@@ -68,6 +68,11 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: landscape-plus
 
+# Themes setting
+mathjax: true
+baidushare: false
+
+
 feed:
   type: atom
   path: atom.xml
