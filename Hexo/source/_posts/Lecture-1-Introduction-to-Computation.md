@@ -1,9 +1,11 @@
 ---
 title: Lecture 1 - Introduction to Computation
 date: 2017-01-29 14:10:28
-tags:
+categories: 
+- Study
+- MOOC
 - edX
-- Python
+- MIT-6.00.1sp
 ---
 # *Lecture 1 Introduction*
 Lecture 1将介绍：计算方法和计算思维的一些基本原则：     
@@ -13,7 +15,7 @@ Lecture 1将介绍：计算方法和计算思维的一些基本原则：
 - 算法中，让计算机能够完成计算的最基本的元素、原则是什么？
 - 我们应该怎样用一门编程语言来描述上述的方法、原则？
 
-
+<!--more-->
 ## Section1 Introduction to Computer Science and Programming
 - Goal
     - Become skillful at making a computer do what you want it to do

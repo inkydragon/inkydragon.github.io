@@ -3,9 +3,10 @@ title: OmegaT翻译环境安装与配置
 date: 2017-02-06 22:06:29
 tags:
 - Translation
-- 逆向工程
 ---
+又想填坑了，所以找了个开源的辅助翻译软件，记录下配置过程
 
+<!--more-->
 # *0x00* 词典、术语集管理
 
 [语帆术语宝](http://termbox.lingosail.com/console/extract)

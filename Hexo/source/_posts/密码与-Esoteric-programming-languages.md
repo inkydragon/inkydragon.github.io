@@ -12,6 +12,7 @@ tags:
 
 开工！
 
+<!--more-->
 -------
 
 # Piet-lang

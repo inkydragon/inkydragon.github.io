@@ -1,11 +1,13 @@
 ---
 title: Win10 x64 WinDbg JIT调试设置
 date: 2016-12-10 15:09:38
-tags: WinDbg
+tags: 
+- WinDbg
 ---
 《格蠹汇编》中第四章有关于如何把WinDbg设为Windows的JIT调试器方法。  
 > 打开一个以管理员身份运行的控制台窗口，切换到WinDbg躲在的目录。然后执行`WinDbg -I`,将WinDbg注册成为JIT调试器，如果执行成功，那么WinDbg会弹出对话框。——《格蠹汇编》P28
 
+<!--more-->
 按照书中的方法，用书中的例子初步试了一下，发现系统还是用MSVC作为默认的调试器。   
 {% asset_img vs.png MSVC调试器 %}
 

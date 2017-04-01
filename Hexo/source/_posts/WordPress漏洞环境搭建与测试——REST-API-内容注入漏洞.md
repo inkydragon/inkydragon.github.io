@@ -8,7 +8,7 @@ tags:
 ---
 研究了下翻译文章投稿的可能性，关注了一堆 [RSS](http://digg.com/user/49eababd06ea463b8d564225d876621e/diggs.rss),在 paper.seebug 上看见这篇 [WordPress REST API 内容注入漏洞分析](http://paper.seebug.org/208/) ，刚好又有几个新搭的 WordPress 站可以测试，于是趁机熟悉下Python、学一学POC的编写。
 
-
+<!--more-->
 ### PoC规范
 【Seebug】[远程 PoC 开发文档](https://www.seebug.org/help/dev)          
 【Github】[PoC 编写规范及要求说明](https://github.com/knownsec/Pocsuite/blob/master/docs/CODING.md)
