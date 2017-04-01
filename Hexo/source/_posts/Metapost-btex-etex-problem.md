@@ -22,6 +22,7 @@ tags:
 mpost 编译不加任何头的mp 文件可以正常生成mps 
 但从上一级目录编译就不行
 
+<!--more-->
 正常情况:
 ```
 I:\Desktop\Translation\TeX-doc\Metapost\Metapost-doc-CHS\source-manual>cd mp

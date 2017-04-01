@@ -2,7 +2,6 @@
 title: Hello Hexo
 date: 2016-08-19 17:21:06
 tags:
-- wo~
 - 日常
 ---
 
