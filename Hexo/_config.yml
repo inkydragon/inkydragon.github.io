@@ -70,7 +70,7 @@ theme: landscape-plus
 
 # Themes setting
 mathjax: true
-baidushare: false
+baidushare: true
 
 
 feed:
