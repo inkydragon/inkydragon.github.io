@@ -17,7 +17,7 @@ widgets:
 - tagcloud
 - archive
 - recent_posts
-- links
+#- links
 
 # Links
 links:
@@ -37,4 +37,4 @@ fb_app_id:
 duoshuo_shortname: 
 
 # Baidu share
-baidushare: true
+baidushare: 
