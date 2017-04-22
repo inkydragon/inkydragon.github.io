@@ -1,14 +1,9 @@
-.deploy*/
-node_modules/
-public/
-themes/landscape/
-themes/landscape-plus-old/
-
-# source/
-
+.DS_Store
 Thumbs.db
 db.json
-
-.DS_Store
 *.log
-.gitignore
+node_modules/
+public/
+.deploy*/
+themes/landscape/
+themes/landscape-plus-old/

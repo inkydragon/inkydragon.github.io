@@ -4,7 +4,6 @@ date: 2017-01-28 21:42:12
 tags:
 - Plan
 - V2code
-layout: false
 ---
 # The way to code
 先解释一下标题，这个用法是从知乎上看见的。原标题是 [V2coder](https://github.com/hhstore/v2coder) 但我还没有转到编程方向的想法，所以就改成了 V2code .

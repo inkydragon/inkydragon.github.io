@@ -9,6 +9,7 @@ categories:
 tags:
   - MIT-OCW
   - Math
+mathjax: true
 ---
 
 # Session Overview

@@ -4,6 +4,7 @@ date: 2017-02-22 17:00:31
 updated: 1017-02-07 16:43:31
 tags:
 - debug
+mathjax: true
 ---
 ## 修改测试
 ```

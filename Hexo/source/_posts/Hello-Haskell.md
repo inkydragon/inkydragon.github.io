@@ -50,6 +50,7 @@ WTF?
 
 - [如何解释 Haskell 中的单子？](https://www.zhihu.com/question/22291305)     
   简单的说单子(Monad)就是自函子范畴上的一个幺半群。
+  - [Functor, Applicative, 以及 Monad 的图片阐释](http://jiyinyiyong.github.io/monads-in-pictures/)
 
 
 你大概需要一点数学：

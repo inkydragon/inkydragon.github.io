@@ -9,6 +9,12 @@ tags:
 <!--more-->
 
 
+
+
+<div style="display: none;">
+{% raw %}
+
+
 {% blockquote [author[, source]] [link] [source_link_title] %}
 content
 {% endblockquote %}
@@ -27,3 +33,6 @@ code snippet
 
 {% asset_img slug [title] %}
 
+
+{% endraw %}
+</div>
