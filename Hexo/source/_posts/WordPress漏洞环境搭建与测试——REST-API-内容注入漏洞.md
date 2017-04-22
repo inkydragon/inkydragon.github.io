@@ -37,7 +37,7 @@ PoC：
 ### Bug 利用
 ##### 垃圾exploit-db
 Python 经典Unicode大坑，PoC并没有注意到这点，代码稍作修改
-```
+``` python
 for post in posts:
     print(' - Post ID: {}, Title: {}, Url: {}'
           .format(post['id'],

@@ -36,8 +36,8 @@ GetModuleHandleA返回值是HMODULE跟系统有关，x64就是long
 
 都不应该有问题，但是就是溢出了。
 
-{% img  /zh-CN/x64下的Python与HANDLE/code.png 500 225 坑中的代码 %}
-{% img  /zh-CN/x64下的Python与HANDLE/windbg.png 500 225 用WinDbg查看真实的函数地址 %}
+{% img  /x64下的Python与HANDLE/code.png 500 225 坑中的代码 %}
+{% img  /x64下的Python与HANDLE/windbg.png 500 225 用WinDbg查看真实的函数地址 %}
 
 # 解决
 
@@ -47,8 +47,8 @@ GetModuleHandleA返回值是HMODULE跟系统有关，x64就是long
 我绕了一圈，又绕回到原来的问题上了，不过有少许进步
 
 我让GetProcAddress已经成功的取到printf的地址，之后就溢出了，还是不知道锅是谁的
-{% img  /zh-CN/x64下的Python与HANDLE/code2.png 500 225 略微修改的代码 %}
-{% img  /zh-CN/x64下的Python与HANDLE/stack.png 415 225 %}
+{% img  /x64下的Python与HANDLE/code2.png 500 225 略微修改的代码 %}
+{% img  /x64下的Python与HANDLE/stack.png 415 225 %}
 
 然后我感觉Microsoft什么溢出没见过，在Windows上WINAPI那是最吼地.这个锅一定是Python的。
 

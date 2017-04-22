@@ -29,7 +29,7 @@ notepad++直接打开
 >easyctf{T00rtUMhk0eTOp}
 
 ### Phunky Python I
-```
+``` python
 x = 672676048626705557 # REDACTED
 digs = [672676048626705658, 672676048626705654, 672676048626705672, 672676048626705678, 672676048626705656, 672676048626705673, 672676048626705659]
 out = ""
@@ -158,7 +158,7 @@ nope ?什么鬼
 #### JavaScript Roman Numeral Converter
 用现成的 [JavaScript Roman Numeral Converter](http://blog.stevenlevithan.com/archives/javascript-roman-numeral-converter)避免出错
 
-```lang:js romanize https://repl.it/CLmf/27 deromanize.js
+``` js romanize https://repl.it/CLmf/27 deromanize.js
 function deromanize (str) {
 	var	str = str.toUpperCase(),
 		validator = /^M*(?:D?C{0,3}|C[MD])(?:L?X{0,3}|X[CL])(?:V?I{0,3}|I[XV])$/,
