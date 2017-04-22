@@ -38,9 +38,12 @@ TODO:
 - [ ] 归档页显示多行
 
 
-以下为默认的模板，不用在意这些细节
 
------
+
+
+<div style="display: none;">
+{% raw %}
+
 
 {% blockquote [author[, source]] [link] [source_link_title] %}
 content
@@ -60,3 +63,6 @@ code snippet
 
 {% asset_img slug [title] %}
 
+
+{% endraw %}
+</div>
