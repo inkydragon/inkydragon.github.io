@@ -26,7 +26,7 @@ GET：
 - 知道了`enumerate` <- 不记得枚举，最后写了个循环
 
 My Solution - Reduce ver
-```
+``` python
 def sum_dig_pow(a, b): 
     return filter(
         lambda g:
@@ -37,7 +37,7 @@ def sum_dig_pow(a, b):
 ```
 
 enumerate ver
-```
+``` python
 def sum_dig_pow(a, b): 
     return filter(
         lambda g:
@@ -56,14 +56,14 @@ GET:
 - `join`的玩法
 
 Reduce ver
-```
+``` python
 from functools import reduce
 def binary_array_to_number(arr):
     return int(reduce(lambda y,x:y+str(x), arr, ''), 2)
 ```
 
 join ver
-```
+``` python
 def binary_array_to_number(arr):
     return int("".join(map(str, arr)), 2)
 ```
@@ -108,7 +108,7 @@ GET：
 Get:
 - `switch-case`替代方案
 
-```
+``` python
 def basic_op(operator, value1, value2):
     ops = {'+': lambda a, b: a + b, 
            '-': lambda a, b: a - b,
