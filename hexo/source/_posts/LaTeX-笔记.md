@@ -34,7 +34,7 @@ TEX 系列    DVI   软件RIP       打印机
 ### 物理结构
 
 #### 序言与正文
-``` lang:latex 文档基本格式
+``` latex 文档基本格式
 \documentclass[options]{class} % 文档类声明
 \usepackage[options]{package} % 引入宏包
 ...
@@ -80,7 +80,7 @@ draft                       草稿模式。有时某些行排得过满，draft �
 
 各命令用法如下，**注意`\maketitle` 命令要放在最后**。
 
-``` lang:latex 标题、作者和日期
+``` latex 标题、作者和日期
 \title{LaTeX Notes}
 \author{Alpha Huang}
 \date{\today}
@@ -91,7 +91,7 @@ draft                       草稿模式。有时某些行排得过满，draft �
 article 和 report 可以有摘要，**book 里没有摘要**。
 摘要环境用法如下：
 
-``` lang:latex 生成摘要
+``` latex 生成摘要
 \begin{abstract}
 ...
 \end{abstract}
@@ -101,7 +101,7 @@ article 和 report 可以有摘要，**book 里没有摘要**。
 LATEX 提供了七种层次结构命令，每个高级层次可以包含若干低级层次。
 **article 中没有 chapter**，而 report 和 book 则支持所有层次。
 
-``` lang:latex 结构层次
+``` latex 结构层次
 \part{...}             %Level -1
 \chapter{...}          %Level 0
 \section{...}          %Level 1
@@ -115,7 +115,7 @@ LATEX 提供了七种层次结构命令，每个高级层次可以包含若干�
 可以用以下命令来生成目录、插图/表格目录。
 这三种目录也都需要编译两遍。
 
-``` lang:latex 生成目录、图/表目录
+``` latex 生成目录、图/表目录
 \tableofcontents
 \listoffigures
 \listoftables
@@ -124,7 +124,7 @@ LATEX 提供了七种层次结构命令，每个高级层次可以包含若干�
 比如下面的命令指定目录深度为2，也就是只显示subsection 及以上层次的目录。
 注意: **设定目录深度命令要放在列目录命令的前面**。
 
-``` lang:latex 生成目录
+``` latex 生成目录
 \setcounter{tocdepth}{2} % 设定目录深度
 \tableofcontents % 列出目录
 ```
@@ -132,7 +132,7 @@ LATEX 提供了七种层次结构命令，每个高级层次可以包含若干�
 如果我们不想让某些层次的标题出现在目录里，则可以给例2.2 中的命
 令加上星号。
 
-``` lang:latex 
+``` latex 
 \chapter*{...}
 \section*{...}
 \subsection*{...}
