@@ -27,7 +27,7 @@ google 一下发现是 [UTF-9 and UTF-18](https://www.ietf.org/rfc/rfc4042.txt)
 在 GitHub 上找到一个解码脚本 [utf9](https://github.com/enricobacis/utf9)
 装完了写一个解码脚本
 
-``` lang:python Utf-9_Decode.py 
+``` python Utf-9_Decode.py 
 #coding=utf-8
 #Utf-9.py
 import codecs
@@ -65,7 +65,7 @@ key 看起来能运算的样子，先放一放。
 在 stackoverflow 上看到有人说这是序列化过的Python代码，有软件可以还原 —— [uncompyle2](https://github.com/Mysterie/uncompyle2)
 
 下载安装之，写个脚本解码
-``` lang:python FlagCodeDecrypted.py 
+``` python FlagCodeDecrypted.py 
 #!/usr/bin/env python
 #coding=utf-8
 #flag.py
@@ -84,7 +84,7 @@ uncompyle2.uncompyle('2.7.3',co,f)
 
 #### flag.py 分析
 
-``` lang:python Flag.py 
+``` python Flag.py 
 #coding=utf-8
 
 import hashlib
@@ -155,7 +155,7 @@ pycharm里单步调试一下，发现加密部分可以逐字逆推出flag
 
 写个脚本
 
-``` lang:python ReDecryptedCode.py 
+``` python ReDecryptedCode.py 
 #coding=utf-8
 #ReDecryptedCode.py
 
@@ -232,7 +232,7 @@ key 有了(or 部分解出)，flag 验证程序源码也有了，开始逆推Fla
 
 #### 2-try
 将key中的下划线`_`按数量一次用数字替代，刚好可以用1~9替代完全
-``` lang:python _DecodeFile2Num.txt 
+``` python _DecodeFile2Num.txt 
 5*((2//2+3+6-4%4)**((3%(3-1))+8+(3%3+5+7%2+6-(6//(5%3)))))+2*(((8/2)+3%2+7-(8//4))**(1*(5+5)+7+9%3))+8*(((9//2+8%2)+(7-1))**((3+7)+9-(6//2)))+7*((3+9-(6//3-7%2%1))**(5+5+5))+2*(2+9-(3//3-9%5%2))**(9-4+7)+(3+7)**(8%3%2+5+6)+(5-2)*((4//4-5%4%1)+9)**(5-(7//7+9%3)+6)+(5+(9%7)*2+1)**9+7*(((9%7)*2+7-(8//8))**7)+(8/2)*(((4-1+7)*(6+4))**3)+3*((2+9-1)**5)+3*(((3+7-6/3+2-9%5%2)*(3-1+8/2+9%5))**2)+(1//1)*(((8%3%2+5+5)%6)+7-1)**3+5*((6/(5%3))+7)*((9%7)*2+5+1)+3//3+9+9/3
 ```
 Python 命令行下执行得 

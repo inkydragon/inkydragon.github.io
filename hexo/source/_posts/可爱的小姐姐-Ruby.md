@@ -66,7 +66,7 @@ Do:
 
 
 ## 1. 打印"Hello, world."
-``` lang:ruby   Hello, world.
+``` ruby Hello, world.
 irb(main):001:0> puts("Hello,  world.")
 Hello,  world.
 => nil
@@ -74,7 +74,7 @@ Hello,  world.
 
 直接输入字符串，看上去 `Ruby` 输出了字符串，其实那是返回值。
 ~~你大概写了一个假的 `Hello, world`~~
-``` lang:ruby 
+``` ruby 
 irb(main):002:0> "Hello World"
 => "Hello World"
 ```
@@ -86,7 +86,7 @@ irb(main):002:0> "Hello World"
 >index(substring [, offset]) → fixnum or nil 
  index(regexp [, offset]) → fixnum or nil
  
-``` lang:ruby
+``` ruby
 irb(main):048:0> str = "Hello, Ruby."
 => "Hello, Ruby."
 irb(main):049:0> str.index("Ruby.")
@@ -97,7 +97,7 @@ irb(main):049:0> str.index("Ruby.")
 正则表达式匹配：
 >str =~ obj → fixnum or nil
 
-``` lang:ruby
+``` ruby
 irb(main):052:0> str =~ /[Ruby.]/
 => 7
 ```
@@ -106,7 +106,7 @@ irb(main):052:0> str =~ /[Ruby.]/
 
 ### `each` 方法
 
-``` lang:ruby
+``` ruby
 irb(main):003:0> def h
 irb(main):004:1> puts "Hello, wo!"
 irb(main):005:1> end
@@ -127,7 +127,7 @@ Hello, wo!
 ```
 
 循环也可以换行
-``` lang:ruby
+``` ruby
 irb(main):021:0> (1..10).each do |i|
 irb(main):022:1*   h()
 irb(main):023:1> end
@@ -135,7 +135,7 @@ irb(main):023:1> end
 
 ### 更优雅的写法 `*`方法
 
-``` lang:ruby
+``` ruby
 irb(main):026:0> "Hello, wo!" * 10
 => "Hello, wo!Hello, wo!Hello, wo!Hello, wo!Hello, wo!Hello, wo!Hello, wo!Hello, wo!Hello, wo!Hello, wo!"
 irb(main):028:0> puts "Hello, wo!\n" * 10
@@ -147,7 +147,7 @@ Hello, wo!
 
 ## 4. 循环
 
-``` lang:ruby
+``` ruby 
 irb(main):030:0> (1..10).each do |i|
 irb(main):031:1*   puts "This is sentence number #{i}."
 irb(main):032:1> end
@@ -165,7 +165,7 @@ This is sentence number 10.
 ```
 
 ## 5.&6. 猜数字.rb
-``` lang:ruby Guess Number.rb
+``` ruby Guess-Number.rb 
 # Guess num between [0..9]
 num = rand(10)
 puts "Let's guess number !\nHave a guess!\n" 
@@ -177,7 +177,7 @@ loop do
 end
 puts "Yes! rand number is #{num}"
 ```
-``` lang:ruby result
+``` ruby result
 I:\Desktop\Programming\Ruby>ruby "Guess Number.rb"
 Let's guess number !
 Have a guess!
