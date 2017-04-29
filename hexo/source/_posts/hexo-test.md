@@ -7,6 +7,108 @@ tags:
   - hexo
 mathjax: true
 ---
+# 超长 TOC 滚动
+[2017-04-24]
+
+<!-- ============================================================ -->
+
+# Install
+
+
+
+# --------- Day 1 ---------
+
+# Ruby'properties
+
+# Note：
+
+# summary
+
+# Todo
+
+
+## 1. "Hello, world."
+
+## 2. 找下标
+
+### `index` 方法
+### `=~` 方法
+
+## 3. 重复打印
+
+### `each` 方法
+### 更优雅的 `*`方法
+
+
+## 4. 循环
+
+## 5.&6. 猜数字.rb
+
+----
+
+# --------- Day 2 ---------
+
+# Note
+## 函数
+
+## 数组
+
+## 散列表
+
+## 代码块和yield
+
+## 类
+
+
+# summary
+
+
+# Todo
+
+## 1. each与枚举
+
+## 2. 树与方法
+
+## 3. grep
+
+----
+
+# --------- Day 3 ---------
+# Note
+## 元编程
+
+
+# summary
+
+
+# Todo
+## CSV程序
+
+
+
+# ---- More about Ruby ----
+
+## Ruby 的核心优势
+
+## 不足之处
+
+
+
+<!-- ============================================================ -->
+
+# 连接符test
+
+# - 1
+# -- 2
+# --- 3
+# ---- 4
+# ----- 5
+# ------ 6
+# ------- 7
+# -------- 8
+# --------- 9
+
+
 # highlight-test
 
 {% codeblock c源码 lang:c 3.1.c %}
@@ -43,7 +145,7 @@ puts "Yes! rand number is #{num}"
 ```
 
 -------
-
+# date & update test
 
 ```
 date: 2017-02-07 17:00:31
@@ -52,7 +154,7 @@ updated: 1017-02-07 16:43:31
 
 -----
 
-# LaTeX-test
+# LaTeX Supposed-test
 
 The **characteristic polynomial** $\chi(\lambda)$ of the $3 \times 3$ matrix
 $$

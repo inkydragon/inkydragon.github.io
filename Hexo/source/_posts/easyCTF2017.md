@@ -29,6 +29,7 @@ notepad++直接打开
 >easyctf{T00rtUMhk0eTOp}
 
 ### Phunky Python I
+
 ``` python
 x = 672676048626705557 # REDACTED
 digs = [672676048626705658, 672676048626705654, 672676048626705672, 672676048626705678, 672676048626705656, 672676048626705673, 672676048626705659]
@@ -63,7 +64,7 @@ print out
 
 还是cmp好用
 
-```
+``` 
 $ cmp -cl file1.txt file2.txt
   482 175 }    154 l
  1638  64 4    146 f
@@ -120,6 +121,7 @@ $ cmp -cl file1.txt file2.txt
 27127 141 a    170 x
 27132 145 e     71 9
 ```
+
 用正则搞了半天，才把flag提出来
 
 >easyctf{th1s_m4y_b3_th3_d1ff3r3nc3_y0u_w3r3_l00k1ng_4}

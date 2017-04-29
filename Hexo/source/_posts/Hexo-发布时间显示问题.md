@@ -77,7 +77,7 @@ Some text i'd like to have in the body of this post
 2. 【无效】`hexo clean` +　`hexo g --safe`
 3. 【无效】换为原版皮肤 `hexo clean` +　`hexo g`
 4. 【无效】把`date_format`的值从`null`改为`'YYYY-MM-DD HH:mm:ss'` + \#1
-    {% codeblock date_format https://github.com/xiangming/landscape-plus/blob/master/layout/_partial/article.ejs article.ejs %}
+    {% codeblock  date_format lang:html https://github.com/xiangming/landscape-plus/blob/master/layout/_partial/article.ejs article.ejs %}
     <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
       <div class="article-meta">
         <%- partial('post/date', {class_name: 'article-date', date_format: 'YYYY-MM-DD HH:mm:ss'}) %>

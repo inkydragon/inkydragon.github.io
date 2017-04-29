@@ -72,7 +72,7 @@ DEAD
 只支持 .gif .png .ppm
 自带的例子可以正常运行，
 
-{% codeblock -help %}
+{% codeblock npiet-help %}
 I:\Downloads\npiet-1.3a-win32>npiet.exe -h
 npiet v1.3  (with GD support, with GIF support, with PNG support)
 
@@ -164,14 +164,14 @@ DEAD
 ***记得把第一句话删掉！！***
 
 Hello World测试代码
-{% codeblock Hello World.mal %}
+{% codeblock Malbolge-lang Hello World.mal %}
 ('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|nm-,jcL(I&%$#"
  `CB]V?Tx<uVtT`Rpo3NlF.Jh++FdbCBA@?]!~|4XzyTT43Qsqq(Lnmkj"Fhg${z@>
 {% endcodeblock %}
 一般都能正常运行
 
 然后手工识别源码：
-{% codeblock Job.mal %}
+{% codeblock Malbolge-lang Job.mal %}
 ('&$:^"!}54Xzyw5.Rtrrp('Kml)j!Eg
 f{"cx>_u::[q7554E~10A.-+M*uK'_^]
 \"ZY}j/zxw;;:Ur7q44
