@@ -19,7 +19,7 @@ int main()
 }
 {% endcodeblock %}
 
-``` nsam 得到的汇编代码 3.1.s
+``` nasm 得到的汇编代码 3.1.s
 .file	"3.1.c"
 .def	__main;	.scl	2;	.type	32;	.endef
 .section .rdata,"dr"

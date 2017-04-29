@@ -12,7 +12,7 @@ Aspen 版本号比较乱
 ## Aspen 版本关系
 可以用记事本打开你的bkp文件，第一行就是实际发行版本好，
 
-{% codeblock http://bbs.mahoupao.net/forum.php?mod=viewthread&tid=49877&page=1#pid840770 Aspen版本区别 %}
+{% codeblock plain http://bbs.mahoupao.net/forum.php?mod=viewthread&tid=49877&page=1#pid840770 Aspen版本区别 %}
 Aspen 10.0
 Aspen 11.1 
 Aspen 12
