@@ -28,6 +28,7 @@ google搜索 `io-lang` ，找到官网 [io / binaries via jake peck](http://iola
 - 一些Io的示例问题。
 - 一个可解答问题的Io社区。
 - 带有Io惯用法的风格指南。
+    - [Io Programming/Io Style Guide](https://en.wikibooks.org/wiki/Io_Programming/Io_Style_Guide)
 
 **Answer**
 
