@@ -417,7 +417,7 @@ NOTE:  Replace mode is like Insert mode, but every typed character deletes an
 
 3. Type  y  to yank (copy) the highlighted text.
 
-4. Move the cursor to the end of the next line:  j$
+4. Move the cursor to the end of the next line:  j$b 
 
 5. Type  p  to put (paste) the text.  Then type:  a second <ESC> .
 
@@ -478,3 +478,64 @@ NOTE:  If you want to ignore case for just one search command, use  \c
 
 # Lesson 7: HELP
 ## GETTING HELP
+```
+Vim has a comprehensive on-line help system.  To get started, try one of
+these three:
+- press the <HELP> key (if you have one)
+- press the <F1> key (if you have one)
+- type   :help <ENTER>
+
+Read the text in the help window to find out how the help works.
+Type  CTRL-W CTRL-W   to jump from one window to another.
+Type    :q <ENTER>    to close the help window.
+```
+
+## CREATE A STARTUP SCRIPT
+```
+** Enable Vim features **
+
+1. Start editing the "vimrc" file.  This depends on your system:
+:e ~/.vimrc		for Unix
+:e $VIM/_vimrc		for MS-Windows
+
+2. Now read the example "vimrc" file contents:
+:r $VIMRUNTIME/vimrc_example.vim
+
+3. Write the file with:
+:w
+```
+
+有cgywin的环境可以直接改 `~/.vimrc`
+
+## COMPLETION
+```
+** Command line completion with CTRL-D and <TAB> **
+
+NOTE:  Completion works for many commands.  Just try pressing CTRL-D and
+       <TAB>.  It is especially useful for  :help .
+
+```
+
+## SUMMARY
+```
+1. Type  :help  or press <F1> or <Help>  to open a help window.
+
+2. Type  :help cmd  to find help on  cmd .
+
+3. Type  CTRL-W CTRL-W  to jump to another window
+
+4. Type  :q  to close the help window
+
+5. Create a vimrc startup script to keep your preferred settings.
+
+6. When typing a  :  command, press CTRL-D to see possible completions.
+   Press <TAB> to use one completion.
+```
+
+# For further reading and studying
+
+- `:help user-manual`
+- [Vim - Vi Improved - by Steve Oualline (Publisher: New Riders)](http://www.truth.sk/vim/vimbook-OPL.pdf)
+- [Vim - ICCF Holland](http://iccf-holland.org/click5.html)
+- Learning the Vi Editor - by Linda Lamb  
+	Publisher: O'Reilly & Associates Inc.
