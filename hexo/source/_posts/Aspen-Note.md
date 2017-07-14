@@ -52,31 +52,9 @@ Aspen plus 是Aspen one工程套件的一个组件，就像word和office的关�
 - aspenONE Supply Chain Management
 
 
+# Aspen 相关书籍
 
+- 《用户指南》(user guide)
+- 《单元操作模型》(Unit Operation Models)
+- 《物性方法和模型》(Physical Property Methods and Models)
 
-
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text] 
-code snippet 
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-{% asset_img slug [title] %}
-
-
-{% endraw %}
-</div>

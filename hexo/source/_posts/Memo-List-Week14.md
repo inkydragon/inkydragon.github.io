@@ -1,10 +1,11 @@
 ---
-title: Memo-List-Week14
+title: 'Memo List @Week14'
 date: 2017-05-22 19:51:22
 categories:
 tags:
   - Memo List
 description:
+  备忘&开坑记录
 ---
 
 
@@ -19,7 +20,7 @@ description:
 将字符串型数字转成[int]
 
 **Integer -> [Int]**
-``` haskell 
+``` haskell
 toDigits :: Integer -> [Int]
 toDigits = map (fromIntegral . digitToInt) . show
 ```
@@ -33,7 +34,7 @@ randint :: IO Int
 randint = randomRIO (1,55) -- 生成int的范围
 
 -- 获得一个长为 10 的list
-rint <- sequence (replicate 10 randint) 
+rint <- sequence (replicate 10 randint)
 
 
 randomList :: IO [Int] -- 返回一个 generater
@@ -97,7 +98,7 @@ Note: 提示符并不需要引号包起来。[ghci ver 8.0.1]
 ``` haskell
 Prelude> :set prompt "ghci>"
 "ghci>" :set prompt ghci>
-ghci> 
+ghci>
 ```
 
 ## 基本算术运算
@@ -147,7 +148,3 @@ ghci>2* -1
 ghci>2* (-1)
 -2
 ```
-
-
-
-
