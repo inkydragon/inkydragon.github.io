@@ -272,6 +272,9 @@ def sum_dig_pow(a, b):
 
 
 ### 7ku
+
+a.map{|arr| arr.map{|a| avg = a.reduce(:+)./3; [avg, avg, avg] }}
+
 [Ones and Zeros](https://www.codewars.com/kata/578553c3a1b8d5c40300037c)
 
 GET:
