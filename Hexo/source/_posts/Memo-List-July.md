@@ -10,6 +10,211 @@ description:
 反正经常开坑不填，为了保持版面整洁，先在Memo里开坑，待填的差不多了再单独拿出去。
 
 <!--more-->
+[2017-07-15 22:02:13]
+
+# Some Note for FreeCodeCamp
+
+当你遇到困惑不知道该怎么办，永远记住:Read-Search-Ask。
+
+- Read the error
+- Search Google
+- Ask for help
+
+# HTML 5 & CSS
+
+**Say Hello to HTML Element**
+
+HTML(Hyper Text Markup Language)(超文本标记语言)
+
+大部分元素都有一个`开始标记`和一个`结束标记`。
+
+`h1`就是一个HTML元素，`h1`是`header1`的简写，意思是 *一级标题*。
+h1是主标题，h2是副标题，h3、h4、h5、h6依次递减字体的大小。
+
+p是英文paragraph段落的缩写，经常被用来创建一个段落.
+
+注释有两个功能：
+
+1. 想让某一段代码不起作用，但你又不想删除这一段代码。
+2. 就是给代码添加一些说明，方便团队合作或日后自己查看，但又不想影响代码本身。
+
+注释的开始标记是`<!--`
+
+结束
+
+**Change the Color of Text**
+
+我们可以通过修改元素的style(样式)来达到目的。
+样式的属性有很多，其中color用来指定颜色。
+
+以下是将你的h2元素的文本颜色设置为蓝色的示例代码：
+
+``` html
+<h2 style="color: blue">CatPhotoApp</h2>
+```
+
+**Use CSS Selectors to Style Elements**
+
+样式的属性多达几千个，但别担心，按照80-20原则，常用的也就几十个，你完全可以掌握它。
+
+当你键入<h2 style="color: red">CatPhotoApp</h2>，你就给h2元素添加了inline style(内联样式)。
+
+内联样式是为元素添加样式的最简单有效的方式，但是更易于维护的方式是使用层叠样式表CSS（Cascading Style Sheets）。
+
+在代码的最顶端，创建一个如下的style元素：
+``` html
+<style>
+</style>
+```
+在这个style元素内, 你可以为所有的h2元素创建一个元素选择器。比如，如果你想要将所有的h2元素设置为红色, 你的代码应该看起来像这样：
+
+``` html
+<style>
+  选择器 {属性名称: 属性值;}
+  h2 {color: red;}
+</style>
+```
+注意：一定要在属性值的后面加上分号`;`。
+
+**Use a CSS Class to Style an Element**
+
+1. 我们先声明一个类选择器：
+  ``` html
+  <style>
+    .blue-text {
+      color: blue;
+    }
+  </style>
+  ```
+  上面的代码在 `<style>` 标记中声明了一个叫做 `blue-text` 的类样式。
+
+2. 然后在h2元素上应用我们声明的类选择器：
+  ``` html
+  <h2 class="blue-text">CatPhotoApp</h2>
+  ```
+
+注意：在CSS中，类选择器应该添加.为前缀。
+
+而在HTML中，class属性不能添加.为前缀。
+这是因为在CSS中如果类选择器前不添加. 浏览器就会误认为类选择器是一个元素选择器。
+
+**Change the Font Size & Font Family of an Element**
+
+字号是由样式属性font-size来控制的, 如下：
+``` css
+h1 {
+  font-size: 30px;
+}
+```
+
+用font-family属性来设置元素的字体。
+
+如果你想把副标题的字体设置为Sans-serif，你可以使用下面的CSS：
+``` css
+h2 {
+  font-family: Sans-serif;
+}
+```
+
+**Import a Google Font**
+
+现在，让我们来导入谷歌字体。
+
+首先，你需要用`link`标签来引入谷歌`Lobster`字体。
+
+复制下面的代码片断并将其粘贴到你的代码编辑器的顶部：
+``` html
+<link href="https://fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css">
+```
+现在你可以将`Lobster`作为 `font-family`属性 的值应用到你的h2元素上了。
+
+
+**Specify How Fonts Should Degrade**
+
+有几种默认的字体是所有浏览器都可用的，包括`Monospace`、`Serif`和`Sans-Serif`。
+
+当某种字体不可用时，你可以让浏览器自动降级到另一种字体。
+
+例如，如果你想让段落的字体为`Helvetica`，但你同时想在`Helvetica`字体不可用时自动降级使用`Sans-Serif`字体，你可以使用如下CSS样式：
+``` css
+p {
+  font-family: Helvetica, Sans-Serif;
+}
+```
+
+**Add Images to your Website**
+
+使用`img`元素来为你的网站添加图片，使用`src`属性指向一个图片的具体地址。
+
+举例如下：
+``` html
+<img src="https://www.your-image-source.com/your-image.jpg">
+```
+注意：`img`元素是自关闭元素，不需要结束标记。
+
+**Size your Images**
+
+CSS包含一个控制元素宽度的`width`属性。像控制字体一样，我们使用`px`（像素）来指定图片的宽度。
+
+例如，如果我们想要创建一个名为`larger-image`的类选择器，把HTML元素的宽度设定为500像素，我们使用：
+``` html
+<style>
+  .larger-image {
+    width: 500px;
+  }
+</style>
+```
+
+**Add Borders Around your Elements**
+
+CSS 边框的属性有style(样式)、color(颜色)、width(宽度)、height(高度)等。
+
+举个例子，如果我们想要让一个HTML元素的边框颜色为红色、边框宽度为5像素(px)、边框样式为固体(solid)，代码如下:
+``` html
+<style>
+  .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+  }
+</style>
+```
+
+提示：你可以应用多个class到一个元素，只需要在多个class之间用 **空格** 分开即可。例如：
+``` html
+<img class="class1 class2">
+```
+
+
+----
+
+
+- [计算机本科应届毕业生要有怎样的能力才算比较好的？ - 知乎](https://www.zhihu.com/question/25753307)
+
+算法
+
+二分搜索 Binary Search
+分治 Divide Conquer
+宽度优先搜索 Breadth First Search
+深度优先搜索 Depth First Search
+回溯法 Backtracking
+双指针 Two Pointers
+动态规划 Dynamic Programming
+扫描线 Scan-line algorithm
+快排 Quick Sort
+
+数据结构  
+
+栈 Stack
+队列 Queue
+链表 Linked List
+数组 Array
+哈希表 Hash Table
+二叉树 Binary Tree  
+堆 Heap
+并查集 Union Find
+字典树 Trie
+
 [2017-07-09 15:00:07]
 
 [Learn you a Haskell for Great good](http://learnyouahaskell.com/chapters)
