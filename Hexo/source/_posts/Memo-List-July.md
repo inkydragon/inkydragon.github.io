@@ -10,6 +10,130 @@ description:
 反正经常开坑不填，为了保持版面整洁，先在Memo里开坑，待填的差不多了再单独拿出去。
 
 <!--more-->
+# try git
+
+`git init` To initialize a Git repository here
+
+`/.git/` is a hidden directory where Git operates.
+
+`git status`
+
+**Staging Area:**
+A place where we can group files together before we "commit" them to Git.
+
+  - **staged:**
+  Files are ready to be committed.
+  - **unstaged:**
+  Files with changes that have not been prepared to be committed.
+  - **untracked:**
+  Files aren't tracked by Git yet. This usually indicates a newly created file.
+  - **deleted:**
+  File has been deleted and is waiting to be removed from Git.
+
+`git add [new file]` To tell Git to start tracking changes made to new file
+
+`git add -A `. where the dot stands for the current directory, so everything in and beneath it is added.
+
+You can use `git reset <filename>` to remove a file or files from the staging area.
+
+
+`git commit -m "Add cute octocat story"`
+A "commit" is a snapshot of our repository.
+
+`git add '*.txt'`
+we can add all the new files
+
+`git add *.txt` [没有单引号，shell只会搜索当前路径下的文件]
+Without quotes our shell will only execute the wildcard search within the current directory. Git will receive the list of files the shell found instead of the wildcard and it will not be able to add the files inside of the octofamily directory.
+
+Use `git log --summary` to see more information for each commit
+
+`git remote add origin https://github.com/try-git/try_git.git`
+To push our local repo to the GitHub server we'll need to add a remote repository.
+
+Git doesn't care what you name your remotes, but it's typical to name your main one origin.
+
+`git push -u origin master`
+The push command tells Git where to put our commits when we're ready.
+The `-u`tells Git to *remember the parameters*, so that next time we can simply run `git push` .
+
+**Cool Stuff:**
+When you start to get the hang of git you can do some really cool things with `hooks` when you push.
+- [Git - Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+
+`git stash` to stash your changes, and `git stash apply` to re-apply your changes after your pull.
+ref:
+- [Git - 储藏（Stashing）](https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%82%A8%E8%97%8F%EF%BC%88Stashing%EF%BC%89)
+
+`git diff` with the `--staged` option to see the changes you just staged
+
+`git checkout -- <target>`. Go ahead and get rid of all the changes since the last commit for octocat.txt
+
+  It's simply promising the command line that there are no more options after the `--`. This way if you happen to have a branch named `octocat.txt`, it will still revert the file, instead of switching to the branch of the same name.
+
+You can switch branches using the `git checkout <branch>` command.
+
+`git rm -r folder_of_cats`
+This will recursively remove all *folders* and files from the given directory.
+
+If you happen to delete a file without using `git rm` you'll find that you still have to `git rm` the deleted files from the working tree.
+You can save this step by using the `-a` option on `git commit`, which auto removes deleted files with the commit.
+`git commit -am "Delete stuff"`
+
+`git merge clean_up`
+tell Git to merge the clean_up branch into it.
+when you have to merge your changes from the `clean_up` branch into the `master` branch
+
+Merge Conflicts can occur when changes are made to a file at the same time.  if you're interested in reading more, take a look the section of the Pro
+[Git - Book](https://git-scm.com/book/en/v2)
+ on 
+[Git - git-merge Documentation](https://git-scm.com/docs/git-merge#_how_conflicts_are_presented)
+
+use `git branch -d <branch name>` to delete a branch
+
+Somtimes, You'll notice that `git branch -d bad_feature` doesn't work.
+This is because `-d` won't let you delete something that *hasn't been merged.*
+You can either add the `--force (-f)` option or use `-D` which combines `-d -f` together into one command.
+
+
+-----
+
+# cis 914
+
+## 01-intro Haskell 入门
+
+推荐阅读：
+【en】
+
+- [Starting Out - Learn You a Haskell for Great Good!](http://learnyouahaskell.com/starting-out), chapter 2
+- [Real World Haskell](http://book.realworldhaskell.org/), chapters 1 and 2
+
+【zh-cn】
+
+- [Ready Go · Haskell 趣學指南](https://learnyoua.haskell.sg/content/zh-cn/ch02/ready-go.html), 第二章
+- [Real World Haskell 中文版 — Real World Haskell 中文版](http://cnhaskell.com/), 第1章和第2章
+
+
+### 什么是 Haskell
+
+Haskell 的特点：
+
+- 函数式[语言/编程] (Functional)
+- 纯函数 (Pure)
+- 惰性求值 (Lazy)
+- 静态类型 (Statically typed)
+
+### Themes
+
+三个关注的方面
+
+- 类型 (Types)
+- 抽象 (Abstraction)
+- Wholemeal programming
+
+
+---
+
 [2017-07-15 22:02:13]
 
 # Some Note for FreeCodeCamp
@@ -185,6 +309,280 @@ CSS 边框的属性有style(样式)、color(颜色)、width(宽度)、height(高
 <img class="class1 class2">
 ```
 
+**Add Rounded Corners with a Border Radius**
+
+猫咪图片的边框现在是尖尖的，不够可爱，我们可以通过CSS的一个叫`border-radius`(边框半径)的属性来让它的边框变成圆的。
+
+除了像素，你还可以使用百分比来指定border-radius边框半径的值。
+
+
+**Link to External Pages with Anchor Elements**
+
+a元素，也叫anchor（锚点）元素，既可以用来链接到外部地址实现页面跳转功能，也可以链接到当前页面的某部分实现内部导航功能。
+
+```html
+ ↓ ancher tag               ↓ anchor tag's href attribute
+<p>Here's a <a href="http://freecodecamp.cn"> link to FreeCodeCamp中文社区 </a> for you to follow.</p>
+ ↑  link's text
+```
+
+`Nesting`（嵌套）就是把一个元素放在另一个元素里面。
+
+**Make Dead Links using the Hash Symbol**
+
+有时你想为你的网站添加一个`a`元素，但此时你还不知道要将它们链接到哪儿，此时可以使用固定链接。
+
+把你的`a`元素的`href`属性的值替换为一个`#`，别名hash(哈希)符号，将其变为一个固定链接。
+
+**Turn an Image into a Link**
+
+你可以通过把某元素嵌套进`a`元素使其变成一个链接。
+
+把你的图片嵌套进`a`元素。举例如下：
+``` html
+<a href="#"><img src="/images/relaxing-cat.jpg"></a>
+```
+
+**Add Alt Text to an Image for Accessibility**
+
+`alt`属性，也被称为alt text, 是当图片无法加载时显示的替代文本。`alt`属性对于盲人或视觉损伤的用户理解一幅图片中所描绘的内容非常重要，搜索引擎也会搜索`alt`属性。
+
+简而言之，每一张图片都应该有一个`alt`属性！
+
+你可以像下面例子中一样为`img`元素添加一个`alt`属性：
+``` html
+<img src="www.your-image-source.com/your-image.jpg" alt="your alt text">
+```
+
+## List
+**Create a Bulleted Unordered List**
+
+HTML有一个特殊元素，用于创建unordered lists（无序列表）, 或带项目符号的列表。
+
+无序列表以<ul>元素开始，并包含一个或多个<li>元素。
+
+例如：
+``` html
+<ul>
+  <li>milk</li>
+  <li>cheese</li>
+</ul>
+```
+将会创建一个带项目符号的"milk"和"cheese"列表。
+
+
+**Create an Ordered List**
+
+HTML有一个特殊元素，用于创建ordered lists（有序列表）, 或数字编号列表。
+
+有序列表以`<ol>`元素开始，并包含一个或多个`<li>`元素。
+
+例如：
+``` html
+<ol>
+  <li>Garfield</li>
+  <li>Sylvester</li>
+</ol>
+```
+将创建一个包含"Garfield"和"Sylvester"的数字编号列表。
+
+## Form, Button and Checkboxes
+**Create a Text Field**
+
+现在让我们来创建一个`form`(表单)。
+
+Text input(文本输入框)是用来获得用户输入的绝佳方式。
+
+你可以用如下方法创建：
+``` html
+<input type="text">
+```
+注意，`input`元素是自关闭的。
+
+**Add Placeholder Text to a Text Field**
+
+占位符(placeholder text)是用户在`input`(输入)框输入任何东西之前放置在`input`(输入)框中的预定义文本。
+
+你可以用如下方式创建占位符：
+``` html
+<input type="text" placeholder="this is placeholder text">
+```
+
+**Create a Form Element**
+
+使用HTML来构建可以跟服务器交互的Web表单(form)，通过给你的`form`元素添加一个`action`属性来达到此目的。
+
+`action`属性的值指定了表单提交到服务器的地址。
+
+例如：
+``` html
+<form action="/url-where-you-want-to-submit-form-data"></form>
+```
+
+**Add a Submit Button to a Form**
+
+让我们来为你的`form`添加一个`submit`(提交)按钮，点击这个按钮，表单中的数据将会被发送到你通过`action`属性指定的地址上。
+
+下面是submit按钮的例子：
+``` html
+<button type="submit">this button submits the form</button>
+```
+
+**Use HTML5 to Require a Field**
+
+当你设计表单时，你可以指定某些选项为必填项(required)，只有当用户填写了该选项后，用户才能够提交表单。
+
+例如，如果你想把一个文本输入字段设置为必填项，在你的`input`元素中加上`required`属性就可以了，你可以使用：
+``` html
+<input type="text" required>
+```
+注意：required属性在Safari浏览器中不起作用，请用其他浏览器来学习，推荐使用Chrome。
+
+**Create a Set of Radio Buttons**
+
+单选就是你只能在多个选项中选择一个，就好比你有很多追求者，但却只能选择一个结婚。
+
+多选一的场景就用`radio button`(单选按钮)
+
+单选按钮只是`input`输入框的一种类型。
+
+每一个单选按钮都应该嵌套在它自己的`label`(标签)元素中。
+
+注意：所有关联的单选按钮应该使用相同的`name`属性。
+
+下面是一个单选按钮的例子：
+``` html
+<label><input type="radio" name="indoor-outdoor"> Indoor</label>
+<label><input type="radio" name="indoor-outdoor"> Outdoor</label>
+```
+
+**Create a Set of Checkboxes**
+
+当你在大学选课时，面对几百门课程，而因为时间和精力，你只能从中选择十几门。
+这样的场景就用`checkboxes`（复选按钮）。
+
+复选按钮是`input`的输入框的另一种类型。
+每一个复选按钮都应该嵌套进`label`元素中。
+所有关联的复选按钮应该具有相同的`name`属性。
+
+下面是复选按钮的例子：
+``` html
+<label><input type="checkbox" name="personality"> Loving</label>
+<label><input type="checkbox" name="personality"> Loving2</label>
+<label><input type="checkbox" name="personality"> Loving3</label>
+```
+
+**Check Radio Buttons and Checkboxes by Default**
+
+使用`checked`属性，你可以设置复选按钮和单选按钮默认被选中。
+
+为此，只需在`input`元素中添加属性`checked`
+``` html
+<input type="radio" name="test-name" checked>
+<label><input type="checkbox" name="personality" checked> Loving</label>
+```
+
+## Div
+**Nest Many Elements within a Single Div Element**
+
+`div`元素，也被称作division(层)元素，是一个盛装其他元素的通用容器。
+所以可以利用CSS的继承关系把`div`上的CSS传递给它所有子元素。
+
+你可以用`<div>`来标记一个`div`元素的开始，然后用`</div>`来标记一个div元素的结束。
+
+**Give a Background Color to a Div Element**
+
+你可以用 `background-color` 属性来设置一个元素的背景颜色。
+
+例如，如果你想把一个元素的背景颜色设置为`green`，你应该把这些加到你的 `style` 元素中：
+``` css
+.green-background {
+  background-color: green;
+}
+```
+
+**Set the ID of an Element**
+
+除了 `class`属性之外，每一个 HTML 元素还可以使用 `id` 属性。
+使用 `id` 属性有若干好处，一旦当你开始使用 jQuery 的时候你会有更深的体会。
+
+`id` 属性应该是唯一的，虽然浏览器并不强制唯一，但基于最佳实践，这一点是被广泛认可的，所以请不要给一个以上的元素设置相同的 `id` 属性。
+
+下面举例说明了如何设置`h2` 元素的`id`属性为`cat-photo-app`
+``` html
+<h2 id="cat-photo-app">
+```
+
+**Use an ID Attribute to Style an Element**
+
+和类选择器一样，你也可以使用ID选择器来声明样式。
+
+声明一个叫`cat-photo-element`的ID选择器 ，并设置背景色为绿色。：
+``` css
+#cat-photo-element {
+  background-color: green;
+}
+```
+注意：在你的 `style` 元素内部，定义类选择器必须添加 . 为前缀，定义ID选择器必须添加 `#` 为前缀。
+
+## padding, margin and border
+**Adjusting the Padding of an Element**
+
+你可能早已经注意到了这点，所有的 HTML 元素本质上是小的矩形块，代表着某一小块区域。有三个影响HTML元素布局的重要属性：`padding(内边距)`、`margin(外边距)`、`border(边框)`。
+
+元素的 `padding` 控制 元素内容/`content`和 元素边框/`border` 之间的距离。
+
+**Add Different Padding to Each Side of an Element**
+
+有时你想要自定义元素，使它的每一个边具有不同的 `padding`。
+CSS 允许你使用 `padding-top`、`padding-right`、`padding-bottom` 和 `padding-left`来控制元素上右下左四个方向的 `padding`。
+
+**Use Clockwise Notation to Specify the Padding of an Element**
+
+除了分别指定元素的属性外，你还可以集中起来指定它们，举例如下：
+```
+padding: 10px 20px 10px 20px;
+```
+这四个值以顺时针方式排列：顶部、右侧、底部、左侧，简称：`上右下左`。
+
+
+**Adjusting the Margin of an Element**
+
+元素的 外边距/`margin` 控制 元素边框/`border` 和元素实际所占空间的距离。
+
+**Add a Negative Margin to an Element**
+
+如果你将一个元素的 `margin` 设置为负值，元素将会变大。
+
+**Add Different Margins to Each Side of an Element**
+
+有时你想要自定义元素，使它的每一个边具有不同的 `margin`。
+CSS 允许你使用 `margin-top`、`margin-right`、`margin-bottom` 和 `margin-left` 来控制元素上右下左四个方向的 `margin`。
+
+**Use Clockwise Notation to Specify the Margin of an Element**
+
+除了分别指定元素的属性外，你还可以集中起来指定它们，举例如下：
+```
+margin: 10px 20px 10px 20px;
+```
+这四个值以顺时针方式排列：顶部、右侧、底部、左侧，简称：`上右下左`。
+
+
+# css
+
+**Style the HTML Body Element**
+
+现在让我们来一个全新的开始，讲一讲 CSS 继承。
+
+每一个 HTML 页面都有一个 `body` 元素。
+通过将其 `background-color` 设置为黑色，我们可以证明 `body` 元素的存在。
+
+我们可以通过将下面的代码添加到我们的 `style` 元素来做到这一点：
+``` css
+body {
+  background-color: black;
+}
+```
 
 ----
 

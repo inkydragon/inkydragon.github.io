@@ -242,8 +242,8 @@ insert a count before the motion to delete more:
 
      2. Press  G  to move you to the bottom of the file.
           Type  gg  to move you to the start of the file.
-     
-       3. Type the number of the line you were on and then  G . 
+
+       3. Type the number of the line you were on and then  G .
 ```
 
 `Ctrl+g` 显示文件路径，行号等信息
@@ -267,7 +267,7 @@ NOTE: When the search reaches the end of the file it will continue at the
       start, unless the 'wrapscan' option has been reset.
 ```
 
-`/word` (向下)在文件中搜索 word 
+`/word` (向下)在文件中搜索 word
 `?word` (向上)搜索
 `n`== **next** 向下继续搜索，
 `N` 向上继续搜索
@@ -417,7 +417,7 @@ NOTE:  Replace mode is like Insert mode, but every typed character deletes an
 
 3. Type  y  to yank (copy) the highlighted text.
 
-4. Move the cursor to the end of the next line:  j$b 
+4. Move the cursor to the end of the next line:  j$b
 
 5. Type  p  to put (paste) the text.  Then type:  a second <ESC> .
 
@@ -446,7 +446,7 @@ NOTE:  Replace mode is like Insert mode, but every typed character deletes an
 
 6. To disable ignoring case enter:  :set noic
 
-NOTE:  To remove the highlighting of matches enter:   :nohlsearch 
+NOTE:  To remove the highlighting of matches enter:   :nohlsearch
 NOTE:  If you want to ignore case for just one search command, use  \c
      in the phrase:  /ignore\c  <ENTER>
 ```
