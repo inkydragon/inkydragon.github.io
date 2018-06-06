@@ -7,96 +7,104 @@ tags:
 description:
   备忘&开坑记录
 ---
+
 反正经常开坑不填，为了保持版面整洁，先在Memo里开坑，待填的差不多了再单独拿出去。
 
 <!--more-->
-# try git
-
-`git init` To initialize a Git repository here
-
-`/.git/` is a hidden directory where Git operates.
-
-`git status`
-
-**Staging Area:**
-A place where we can group files together before we "commit" them to Git.
-
-  - **staged:**
-  Files are ready to be committed.
-  - **unstaged:**
-  Files with changes that have not been prepared to be committed.
-  - **untracked:**
-  Files aren't tracked by Git yet. This usually indicates a newly created file.
-  - **deleted:**
-  File has been deleted and is waiting to be removed from Git.
-
-`git add [new file]` To tell Git to start tracking changes made to new file
-
-`git add -A `. where the dot stands for the current directory, so everything in and beneath it is added.
-
-You can use `git reset <filename>` to remove a file or files from the staging area.
 
 
-`git commit -m "Add cute octocat story"`
-A "commit" is a snapshot of our repository.
+[2017-07-30 17:46:32]
 
-`git add '*.txt'`
-we can add all the new files
+# Linux内核分析与实现
 
-`git add *.txt` [没有单引号，shell只会搜索当前路径下的文件]
-Without quotes our shell will only execute the wildcard search within the current directory. Git will receive the list of files the shell found instead of the wildcard and it will not be able to add the files inside of the octofamily directory.
+- [天极网---服务器专栏](http://www.yesky.com/20010813/192098.shtml)
+- [linux 0.11 bootsect.s中的BIOS部分解读 - 行者无疆的专栏 - CSDN博客](http://blog.csdn.net/suppercoder/article/details/18703903)
 
-Use `git log --summary` to see more information for each commit
+- [staff.ustc.edu.cn/~xlanchen/](http://staff.ustc.edu.cn/~xlanchen/)
+  - [staff.ustc.edu.cn/~xlanchen/UnderstandingLinuxKernel2007Autumn/UnderstandingLinuxKernel2007Autumn.html](http://staff.ustc.edu.cn/~xlanchen/UnderstandingLinuxKernel2007Autumn/UnderstandingLinuxKernel2007Autumn.html)
+  有部分内核源码的注释
+  - [ULKFall2014](http://staff.ustc.edu.cn/~xlanchen/ULK2014Fall/ULK2014Fall.html)
+  Linux操作系统分析。课件参考
+  - [OperatingSystemPrinciplesAndImplementationFall2016](http://staff.ustc.edu.cn/~xlanchen/OperatingSystemConcepts2017Spring/OperatingSystem2017Spring.htm)
+  操作系统原理与实现
 
-`git remote add origin https://github.com/try-git/try_git.git`
-To push our local repo to the GitHub server we'll need to add a remote repository.
 
-Git doesn't care what you name your remotes, but it's typical to name your main one origin.
+## ULK 2014
 
-`git push -u origin master`
-The push command tells Git where to put our commits when we're ready.
-The `-u`tells Git to *remember the parameters*, so that next time we can simply run `git push` .
+### hw1
 
-**Cool Stuff:**
-When you start to get the hang of git you can do some really cool things with `hooks` when you push.
-- [Git - Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+1. 阅读至少2本操作系统相关书籍，
+  - 给出这些书中关于操作系统的定义，要列出出处。
+  - 阐明操作系统的公共设计目标和某些操作系统特有的设计目标，要列出出处。
+  - 阐明操作系统的作用，要列出出处。
+2. 根据你对操作系统的理解， 画出操作系统的层次模块图（自由发挥，合乎逻辑）。
+3. 操作系统的基本类型是哪三种？它们的关键技术有哪些？
+4. 使用一张表，简要列出操作系统发展各个阶段的年代、器件技术、操作系统突破的关键技术问题。
+5. 多道程序设计的主要优点是什么？多道程序对操作系统的功能需求有哪些？
 
-`git stash` to stash your changes, and `git stash apply` to re-apply your changes after your pull.
-ref:
-- [Git - 储藏（Stashing）](https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E5%82%A8%E8%97%8F%EF%BC%88Stashing%EF%BC%89)
-
-`git diff` with the `--staged` option to see the changes you just staged
-
-`git checkout -- <target>`. Go ahead and get rid of all the changes since the last commit for octocat.txt
-
-  It's simply promising the command line that there are no more options after the `--`. This way if you happen to have a branch named `octocat.txt`, it will still revert the file, instead of switching to the branch of the same name.
-
-You can switch branches using the `git checkout <branch>` command.
-
-`git rm -r folder_of_cats`
-This will recursively remove all *folders* and files from the given directory.
-
-If you happen to delete a file without using `git rm` you'll find that you still have to `git rm` the deleted files from the working tree.
-You can save this step by using the `-a` option on `git commit`, which auto removes deleted files with the commit.
-`git commit -am "Delete stuff"`
-
-`git merge clean_up`
-tell Git to merge the clean_up branch into it.
-when you have to merge your changes from the `clean_up` branch into the `master` branch
-
-Merge Conflicts can occur when changes are made to a file at the same time.  if you're interested in reading more, take a look the section of the Pro
-[Git - Book](https://git-scm.com/book/en/v2)
- on 
-[Git - git-merge Documentation](https://git-scm.com/docs/git-merge#_how_conflicts_are_presented)
-
-use `git branch -d <branch name>` to delete a branch
-
-Somtimes, You'll notice that `git branch -d bad_feature` doesn't work.
-This is because `-d` won't let you delete something that *hasn't been merged.*
-You can either add the `--force (-f)` option or use `-D` which combines `-d -f` together into one command.
 
 
 -----
+
+[2017-07-29 16:48:13]
+
+Arch 里面换了systemd-netwoekd 配置网络，一直不成功。想看一下log
+结果journal坏掉了，如下
+
+```
+➜  ~ systemctl status systemd-journald.service          
+● systemd-journald.service - Journal Service
+   Loaded: loaded (/usr/lib/systemd/system/systemd-journald.service; static;
+   Active: failed (Result: exit-code) since Sat 2017-07-29 16:58:02 CST; 52s
+     Docs: man:systemd-journald.service(8)
+           man:journald.conf(5)
+  Process: 184 ExecStart=/usr/lib/systemd/systemd-journald (code=exited, stat
+ Main PID: 184 (code=exited, status=1/FAILURE)
+```
+
+`systemctl list-dependencies systemd-journald.service`
+查看启动依赖
+
+发现有几个依赖项没有启动，手工拉一下
+
+{% asset_img systemd-journald-dependence.png  systemd-journald-dependence %}
+
+开了下其中一个的状态，并尝试重启了下.
+无效
+
+{% asset_img systemd-journald-audit-cond.png %}
+
+`systemctl --all --failed`
+
+ref；
+
+- [[SOLVED] journald not logging / System Administration / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=187602)
+  然而并没有出现这个问题
+  {% asset_img systemd-journald.service&socket.png %}
+- [Arch Linux ARM • View topic - Issuses with 1Aug2016 "latest" for utilite](https://archlinuxarm.org/forum/viewtopic.php?f=45&t=10703)
+  这个要重装内核...
+
+  >Got it working by updating uboot and switching to the >linux-image-imx6 kernel, resetting and updating the uboot env >with the help of these threads:
+  >
+  >....
+  >
+  >pacman -Syu installed the new glibc and it didn't blow up! Hooray.
+  >Now to rebuild all my configurations.
+  >
+  >@DevilCrayon
+
+- [Bug 1379725 – systemd-journald.service loaded but failed](https://bugzilla.redhat.com/show_bug.cgi?id=1379725)
+- [Bug 1379800 – systemd does not create new machine-id file if none is present](https://bugzilla.redhat.com/show_bug.cgi?id=1379800)
+  以上两个bug 互相关联
+
+附 dmesg-log
+{% asset_link dmesg-err.txt dmesg error log %}
+
+
+
+
+---
+
 
 # cis 914
 
@@ -1119,23 +1127,23 @@ mov   |  013C8144h  | 12345678h
 
 - [打造令人愉悦的 Haskell 开发环境 - 简书](http://www.jianshu.com/p/605042ea7c16)
 
-以前也没安装成功，这次先装依赖`cabal install ghc-mod`
+以前也没安装成功，这次先装依赖`stack install ghc-mod`
 
 ``` log
 Failed to install old-time-1.1.0.3
-Build log ( C:\Users\inkyd\AppData\Roaming\cabal\logs\old-time-1.1.0.3.log ):
+Build log ( C:\Users\inkyd\AppData\Roaming\stack\logs\old-time-1.1.0.3.log ):
 Configuring old-time-1.1.0.3...
 configure: WARNING: unrecognized options: --with-compiler
 checking for gcc... F:\env\HASKEL~1\8080A1~1.2-A\mingw\bin\gcc.exe
 checking whether the C compiler works... no
-configure: error: in `/cygdrive/c/Users/inkyd/AppData/Local/Temp/cabal-tmp-6820/old-time-1.1.0.3':
+configure: error: in `/cygdrive/c/Users/inkyd/AppData/Local/Temp/stack-tmp-6820/old-time-1.1.0.3':
 configure: error: C compiler cannot create executables
 See `config.log' for more details
-cabal: Leaving directory 'C:\Users\inkyd\AppData\Local\Temp\cabal-tmp-6820\old-time-1.1.0.3'
+stack: Leaving directory 'C:\Users\inkyd\AppData\Local\Temp\stack-tmp-6820\old-time-1.1.0.3'
 
 ···
 
-cabal: Error: some packages failed to install:
+stack: Error: some packages failed to install:
 cpphs-1.20.8 depends on old-time-1.1.0.3 which failed to install.
 ghc-mod-5.8.0.0 depends on old-time-1.1.0.3 which failed to install.
 haskell-src-exts-1.19.1 depends on old-time-1.1.0.3 which failed to install.

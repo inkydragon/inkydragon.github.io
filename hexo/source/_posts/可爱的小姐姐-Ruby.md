@@ -33,13 +33,207 @@ Seven Languages in Seven Weeks: Ruby, Day 1-3 FULL
 - Ruby is productive
 
 
-# Note：
+# Notes：
 
-- 除了nil和false之外，其他值都代表true。C和C++程序员可得小心了，**0也是true！**
-- obj is first-class object
-- and && or || [短路求值]
-    - 整个表达式全部求值 & |
+## Ruby初体验
 
+``` ruby
+irb(main):001:0> puts 'hello, world'
+hello, world
+=> nil
+irb(main):002:0> languages = 'Ruby'
+=> "Ruby"
+irb(main):003:0> puts "hello, #{languages}"
+hello, Ruby
+=> nil
+irb(main):004:0> languages = 'my Ruby'
+=> "my Ruby"
+irb(main):005:0> puts "hello, #{languages}"
+hello, my Ruby
+=> nil
+```
+
+Note:
+- Ruby 是解释执行的
+- Ruby 不需要预先声明变量
+- 每条 Ruby 语句都有返回值
+
+
+## Ruby 的编程模型
+
+Point: Ruby 是一门纯面向对象的语言。
+
+``` ruby
+irb(main):006:0> 4
+=> 4
+irb(main):007:0> 4.class
+=> Integer
+irb(main):008:0> 4+8
+=> 12
+irb(main):009:0> 4.methods
+=> [:%, :&, :*, :+, :-, :/, :<, :>, :^, :|, :~, :-@, :**, :<=>, :<<, :>>, :<=, :>=, :==, :===, :[], :inspect, :size, :succ, :to_int, :to_s, :to_i, :to_f, :next, :div, :upto, :chr,
+:ord, :coerce, :divmod, :fdiv, :modulo, :remainder, :abs, :magnitude, :integer?, :floor, :ceil, :round, :truncate, :odd?, :even?, :downto, :times, :pred, :bit_length, :digits, :to_r, :numerator, :denominator, :rationalize, :gcd, :lcm, :gcdlcm, :+@, :eql?, :singleton_method_added, :i, :real?, :zero?, :nonzero?, :finite?, :infinite?, :step, :positive?, :negative?, :quo, :arg, :rectangular, :rect, :polar, :real, :imaginary, :imag, :abs2, :angle, :phase, :conjugate, :conj, :to_c, :between?, :clamp, :instance_of?, :kind_of?, :is_a?, :tap,
+:public_send, :define_singleton_method, :method, :public_method, :remove_instance_variable, :instance_variable_set, :singleton_method, :extend, :to_enum, :enum_for, :=~, :!~, :respond_to?, :freeze, :object_id, :send, :display, :nil?, :hash, :class, :singleton_class, :clone, :dup, :itself, :taint, :tainted?, :untaint, :untrust, :untrusted?, :trust, :frozen?,
+:methods, :singleton_methods, :protected_methods, :private_methods, :public_methods, :instance_variable_get, :instance_variables, :instance_variable_defined?, :!, :!=, :__send__, :equal?, :instance_eval, :instance_exec, :__id__]
+```
+
+Note:
+- Ruby 中一切皆对象
+- `.methods` 可返回方法数组
+- 可用`.`调用对象具有的任意方法
+
+
+## 判断
+
+``` ruby
+irb(main):012:0> x = 4
+=> 4
+irb(main):013:0> x < 5
+=> true
+irb(main):014:0> x > 4
+=> false
+irb(main):015:0> false.class
+=> FalseClass
+irb(main):016:0> true.class
+=> TrueClass
+```
+
+Note: 
+- Ruby 中的 `true`和`false`都是一等对象(first-class object)
+
+``` ruby
+irb(main):001:0> x = 4
+=> 4
+irb(main):002:0> puts 'This appears to be false.' unless x == 4
+=> nil
+irb(main):003:0> puts 'This appears to be true.' if x == 4
+This appears to be true.
+=> nil
+irb(main):004:0> if x == 4
+irb(main):005:1>   puts 'This appears to be true.'
+irb(main):006:1>   end
+This appears to be true.
+=> nil
+
+...
+
+irb(main):014:0> unless x == 4
+irb(main):015:1>   puts 'This appears to be false.'
+irb(main):016:1>   else
+irb(main):017:1*     puts 'This appears to be true.'
+irb(main):018:1>   end
+This appears to be true.
+=> nil
+irb(main):019:0> puts 'This appears to be true.'
+This appears to be true.
+=> nil
+irb(main):021:0> puts 'This appears to be true.' if not true
+=> nil
+irb(main):022:0> puts 'This appears to be true.' if !true
+=> nil
+```
+
+Note:
+
+使用`if`或`unless`时，既可以用块形式
+- `if condition, statements, end`
+也可用单行形式
+- `statements if condition`
+- `order.calculate_tax unless order.nil?`
+
+``` ruby
+irb(main):026:0> x = x+1 while x < 10
+=> nil
+irb(main):027:0> x
+=> 10
+irb(main):028:0> x = x-1 until x == 1
+=> nil
+irb(main):029:0> x
+=> 1
+irb(main):030:0> while x < 10
+irb(main):031:1>   x = x+1
+irb(main):032:1>   puts x
+irb(main):033:1>   end
+2
+3
+4
+5
+6
+7
+8
+9
+10
+=> nil
+```
+
+判断语句
+``` ruby
+irb(main):034:0> puts 'Should be true' if 1
+Should be true
+=> nil
+irb(main):035:0> puts 'Should be true' if 'random_string'
+(irb):35: warning: string literal in condition
+Should be true
+=> nil
+irb(main):036:0> puts 'Should be true' if 0
+Should be true
+=> nil
+irb(main):037:0> puts 'Should be true' if true
+Should be true
+=> nil
+irb(main):038:0> puts 'Should be true' if false
+=> nil
+irb(main):039:0> puts 'Should be true' if nil
+=> nil
+irb(main):040:0> puts 'Should be true' if ''
+(irb):40: warning: string literal in condition
+Should be true
+=> nil
+irb(main):041:0> puts 'Should be true' if ""
+(irb):41: warning: string literal in condition
+Should be true
+=> nil
+```
+
+Note:
+- 除了`nil`和`false`之外，其他值都代表`true`。C和C++程序员可得小心了，**0也是true！**
+
+**短路求值**
+``` ruby
+irb(main):043:0> true and false
+=> false
+irb(main):044:0> true or false
+=> true
+irb(main):047:0> false || true
+=> true
+
+irb(main):053:0> true && This_will_cause_an_error
+NameError: uninitialized constant This_will_cause_an_error
+        from (irb):53
+        from F:/env/Ruby24-x64/bin/irb.cmd:19:in `<main>'
+irb(main):054:0> false && This_will_cause_an_error
+=> false
+irb(main):056:0> true || This_will_cause_an_error
+=> true
+irb(main):057:0> true | This_will_cause_an_error
+NameError: uninitialized constant This_will_cause_an_error
+        from (irb):57
+        from F:/env/Ruby24-x64/bin/irb.cmd:19:in `<main>'
+irb(main):058:0> true | false
+=> true
+```
+
+Note:
+- `and && or ||` [短路求值]
+    - 整个表达式全部求值 `& |`
+
+
+## 鸭子类型
+
+类型安全(type safety)
+``` ruby
+
+```
 
 # summary
 - Ruby是一门解释型语言。一切皆为对象，且易于获取对象的任何信息，如对象的各方法及所属类。
