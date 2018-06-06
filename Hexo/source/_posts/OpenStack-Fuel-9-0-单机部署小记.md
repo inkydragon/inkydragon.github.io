@@ -9,12 +9,10 @@ tags:
 description:
   Mirantis 家的 OpenStack Fuel 套装单机部署踩坑记录
 ---
+{% asset_img fuel.png %}
 OpenStack Fuel 是Mirantis为OpenStack定制的自动部署软件(套装)，使用fuel配置OpenStack只需要配置master/主节点，并在主节点安装完成后在fuel dashboard/控制面板配置好整个OpenStack系统，即可通过fuel自动给个node/子节点部署系统(默认为Ubuntu)并安装、配置openstack。
 
 <!--more-->
-
-
-
 
 # Ref Links
 
@@ -131,9 +129,8 @@ omitted
 
 ## 主节点网络配置
 
-- 主节点应该能正常联网，一遍下载、制作PXE启动镜像。
+- 主节点应该能正常联网，一边下载、制作PXE启动镜像。
 - 也可以在不联网的条件下，通过本地镜像制作PXE启动镜像。
-
 
 
 # 安装步骤
@@ -151,8 +148,8 @@ omitted
   - Hyper-V (教程较少)
     - [Hyper-V integration in OpenStack platform | Mirantis](https://www.mirantis.com/blog/hyper-v-integration-openstack-platform/)
 
-【安装过程概述】
-详细的过程建议参考ref部分-推荐阅读的教程
+>【安装过程概述】
+>详细的过程建议参考ref部分-推荐阅读的教程
 
 
 ## Part 0 安装镜像的下载
@@ -192,34 +189,43 @@ omitted
 >**NOTE**: 针对易出错的地方单独列出checklist，以便于检查
 
 - [ ] 虚拟机的选择
-  注意虚拟机冲突
-  VBox
+  注意虚拟机之间的冲突 Hyper-V 打开时，VirtualBox、VMware均不能正常工作，
+  有时还会导致蓝屏(参见【常见错误】蓝屏 `0x0000003B`)
+  Fuel 官方推荐用 VBox，并提供了相应的自动安装、配置脚本。
 
 - [ ] 虚拟网络(网卡/交换机)的配置
-  各虚拟机网络配置方式不同，参数也有变化
-  注意配置统一
-  最好画图
+  各虚拟机网络配置方式不同，参数也有变化。
+  例如：
+    - VBox 设置网卡时，会将IP设置为形如 `10.20.0.1`的样子
+    - VMware 则会设置为 `10.20.0.0`
+  **注意配置统一**
+    建议配置之前画出网络拓扑图，并标注出功能/用途，再配置
 
 - [ ] master 的配置
-  硬盘》64G
+  硬盘大小\>64G
+  不然安装时会提示硬盘不够大
 
 - [ ] master 的安装
-  一定要等待安装完成
+  一定要等待安装完成，否则会出现不可预料的错误.
+  **完成的标志**: `tty1`出现
+  {% asset_img master-finish.png %}
 
 - [ ] node 的配置
-  硬盘>120G
-  注意网卡down点的情况，手工拉起来
+  硬盘\>120G
+
+- [ ] 网卡状态
+  检查各虚拟机网卡状态，down掉的网卡手动up
+  在虚拟机重启/安装完系统/应用完配置后均要检查网卡状态。
+  查看down掉的网卡：`ifconfig -a` 显示，而`ifconfig`不显示的
+  如果有`ifconfig <enp0sx> up`起来(`<enp0sx>`为网卡名)
 
 - [ ] 镜像的准备
-  注意activate相关的bootstrap
-
-- [ ] fuel dashboard
-  检查各虚拟机网卡状态，down掉的网卡手动up
+  注意activate(`fuel-bootstrap activate`)相关的bootstrap
+  参考：ref-5
 
 - [ ] 检查网络配置【之后不可更改】
-  NTP服务器设为master
-  注意ip段无冲突
-  注意虚拟机重启后网卡状态
+  NTP服务器设为master(推荐)
+  注意ip段无冲突(默认的是无冲突的，更改时注意，务必同时参考网络配置的要求)
 
 
 # 常见错误
@@ -257,40 +263,52 @@ omitted
 
   根据以下链接，认为此bug为已知的、未修复的bug，
 
-  可能的解决思路：
-
-  注释掉`launch.sh`中的`./actions/create-interfaces.sh || exit 1`
-  手工创建网络，然后执行安装脚本
-
   Bug 相关：
 
   - [virtualbox.org • View topic - try to use scripts to create VirtualBox Host-Only Ethernet Adapter does not exist after creation.](https://forums.virtualbox.org/viewtopic.php?f=6&t=82989)
   - [#15019 (Unable to create Host-Only Network in Windows 10) – Oracle VM VirtualBox](https://www.virtualbox.org/ticket/15019)
 
-- 开虚拟机 蓝屏 0x0000003B
-  虚拟机冲突,只留一个要用的虚拟机 (一般为 hyper-v 和其他虚拟机冲突)
+  【 **可能的解决思路**：】
+  注释掉`launch.sh`中的`./actions/create-interfaces.sh || exit 1`
+  手工创建网络，然后执行安装脚本
 
-- fuel-bootstrap list 结果为空
-  在生成镜像后，镜像还放在`tmp`里，需要手工导入
+- 开虚拟机 蓝屏 `0x0000003B`
+  虚拟机冲突,只留一个要用的虚拟机，关闭其他的。
+   (一般为 hyper-v 和其他虚拟机冲突，因为他会默认将整个系统虚拟化)
+   - [virtualbox.org • View topic - system_service_exception](https://forums.virtualbox.org/viewtopic.php?f=38&t=77134)
+   {% asset_img hyper-v conflict.png %}
+
+- `fuel-bootstrap list` 结果为空
+  【适用于手工生成镜像。若使用了已有的镜像，可能是镜像损坏】
+  在生成镜像(`fuel-bootstrap build`)后，镜像还放在`tmp`里，需要手工导入
+  `fuel-bootstrap import /tmp/<bootstrap-id>`然后再次list就可以看见了。
+  然后激活镜像`fuel-bootstrap activate <bootstrap-id>`
+  {% asset_img active-bootstrap.png %}
 
 - 连接不上 Fuel Web UI (10.20.0.2:8448)
   检查主节点及子节点网卡是否有`down`掉的(`ifconfig -a` 显示，而`ifconfig`不显示的)，
   如果有`ifconfig <enp0sx> up`起来(`<enp0sx>`为网卡名)
 
-- Timeout waiting for host '10.109.6.1' status to become 'up' after 60 seconds!
+  若主机与虚拟机可以互`ping`
+  可尝试设置SSH隧道访问
+  {% asset_img ssh-tunnel.png %}
+
+- `Timeout waiting for host '10.109.6.1' status to become 'up' after 60 seconds!`
   公有网关设置有误/网关不回应ICMP包(ping包)
 
   先对照的网络配置要求检查Fuel Web UI的配置是否有误，检查网络连通性。
   如果用本机做网关，则应在防火墙中打开ICMP回显。
   (可直接关闭防火墙/ **不推荐**)
 
-- (/Stage[main]/Main/Exec[sync_time_shell]/returns) failed: /bin/bash "/etc/puppet/shell_manifests/sync_time_command.sh" Excuted failed
+- `(/Stage[main]/Main/Exec[sync_time_shell]/returns) failed: /bin/bash "/etc/puppet/shell_manifests/sync_time_command.sh" Excuted failed`
   NTP服务配置有误，务必设置为master的IP (默认为 `10.20.0.2`)
 
-- Command: 'openstack [ .... ]' has been running for more then 20 seconds!
+- `Command: 'openstack [ .... ]' has been running for more then 20 seconds!`
+  {% asset_img keystone-timeout.png %}
   一般是虚拟机性能不行。
   查看各虚拟机，资源占用情况(`top` or `htop`)
   若CPU/内存占用过大，务必关机后增加配置。
+  并检查网卡up情况
 
 - `unable to establish connection to keystone endpoint`
   horizon_dashboard 登录不了
@@ -301,31 +319,3 @@ omitted
 
   一般方法，检查master上的keystone服务是否正常运行，并查看各虚拟机，资源占用情况(`top` or `htop`)
   CPU/内存占用过大，务必关机后增加配置。
-
-
-
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]][link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text]
-code snippet
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-{% asset_img slug [title] %}
-
-
-{% endraw %}
-</div>
