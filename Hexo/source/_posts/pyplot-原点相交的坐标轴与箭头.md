@@ -212,8 +212,8 @@ x,&         x\ge 0 \\
 $$
 ```
 
-{% asset_img eq-ReLU.svg ReLU ReLU 数学定义 %}
-{% asset_img ReLU-final.svg ReLU 图像 ReLU 图像 %}
+{% asset_img eq-ReLU.svg ReLU 数学定义 %}
+{% asset_img ReLU-final.svg ReLU 图像 %}
 
 
 ### Sigmod
@@ -223,8 +223,8 @@ f\left( x \right) =\frac{1}{1+e^x}
 $$
 ```
 
-{% asset_img eq-sigmod.svg sigmod sigmod 数学定义 %}
-{% asset_img sigmod.svg sigmod 图像 sigmod 图像 %}
+{% asset_img eq-sigmod.svg sigmod 数学定义 %}
+{% asset_img sigmod.svg sigmod 图像 %}
 
 
 ### tanh
@@ -234,5 +234,5 @@ f\left( x \right) =\frac{1-e^{-2x}}{1+e^{-2x}}
 $$
 ```
 
-{% asset_img eq-tanh.svg tanh tanh 数学定义 %}
-{% asset_img tanh.svg tanh_图像 tanh_图像 %}
+{% asset_img eq-tanh.svg tanh  %}
+{% asset_img tanh.svg tanh_图像 %}
