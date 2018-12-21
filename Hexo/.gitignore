@@ -5,5 +5,7 @@ db.json
 node_modules/
 public/
 .deploy*/
+
+# 旧主题文件夹
 themes/landscape/
 themes/landscape-plus-old/
