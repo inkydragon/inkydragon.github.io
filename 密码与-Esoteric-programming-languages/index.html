@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="密码与 Esoteric programming languages">
+
+
+
+
+  <meta name="keywords" content="Cipher & Code,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/密码与-Esoteric-programming-languages/">
+
+
+<meta name="description" content="在密码吧看到两张图，目测是Esoteric programming language(天马dalao也提示了，就想着试一试 以前也在知乎上看见过相关的介绍，找了一下，第一张是Piet-lang，第二张是 Malbolge-lang 开工！">
+<meta name="keywords" content="Cipher &amp; Code">
+<meta property="og:type" content="article">
+<meta property="og:title" content="密码与 Esoteric programming languages">
+<meta property="og:url" content="https://blog.wo-class.cn/密码与-Esoteric-programming-languages/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="在密码吧看到两张图，目测是Esoteric programming language(天马dalao也提示了，就想着试一试 以前也在知乎上看见过相关的介绍，找了一下，第一张是Piet-lang，第二张是 Malbolge-lang 开工！">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://blog.wo-class.cn/密码与-Esoteric-programming-languages/Piet.jpg">
+<meta property="og:image" content="https://blog.wo-class.cn/密码与-Esoteric-programming-languages/Malbolge.jpg">
+<meta property="og:updated_time" content="2018-12-21T11:52:16.654Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="密码与 Esoteric programming languages">
+<meta name="twitter:description" content="在密码吧看到两张图，目测是Esoteric programming language(天马dalao也提示了，就想着试一试 以前也在知乎上看见过相关的介绍，找了一下，第一张是Piet-lang，第二张是 Malbolge-lang 开工！">
+<meta name="twitter:image" content="https://blog.wo-class.cn/密码与-Esoteric-programming-languages/Piet.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> 密码与 Esoteric programming languages · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          密码与 Esoteric programming languages
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年2月8日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Piet-lang"><span class="toc-text">Piet-lang</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Piet-lang-编译环境构建"><span class="toc-text">Piet-lang 编译环境构建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-try-web-Piet-IDE"><span class="toc-text"># 0 try: web Piet IDE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1st-try-py-脚本"><span class="toc-text"># 1st try: .py 脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2nd-try-C-编译器"><span class="toc-text"># 2nd try: C 编译器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3rd-try-成品编译器-npiet-1-3a"><span class="toc-text"># 3rd try: 成品编译器 npiet-1.3a</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Malbolge-lang"><span class="toc-text">Malbolge-lang</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#编译环境"><span class="toc-text">编译环境</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>在密码吧看到<a href="http://tieba.baidu.com/p/4963843005" target="_blank" rel="noopener">两张图</a>，目测是<a href="https://en.wikipedia.org/wiki/Esoteric_programming_language" target="_blank" rel="noopener">Esoteric programming language</a>(天马dalao也提示了，就想着试一试<br><img src="/密码与-Esoteric-programming-languages/Piet.jpg" title="第一张"><br><img src="/密码与-Esoteric-programming-languages/Malbolge.jpg" title="第二张"></p>
+<p>以前也在知乎上看见过<a href="https://www.zhihu.com/question/23115824/answer/45138393" target="_blank" rel="noopener">相关的介绍</a>，找了一下，第一张是Piet-lang，第二张是 Malbolge-lang</p>
+<p>开工！</p>
+<a id="more"></a>
+<h1 id="Piet-lang"><a href="#Piet-lang" class="headerlink" title="Piet-lang"></a>Piet-lang</h1><p>Google 之，找到编译器 <a href="http://www.dangermouse.net/esoteric/piet/tools.html" target="_blank" rel="noopener">Piet Interpreters and Assemblers</a></p>
+<h2 id="Piet-lang-编译环境构建"><a href="#Piet-lang-编译环境构建" class="headerlink" title="Piet-lang 编译环境构建"></a>Piet-lang 编译环境构建</h2><h3 id="0-try-web-Piet-IDE"><a href="#0-try-web-Piet-IDE" class="headerlink" title="# 0 try: web Piet IDE"></a># 0 try: <a href="http://zobier.net/piet/" target="_blank" rel="noopener">web Piet IDE</a></h3><p>格子太少，需要手工输入，虽然有<a href="http://www.rapapaing.com/blog/?page_id=6" target="_blank" rel="noopener">源码</a>，但目测改起来麻烦，遂放弃</p>
+<h3 id="1st-try-py-脚本"><a href="#1st-try-py-脚本" class="headerlink" title="# 1st try: .py 脚本"></a># 1st try: .py 脚本</h3><p>另存为.py运行，需要 Python Imaging Library 库</p>
+<p>在<a href="http://www.pythonware.com/products/pil/" target="_blank" rel="noopener">官网</a>下载的安装包不能用，<code>easy_install PIL</code>无果</p>
+<p>遂手动编译 PIL</p>
+<p>下载源码 ，cd到源代码根目录<code>python setup.py install</code></p>
+<p>报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">running build_ext</span><br><span class="line">building &apos;_imaging&apos; extension</span><br><span class="line">error: Unable to find vcvarsall.bat</span><br><span class="line"></span><br><span class="line">I:\Desktop\Imaging-1.1.7&gt;</span><br></pre></td></tr></table></figure></p>
+<p>google 得知是少Python的C++编译器<br><blockquote><p>Update: Comments point out that the instructions here may be dangerous. Consider using the Visual C++ 2008 Express edition or the purpose-built <a href="http://www.microsoft.com/en-us/download/details.aspx?id=44266" target="_blank" rel="noopener">Microsoft Visual C++ Compiler for Python</a> <a href="http://stackoverflow.com/a/26127562/2778484" target="_blank" rel="noopener">(details)</a> and NOT using the original answer below. Original error message means the required version of Visual C++ is not installed.</p>
+<footer><strong>Ross Rogers</strong><cite><a href="http://stackoverflow.com/a/10558328" target="_blank" rel="noopener">hexo error: Unable to find vcvarsall.bat</a></cite></footer></blockquote></p>
+<p>安装以上提到的.msi包，发现已经装过了</p>
+<p>DEAD</p>
+<h3 id="2nd-try-C-编译器"><a href="#2nd-try-C-编译器" class="headerlink" title="# 2nd try: C 编译器"></a># 2nd try: <a href="https://github.com/ducin/piet" target="_blank" rel="noopener">C 编译器</a></h3><p>需要<code>cmake</code>，下载cmake(网速感人，安装完，编译</p>
+<p>报错：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CMake Error at C:/Program Files/CMake/share/cmake-3.8/Modules/FindQt4.cmake:1318 (message):</span><br><span class="line">  Found unsuitable Qt version &quot;&quot; from NOTFOUND, this code requires Qt 4.x</span><br><span class="line">Call Stack (most recent call first):</span><br><span class="line">  CMakeLists.txt:5 (FIND_PACKAGE)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- Configuring incomplete, errors occurred!</span><br><span class="line">See also &quot;I:/Desktop/piet-master/build/CMakeFiles/CMakeOutput.log&quot;.</span><br><span class="line"></span><br><span class="line">I:\Desktop\piet-master\build&gt;</span><br></pre></td></tr></table></figure></p>
+<p>DEAD</p>
+<h3 id="3rd-try-成品编译器-npiet-1-3a"><a href="#3rd-try-成品编译器-npiet-1-3a" class="headerlink" title="# 3rd try: 成品编译器 npiet-1.3a"></a># 3rd try: 成品编译器 npiet-1.3a</h3><p><a href="http://www.bertnase.de/npiet/" target="_blank" rel="noopener">npiet-1.3a-win32 </a><br>只支持 .gif .png .ppm<br>自带的例子可以正常运行，</p>
+<figure class="highlight plain"><figcaption><span>npiet-help</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">I:\Downloads\npiet-1.3a-win32&gt;npiet.exe -h</span><br><span class="line">npiet v1.3  (with GD support, with GIF support, with PNG support)</span><br><span class="line"></span><br><span class="line">use: npiet [&lt;options&gt;] &lt;filename&gt;</span><br><span class="line">options:</span><br><span class="line">        -v         - be verbose (default: off)</span><br><span class="line">        -q         - be quiet (default: off)</span><br><span class="line">        -e &lt;n&gt;     - execution steps (default: unlimited)</span><br><span class="line">        -t         - trace (default: off)</span><br><span class="line">        -ub        - unknown colors are black (default: white)</span><br><span class="line">        -uu        - unknown colors give error (default: white)</span><br><span class="line">        -cs &lt;n&gt;    - codelsize of the input (default: guess)</span><br><span class="line">        -tpic      - create trace picture  (default: do not)</span><br><span class="line">        -tpf &lt;n&gt;   - trace pixelzoom  (default: 48 or so)</span><br><span class="line">        -tps       - simple trace pic w/o dp/cc info  (default: sho dp/cc info)</span><br><span class="line">        -ts &lt;n&gt;    - graphic trace start (default: 0)</span><br><span class="line">        -te &lt;n&gt;    - graphic trace end (default: unlimited)</span><br><span class="line">        -n-str &lt;s&gt; - nase stuff: string-to-command</span><br><span class="line">        -d         - debug (default: off)</span><br><span class="line">        -dpbug     - model the perl piet interpreter (default: off)</span><br><span class="line">        -v11       - model the npiet v1.1 interpreter (default: off)</span><br></pre></td></tr></table></figure>
+<p>不带参数运行题目，听见风扇声，CPU占用率升高，怀疑死循环，加上参数<code>-t</code>确认是死循环</p>
+<p>怀疑是图片非原图质量不高且经过放大所致.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">I:\Downloads\npiet-1.3a-win32&gt;npiet.exe -t Piet.png</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: entering white block at 471,0 (like the perl interpreter would)...</span><br><span class="line"></span><br><span class="line">trace: step 0  (0,0/r,l WW -&gt; 471,0/r,l WW):</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: entering white block at 471,2 (like the perl interpreter would)...</span><br><span class="line"></span><br><span class="line">trace: step 1  (471,0/r,l WW -&gt; 471,2/d,r WW):</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: entering white block at 464,2 (like the perl interpreter would)...</span><br><span class="line"></span><br><span class="line">trace: step 2  (471,2/d,r WW -&gt; 464,2/l,l WW):</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: entering white block at 464,0 (like the perl interpreter would)...</span><br><span class="line"></span><br><span class="line">trace: step 3  (464,2/l,l WW -&gt; 464,0/u,r WW):</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: entering white block at 471,0 (like the perl interpreter would)...</span><br><span class="line"></span><br><span class="line">trace: step 4  (464,0/u,r WW -&gt; 471,0/r,l WW):</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: entering white block at 471,2 (like the perl interpreter would)...</span><br><span class="line"></span><br><span class="line">trace: step 5  (471,0/r,l WW -&gt; 471,2/d,r WW):</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: entering white block at 464,2 (like the perl interpreter would)...</span><br><span class="line"></span><br><span class="line">.....</span><br></pre></td></tr></table></figure></p>
+<p>带参数<code>-ub</code>无果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">I:\Downloads\npiet-1.3a-win32&gt;npiet.exe -ub -t Piet.png</span><br><span class="line">trace: special case: we started at a black cell - exiting...</span><br><span class="line"></span><br><span class="line">I:\Downloads\npiet-1.3a-win32&gt;</span><br></pre></td></tr></table></figure></p>
+<p>用老版的解释器进一步确认是死循环：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">I:\Downloads\npiet-1.3a-win32&gt;npiet.exe -v11 -t Piet.png</span><br><span class="line">trace: special case: we at a white codel - continuing</span><br><span class="line">trace: hitting black block when sliding at 471,0 l r</span><br><span class="line">trace: hitting black block when sliding at 471,2 r d</span><br><span class="line">trace: hitting black block when sliding at 464,2 l l</span><br><span class="line">trace: hitting black block when sliding at 464,0 r u</span><br><span class="line">trace: hitting black block when sliding at 471,0 l r</span><br><span class="line"></span><br><span class="line">I:\Downloads\npiet-1.3a-win32&gt;</span><br></pre></td></tr></table></figure></p>
+<p>遂放弃</p>
+<p>DEAD</p>
+<hr>
+<h1 id="Malbolge-lang"><a href="#Malbolge-lang" class="headerlink" title="Malbolge-lang"></a>Malbolge-lang</h1><p>找到疑似<a href="http://www.lscheffer.com/malbolge.shtml" target="_blank" rel="noopener">官网</a></p>
+<h2 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h2><p><a href="http://www.lscheffer.com/malbolge_interp.html" target="_blank" rel="noopener">编译器源码</a><br><strong><em>记得把第一句话删掉！！</em></strong></p>
+<p>Hello World测试代码<br><figure class="highlight plain"><figcaption><span>Malbolge-lang Hello World.mal</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(&apos;&amp;%:9]!~&#125;|z2Vxwv-,POqponl$Hjig%eB@@&gt;&#125;=&lt;M:9wv6WsU2T|nm-,jcL(I&amp;%$#&quot;</span><br><span class="line"> `CB]V?Tx&lt;uVtT`Rpo3NlF.Jh++FdbCBA@?]!~|4XzyTT43Qsqq(Lnmkj&quot;Fhg$&#123;z@&gt;</span><br></pre></td></tr></table></figure><br>一般都能正常运行</p>
+<p>然后手工识别源码：<br><figure class="highlight plain"><figcaption><span>Malbolge-lang Job.mal</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(&apos;&amp;$:^&quot;!&#125;54Xzyw5.Rtrrp(&apos;Kml)j!Eg</span><br><span class="line">f&#123;&quot;cx&gt;_u::[q7554E~10A.-+M*uK&apos;_^]</span><br><span class="line">\&quot;ZY&#125;j/zxw;;:Ur7q44</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">I:\Desktop\malbolge_interp&gt;malbolge.exe Hello_World.mal</span><br><span class="line">Hello World!</span><br><span class="line">I:\Desktop\malbolge_interp&gt;malbolge.exe job.mal</span><br><span class="line">g@v-io.co</span><br><span class="line">I:\Desktop\malbolge_interp&gt;</span><br></pre></td></tr></table></figure></p>
+<p>FIN</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Cipher-Code/">Cipher & Code</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/WordPress漏洞环境搭建与测试——REST-API-内容注入漏洞/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">WordPress漏洞环境搭建与测试——REST API 内容注入漏洞</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/Private-Github-repo-Public-Github-Pages/">
+        <span class="next-text nav-default">Private Github repo & Public Github Pages</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="Git 仓库瘦身之.git文件夹清理">
+
+
+
+
+  <meta name="keywords" content="Git,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/Git-仓库瘦身之-git文件夹清理/">
+
+
+<meta name="description" content="clone某汉化组的repo，本来有墙，结果repo竟然有31M，源码是一堆tex文件，图片也没几张最大的一个文件是PDF，然后我就感觉很奇怪，怎么这个repo这么大。">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 仓库瘦身之.git文件夹清理">
+<meta property="og:url" content="https://blog.wo-class.cn/Git-仓库瘦身之-git文件夹清理/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="clone某汉化组的repo，本来有墙，结果repo竟然有31M，源码是一堆tex文件，图片也没几张最大的一个文件是PDF，然后我就感觉很奇怪，怎么这个repo这么大。">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-12-21T11:52:16.392Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git 仓库瘦身之.git文件夹清理">
+<meta name="twitter:description" content="clone某汉化组的repo，本来有墙，结果repo竟然有31M，源码是一堆tex文件，图片也没几张最大的一个文件是PDF，然后我就感觉很奇怪，怎么这个repo这么大。">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> Git 仓库瘦身之.git文件夹清理 · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Git 仓库瘦身之.git文件夹清理
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年4月1日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#原因分析"><span class="toc-text">原因分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#repo瘦身"><span class="toc-text">repo瘦身</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#临时解决方法"><span class="toc-text">临时解决方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#彻底解决方案"><span class="toc-text">彻底解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#step-0-git-clone"><span class="toc-text">step 0 git clone</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step-1-备份"><span class="toc-text">step 1 备份</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step-2-查看空间占用"><span class="toc-text">step 2 查看空间占用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step-3-查找大文件"><span class="toc-text">step 3 查找大文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step-4-删除大文件"><span class="toc-text">step 4 删除大文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#删除单个大文件"><span class="toc-text">删除单个大文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#删除多个大文件"><span class="toc-text">删除多个大文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step-5-清理repo"><span class="toc-text">step 5 清理repo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step-6-推送到远端"><span class="toc-text">step 6 推送到远端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#效果"><span class="toc-text">效果</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>clone某汉化组的repo，本来有墙，结果repo竟然有31M，源码是一堆tex文件，图片也没几张最大的一个文件是PDF，然后我就感觉很奇怪，怎么这个repo这么大。</p>
+<a id="more"></a>
+<p>ref：    </p>
+<ol>
+<li><a href="http://www.jianshu.com/p/7231b509c279" target="_blank" rel="noopener">为什么你的 Git 仓库变得如此臃肿</a></li>
+<li><a href="https://segmentfault.com/q/1010000000171057" target="_blank" rel="noopener">.git 文件太大时怎样处理</a></li>
+<li><a href="http://harttle.github.io/2016/03/22/purge-large-files-in-gitrepo.html" target="_blank" rel="noopener">寻找并删除Git记录中的大文件</a></li>
+<li><a href="http://www.hollischuang.com/archives/1708" target="_blank" rel="noopener">记一次删除Git记录中的大文件的过程</a></li>
+</ol>
+<h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>先找了篇教程(第一篇)，知道了是因为<code>.git/objects</code>目录下缓存了过多的大文件。结合repo的原文件，可知是因为编译出的PDF文件每次都包含到repo中了，导致<code>.git</code>文件夹很大。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ du -d 1 -h</span><br><span class="line">27M     ./.git</span><br><span class="line">356K    ./Chaps</span><br><span class="line">1.0K    ./Parts</span><br><span class="line">3.9M    ./Pictures</span><br><span class="line">35M     .</span><br></pre></td></tr></table></figure>
+<h1 id="repo瘦身"><a href="#repo瘦身" class="headerlink" title="repo瘦身"></a>repo瘦身</h1><h2 id="临时解决方法"><a href="#临时解决方法" class="headerlink" title="临时解决方法"></a>临时解决方法</h2><blockquote>
+<p>ref:2</p>
+</blockquote>
+<ol>
+<li>在<code>.gitignore</code>里面加上要排除的PDF</li>
+<li>clone repo时 使用<code>--depth</code>指定clone深度<br> <code>git clone git@github.com:torvalds/linux.git --depth 1</code>     </li>
+</ol>
+<h2 id="彻底解决方案"><a href="#彻底解决方案" class="headerlink" title="彻底解决方案"></a>彻底解决方案</h2><p><strong>WARNING!</strong><br><em>如果你不是完全清楚你在做什么，那么</em><br><strong>你正在作死</strong></p>
+<blockquote>
+<p>WARNING! The rewritten history will have different object names for all the objects and will not converge with the original branch. You will not be able to easily push and distribute the rewritten branch on top of the original branch. <strong>Please do not use this command if you do not know the full implications, and avoid using it anyway</strong>, if a simple single commit would suffice to fix your problem. </p>
+<p>——<br><a href="https://git-scm.com/docs/git-filter-branch" target="_blank" rel="noopener">Git - git-filter-branch Documentation</a></p>
+</blockquote>
+<p>后面会有命令，让git会遍历repo~所有分支~(所选分支)中所有的commit，删除大文件的记录。这极度危险，所以动手前请务必备份。</p>
+<p><strong>进行危险操作前先备份</strong></p>
+<h3 id="step-0-git-clone"><a href="#step-0-git-clone" class="headerlink" title="step 0 git clone"></a>step 0 git clone</h3><p><code>git clone git@github.com:ChzRuan/CallenThermo.git</code></p>
+<h3 id="step-1-备份"><a href="#step-1-备份" class="headerlink" title="step 1 备份"></a>step 1 备份</h3><p>首先备份<br><code>git clone /i/GitHub/Callen-Thermo-CHS /i/backup</code></p>
+<p>然后再备份中先尝试操作，并观察结果，达到预期后，再次备份，并修改真正的repo</p>
+<p>切换目录<br><code>cd /i/backup/</code></p>
+<h3 id="step-2-查看空间占用"><a href="#step-2-查看空间占用" class="headerlink" title="step 2 查看空间占用"></a>step 2 查看空间占用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ du -d 1 -h</span><br><span class="line">27M     ./.git</span><br><span class="line">356K    ./Chaps</span><br><span class="line">1.0K    ./Parts</span><br><span class="line">3.9M    ./Pictures</span><br><span class="line">35M     .</span><br></pre></td></tr></table></figure>
+<p>进一步确认可知是<code>.git/objects</code>占了大头，源代码其实并不大</p>
+<p>深究原因，最根本的在于git的存储方式</p>
+<blockquote>
+<p>Git与你熟悉的大部分版本控制系统的差别是很大的。也许你熟悉Subversion、CVS、Perforce、Mercurial 等等，他们使用 “增量文件系统” （Delta Storage systems）, 就是说它们存储每次提交(commit)之间的差异。Git正好与之相反，它会把你的每次提交的文件的全部内容（snapshot）都会记录下来。这会是在使用Git时的一个很重要的理念。</p>
+<p>——<br><a href="https://github.com/liuhui998/gitbook/blob/master/text_zh/02_Git_Object_Db_Basics/0_%20Git_Object_Db_Basics.markdown#与svn的区别" target="_blank" rel="noopener">Git Book 中文版 - GIT对象模型</a></p>
+</blockquote>
+<p>当然为了保证传输效率，git会在碎片对象过多，或者你向远端服务器发起推送的时候，自动执行一次打包过程。在打包的过程中，git会使用增量编码方案（delta encoding），只保存对象的不同版本之间的差异，这会显著减小repo的大小。</p>
+<p>对我们的目标repo，源文件中包含了编译产生的PDF文件，虽然git使用了增量编码来打包。但由于PDF文件是一个整体，git无法用增量编码来保存差异，而是每次都保存整个pdf文件，所以.git文件夹会越来越大。</p>
+<p>找到了根本原因，下面就要着手解决一下。</p>
+<hr>
+<p><em>上面没<strong>备份</strong>的，现在还有救</em></p>
+<h3 id="step-3-查找大文件"><a href="#step-3-查找大文件" class="headerlink" title="step 3 查找大文件"></a>step 3 查找大文件</h3><p>本例中已经确定大文件是 <code>CallenThermo.pdf</code> 可以直接进行下一步。<br>当然还要提一下通用的方法。</p>
+<p>使用以下命令，查找排名前5的大文件</p>
+<p><code>git rev-list --objects --all | grep &quot;$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5 | awk &#39;{print$1}&#39;)&quot;</code></p>
+<p>命令详解见 ref:3 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git rev-list --objects --all | grep &quot;$(git verify-pack -v .git/objects/pack/\*.idx | sort -k 3 -n | tail -5 | awk &apos;&#123;print$1&#125;&apos;)&quot;</span><br><span class="line">dd351b9649360a24d890ba8df7cad2b16e2b914d CallenThermo.pdf</span><br><span class="line">31b7802b6ac511e692be2a9ea6a3901d3c04b44d CallenThermo.pdf</span><br><span class="line">0b5af57cea13227839e888f6ad7208355bc3bbe8 CallenThermo.pdf</span><br><span class="line">592063e0dc668dede796a271528f96b872eef537 CallenThermo.pdf</span><br><span class="line">9ac4277398fbfdb99be84a16f149745d728b4b2e CallenThermo.pdf</span><br></pre></td></tr></table></figure>
+<p>确认是<code>CallenThermo.pdf</code>的锅</p>
+<h3 id="step-4-删除大文件"><a href="#step-4-删除大文件" class="headerlink" title="step 4 删除大文件"></a>step 4 删除大文件</h3><h4 id="删除单个大文件"><a href="#删除单个大文件" class="headerlink" title="删除单个大文件"></a>删除单个大文件</h4><p>使用以下命令，删除提交历史中所有的大文件记录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch --force --index-filter &apos;git rm -rf --cached --ignore-unmatch big-file-name&apos; --prune-empty --tag-name-filter cat -- --all</span><br></pre></td></tr></table></figure>
+<p>命令中的 <code>big-file-name</code>请替换为大文件名，这里是<code>CallenThermo.pdf</code>.<br>执行命令后，你可以在输出中看见git正在遍历每一次commit，然后删除其中的大文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">emaining 1 predicted)    rm &apos;CallenThermo.pdf&apos;</span><br><span class="line">Rewrite a9a3ca2ea17ac55b3a769e7eced60059d2de5dd4 (113/116) (43 seconds passed, remaining 1 predicted)    rm &apos;CallenThermo.pdf&apos;</span><br><span class="line">Rewrite cc30f6cabb8a9bc981767138567f79df2593e108 (113/116) (43 seconds passed, remaining 1 predicted)    rm &apos;CallenThermo.pdf&apos;</span><br><span class="line">Rewrite a0b3a37eb34e51b903befa9f3c481c986fcf6e2e (116/116) (45 seconds passed, remaining 0 predicted)</span><br><span class="line">Ref &apos;refs/heads/dev-thin&apos; was rewritten</span><br><span class="line">Ref &apos;refs/heads/master&apos; was rewritten</span><br><span class="line">Ref &apos;refs/remotes/ChzRuan/master&apos; was rewritten</span><br><span class="line">Ref &apos;refs/remotes/origin/master&apos; was rewritten</span><br><span class="line">Ref &apos;refs/remotes/origin/dev&apos; was rewritten</span><br><span class="line">WARNING: Ref &apos;refs/remotes/origin/master&apos; is unchanged</span><br></pre></td></tr></table></figure>
+<p>我本来为了‘安全’，建立了一个新的分支dev-thin。但从输出的最后几行可以出git修改了所有与repo相关的分支，这也是这个操作最危险的一点。</p>
+<h4 id="删除多个大文件"><a href="#删除多个大文件" class="headerlink" title="删除多个大文件"></a>删除多个大文件</h4><p>取得单行的大文件名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rev-list --objects --all | grep &quot;$(git verify-pack -v .git/objects/pack/\*.idx | sort -k 3 -n | tail -5 | awk &apos;&#123;print$1&#125;&apos;)&quot; | awk &apos;&#123;print $2&#125;&apos; | tr &apos;\n&apos; &apos; &apos; &gt; large-file.txt</span><br></pre></td></tr></table></figure>
+<p>再执行，以下命令，删除大文件记录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch -f --prune-empty --index-filter &quot;git rm -rf --cached --ignore-unmatch `cat large-file.txt`&quot; --tag-name-filter cat -- --all</span><br></pre></td></tr></table></figure></p>
+<h3 id="step-5-清理repo"><a href="#step-5-清理repo" class="headerlink" title="step 5 清理repo"></a>step 5 清理repo</h3><p>一开始照着 ref：3 来操作时没有这一步，发现repo的大小几乎没变。<br>找了新的教程后，才成功给repo瘦身。</p>
+<p>一次一行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rm -rf .git/refs/original/</span><br><span class="line">git for-each-ref --format=&apos;delete %(refname)&apos; refs/original | git update-ref --stdin</span><br><span class="line"></span><br><span class="line">git reflog expire --expire=now --all</span><br><span class="line"></span><br><span class="line">git gc --prune=now</span><br></pre></td></tr></table></figure></p>
+<h3 id="step-6-推送到远端"><a href="#step-6-推送到远端" class="headerlink" title="step 6 推送到远端"></a>step 6 推送到远端</h3><p>以强制覆盖的方式推送你的repo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin --force --all</span><br></pre></td></tr></table></figure>
+<p>这里的<code>--all</code>会将所有分支都推送到origin上。当然你也可以只推送master分支： <code>git push origin master --force</code>。</p>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ du -d 1 -h</span><br><span class="line">7.2M    ./.git</span><br><span class="line">356K    ./Chaps</span><br><span class="line">1.0K    ./Parts</span><br><span class="line">3.9M    ./Pictures</span><br><span class="line">12M     .</span><br></pre></td></tr></table></figure>
+<p>35M -&gt; 12M 缩减了约2/3，效果立竿见影</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Git/">Git</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/Hello-Haskell/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Hello Haskell !</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/Reverse-Engineering-简介-安利向/">
+        <span class="next-text nav-default">Reverse Engineering 简介(安利向)</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

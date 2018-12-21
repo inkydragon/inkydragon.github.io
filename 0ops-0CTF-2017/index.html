@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="0ops 0CTF 2017">
+
+
+
+
+  <meta name="keywords" content="CTF,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/0ops-0CTF-2017/">
+
+
+<meta name="description" content="探索 http://www.0ops.net/cli.html">
+<meta name="keywords" content="CTF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="0ops 0CTF 2017">
+<meta property="og:url" content="https://blog.wo-class.cn/0ops-0CTF-2017/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="探索 http://www.0ops.net/cli.html">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/curl.png">
+<meta property="og:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/1-ori.png">
+<meta property="og:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/1-konami.png">
+<meta property="og:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/2-KONAMI.png">
+<meta property="og:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/3-KONAMI.png">
+<meta property="og:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/4-konami.gif">
+<meta property="og:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/5-konami.png">
+<meta property="og:updated_time" content="2018-12-21T11:52:16.313Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="0ops 0CTF 2017">
+<meta name="twitter:description" content="探索 http://www.0ops.net/cli.html">
+<meta name="twitter:image" content="https://blog.wo-class.cn/0ops-0CTF-2017/curl.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> 0ops 0CTF 2017 · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          0ops 0CTF 2017
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年3月9日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#探索-http-www-0ops-net-cli-html"><span class="toc-text">探索 http://www.0ops.net/cli.html</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一次-大力出奇迹"><span class="toc-text">第一次 大力出奇迹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二次-常规方法"><span class="toc-text">第二次 常规方法</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="探索-http-www-0ops-net-cli-html"><a href="#探索-http-www-0ops-net-cli-html" class="headerlink" title="探索 http://www.0ops.net/cli.html"></a>探索 <a href="http://www.0ops.net/cli.html" target="_blank" rel="noopener">http://www.0ops.net/cli.html</a></h2><a id="more"></a>
+<p>可用命令<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span></span><br><span class="line">ls</span><br><span class="line">co</span><br><span class="line">cat</span><br><span class="line">whoami</span><br><span class="line">clear</span><br><span class="line">whosyourdaddy</span><br><span class="line">sudo</span><br><span class="line">wget</span><br><span class="line">curl</span><br><span class="line">hint</span><br><span class="line">konami.</span><br></pre></td></tr></table></figure></p>
+<h2 id="第一次-大力出奇迹"><a href="#第一次-大力出奇迹" class="headerlink" title="第一次 大力出奇迹"></a>第一次 大力出奇迹</h2><p>比较懒，直接审查元素，找到了相关的js<br><a href="http://www.0ops.net/0ops_cli_all.js" target="_blank" rel="noopener">0ops_cli_all.js</a></p>
+<p>美化了一下js <a href="http://tool.lu/js/" target="_blank" rel="noopener">http://tool.lu/js/</a> </p>
+<p>然后大致看了一下，发现了这个<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>[<span class="string">"\x65\x76\x61\x6c"</span>](Terminal[<span class="string">"\x72\x75\x6e\x43\x6f\x6d\x6d\x61\x6e\x64"</span>](<span class="built_in">unescape</span>(<span class="string">"%63%75\x72%6c%20%66%6c\x61%67%5f\u0069%73%5f%6e\x6f%74\u005f\u0068%65%72%65"</span>)))</span><br></pre></td></tr></table></figure></p>
+<p>即<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>[<span class="string">"eval"</span>](Terminal[<span class="string">"runCommand"</span>](<span class="built_in">unescape</span>(<span class="string">"%63%75r%6c%20%66%6ca%67%5f\u0069%73%5f%6eo%74\u005f\u0068%65%72%65"</span>)))</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">unescape</span>(<span class="string">"%63%75r%6c%20%66%6ca%67%5f\u0069%73%5f%6eo%74\u005f\u0068%65%72%65"</span>)</span><br><span class="line">&lt; <span class="string">"curl flag_is_not_here"</span></span><br></pre></td></tr></table></figure>
+<p>运行 以上命令得<br><img src="/0ops-0CTF-2017/curl.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emxpYi5kZWNvbXByZXNzKCd4nLPTpgrQsyFdi50uBtDDpg63ndiMwAVwGoPFYEzNNrp6dpjOwVQIVU6WC3CZBtcPAIrcScYnKQ==</span><br></pre></td></tr></table></figure></p>
+<p>用Python解得<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> base64</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>base64.b64decode(<span class="string">"emxpYi5kZWNvbXByZXNzKCd4nLPTpgrQsyFdi50uBtDDpg63ndiMwAVwGoPFYEzNNrp6dpjOwVQIVU6WC3CZBtcPAIrcScYnKQ=="</span>)</span><br><span class="line"><span class="string">"zlib.decompress('x\x9c\xb3\xd3\xa6\n\xd0\xb3!]\x8b\x9d.\x06\xd0\xc3\xa6\x0e\xb7\x9d\xd8\x8c\xc0\x05p\x1a\x83\xc5`L\xcd6\xbazv\x98\xce\xc1T\x08UN\x96\x0bp\x99\x06\xd7\x0f\x00\x8a\xdcI\xc6')"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> zlib</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zlib.decompress(<span class="string">'x\x9c\xb3\xd3\xa6\n\xd0\xb3!]\x8b\x9d.\x06\xd0\xc3\xa6\x0e\xb7\x9d\xd8\x8c\xc0\x05p\x1a\x83\xc5`L\xcd6\xbazv\x98\xce\xc1T\x08UN\x96\x0bp\x99\x06\xd7\x0f\x00\x8a\xdcI\xc6'</span>)</span><br><span class="line"><span class="string">'&gt;++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.&lt;+++++++++++++++++++++++++++++++++++++++++++++++++.&gt;------------------.+++++++++++++++++++.++++++++++++++++++++++++.&lt;.&gt;------------------------------------------.++++++++++++++++++++++++++++++++++++++++++.-----------------.&lt;-.&gt;++++++.+++++++++++.-----------------------.---------------------.+++++++++++++++++++++++++++++++.-------------------------------.'</span></span><br></pre></td></tr></table></figure></p>
+<p>目测某fuck语言 <a href="https://en.wikipedia.org/wiki/Brainfuck" target="_blank" rel="noopener">Brainfuck</a></p>
+<p>web解释器<a href="https://copy.sh/brainfuck/" target="_blank" rel="noopener">El Brainfuck</a></p>
+<p>得到真正的Flag<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">F14G_15_N0T_H3R3</span><br></pre></td></tr></table></figure></p>
+<h2 id="第二次-常规方法"><a href="#第二次-常规方法" class="headerlink" title="第二次 常规方法"></a>第二次 常规方法</h2><p>Hint：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">guest@0ops:/$ hint</span><br><span class="line">      ________________________________________________</span><br><span class="line">     &lt; Do you know konami, konami, konami and konami? &gt;</span><br><span class="line">      ------------------------------------------------</span><br><span class="line">             \   ^__^</span><br><span class="line">              \  (xx)\_______</span><br><span class="line">                 (__)\       )\/\</span><br><span class="line">                  U  ||----w |</span><br><span class="line">                     ||     ||</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">guest@0ops:/$</span><br></pre></td></tr></table></figure></p>
+<p>在找到 hint 后，搜索一下就可知: <code>konami</code>指的是一组热键 <code>↑↑↓↓←→←→BA</code> —— <a href="https://en.wikipedia.org/wiki/Konami_Code" target="_blank" rel="noopener">Konami Code - Wikipedia</a></p>
+<p>尝试一下<br>ori<br><img src="/0ops-0CTF-2017/1-ori.png" title="初始界面"><br>1st<br><img src="/0ops-0CTF-2017/1-konami.png"><br>2nd<br><img src="/0ops-0CTF-2017/2-KONAMI.png"><br>3rd<br><img src="/0ops-0CTF-2017/3-KONAMI.png" title="发光了"><br>4th<br><img src="/0ops-0CTF-2017/4-konami.gif" title="文字开始抖动"><br>result<br><img src="/0ops-0CTF-2017/5-konami.png" title="得到base64-code"></p>
+<p>接下来的解密同上</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/某-CTF-Group-的入群考核试题/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">某 CTF Group 的入群考核试题</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/MIT-18-03sc-Unit-I-Overview/">
+        <span class="next-text nav-default">Unit I: Overview</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

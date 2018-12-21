@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="Unit I: Basic DE's and Separable Equations">
+
+
+
+
+  <meta name="keywords" content="MIT-OCW,Math,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/MIT-18-03sc-Unit-I-Basic-DE-s-and-Separable-Equations/">
+
+
+<meta name="description" content="Session Overview本章重点： $$y’=ay$$$$\Updownarrow$$$$y=Ce^{at}$$">
+<meta name="keywords" content="MIT-OCW,Math">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unit I: Basic DE&#39;s and Separable Equations">
+<meta property="og:url" content="https://blog.wo-class.cn/MIT-18-03sc-Unit-I-Basic-DE-s-and-Separable-Equations/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="Session Overview本章重点： $$y’=ay$$$$\Updownarrow$$$$y=Ce^{at}$$">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-12-21T11:52:16.439Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unit I: Basic DE&#39;s and Separable Equations">
+<meta name="twitter:description" content="Session Overview本章重点： $$y’=ay$$$$\Updownarrow$$$$y=Ce^{at}$$">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> Unit I: Basic DE's and Separable Equations · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Unit I: Basic DE's and Separable Equations
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年2月22日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Session-Overview"><span class="toc-text">Session Overview</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Session-Activities"><span class="toc-text">Session Activities</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-Yourself"><span class="toc-text">Check Yourself</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Session-Activities-1"><span class="toc-text">Session Activities</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Check-Yourself-1"><span class="toc-text">Check Yourself</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h1 id="Session-Overview"><a href="#Session-Overview" class="headerlink" title="Session Overview"></a>Session Overview</h1><p>本章重点：</p>
+<p>$$<br>y’=ay<br>$$<br>$$<br>\Updownarrow<br>$$<br>$$<br>y=Ce^{at}<br>$$</p>
+<a id="more"></a>
+<h1 id="Session-Activities"><a href="#Session-Activities" class="headerlink" title="Session Activities"></a>Session Activities</h1><ul>
+<li><a href="https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/unit-i-first-order-differential-equations/basic-de-and-separable-equations/MIT18_03SCF11_s1_0intro.pdf" target="_blank" rel="noopener">[PDF-1p]The Most Important DE</a><br> 证明了$y’=ay$的通解为$y=Ce^{at}$</li>
+<li><a href="https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/unit-i-first-order-differential-equations/basic-de-and-separable-equations/MIT18_03SCF11_s1_1text.pdf" target="_blank" rel="noopener">[PDF-3p]</a><br> 介绍了常见的几个常微分方程的例子</li>
+<li><a href="https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/unit-i-first-order-differential-equations/basic-de-and-separable-equations/MIT18_03SCF11_s1_2text.pdf" target="_blank" rel="noopener">[PDF-3p]Separation of Variables</a><br> 举例讲解了分离变量法，以及其丢根(lost solution)的特性，并重新用分离变量法证明了$y’=ay$的通解</li>
+</ul>
+<h1 id="Check-Yourself"><a href="#Check-Yourself" class="headerlink" title="Check Yourself"></a>Check Yourself</h1><h1 id="Session-Activities-1"><a href="#Session-Activities-1" class="headerlink" title="Session Activities"></a>Session Activities</h1><ul>
+<li><a href="https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/unit-i-first-order-differential-equations/basic-de-and-separable-equations/MIT18_03SCF11_s1_5text.pdf" target="_blank" rel="noopener">[PDF-2p]Solutions that Blow Up: The Domain of a Solution</a><br> 讲了有间隔定义域函数$y$组成的微分方程的解法-&gt;作图判断定义区间</li>
+<li><a href="https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/unit-i-first-order-differential-equations/basic-de-and-separable-equations/MIT18_03SCF11_s1_6text.pdf" target="_blank" rel="noopener">[PDF-3p]Modeling by First Order Linear ODE’s</a><br> 一阶微分方程的解法</li>
+</ul>
+<h1 id="Check-Yourself-1"><a href="#Check-Yourself-1" class="headerlink" title="Check Yourself"></a>Check Yourself</h1>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/MIT-OCW/">MIT-OCW</a>
+            
+              <a href="/tags/Math/">Math</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/MIT-18-03SC-Differential-Equations/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">MIT-18.03sc Differential Equations</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/hexo-test/">
+        <span class="next-text nav-default">Hexo 测试页</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

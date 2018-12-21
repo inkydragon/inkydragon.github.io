@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="Seven Languages In Seven Weeks - Scala">
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/Seven-Languages-In-Seven-Weeks-Scala/">
+
+
+<meta name="description" content="scala">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Seven Languages In Seven Weeks - Scala">
+<meta property="og:url" content="https://blog.wo-class.cn/Seven-Languages-In-Seven-Weeks-Scala/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="scala">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-12-21T11:52:16.547Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Seven Languages In Seven Weeks - Scala">
+<meta name="twitter:description" content="scala">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> Seven Languages In Seven Weeks - Scala · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Seven Languages In Seven Weeks - Scala
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年12月25日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Day-0"><span class="toc-text">Day 0</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Day-1"><span class="toc-text">Day 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#类型"><span class="toc-text">类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表达式与条件"><span class="toc-text">表达式与条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-text">循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Range-与-元组"><span class="toc-text">Range 与 元组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类"><span class="toc-text">类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#扩展类"><span class="toc-text">扩展类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Day-2"><span class="toc-text">Day 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#var-and-val"><span class="toc-text">var and val</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#集合"><span class="toc-text">集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Any-and-Nothing"><span class="toc-text">Any and Nothing</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>scala</p>
+<a id="more"></a>
+<h1 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h1><p><em><code>Scala</code> 与 <code>java</code> 的不同之处</em></p>
+<ul>
+<li>类型推断</li>
+<li>函数式编程理念</li>
+<li>不(可)变量</li>
+<li>高级程序构造</li>
+</ul>
+<h1 id="Day-1"><a href="#Day-1" class="headerlink" title="Day 1"></a>Day 1</h1><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; println(<span class="string">"Hello, surreal world"</span>)</span><br><span class="line">Hello, surreal world</span><br><span class="line"></span><br><span class="line">scala&gt; println(<span class="string">'Hello, world'</span>)</span><br><span class="line">&lt;console&gt;:<span class="number">1</span>: error: unclosed character literal</span><br><span class="line">       println(<span class="string">'Hello, world'</span>)</span><br><span class="line">                            ^</span><br><span class="line"></span><br><span class="line">scala&gt; println(<span class="string">'!'</span>)</span><br><span class="line">!</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">1</span> + <span class="number">1</span></span><br><span class="line">res2: Int = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">scala&gt; (<span class="number">1</span>) .+ (<span class="number">1</span>)</span><br><span class="line">res3: Int = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">5</span> + <span class="number">4</span> * <span class="number">3</span></span><br><span class="line">res4: Int = <span class="number">17</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">5</span> .+ (<span class="number">4</span> .* (<span class="number">3</span>))</span><br><span class="line">res5: Int = <span class="number">17</span></span><br><span class="line"></span><br><span class="line">scala&gt; (<span class="number">5</span>) .+ ((<span class="number">4</span>) .* (<span class="number">3</span>))</span><br><span class="line">res6: Int = <span class="number">17</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="string">"abc"</span>.size</span><br><span class="line">res7: Int = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="string">"abc"</span> + <span class="number">4</span></span><br><span class="line">res8: String = abc4</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">4</span> + <span class="string">"abc"</span></span><br><span class="line">res9: String = <span class="number">4</span>abc</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">4</span> + <span class="string">"1.0"</span></span><br><span class="line">res10: String = <span class="number">41.0</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">4</span> * <span class="string">"abc"</span></span><br><span class="line">&lt;console&gt;:<span class="number">12</span>: error: overloaded method value * with alternatives:</span><br><span class="line">  (x: Double)Double &lt;and&gt;</span><br><span class="line">  (x: Float)Float &lt;and&gt;</span><br><span class="line">  (x: Long)Long &lt;and&gt;</span><br><span class="line">  (x: Int)Int &lt;and&gt;</span><br><span class="line">  (x: Char)Int &lt;and&gt;</span><br><span class="line">  (x: Short)Int &lt;and&gt;</span><br><span class="line">  (x: Byte)Int</span><br><span class="line"> <span class="function">cannot be applied <span class="title">to</span> <span class="params">(String)</span></span></span><br><span class="line"><span class="function">       4 * "abc"</span></span><br><span class="line"><span class="function">         ^</span></span><br></pre></td></tr></table></figure>
+<h3 id="表达式与条件"><a href="#表达式与条件" class="headerlink" title="表达式与条件"></a>表达式与条件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; <span class="number">5</span> &lt; <span class="number">6</span></span><br><span class="line">res0: Boolean = <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">5</span> &lt;= <span class="number">6</span></span><br><span class="line">res1: Boolean = <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">5</span> &gt;= <span class="number">2</span></span><br><span class="line">res2: Boolean = <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">5</span> == <span class="number">2</span></span><br><span class="line">res3: Boolean = <span class="keyword">false</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="number">5</span> != <span class="number">2</span></span><br><span class="line">res4: Boolean = <span class="keyword">true</span></span><br></pre></td></tr></table></figure>
+<p><em>自动类型推断</em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; val a = <span class="number">1</span></span><br><span class="line">a: Int = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">scala&gt; val b = <span class="number">2</span></span><br><span class="line">b: Int = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (b &lt; a) &#123;</span><br><span class="line">     | println(<span class="string">"true"</span>)</span><br><span class="line">     | &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">     | println(<span class="string">"false"</span>)</span><br><span class="line">     | &#125;</span><br><span class="line"><span class="keyword">false</span></span><br></pre></td></tr></table></figure></p>
+<p>Note:</p>
+<ul>
+<li>Scala 可以自动推断类型</li>
+<li><code>var</code> 变量</li>
+<li><code>val</code> 声明不变量</li>
+</ul>
+<p><em><code>0`</code>nil<code>与</code>false`</em><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">scala&gt; Nil</span><br><span class="line">res6: scala.collection.immutable.Nil.type = List()</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (<span class="keyword">false</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (<span class="number">0</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">&lt;console&gt;:<span class="number">12</span>: error: type mismatch;</span><br><span class="line"> found   : Int(<span class="number">0</span>)</span><br><span class="line"> required: Boolean</span><br><span class="line">       <span class="keyword">if</span> (<span class="number">0</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">           ^</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (Nil) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">&lt;console&gt;:<span class="number">12</span>: error: type mismatch;</span><br><span class="line"> found   : scala.collection.immutable.Nil.type</span><br><span class="line"> required: Boolean</span><br><span class="line">       <span class="keyword">if</span> (Nil) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">           ^</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (<span class="string">''</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">&lt;console&gt;:<span class="number">1</span>: error: empty character literal</span><br><span class="line">       <span class="keyword">if</span> (<span class="string">''</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">           ^</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (<span class="string">""</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">&lt;console&gt;:<span class="number">12</span>: error: type mismatch;</span><br><span class="line"> found   : String(<span class="string">""</span>)</span><br><span class="line"> required: Boolean</span><br><span class="line">       <span class="keyword">if</span> (<span class="string">""</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">           ^</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (<span class="keyword">true</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line"><span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">if</span> (<span class="number">1</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">&lt;console&gt;:<span class="number">12</span>: error: type mismatch;</span><br><span class="line"> found   : Int(<span class="number">1</span>)</span><br><span class="line"> required: Boolean</span><br><span class="line">       <span class="keyword">if</span> (<span class="number">1</span>) &#123;println(<span class="string">"true"</span>)&#125;</span><br><span class="line">           ^</span><br></pre></td></tr></table></figure></p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><h3 id="Range-与-元组"><a href="#Range-与-元组" class="headerlink" title="Range 与 元组"></a>Range 与 元组</h3><p><strong>Range</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; val rang = <span class="number">0</span> until <span class="number">10</span></span><br><span class="line">rang: scala.collection.immutable.Range = Range <span class="number">0</span> until <span class="number">10</span></span><br><span class="line"></span><br><span class="line">scala&gt; val range = <span class="number">0</span> until <span class="number">10</span></span><br><span class="line">range: scala.collection.immutable.Range = Range <span class="number">0</span> until <span class="number">10</span></span><br><span class="line"></span><br><span class="line">scala&gt; range.start</span><br><span class="line">res1: Int = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">scala&gt; range.end</span><br><span class="line">res2: Int = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">scala&gt; range.step</span><br><span class="line">res3: Int = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">scala&gt; (<span class="number">0</span> to <span class="number">10</span>) by <span class="number">5</span></span><br><span class="line">res4: scala.collection.immutable.Range = Range <span class="number">0</span> to <span class="number">10</span> by <span class="number">5</span></span><br><span class="line"></span><br><span class="line">scala&gt; (<span class="number">0</span> to <span class="number">10</span>) by <span class="number">6</span></span><br><span class="line">res5: scala.collection.immutable.Range = inexact Range <span class="number">0</span> to <span class="number">10</span> by <span class="number">6</span></span><br><span class="line"></span><br><span class="line">scala&gt; (<span class="number">0</span> until <span class="number">10</span> by <span class="number">5</span>)</span><br><span class="line">res6: scala.collection.immutable.Range = Range <span class="number">0</span> until <span class="number">10</span> by <span class="number">5</span></span><br><span class="line"></span><br><span class="line">scala&gt; val range = (<span class="number">10</span> until <span class="number">0</span>) by -<span class="number">1</span></span><br><span class="line">range: scala.collection.immutable.Range = Range <span class="number">10</span> until <span class="number">0</span> by -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">scala&gt; val range = (<span class="number">10</span> until <span class="number">0</span>)</span><br><span class="line">range: scala.collection.immutable.Range = empty Range <span class="number">10</span> until <span class="number">0</span></span><br><span class="line"></span><br><span class="line">scala&gt; val range = (<span class="number">0</span> to <span class="number">10</span>)</span><br><span class="line">range: scala.collection.immutable.Range.Inclusive = Range <span class="number">0</span> to <span class="number">10</span></span><br><span class="line"></span><br><span class="line">scala&gt; val range = <span class="string">'a'</span> to <span class="string">'e'</span></span><br><span class="line">range: scala.collection.immutable.NumericRange.Inclusive[Char] = NumericRange a to e</span><br></pre></td></tr></table></figure></p>
+<p><strong>元组</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; val person = (<span class="string">"Elvis"</span>, <span class="string">"Presley"</span>)</span><br><span class="line">person: (String, String) = (Elvis,Presley)</span><br><span class="line"></span><br><span class="line">scala&gt; person._1</span><br><span class="line">res7: String = Elvis</span><br><span class="line"></span><br><span class="line">scala&gt; person._2</span><br><span class="line">res8: String = Presley</span><br><span class="line"></span><br><span class="line">scala&gt; person._3</span><br><span class="line">&lt;console&gt;:<span class="number">13</span>: error: <span class="function">value _3 is not a member <span class="title">of</span> <span class="params">(String, String)</span></span></span><br><span class="line"><span class="function">       person._3</span></span><br><span class="line"><span class="function">              ^</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">scala&gt; val (x, y) = (<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">x: Int = <span class="number">1</span></span><br><span class="line">y: Int = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">scala&gt; val (x, y) = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">&lt;console&gt;:<span class="number">13</span>: error: constructor cannot be instantiated to expected type;</span><br><span class="line"> found   : (T1, T2)</span><br><span class="line"> required: (Int, Int, Int)</span><br><span class="line">       val (x, y) = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">           ^</span><br><span class="line"></span><br><span class="line">scala&gt; val (x, y, z) = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">x: Int = <span class="number">1</span></span><br><span class="line">y: Int = <span class="number">2</span></span><br><span class="line">z: Int = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">scala&gt; val (x, y, z) = (<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">&lt;console&gt;:<span class="number">14</span>: error: constructor cannot be instantiated to expected type;</span><br><span class="line"> found   : (T1, T2, T3)</span><br><span class="line"> required: (Int, Int)</span><br><span class="line">       val (x, y, z) = (<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line">           ^</span><br></pre></td></tr></table></figure>
+<h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>定义类<br><code>class Person(firstName: String, lastName: String)</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; class Person(firstName: String, lastName: String)</span><br><span class="line">defined <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class"><span class="title">scala</span>&gt; <span class="title">val</span> <span class="title">gump</span> </span>= <span class="keyword">new</span> Person(<span class="string">"Forrest"</span>, <span class="string">"Gump"</span>)</span><br><span class="line">gump: Person = Person@<span class="number">5e9257</span>b3</span><br></pre></td></tr></table></figure>
+<h3 id="扩展类"><a href="#扩展类" class="headerlink" title="扩展类"></a>扩展类</h3><h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day 2"></a>Day 2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; <span class="function">def <span class="title">double</span><span class="params">(x:Int)</span>:Int </span>= x * <span class="number">2</span></span><br><span class="line"><span class="keyword">double</span>: (x: Int)Int</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">double</span>(<span class="number">4</span>)</span><br><span class="line">res0: Int = <span class="number">8</span></span><br><span class="line"></span><br><span class="line">scala&gt; <span class="function">def <span class="title">double</span><span class="params">(x:Int)</span>:Int </span>= &#123;</span><br><span class="line">     |   x * <span class="number">2</span></span><br><span class="line">     | &#125;</span><br><span class="line"><span class="keyword">double</span>: (x: Int)Int</span><br><span class="line"></span><br><span class="line">scala&gt; <span class="keyword">double</span>(<span class="number">2</span>)</span><br><span class="line">res1: Int = <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h3 id="var-and-val"><a href="#var-and-val" class="headerlink" title="var and val"></a>var and val</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; <span class="keyword">var</span> mutable = <span class="string">"I am mutable"</span></span><br><span class="line">mutable: String = I am mutable</span><br><span class="line"></span><br><span class="line">scala&gt; mutable = <span class="string">"Touch me, change me..."</span></span><br><span class="line">mutable: String = Touch me, change me...</span><br><span class="line"></span><br><span class="line">scala&gt; val immutable = <span class="string">"I am not mutable"</span></span><br><span class="line">immutable: String = I am not mutable</span><br><span class="line"></span><br><span class="line">scala&gt; immutable = <span class="string">"Can't tounch this"</span></span><br><span class="line">&lt;console&gt;:<span class="number">12</span>: error: reassignment to val</span><br><span class="line">       immutable = <span class="string">"Can't tounch this"</span></span><br><span class="line">                 ^</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>var</code> 可变</li>
+<li><code>val</code> 不可变</li>
+<li>可变状态限制并发</li>
+</ul>
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><p><strong>List - 列表</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; List(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">res2: List[Int] = List(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">scala&gt; List(<span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>)</span><br><span class="line">res3: List[String] = List(one, two, three)</span><br><span class="line"></span><br><span class="line">scala&gt; List(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"three"</span>)</span><br><span class="line">res4: List[Any] = List(<span class="number">1</span>, <span class="number">2</span>, three)</span><br><span class="line"></span><br><span class="line">scala&gt; List(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"three"</span>)(<span class="number">2</span>)</span><br><span class="line">res5: Any = three</span><br><span class="line"></span><br><span class="line">scala&gt; List(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"three"</span>)(<span class="number">3</span>)</span><br><span class="line">java.lang.IndexOutOfBoundsException: <span class="number">3</span></span><br><span class="line">  at scala.collection.LinearSeqOptimized.apply(LinearSeqOptimized.scala:<span class="number">63</span>)</span><br><span class="line">  at scala.collection.LinearSeqOptimized.apply$(LinearSeqOptimized.scala:<span class="number">61</span>)</span><br><span class="line">  at scala.collection.immutable.List.apply(List.scala:<span class="number">86</span>)</span><br><span class="line">  ... <span class="number">28</span> elided</span><br><span class="line"></span><br><span class="line">scala&gt; List(<span class="number">1</span>, <span class="number">2</span>, <span class="string">"three"</span>)(-<span class="number">1</span>)</span><br><span class="line">java.lang.IndexOutOfBoundsException: -<span class="number">1</span></span><br><span class="line">  at scala.collection.LinearSeqOptimized.apply(LinearSeqOptimized.scala:<span class="number">63</span>)</span><br><span class="line">  at scala.collection.LinearSeqOptimized.apply$(LinearSeqOptimized.scala:<span class="number">61</span>)</span><br><span class="line">  at scala.collection.immutable.List.apply(List.scala:<span class="number">86</span>)</span><br><span class="line">  ... <span class="number">28</span> elided</span><br><span class="line"></span><br><span class="line">scala&gt; Nil</span><br><span class="line">res8: scala.collection.immutable.Nil.type = List()</span><br><span class="line"></span><br><span class="line">scala&gt; List()</span><br><span class="line">res9: List[Nothing] = List()</span><br></pre></td></tr></table></figure>
+<p><strong>set - 集合</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; val animals = Set(<span class="string">"lions"</span>, <span class="string">"tigers"</span>, <span class="string">"bears"</span>)</span><br><span class="line">animals: scala.collection.immutable.Set[String] = Set(lions, tigers, bears)</span><br><span class="line"></span><br><span class="line">scala&gt; animals + <span class="string">"armadillos"</span></span><br><span class="line">res10: scala.collection.immutable.Set[String] = Set(lions, tigers, bears, armadillos)</span><br><span class="line"></span><br><span class="line">scala&gt; animals - <span class="string">"tigers"</span></span><br><span class="line">res11: scala.collection.immutable.Set[String] = Set(lions, bears)</span><br><span class="line"></span><br><span class="line">scala&gt; animals + Set(<span class="string">"raccoons"</span>)</span><br><span class="line">&lt;console&gt;:<span class="number">13</span>: error: type mismatch;</span><br><span class="line"> found   : scala.collection.immutable.Set[String]</span><br><span class="line"> required: String</span><br><span class="line">       animals + Set(<span class="string">"raccoons"</span>)</span><br><span class="line">                    ^</span><br><span class="line"></span><br><span class="line">scala&gt; animals ++ Set(<span class="string">"raccoons"</span>)</span><br><span class="line">res13: scala.collection.immutable.Set[String] = Set(lions, tigers, bears, raccoons)</span><br><span class="line"></span><br><span class="line">scala&gt; animals -- Set(<span class="string">"lions"</span>, <span class="string">"bears"</span>)</span><br><span class="line">res14: scala.collection.immutable.Set[String] = Set(tigers)</span><br><span class="line"></span><br><span class="line">scala&gt; animals &amp; Set(<span class="string">"lions"</span>, <span class="string">"bears"</span>)</span><br><span class="line">res15: scala.collection.immutable.Set[String] = Set(lions, bears)</span><br><span class="line"></span><br><span class="line">scala&gt; Set(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) == Set(<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">res16: Boolean = <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">scala&gt; List(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) == List(<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">res17: Boolean = <span class="keyword">false</span></span><br></pre></td></tr></table></figure>
+<p><strong>map - 映射</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">scala&gt; <span class="keyword">import</span> scala.collection.mutable.HashMap</span><br><span class="line"><span class="keyword">import</span> scala.collection.mutable.HashMap</span><br><span class="line"></span><br><span class="line">scala&gt; val map = <span class="keyword">new</span> HashMap[Int, String]</span><br><span class="line">map: scala.collection.mutable.HashMap[Int,String] = Map()</span><br><span class="line"></span><br><span class="line">scala&gt; map += <span class="number">4</span> -&gt; <span class="string">"four"</span></span><br><span class="line">res19: map.type = Map(<span class="number">4</span> -&gt; four)</span><br><span class="line"></span><br><span class="line">scala&gt; map += <span class="number">8</span> -&gt; <span class="string">"eight"</span></span><br><span class="line">res20: map.type = Map(<span class="number">8</span> -&gt; eight, <span class="number">4</span> -&gt; four)</span><br><span class="line"></span><br><span class="line">scala&gt; map</span><br><span class="line">res21: scala.collection.mutable.HashMap[Int,String] = Map(<span class="number">8</span> -&gt; eight, <span class="number">4</span> -&gt; four)</span><br><span class="line"></span><br><span class="line">scala&gt; map += <span class="string">"zero"</span> -&gt; <span class="number">0</span></span><br><span class="line">&lt;console&gt;:<span class="number">14</span>: error: type mismatch;</span><br><span class="line"> found   : (String, Int)</span><br><span class="line"> required: (Int, String)</span><br><span class="line">       map += <span class="string">"zero"</span> -&gt; <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h3 id="Any-and-Nothing"><a href="#Any-and-Nothing" class="headerlink" title="Any and Nothing"></a><code>Any</code> and <code>Nothing</code></h3>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/Tsinghua-MOOC-DSA-in-CPP/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Tsinghua-MOOC-DSA in C++</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/Memo-List-Dec/">
+        <span class="next-text nav-default">Memo List @Dec</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

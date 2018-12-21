@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="x64下的Python与HANDLE">
+
+
+
+
+  <meta name="keywords" content="Python,PyDbg,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/x64下的Python与HANDLE/">
+
+
+<meta name="description" content="我又默默地开了新坑. 这篇文章是填坑中坑有感 坑的起源及发展我尝试在x64下跑GHP-PyDbg(实际上和PyDbg是一个东西) 然后遇到获取DLL中函数句柄的问题。本来很简单，Python有ctype写起来也很好。 func_resolve()pydbg.py1234567def func_resolve (self, dll, function):    handle  = kernel32.">
+<meta name="keywords" content="Python,PyDbg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="x64下的Python与HANDLE">
+<meta property="og:url" content="https://blog.wo-class.cn/x64下的Python与HANDLE/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="我又默默地开了新坑. 这篇文章是填坑中坑有感 坑的起源及发展我尝试在x64下跑GHP-PyDbg(实际上和PyDbg是一个东西) 然后遇到获取DLL中函数句柄的问题。本来很简单，Python有ctype写起来也很好。 func_resolve()pydbg.py1234567def func_resolve (self, dll, function):    handle  = kernel32.">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://blog.wo-class.cn/x64下的Python与HANDLE/code.png">
+<meta property="og:image" content="https://blog.wo-class.cn/x64下的Python与HANDLE/windbg.png">
+<meta property="og:image" content="https://blog.wo-class.cn/x64下的Python与HANDLE/code2.png">
+<meta property="og:image" content="https://blog.wo-class.cn/x64下的Python与HANDLE/stack.png">
+<meta property="og:updated_time" content="2018-12-21T11:52:16.643Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="x64下的Python与HANDLE">
+<meta name="twitter:description" content="我又默默地开了新坑. 这篇文章是填坑中坑有感 坑的起源及发展我尝试在x64下跑GHP-PyDbg(实际上和PyDbg是一个东西) 然后遇到获取DLL中函数句柄的问题。本来很简单，Python有ctype写起来也很好。 func_resolve()pydbg.py1234567def func_resolve (self, dll, function):    handle  = kernel32.">
+<meta name="twitter:image" content="https://blog.wo-class.cn/x64下的Python与HANDLE/code.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> x64下的Python与HANDLE · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          x64下的Python与HANDLE
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年1月19日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#坑的起源及发展"><span class="toc-text">坑的起源及发展</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#坑中坑"><span class="toc-text">坑中坑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决"><span class="toc-text">解决</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>我又默默地开了<a href="https://github.com/inkydragon/GHP-PyDbg" target="_blank" rel="noopener">新坑</a>.</p>
+<p>这篇文章是填坑中坑有感</p>
+<h1 id="坑的起源及发展"><a href="#坑的起源及发展" class="headerlink" title="坑的起源及发展"></a>坑的起源及发展</h1><p>我尝试在x64下跑GHP-PyDbg(实际上和PyDbg是一个东西)</p>
+<p>然后遇到获取DLL中函数句柄的问题。本来很简单，Python有ctype写起来也很好。</p>
+<figure class="highlight python"><figcaption><span>func_resolve()</span><a href="https://github.com/OpenRCE/pydbg/blob/master/pydbg.py#L1735" target="_blank" rel="noopener">pydbg.py</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_resolve</span> <span class="params">(self, dll, function)</span>:</span></span><br><span class="line">    handle  = kernel32.LoadLibraryA(dll)</span><br><span class="line">    address = kernel32.GetProcAddress(handle, function)</span><br><span class="line"></span><br><span class="line">    kernel32.FreeLibrary(handle)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> address</span><br></pre></td></tr></table></figure>
+<p>然后就报错，调试一下，发现是<code>handle</code>溢出了。</p>
+<p>坑中坑就开始了。</p>
+<a id="more"></a>
+<h1 id="坑中坑"><a href="#坑中坑" class="headerlink" title="坑中坑"></a>坑中坑</h1><p>讲道理：<br>python是超出int自动转换为long<br>GetModuleHandleA返回值是HMODULE跟系统有关，x64就是long</p>
+<p>都不应该有问题，但是就是溢出了。</p>
+<img src="/x64下的Python与HANDLE/code.png" width="500" height="225" title="坑中的代码">
+<img src="/x64下的Python与HANDLE/windbg.png" width="500" height="225" title="用WinDbg查看真实的函数地址">
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>在折腾了一天后…..</p>
+<p>我绕了一圈，又绕回到原来的问题上了，不过有少许进步</p>
+<p>我让GetProcAddress已经成功的取到printf的地址，之后就溢出了，还是不知道锅是谁的<br><img src="/x64下的Python与HANDLE/code2.png" width="500" height="225" title="略微修改的代码"><br><img src="/x64下的Python与HANDLE/stack.png" width="415" height="225"></p>
+<p>然后我感觉Microsoft什么溢出没见过，在Windows上WINAPI那是最吼地.这个锅一定是Python的。</p>
+<p>本着”我遇到的问题，别人一定遇到并解决过了”的信念。<br>又经过一番查找，终于发现函数如果不指定返回的类型，Python默认用int去接收。<br><blockquote><p>四、c 类型与 Python 类型， 参数类型、返回类型</p>
+<p>之所以会调用 addf 函数“失败”倒不是 Python 出了问题。原因是你没有“告诉” Python 这个函数的“容貌”（更正式的说法是“描述”）——函数的形参类型和返回类型。那么为什么我们调用 add 成功了呢？因为 Python 默认函数的参数类型和返回类型为 int 型。理所当然地 Python 以为 addf 返回了一个 int 类型的值。</p>
+<footer><strong>无尽的数字眩晕症</strong><cite><a href="http://www.cnblogs.com/night-ride-depart/p/4907613.html" target="_blank" rel="noopener">python 与 c 的交互</a></cite></footer></blockquote></p>
+<p>然后我就改代码了,然后就好使了。</p>
+<figure class="highlight python"><figcaption><span>func_resolve()</span><a href="https://github.com/inkydragon/GHP-PyDbg/commit/015b1eacd0d02db1e71cd20d5be88a76dee1af05#diff-32ef09858fe30f6d1098ead3ffdbb7b2R238" target="_blank" rel="noopener">pydbg.py</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func_resolve</span><span class="params">(self,dll,function)</span>:</span></span><br><span class="line">    <span class="comment"># 不指定返回值，python会将返回值默认当做int处理，导致溢出</span></span><br><span class="line">    kernel32.GetModuleHandleA.restype = c_ulonglong</span><br><span class="line">    kernel32.GetProcAddress.restype = c_longlong</span><br><span class="line"></span><br><span class="line">    handle  = c_longlong(kernel32.GetModuleHandleA(dll))</span><br><span class="line">    <span class="comment"># 此时handle的实际类型为long，需要再次转换成 longlong，否则会报错 long int too long to convert</span></span><br><span class="line">    address = kernel32.GetProcAddress(handle, function)</span><br><span class="line"></span><br><span class="line">    kernel32.CloseHandle(handle)</span><br><span class="line">    <span class="keyword">return</span> address</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Python/">Python</a>
+            
+              <a href="/tags/PyDbg/">PyDbg</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/edX-计算机科学和Python编程导论学习笔记/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">edX-计算机科学和Python编程导论学习笔记</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/Win10-x64-WinDbg-JIT调试设置/">
+        <span class="next-text nav-default">Win10 x64 WinDbg JIT调试设置</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

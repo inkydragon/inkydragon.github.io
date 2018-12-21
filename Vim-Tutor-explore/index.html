@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="我真是闲">
+
+
+
+
+  <meta name="keywords" content="vim,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/Vim-Tutor-explore/">
+
+
+<meta name="description" content="我真是闲">
+<meta name="keywords" content="vim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vim Tutor explore">
+<meta property="og:url" content="https://blog.wo-class.cn/Vim-Tutor-explore/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="我真是闲">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://blog.wo-class.cn/Vim-Tutor-explore/ls.png">
+<meta property="og:updated_time" content="2018-12-21T11:52:17.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vim Tutor explore">
+<meta name="twitter:description" content="我真是闲">
+<meta name="twitter:image" content="https://blog.wo-class.cn/Vim-Tutor-explore/ls.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> Vim Tutor explore · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Vim Tutor explore
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年4月30日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Lesson-1-TEXT-EDITING"><span class="toc-text">Lesson 1: TEXT EDITING</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MOVING-THE-CURSOR"><span class="toc-text">MOVING THE CURSOR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EXITING-VIM"><span class="toc-text">EXITING VIM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DELETION"><span class="toc-text">DELETION</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#INSERTION"><span class="toc-text">INSERTION</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#APPENDING"><span class="toc-text">APPENDING</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EDITING-A-FILE"><span class="toc-text">EDITING A FILE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SUMMARY"><span class="toc-text">SUMMARY</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lesson-2-COMMANDS"><span class="toc-text">Lesson 2: COMMANDS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DELETION-COMMANDS"><span class="toc-text">DELETION COMMANDS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MORE-DELETION-COMMANDS"><span class="toc-text">MORE DELETION COMMANDS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ON-OPERATORS-AND-MOTIONS"><span class="toc-text">ON OPERATORS AND MOTIONS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USING-A-COUNT-FOR-A-MOTION"><span class="toc-text">USING A COUNT FOR A MOTION</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#USING-A-COUNT-TO-DELETE-MORE"><span class="toc-text">USING A COUNT TO DELETE MORE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OPERATING-ON-LINES"><span class="toc-text">OPERATING ON LINES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-UNDO-COMMAND"><span class="toc-text">THE UNDO COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SUMMARY-1"><span class="toc-text">SUMMARY</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lesson-3-MORE-COMMAND"><span class="toc-text">Lesson 3: MORE COMMAND</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-PUT-COMMAND"><span class="toc-text">THE PUT COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-REPLACE-COMMAND"><span class="toc-text">THE REPLACE COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-CHANGE-OPERATOR"><span class="toc-text">THE CHANGE OPERATOR</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MORE-CHANGES-USING-c"><span class="toc-text">MORE CHANGES USING c</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SUMMARY-2"><span class="toc-text">SUMMARY</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lesson-4-CURSOR-AND-FILE"><span class="toc-text">Lesson 4: CURSOR AND FILE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CURSOR-LOCATION-AND-FILE-STATUS"><span class="toc-text">CURSOR LOCATION AND FILE STATUS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-SEARCH-COMMAND"><span class="toc-text">THE SEARCH COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-SUBSTITUTE-COMMAND"><span class="toc-text">THE SUBSTITUTE COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SUMMARY-3"><span class="toc-text">SUMMARY</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lesson-5-EXTERNAL-COMMAND"><span class="toc-text">Lesson 5: EXTERNAL COMMAND</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HOW-TO-EXECUTE-AN-EXTERNAL-COMMAND"><span class="toc-text">HOW TO EXECUTE AN EXTERNAL COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MORE-ON-WRITING-FILES"><span class="toc-text">MORE ON WRITING FILES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SELECTING-TEXT-TO-WRITE"><span class="toc-text">SELECTING TEXT TO WRITE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RETRIEVING-AND-MERGING-FILES"><span class="toc-text">RETRIEVING AND MERGING FILES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SUMMARY-4"><span class="toc-text">SUMMARY</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lesson-6-OPEN-COMMAND"><span class="toc-text">Lesson 6: OPEN COMMAND</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-OPEN-COMMAND"><span class="toc-text">THE OPEN COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#THE-APPEND-COMMAND"><span class="toc-text">THE APPEND COMMAND</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ANOTHER-WAY-TO-REPLACE"><span class="toc-text">ANOTHER WAY TO REPLACE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#COPY-AND-PASTE-TEXT"><span class="toc-text">COPY AND PASTE TEXT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SET-OPTION"><span class="toc-text">SET OPTION</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SUMMARY-5"><span class="toc-text">SUMMARY</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lesson-7-HELP"><span class="toc-text">Lesson 7: HELP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GETTING-HELP"><span class="toc-text">GETTING HELP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CREATE-A-STARTUP-SCRIPT"><span class="toc-text">CREATE A STARTUP SCRIPT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#COMPLETION"><span class="toc-text">COMPLETION</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SUMMARY-6"><span class="toc-text">SUMMARY</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#For-further-reading-and-studying"><span class="toc-text">For further reading and studying</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <a id="more"></a>
+<blockquote>
+<p><strong>ATTENTION:</strong><br>     The commands in the lessons will modify the text.  Make a copy of this<br>     file to practise on (if you started “vimtutor” this is already a copy).</p>
+</blockquote>
+<p>我直接开的vim tutor所以没问题</p>
+<h1 id="Lesson-1-TEXT-EDITING"><a href="#Lesson-1-TEXT-EDITING" class="headerlink" title="Lesson 1: TEXT EDITING"></a>Lesson 1: TEXT EDITING</h1><h2 id="MOVING-THE-CURSOR"><a href="#MOVING-THE-CURSOR" class="headerlink" title="MOVING THE CURSOR"></a>MOVING THE CURSOR</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">** To move the cursor, press the h,j,k,l keys as indicated. **</span><br><span class="line">          ^</span><br><span class="line">          k		    Hint:  The h key is at the left and moves left.</span><br><span class="line">    &lt; h	      l &gt;		   The l key is at the right and moves right.</span><br><span class="line">          j			   The j key looks like a down arrow.</span><br><span class="line">          v</span><br></pre></td></tr></table></figure>
+<p><code>hj/lk</code> == <strong>左下/右上</strong></p>
+<h2 id="EXITING-VIM"><a href="#EXITING-VIM" class="headerlink" title="EXITING VIM"></a>EXITING VIM</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. Press the &lt;ESC&gt; key (to make sure you are in Normal mode).</span><br><span class="line"></span><br><span class="line">2. Type:	  :q! &lt;ENTER&gt;.</span><br><span class="line">   This exits the editor, DISCARDING any changes you have made.</span><br></pre></td></tr></table></figure>
+<p><code>:q!</code> 不保存退出</p>
+<h2 id="DELETION"><a href="#DELETION" class="headerlink" title="DELETION"></a>DELETION</h2><blockquote>
+<p><strong> Press  x  to delete the character under the cursor. </strong></p>
+<p>NOTE: As you go through this tutor, do not try to memorize, learn by usage.</p>
+</blockquote>
+<p><code>x</code> 删除当店光标后的字符</p>
+<h2 id="INSERTION"><a href="#INSERTION" class="headerlink" title="INSERTION"></a>INSERTION</h2><blockquote>
+<p><strong> Press  i  to insert text. </strong></p>
+</blockquote>
+<p><code>i</code>== <strong>insert</strong> 即插入到光标处</p>
+<h2 id="APPENDING"><a href="#APPENDING" class="headerlink" title="APPENDING"></a>APPENDING</h2><blockquote>
+<p><strong> Press  A  to append text. </strong></p>
+</blockquote>
+<p><code>A</code>== <strong>append</strong> 在一行末尾插入<br><code>a</code> 在光标后插入</p>
+<h2 id="EDITING-A-FILE"><a href="#EDITING-A-FILE" class="headerlink" title="EDITING A FILE"></a>EDITING A FILE</h2><blockquote>
+<p><strong> Use  :wq  to save a file and exit. </strong></p>
+</blockquote>
+<p><code>:wq</code> 保存+退出<br><code>w</code>== <strong>write</strong> &amp;&amp; <code>q</code>== <strong>quit</strong></p>
+<h2 id="SUMMARY"><a href="#SUMMARY" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1. The cursor is moved using either the arrow keys or the hjkl keys.</span><br><span class="line">        h (left)	j (down)       k (up)	    l (right)</span><br><span class="line"></span><br><span class="line">2. To start Vim from the shell prompt type:  vim FILENAME &lt;ENTER&gt;</span><br><span class="line"></span><br><span class="line">3. To exit Vim type:	   &lt;ESC&gt;   :q!	 &lt;ENTER&gt;  to trash all changes.</span><br><span class="line">            OR type:	   &lt;ESC&gt;   :wq	 &lt;ENTER&gt;  to save the changes.</span><br><span class="line"></span><br><span class="line">4. To delete the character at the cursor type:  x</span><br><span class="line"></span><br><span class="line">5. To insert or append text type:</span><br><span class="line"> i   type inserted text   &lt;ESC&gt;		insert before the cursor</span><br><span class="line"> A   type appended text   &lt;ESC&gt;         append after the line</span><br><span class="line"></span><br><span class="line">NOTE: Pressing &lt;ESC&gt; will place you in Normal mode or will cancel</span><br><span class="line">      an unwanted and partially completed command.</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="Lesson-2-COMMANDS"><a href="#Lesson-2-COMMANDS" class="headerlink" title="Lesson 2: COMMANDS"></a>Lesson 2: COMMANDS</h1><h2 id="DELETION-COMMANDS"><a href="#DELETION-COMMANDS" class="headerlink" title="DELETION COMMANDS"></a>DELETION COMMANDS</h2><blockquote>
+<p><strong> Type  dw  to delete a word. </strong></p>
+</blockquote>
+<p><code>dw</code> 删除连续的空格/空行/一个词+其后的空格<br><code>d</code>== <strong>delete</strong></p>
+<ul>
+<li><code>ABC_DEF</code> 被当做一个词</li>
+<li><code>ABC.DEF</code> <code>foo-bar</code> 被当做两个词+一个符号</li>
+</ul>
+<h2 id="MORE-DELETION-COMMANDS"><a href="#MORE-DELETION-COMMANDS" class="headerlink" title="MORE DELETION COMMANDS"></a>MORE DELETION COMMANDS</h2><blockquote>
+<p><strong> Type  d$    to delete to the end of the line. </strong></p>
+</blockquote>
+<p><code>d$</code> 删除光标到行尾的所有内容<br><code>$</code> ==/$/ ，正则表达式中的行尾</p>
+<h2 id="ON-OPERATORS-AND-MOTIONS"><a href="#ON-OPERATORS-AND-MOTIONS" class="headerlink" title="ON OPERATORS AND MOTIONS"></a>ON OPERATORS AND MOTIONS</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A short list of motions:</span><br><span class="line">  w - until the start of the next word, EXCLUDING its first character.</span><br><span class="line">  e - to the end of the current word, INCLUDING the last character.</span><br><span class="line">  $ - to the end of the line, INCLUDING the last character.</span><br></pre></td></tr></table></figure>
+<p><code>dw</code> 删除到下一个词 (删去了词间空格, 行尾句号不删去)<br><code>de</code> 删除到词尾<br><code>d$</code> 删除到行尾</p>
+<h2 id="USING-A-COUNT-FOR-A-MOTION"><a href="#USING-A-COUNT-FOR-A-MOTION" class="headerlink" title="USING A COUNT FOR A MOTION"></a>USING A COUNT FOR A MOTION</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">** Typing a number before a motion repeats it that many times. **</span><br><span class="line"></span><br><span class="line">1. Move the cursor to the start of the line marked ---&gt; below.</span><br><span class="line"></span><br><span class="line">2. Type  2w  to move the cursor two words forward.</span><br><span class="line"></span><br><span class="line">3. Type  3e  to move the cursor to the end of the third word forward.</span><br><span class="line"></span><br><span class="line">4. Type  0  (zero) to move to the start of the line.</span><br></pre></td></tr></table></figure>
+<p><code>1w</code> == 一个词+一个空格<br><code>2w</code> 即向后移动两个词<br><code>2e</code> 即向后移动到第二个词 <strong>词尾</strong>(最后一个字母)<br><code>0</code>  回到行首</p>
+<h2 id="USING-A-COUNT-TO-DELETE-MORE"><a href="#USING-A-COUNT-TO-DELETE-MORE" class="headerlink" title="USING A COUNT TO DELETE MORE"></a>USING A COUNT TO DELETE MORE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">In the combination of the delete operator and a motion mentioned above you</span><br><span class="line">insert a count before the motion to delete more:</span><br><span class="line"> d   number   motion</span><br></pre></td></tr></table></figure>
+<p><code>d2w</code> 删两个词 (包括最后的空格)<br><code>d2e</code> 删两个词 (留空格)</p>
+<h2 id="OPERATING-ON-LINES"><a href="#OPERATING-ON-LINES" class="headerlink" title="OPERATING ON LINES"></a>OPERATING ON LINES</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">** Type  dd   to delete a whole line. **</span><br><span class="line"></span><br><span class="line">  2. Type  dd  to delete the line.</span><br><span class="line">  ...</span><br><span class="line">  4. Type   2dd   to delete two lines.</span><br></pre></td></tr></table></figure>
+<p><code>dd</code>  删去一整行<br><code>2dd</code> 删去两行</p>
+<h2 id="THE-UNDO-COMMAND"><a href="#THE-UNDO-COMMAND" class="headerlink" title="THE UNDO COMMAND"></a>THE UNDO COMMAND</h2><blockquote>
+<p><strong> Press  u    to undo the last commands,   U  to fix a whole line. </strong></p>
+</blockquote>
+<p><code>u</code>== <strong>undo</strong> 撤销上一个举动<br><code>U</code> 撤销一行上的所有更改 <del>时间间隔相近的一系列举动</del> ,可反撤销<br><code>CTRL-R</code> 撤销之前的命令</p>
+<h2 id="SUMMARY-1"><a href="#SUMMARY-1" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1. To delete from the cursor up to the next word type:      dw</span><br><span class="line">2. To delete from the cursor to the end of a line type:     d$</span><br><span class="line">3. To delete a whole line type:    dd</span><br><span class="line"></span><br><span class="line">4. To repeat a motion prepend it with a number:   2w</span><br><span class="line">5. The format for a change command is:</span><br><span class="line">             operator   [number]   motion</span><br><span class="line">   where:</span><br><span class="line">     operator - is what to do, such as  d  for delete</span><br><span class="line">     [number] - is an optional count to repeat the motion</span><br><span class="line">     motion   - moves over the text to operate on, such as  w (word),</span><br><span class="line">                $ (to the end of line), etc.</span><br><span class="line"></span><br><span class="line">6. To move to the start of the line use a zero:  0</span><br><span class="line"></span><br><span class="line">7. To undo previous actions, type: 	      u  (lowercase u)</span><br><span class="line">   To undo all the changes on a line, type:   U  (capital U)</span><br><span class="line">   To undo the undo&apos;s, type:		      CTRL-R</span><br></pre></td></tr></table></figure>
+<h1 id="Lesson-3-MORE-COMMAND"><a href="#Lesson-3-MORE-COMMAND" class="headerlink" title="Lesson 3: MORE COMMAND"></a>Lesson 3: MORE COMMAND</h1><h2 id="THE-PUT-COMMAND"><a href="#THE-PUT-COMMAND" class="headerlink" title="THE PUT COMMAND"></a>THE PUT COMMAND</h2><blockquote>
+<p><strong> Type    p  to put previously deleted text after the cursor. </strong></p>
+</blockquote>
+<p><code>p</code>== <strong>puts</strong> 把缓冲区中的一行，插入到当前行的下一行</p>
+<h2 id="THE-REPLACE-COMMAND"><a href="#THE-REPLACE-COMMAND" class="headerlink" title="THE REPLACE COMMAND"></a>THE REPLACE COMMAND</h2><blockquote>
+<p><strong> Type  rx  to replace the character at the cursor with  x . </strong></p>
+</blockquote>
+<p><code>rx</code> 把当前光标所在的字母替换为<code>x</code><br><code>r</code>== <strong>replace</strong></p>
+<h2 id="THE-CHANGE-OPERATOR"><a href="#THE-CHANGE-OPERATOR" class="headerlink" title="THE CHANGE OPERATOR"></a>THE CHANGE OPERATOR</h2><blockquote>
+<p><strong> To change until the end of a word, type  ce . </strong></p>
+</blockquote>
+<p><code>ce</code> 删除光标至词尾，然后插入<br><code>c</code>== <strong>change</strong></p>
+<h2 id="MORE-CHANGES-USING-c"><a href="#MORE-CHANGES-USING-c" class="headerlink" title="MORE CHANGES USING c"></a>MORE CHANGES USING c</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">** The change operator is used with the same motions as delete. **</span><br><span class="line"></span><br><span class="line">1. The change operator works in the same way as delete.  The format is:</span><br><span class="line"></span><br><span class="line">       c    [number]   motion</span><br><span class="line"></span><br><span class="line">2. The motions are the same, such as   w (word) and  $ (end of line).</span><br></pre></td></tr></table></figure>
+<p><code>c</code> 命令和 <code>d</code> 命令相似，只是多了插入<br><code>c$</code> 删除光标到行尾，然后插入<br><code>cw</code>/ <code>ce</code>相同，删除光标到词尾(不含空格)，然后插入</p>
+<h2 id="SUMMARY-2"><a href="#SUMMARY-2" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1. To put back text that has just been deleted, type   p .  This puts the</span><br><span class="line">   deleted text AFTER the cursor (if a line was deleted it will go on the</span><br><span class="line">   line below the cursor).</span><br><span class="line"></span><br><span class="line">2. To replace the character under the cursor, type   r   and then the</span><br><span class="line">   character you want to have there.</span><br><span class="line"></span><br><span class="line">3. The change operator allows you to change from the cursor to where the</span><br><span class="line">   motion takes you.  eg. Type  ce  to change from the cursor to the end of</span><br><span class="line">   the word,  c$  to change to the end of a line.</span><br><span class="line"></span><br><span class="line">4. The format for change is:</span><br><span class="line"></span><br><span class="line"> c   [number]   motion</span><br></pre></td></tr></table></figure>
+<h1 id="Lesson-4-CURSOR-AND-FILE"><a href="#Lesson-4-CURSOR-AND-FILE" class="headerlink" title="Lesson 4: CURSOR AND FILE"></a>Lesson 4: CURSOR AND FILE</h1><h2 id="CURSOR-LOCATION-AND-FILE-STATUS"><a href="#CURSOR-LOCATION-AND-FILE-STATUS" class="headerlink" title="CURSOR LOCATION AND FILE STATUS"></a>CURSOR LOCATION AND FILE STATUS</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">** Type CTRL-G to show your location in the file and the file status.</span><br><span class="line">     Type  G  to move to a line in the file. **</span><br><span class="line"></span><br><span class="line">     2. Press  G  to move you to the bottom of the file.</span><br><span class="line">          Type  gg  to move you to the start of the file.</span><br><span class="line"></span><br><span class="line">       3. Type the number of the line you were on and then  G .</span><br></pre></td></tr></table></figure>
+<p><code>Ctrl+g</code> 显示文件路径，行号等信息<br><code>gg</code> 转跳到文件头<br><code>G</code> 转跳到文件尾<br><code>233G</code> 转跳到 233 行</p>
+<h2 id="THE-SEARCH-COMMAND"><a href="#THE-SEARCH-COMMAND" class="headerlink" title="THE SEARCH COMMAND"></a>THE SEARCH COMMAND</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">** Type  /  followed by a phrase to search for the phrase. **</span><br><span class="line"></span><br><span class="line">3. To search for the same phrase again, simply type  n .</span><br><span class="line">   To search for the same phrase in the opposite direction, type  N .</span><br><span class="line"></span><br><span class="line">4. To search for a phrase in the backward direction, use  ?  instead of  / .</span><br><span class="line"></span><br><span class="line">5. To go back to where you came from press  CTRL-O  (Keep Ctrl down while</span><br><span class="line">   pressing the letter o).  Repeat to go back further.  CTRL-I goes forward.</span><br><span class="line"></span><br><span class="line">NOTE: When the search reaches the end of the file it will continue at the</span><br><span class="line">      start, unless the &apos;wrapscan&apos; option has been reset.</span><br></pre></td></tr></table></figure>
+<p><code>/word</code> (向下)在文件中搜索 word<br><code>?word</code> (向上)搜索<br><code>n</code>== <strong>next</strong> 向下继续搜索，<br><code>N</code> 向上继续搜索<br><code>Ctrl+o</code> 返回(上一个点)<br><code>Ctrl+i</code> 前进(到下一个点)</p>
+<h2 id="THE-SUBSTITUTE-COMMAND"><a href="#THE-SUBSTITUTE-COMMAND" class="headerlink" title="THE SUBSTITUTE COMMAND"></a>THE SUBSTITUTE COMMAND</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">** Type  :s/new/new/g  to substitute &apos;new&apos; for &apos;new&apos;. **</span><br><span class="line"></span><br><span class="line">2. Type  :s/thee/the &lt;ENTER&gt; .  Note that this command only changes the</span><br><span class="line">   first occurrence of &quot;thee&quot; in the line.</span><br><span class="line"></span><br><span class="line">3. Now type  :s/thee/the/g .  Adding the  g  flag means to substitute</span><br><span class="line">   globally in the line, change all occurrences of &quot;thee&quot; in the line.</span><br><span class="line"></span><br><span class="line">4. To change every occurrence of a character string between two lines,</span><br><span class="line">   type   :#,#s/old/new/g    where #,# are the line numbers of the range</span><br><span class="line">                             of lines where the substitution is to be done.</span><br><span class="line">   Type   :%s/old/new/g      to change every occurrence in the whole file.</span><br><span class="line">   Type   :%s/old/new/gc     to find every occurrence in the whole file,</span><br><span class="line">               with a prompt whether to substitute or not.</span><br></pre></td></tr></table></figure>
+<p><code>:s/old/new</code> 在当前行中，替换 <strong>第一个</strong> old为new (无确认)<br><code>:s/old/new/g</code> 在当前行中，替换所有的old为new (无确认)<br><code>:123,456s/old/new/g</code> 在123~456行中，替换所有的old为new (无确认)<br><code>:%s/old/new/g</code> 在 <strong>整个文件</strong> 中，替换所有的old为new (无确认)<br><code>:%s/old/new/gc</code> 在 <strong>整个文件</strong> 中，替换所有的old为new (<strong>有确认</strong>)</p>
+<p>参数解释：</p>
+<ul>
+<li><code>/g</code>== <strong>globally</strong></li>
+<li><code>/c</code>== <strong>confirm</strong></li>
+</ul>
+<h2 id="SUMMARY-3"><a href="#SUMMARY-3" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1. CTRL-G  displays your location in the file and the file status.</span><br><span class="line">           G  moves to the end of the file.</span><br><span class="line">   number  G  moves to that line number.</span><br><span class="line">          gg  moves to the first line.</span><br><span class="line"></span><br><span class="line">2. Typing  /	followed by a phrase searches FORWARD for the phrase.</span><br><span class="line">   Typing  ?	followed by a phrase searches BACKWARD for the phrase.</span><br><span class="line">   After a search type  n  to find the next occurrence in the same direction</span><br><span class="line">   or  N  to search in the opposite direction.</span><br><span class="line">   CTRL-O takes you back to older positions, CTRL-I to newer positions.</span><br><span class="line"></span><br><span class="line">3. Typing  %	while the cursor is on a (,),[,],&#123;, or &#125; goes to its match.</span><br><span class="line"></span><br><span class="line">4. To substitute new for the first old in a line type    :s/old/new</span><br><span class="line">   To substitute new for all &apos;old&apos;s on a line type	   :s/old/new/g</span><br><span class="line">   To substitute phrases between two line #&apos;s type	   :#,#s/old/new/g</span><br><span class="line">   To substitute all occurrences in the file type	   :%s/old/new/g</span><br><span class="line">   To ask for confirmation each time add &apos;c&apos;		   :%s/old/new/gc</span><br></pre></td></tr></table></figure>
+<h1 id="Lesson-5-EXTERNAL-COMMAND"><a href="#Lesson-5-EXTERNAL-COMMAND" class="headerlink" title="Lesson 5: EXTERNAL COMMAND"></a>Lesson 5: EXTERNAL COMMAND</h1><h2 id="HOW-TO-EXECUTE-AN-EXTERNAL-COMMAND"><a href="#HOW-TO-EXECUTE-AN-EXTERNAL-COMMAND" class="headerlink" title="HOW TO EXECUTE AN EXTERNAL COMMAND"></a>HOW TO EXECUTE AN EXTERNAL COMMAND</h2><blockquote>
+<p><strong> Type  :!    followed by an external command to execute that command. </strong></p>
+</blockquote>
+<p><code>:!ls</code> 在cmd中执行<code>ls</code>并打开新窗口</p>
+<img src="/Vim-Tutor-explore/ls.png" title="执行效果">
+<h2 id="MORE-ON-WRITING-FILES"><a href="#MORE-ON-WRITING-FILES" class="headerlink" title="MORE ON WRITING FILES"></a>MORE ON WRITING FILES</h2><blockquote>
+<p><strong> To save the changes made to the text, type  :w FILENAME. </strong></p>
+</blockquote>
+<p><code>:w FILENAME</code> 将文件写进<code>FILENAME</code>中</p>
+<h2 id="SELECTING-TEXT-TO-WRITE"><a href="#SELECTING-TEXT-TO-WRITE" class="headerlink" title="SELECTING TEXT TO WRITE"></a>SELECTING TEXT TO WRITE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">** To save part of the file, type  v  motion  :w FILENAME **</span><br><span class="line"></span><br><span class="line">NOTE:  Pressing  v  starts Visual selection.  You can move the cursor around</span><br><span class="line">       to make the selection bigger or smaller.  Then you can use an operator</span><br><span class="line">       to do something with the text.  For example,  d  deletes the text.</span><br></pre></td></tr></table></figure>
+<p><code>v</code> == <strong>visual</strong> 进入可视化模式，用来选择文字<br><code>:w FILENAME</code> -&gt; <code>:&#39;&lt;,&#39;&gt;w FILENAME</code> 保存选中的文字到文件</p>
+<h2 id="RETRIEVING-AND-MERGING-FILES"><a href="#RETRIEVING-AND-MERGING-FILES" class="headerlink" title="RETRIEVING AND MERGING FILES"></a>RETRIEVING AND MERGING FILES</h2><blockquote>
+<p><strong> To insert the contents of a file, type  :r FILENAME  </strong></p>
+</blockquote>
+<p><code>:r FILENAME</code> 将文件中的内容插入到光标所在处</p>
+<h2 id="SUMMARY-4"><a href="#SUMMARY-4" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1.  :!command  executes an external command.</span><br><span class="line"></span><br><span class="line">    Some useful examples are:</span><br><span class="line"> (MS-DOS)	  (Unix)</span><br><span class="line">  :!dir		   :!ls		   -  shows a directory listing.</span><br><span class="line">  :!del FILENAME   :!rm FILENAME   -  removes file FILENAME.</span><br><span class="line"></span><br><span class="line">2.  :w FILENAME  writes the current Vim file to disk with name FILENAME.</span><br><span class="line"></span><br><span class="line">3.  v  motion  :w FILENAME  saves the Visually selected lines in file</span><br><span class="line">    FILENAME.</span><br><span class="line"></span><br><span class="line">4.  :r FILENAME  retrieves disk file FILENAME and puts it below the</span><br><span class="line">    cursor position.</span><br><span class="line"></span><br><span class="line">5.  :r !dir  reads the output of the dir command and puts it below the</span><br><span class="line">    cursor position.</span><br></pre></td></tr></table></figure>
+<h1 id="Lesson-6-OPEN-COMMAND"><a href="#Lesson-6-OPEN-COMMAND" class="headerlink" title="Lesson 6: OPEN COMMAND"></a>Lesson 6: OPEN COMMAND</h1><h2 id="THE-OPEN-COMMAND"><a href="#THE-OPEN-COMMAND" class="headerlink" title="THE OPEN COMMAND"></a>THE OPEN COMMAND</h2><blockquote>
+<p><strong> Type  o  to open a line below the cursor and place you in Insert mode. </strong></p>
+</blockquote>
+<p><code>o</code> 小写的o在当前行的 <strong>下一行</strong>，插入新行<br><code>O</code> 大写的O在当前行的 <strong>上一行</strong>，插入新行</p>
+<h2 id="THE-APPEND-COMMAND"><a href="#THE-APPEND-COMMAND" class="headerlink" title="THE APPEND COMMAND"></a>THE APPEND COMMAND</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  ** Type  a  to insert text AFTER the cursor. **</span><br><span class="line"></span><br><span class="line">2. Press  e  until the cursor is on the end of  li .</span><br><span class="line"></span><br><span class="line">3. Type an  a  (lowercase) to append text AFTER the cursor.</span><br><span class="line"></span><br><span class="line">NOTE:  a, i and A all go to the same Insert mode, the only  </span><br><span class="line">       difference is where the characters are inserted.</span><br></pre></td></tr></table></figure>
+<p><code>i</code> 在当前光标处插入<br><code>a</code> 在当前光标后插入<br><code>e</code> 调到下一个词尾</p>
+<h2 id="ANOTHER-WAY-TO-REPLACE"><a href="#ANOTHER-WAY-TO-REPLACE" class="headerlink" title="ANOTHER WAY TO REPLACE"></a>ANOTHER WAY TO REPLACE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">** Type a capital  R  to replace more than one character. **</span><br><span class="line"></span><br><span class="line">NOTE:  Replace mode is like Insert mode, but every typed character deletes an</span><br><span class="line">       existing character.</span><br></pre></td></tr></table></figure>
+<p><code>R</code> 在当前光标处开始替换模式</p>
+<h2 id="COPY-AND-PASTE-TEXT"><a href="#COPY-AND-PASTE-TEXT" class="headerlink" title="COPY AND PASTE TEXT"></a>COPY AND PASTE TEXT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">** Use the  y  operator to copy text and  p  to paste it **</span><br><span class="line"></span><br><span class="line">2. Start Visual mode with  v  and move the cursor to just before &quot;first&quot;.</span><br><span class="line"></span><br><span class="line">3. Type  y  to yank (copy) the highlighted text.</span><br><span class="line"></span><br><span class="line">4. Move the cursor to the end of the next line:  j$b</span><br><span class="line"></span><br><span class="line">5. Type  p  to put (paste) the text.  Then type:  a second &lt;ESC&gt; .</span><br><span class="line"></span><br><span class="line">6. Use Visual mode to select &quot; item.&quot;, yank it with  y , move to the end of</span><br><span class="line">   the next line with  j$  and put the text there with  p .</span><br><span class="line"></span><br><span class="line">   NOTE: you can also use  y  as an operator;  yw  yanks one word.</span><br></pre></td></tr></table></figure>
+<p>在<code>v</code>== <strong>visual</strong> 模式下选中要复制的文字<br><code>y</code> == <strong>yank</strong> 复制选中的文字<br><code>p</code> == <strong>paste</strong> 黏贴文字</p>
+<p><code>yw</code> 复制一个词<br><code>j$</code> 选中到下一行行尾</p>
+<h2 id="SET-OPTION"><a href="#SET-OPTION" class="headerlink" title="SET OPTION"></a>SET OPTION</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">** Set an option so a search or substitute ignores case **</span><br><span class="line"></span><br><span class="line">1. Search for &apos;ignore&apos; by entering:   /ignore  &lt;ENTER&gt;</span><br><span class="line">   Repeat several times by pressing  n .</span><br><span class="line"></span><br><span class="line">2. Set the &apos;ic&apos; (Ignore case) option by entering:   :set ic</span><br><span class="line"></span><br><span class="line">4. Set the &apos;hlsearch&apos; and &apos;incsearch&apos; options:  :set hls is</span><br><span class="line"></span><br><span class="line">6. To disable ignoring case enter:  :set noic</span><br><span class="line"></span><br><span class="line">NOTE:  To remove the highlighting of matches enter:   :nohlsearch</span><br><span class="line">NOTE:  If you want to ignore case for just one search command, use  \c</span><br><span class="line">     in the phrase:  /ignore\c  &lt;ENTER&gt;</span><br></pre></td></tr></table></figure>
+<p><code>:set ic</code> \ <code>:set noic</code> 打开/关闭 忽略大小写(for 查找/替换)<br><code>:set hls is</code> \ <code>:nohlsearch</code> 打开/关闭 高亮</p>
+<h2 id="SUMMARY-5"><a href="#SUMMARY-5" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">1. Type  o  to open a line BELOW the cursor and start Insert mode.</span><br><span class="line">   Type  O  to open a line ABOVE the cursor.</span><br><span class="line"></span><br><span class="line">2. Type  a  to insert text AFTER the cursor.</span><br><span class="line">   Type  A  to insert text after the end of the line.</span><br><span class="line"></span><br><span class="line">3. The  e  command moves to the end of a word.</span><br><span class="line"></span><br><span class="line">4. The  y  operator yanks (copies) text,  p  puts (pastes) it.</span><br><span class="line"></span><br><span class="line">5. Typing a capital  R  enters Replace mode until  &lt;ESC&gt;  is pressed.</span><br><span class="line"></span><br><span class="line">6. Typing &quot;:set xxx&quot; sets the option &quot;xxx&quot;.  Some options are:</span><br><span class="line">  &apos;ic&apos; &apos;ignorecase&apos;	ignore upper/lower case when searching</span><br><span class="line">&apos;is&apos; &apos;incsearch&apos;	show partial matches for a search phrase</span><br><span class="line">&apos;hls&apos; &apos;hlsearch&apos;	highlight all matching phrases</span><br><span class="line">   You can either use the long or the short option name.</span><br><span class="line"></span><br><span class="line">7. Prepend &quot;no&quot; to switch an option off:   :set noic</span><br></pre></td></tr></table></figure>
+<h1 id="Lesson-7-HELP"><a href="#Lesson-7-HELP" class="headerlink" title="Lesson 7: HELP"></a>Lesson 7: HELP</h1><h2 id="GETTING-HELP"><a href="#GETTING-HELP" class="headerlink" title="GETTING HELP"></a>GETTING HELP</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Vim has a comprehensive on-line help system.  To get started, try one of</span><br><span class="line">these three:</span><br><span class="line">- press the &lt;HELP&gt; key (if you have one)</span><br><span class="line">- press the &lt;F1&gt; key (if you have one)</span><br><span class="line">- type   :help &lt;ENTER&gt;</span><br><span class="line"></span><br><span class="line">Read the text in the help window to find out how the help works.</span><br><span class="line">Type  CTRL-W CTRL-W   to jump from one window to another.</span><br><span class="line">Type    :q &lt;ENTER&gt;    to close the help window.</span><br></pre></td></tr></table></figure>
+<h2 id="CREATE-A-STARTUP-SCRIPT"><a href="#CREATE-A-STARTUP-SCRIPT" class="headerlink" title="CREATE A STARTUP SCRIPT"></a>CREATE A STARTUP SCRIPT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">** Enable Vim features **</span><br><span class="line"></span><br><span class="line">1. Start editing the &quot;vimrc&quot; file.  This depends on your system:</span><br><span class="line">:e ~/.vimrc		for Unix</span><br><span class="line">:e $VIM/_vimrc		for MS-Windows</span><br><span class="line"></span><br><span class="line">2. Now read the example &quot;vimrc&quot; file contents:</span><br><span class="line">:r $VIMRUNTIME/vimrc_example.vim</span><br><span class="line"></span><br><span class="line">3. Write the file with:</span><br><span class="line">:w</span><br></pre></td></tr></table></figure>
+<p>有cgywin的环境可以直接改 <code>~/.vimrc</code></p>
+<h2 id="COMPLETION"><a href="#COMPLETION" class="headerlink" title="COMPLETION"></a>COMPLETION</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">** Command line completion with CTRL-D and &lt;TAB&gt; **</span><br><span class="line"></span><br><span class="line">NOTE:  Completion works for many commands.  Just try pressing CTRL-D and</span><br><span class="line">       &lt;TAB&gt;.  It is especially useful for  :help .</span><br></pre></td></tr></table></figure>
+<h2 id="SUMMARY-6"><a href="#SUMMARY-6" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1. Type  :help  or press &lt;F1&gt; or &lt;Help&gt;  to open a help window.</span><br><span class="line"></span><br><span class="line">2. Type  :help cmd  to find help on  cmd .</span><br><span class="line"></span><br><span class="line">3. Type  CTRL-W CTRL-W  to jump to another window</span><br><span class="line"></span><br><span class="line">4. Type  :q  to close the help window</span><br><span class="line"></span><br><span class="line">5. Create a vimrc startup script to keep your preferred settings.</span><br><span class="line"></span><br><span class="line">6. When typing a  :  command, press CTRL-D to see possible completions.</span><br><span class="line">   Press &lt;TAB&gt; to use one completion.</span><br></pre></td></tr></table></figure>
+<h1 id="For-further-reading-and-studying"><a href="#For-further-reading-and-studying" class="headerlink" title="For further reading and studying"></a>For further reading and studying</h1><ul>
+<li><code>:help user-manual</code></li>
+<li><a href="http://www.truth.sk/vim/vimbook-OPL.pdf" target="_blank" rel="noopener">Vim - Vi Improved - by Steve Oualline (Publisher: New Riders)</a></li>
+<li><a href="http://iccf-holland.org/click5.html" target="_blank" rel="noopener">Vim - ICCF Holland</a></li>
+<li>Learning the Vi Editor - by Linda Lamb<br>  Publisher: O’Reilly &amp; Associates Inc.</li>
+</ul>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/vim/">vim</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/MIT-HAKMAN/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">MIT HAKMAN</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/hexo-math-插件修复/">
+        <span class="next-text nav-default">hexo-math 插件修复</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

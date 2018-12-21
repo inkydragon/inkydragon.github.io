@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="某 CTF Group 的入群考核试题">
+
+
+
+
+  <meta name="keywords" content="CTF,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/">
+
+
+<meta name="description" content="题目由来看知乎CTF入门相关问题看到 sunnyelf dalao的答案 针对CTF，大家都是怎么训练的？ 他的签名里有个群号  CTF Group:473831530  加群需要先解出Flag  http://t.cn/RJgPBh4 -&amp;gt; https://pan.baidu.com/s/1nv4UsyP">
+<meta name="keywords" content="CTF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="某 CTF Group 的入群考核试题">
+<meta property="og:url" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="题目由来看知乎CTF入门相关问题看到 sunnyelf dalao的答案 针对CTF，大家都是怎么训练的？ 他的签名里有个群号  CTF Group:473831530  加群需要先解出Flag  http://t.cn/RJgPBh4 -&amp;gt; https://pan.baidu.com/s/1nv4UsyP">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/0-flag.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/1-7zip.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/2-key.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/3-flag.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/4-try1.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/5-py.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/6-try2.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/7-zhushi.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/8-try3.png">
+<meta property="og:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/9-try4.png">
+<meta property="og:updated_time" content="2018-12-21T11:52:16.663Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="某 CTF Group 的入群考核试题">
+<meta name="twitter:description" content="题目由来看知乎CTF入门相关问题看到 sunnyelf dalao的答案 针对CTF，大家都是怎么训练的？ 他的签名里有个群号  CTF Group:473831530  加群需要先解出Flag  http://t.cn/RJgPBh4 -&amp;gt; https://pan.baidu.com/s/1nv4UsyP">
+<meta name="twitter:image" content="https://blog.wo-class.cn/某-CTF-Group-的入群考核试题/0-flag.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> 某 CTF Group 的入群考核试题 · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          某 CTF Group 的入群考核试题
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年3月13日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目由来"><span class="toc-text">题目由来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CTF"><span class="toc-text">CTF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RFC4042"><span class="toc-text">RFC4042</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#marshal"><span class="toc-text">marshal</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#flag-py-分析"><span class="toc-text">flag.py 分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Capture-the-Flag"><span class="toc-text">Capture the Flag</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-try"><span class="toc-text">1-try</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-try"><span class="toc-text">2-try</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#final-try"><span class="toc-text">final-try</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="题目由来"><a href="#题目由来" class="headerlink" title="题目由来"></a>题目由来</h2><p>看知乎CTF入门相关问题看到 <a href="https://www.zhihu.com/people/sunnyelf/answers" target="_blank" rel="noopener">sunnyelf</a> dalao的答案 <a href="http://zhihu.com/question/30505597/answer/72163029" target="_blank" rel="noopener">针对CTF，大家都是怎么训练的？</a></p>
+<p>他的签名里有个群号</p>
+<blockquote>
+<p>CTF Group:473831530</p>
+</blockquote>
+<p>加群需要先解出Flag<br><img src="/某-CTF-Group-的入群考核试题/0-flag.png" title="加群Flag"></p>
+<blockquote>
+<p><a href="http://t.cn/RJgPBh4" target="_blank" rel="noopener">http://t.cn/RJgPBh4</a> -&gt; <a href="https://pan.baidu.com/s/1nv4UsyP" target="_blank" rel="noopener">https://pan.baidu.com/s/1nv4UsyP</a></p>
+</blockquote>
+<a id="more"></a>
+<h2 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h2><img src="/某-CTF-Group-的入群考核试题/1-7zip.png" title="压缩包内容">
+<h3 id="RFC4042"><a href="#RFC4042" class="headerlink" title="RFC4042"></a>RFC4042</h3><p>google 一下发现是 <a href="https://www.ietf.org/rfc/rfc4042.txt" target="_blank" rel="noopener">UTF-9 and UTF-18</a></p>
+<p>在 GitHub 上找到一个解码脚本 <a href="https://github.com/enricobacis/utf9" target="_blank" rel="noopener">utf9</a><br>装完了写一个解码脚本</p>
+<figure class="highlight python"><figcaption><span>Utf-9_Decode.py </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="comment">#Utf-9.py</span></span><br><span class="line"><span class="keyword">import</span> codecs</span><br><span class="line"><span class="keyword">import</span> utf9</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">with</span> codecs.open(<span class="string">"rfc4042"</span>) <span class="keyword">as</span> file:</span><br><span class="line">        data = file.read()</span><br><span class="line">        <span class="comment">#data = data.replace("\n", "")</span></span><br><span class="line">        <span class="comment">#print utf9.utf9decode(data)</span></span><br><span class="line">        file.close()</span><br><span class="line">        <span class="keyword">return</span> utf9.utf9decode(data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> codecs.open(<span class="string">"_DecodeFile.txt"</span>, <span class="string">"w"</span>) <span class="keyword">as</span> temp:</span><br><span class="line">    temp.write(main())</span><br><span class="line">    temp.close()</span><br></pre></td></tr></table></figure>
+<img src="/某-CTF-Group-的入群考核试题/2-key.png" title="UTF-9解码得key">
+<p>key 看起来能运算的样子，先放一放。</p>
+<p>考虑到本题有<code>.py</code>文件，又看到<code>** //</code>等Python的运算符，怀疑是Python的代码</p>
+<h3 id="marshal"><a href="#marshal" class="headerlink" title="marshal"></a>marshal</h3><p>再看flag.py<br><img src="/某-CTF-Group-的入群考核试题/3-flag.png"></p>
+<p>执行一下<br><img src="/某-CTF-Group-的入群考核试题/4-try1.png"></p>
+<p>尝试依次<code>base64 zlib</code>解码无果</p>
+<p>搜索<code>marshal</code>发现是序列化，<br>在 stackoverflow 上看到有人说这是序列化过的Python代码，有软件可以还原 —— <a href="https://github.com/Mysterie/uncompyle2" target="_blank" rel="noopener">uncompyle2</a></p>
+<p>下载安装之，写个脚本解码<br><figure class="highlight python"><figcaption><span>FlagCodeDecrypted.py </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="comment">#flag.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> marshal, zlib, base64</span><br><span class="line"><span class="keyword">import</span> uncompyle2</span><br><span class="line"></span><br><span class="line"><span class="comment">#exec(marshal.loads(</span></span><br><span class="line">co = marshal.loads(zlib.decompress(base64.b64decode(<span class="string">'eJxtVP9r21YQvyd/ieWm66Cd03QM1B8C3pggUuzYCSWstHSFQijyoJBhhGq9OXJl2ZFeqAMOK6Q/94f9Ofvn1s+d7Lgtk/3O997du/vc584a0eqpYP2GVfwDEeOrKCU6g2LRRyiK4oooFsVVUSqkqxTX6J1F+SfSNYrrdKPorC76luhbpOEGCZNFZw2KG3Rmk26QtuXi3xTb7ND6/aVu0g2RuvhEcZNut5lAGbTvAFbyH57TkYLKy8J6xpDvQxiiiaIlcdqJxVcHbXY6bXNlZgviPCrO0+StqfKd88gzNh/qRZyMdWHE29TZZvIkG7eZFRGGRcBmsXJaUoKCQ9fWKHwSqNeKFnsM5PnwJ7q2aKk4AFhcWtQCh+ChB5+Lu/RmyYUxmtOEYxas7i/2iuR7Ti14OEOSmU0RADd4+dQzbM1FJhukAUeQ+kZROuLyioagrau76kc1slY1NNaY/y3LAxDQBrAICJisV2hMdF2lxQcyFuMoqcX3+TCl6xotqzSpkqmxYVmjXVjAXiwBsEfBrd1VvTvLCj2EXRnhoryAKdpxcIgJcowUB68yAx/tlCAuPHqDuZo0CN3CUGHwkPhGMA7aXMfphjbmQLhLhJcHa0a+mpgB191c1U1lnHJQbgkHx+WGxeJbejnpkzSavo2jkxZ7i725npGAaTc8FXmUjbUETHUmkxXN5zqL5WiWxwE7Bc11yyYzNJpN02jerq+DzNNodfxOX8kE4FcmYKscDdYD1oPGGucXYNmgs1F+NTf3GOt3Mg7b+NTVruqoQyX1hOEUacKw+AGbP38ZOq9THRXaSbL5pXGQ8bho/Z/lrzQaHxdoCrlev+t6nZ7re57r+57rHXag93Deh37k+vuw9zorO/Qj/B50cAf2oyOsvut3D+ADWxdxfN/1Drqu39mHzvcRswv/Hvz7sHeg9w8Qzy99DzuFwxhPhs6zWTbOI3OZRiaZZcVj5wVwOklx7OwVxR47PR46r/SVM8ulBJic9zku/eqY/MqJxiDj+Gd55wS3f35pbLCzHoEwzKKpDkN5i+TR+1AYCWTo5IV0Z0P9H3phDDd6lMzPdS5bbo9eJGbTsW9nbDqLL1N9Iq+rRxDbll2x67a9Lf27hw5uK1s1rZr6DOPF+FI='</span>)))</span><br><span class="line"><span class="comment">#)</span></span><br><span class="line"></span><br><span class="line">f=open(<span class="string">'./_DecryptedCode.py'</span>,<span class="string">'w'</span>)</span><br><span class="line">uncompyle2.uncompyle(<span class="string">'2.7.3'</span>,co,f)</span><br></pre></td></tr></table></figure></p>
+<img src="/某-CTF-Group-的入群考核试题/5-py.png" title="解码得到的Python代码">
+<h4 id="flag-py-分析"><a href="#flag-py-分析" class="headerlink" title="flag.py 分析"></a>flag.py 分析</h4><figure class="highlight python"><figcaption><span>Flag.py </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用 hashlib 库, 计算sha1，然后转化为16进制输出</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sha1</span><span class="params">(string)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> hashlib.sha1(string).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将 sha1 序列逐位按16进制求校验和</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span><span class="params">(strSHA1)</span>:</span></span><br><span class="line">    r = <span class="number">0</span> <span class="comment"># 校验和置0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> strSHA1: <span class="comment"># 循环读取 sha1 字符串的每一位</span></span><br><span class="line">        r += int(<span class="string">'0x%s'</span> % i, <span class="number">16</span>) <span class="comment"># 将读入的字符 按16进制转化为证书求和</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> r <span class="comment"># 返回校验和</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注加密函数，通过 key&amp;flag 计算出 encryptText</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encrypt</span><span class="params">(plain, key)</span>:</span></span><br><span class="line">    <span class="comment"># 计算 key的sha1，及相应的校验和</span></span><br><span class="line">    keySHA1 = sha1(key)</span><br><span class="line">    intSHA1 = calc(keySHA1)</span><br><span class="line"></span><br><span class="line">    r = [] <span class="comment"># encryptText 数组置空</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 主加密循环</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(plain)): <span class="comment"># 循环读取 flag 的每一位</span></span><br><span class="line">        <span class="comment"># 将计算结果添加到数组 r 内</span></span><br><span class="line">        r.append(ord(plain[i]) <span class="comment"># 将 flag[i] 转化为整数(ASCII码)</span></span><br><span class="line">                 + int(<span class="string">'0x%s'</span> % keySHA1[i % <span class="number">40</span>], <span class="number">16</span>) <span class="comment"># 加上 10进制的 sha1的第 [i % 40] 位，(16 -&gt; 10)</span></span><br><span class="line">                 - intSHA1 <span class="comment">#减去 sha1 的校验和</span></span><br><span class="line">                 )</span><br><span class="line">        <span class="comment"># 计算新的校验和</span></span><br><span class="line">        intSHA1 = calc(sha1(plain[:i + <span class="number">1</span>])[:<span class="number">20</span>] <span class="comment"># 【flag 前i位的 sha1】的 前20位</span></span><br><span class="line">                       + sha1(str(intSHA1))[:<span class="number">20</span>] <span class="comment"># 加上 【上一次校验和的字符串】的 前20位</span></span><br><span class="line">                       )</span><br><span class="line">        <span class="comment"># 继续循环</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将 r 转化为字符串并返回</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>.join( <span class="comment"># 将字符串拼接在一起</span></span><br><span class="line">        map( <span class="comment"># 枚举r中元素</span></span><br><span class="line">        <span class="keyword">lambda</span> x: str(x), r ) <span class="comment"># 此 lambda 表达式，将元素转化为字符串</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line"><span class="comment"># 主函数</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 输入 key&amp;flag</span></span><br><span class="line">    key = raw_input(<span class="string">'[*] Please input key:'</span>)</span><br><span class="line">    plain = raw_input(<span class="string">'[*] Please input flag:'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调用 encrypt 函数计算 encryptText</span></span><br><span class="line">    encryptText = encrypt(plain, key)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 作为对比的 cipherText 字符串， 可用于逆推 flag</span></span><br><span class="line">    cipherText = <span class="string">'-185-147-211-221-164-217-188-169-205-174-211-225-191-234-148-199-198-253-175-157-222-135-240-229-201-154-178-187-244-183-212-222-164'</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 判断 flag 是否正确， 正确则输出 **你输入的** flag</span></span><br><span class="line">    <span class="keyword">if</span> encryptText == cipherText:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'[&gt;] Congratulations! Flag is: %s'</span> % plain</span><br><span class="line">        exit()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'[!] Key or flag is wrong, try again:)'</span></span><br><span class="line">        exit()</span><br></pre></td></tr></table></figure>
+<p>pycharm里单步调试一下，发现加密部分可以逐字逆推出flag</p>
+<p>写个脚本</p>
+<figure class="highlight python"><figcaption><span>ReDecryptedCode.py </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#coding=utf-8</span></span><br><span class="line"><span class="comment">#ReDecryptedCode.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sha1</span><span class="params">(string)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> hashlib.sha1(string).hexdigest()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span><span class="params">(strSHA1)</span>:</span></span><br><span class="line">    r = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> strSHA1:</span><br><span class="line">        r += int(<span class="string">'0x%s'</span> % i, <span class="number">16</span>)</span><br><span class="line">    <span class="keyword">return</span> r</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encrypt</span><span class="params">(flag, key, cipherText)</span>:</span></span><br><span class="line">    keySHA1 = sha1(key)</span><br><span class="line">    intSHA1 = calc(keySHA1)</span><br><span class="line">    </span><br><span class="line">    cipherTextLength=len(cipherText)/<span class="number">4</span></span><br><span class="line">    FlagASCII=[]</span><br><span class="line">    r = []</span><br><span class="line">    cipherNum=[]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(cipherTextLength):</span><br><span class="line">        <span class="comment"># 将 cipherText 转化为数字 list</span></span><br><span class="line">        cipherNum.append(int(cipherText[<span class="number">4</span>*i : <span class="number">4</span>*i+<span class="number">4</span>]))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 计算 plainText</span></span><br><span class="line">        <span class="comment">#         FlagASCII[i] = r[i] - int('0x%s' % keySHA1[i % 40], 16) + intSHA1</span></span><br><span class="line">        FlagASCII.append(cipherNum[i] - int(<span class="string">'0x%s'</span> % keySHA1[i % <span class="number">40</span>], <span class="number">16</span>) + intSHA1)</span><br><span class="line">        flag += chr(FlagASCII[i])</span><br><span class="line"></span><br><span class="line">        <span class="comment">#         r[i] = FlagASCII[i] + int('0x%s' % keySHA1[i % 40], 16) - intSHA1</span></span><br><span class="line">        r.append(        ord(flag[i]) + int(<span class="string">'0x%s'</span> % keySHA1[i % <span class="number">40</span>], <span class="number">16</span>) - intSHA1)</span><br><span class="line">        intSHA1 = calc(sha1(flag[:i + <span class="number">1</span>])[:<span class="number">20</span>] + sha1(str(intSHA1))[:<span class="number">20</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">print</span> FlagASCII</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>.join(map(<span class="keyword">lambda</span> x: str(x), r)), flag</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    f_key = open(<span class="string">'_DecodeFile.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">    key = f_key.read().decode(<span class="string">'utf8'</span>).encode(<span class="string">'ascii'</span>,<span class="string">'ignore'</span>)</span><br><span class="line">    f_key.close()</span><br><span class="line">    <span class="comment">#key = raw_input('[*] Please input key:')</span></span><br><span class="line">    <span class="comment">#plain = raw_input('[*] Please input flag:')</span></span><br><span class="line">    flag = <span class="string">''</span></span><br><span class="line">    cipherText = <span class="string">'-185-147-211-221-164-217-188-169-205-174-211-225-191-234-148-199-198-253-175-157-222-135-240-229-201-154-178-187-244-183-212-222-164'</span></span><br><span class="line">    (encryptText, flag) = encrypt(flag, key, cipherText)</span><br><span class="line">    <span class="keyword">if</span> encryptText == cipherText:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'[&gt;] Congratulations! Flag is: %s'</span> % flag</span><br><span class="line"></span><br><span class="line">        <span class="comment">#with codecs.open("_Flag_res", "w", "utf-8-sig") as temp:</span></span><br><span class="line">        <span class="comment">#    temp.write(utf9.utf9decode(plain))</span></span><br><span class="line">        <span class="comment">#    temp.close()</span></span><br><span class="line"></span><br><span class="line">        exit()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'[!] Key or flag is wrong, try again:)'</span></span><br><span class="line">        exit()</span><br></pre></td></tr></table></figure>
+<h3 id="Capture-the-Flag"><a href="#Capture-the-Flag" class="headerlink" title="Capture the Flag"></a>Capture the Flag</h3><p>key 有了(or 部分解出)，flag 验证程序源码也有了，开始逆推Flag</p>
+<h4 id="1-try"><a href="#1-try" class="headerlink" title="1-try"></a>1-try</h4><p>用上面的<code>.py</code>脚本+之前解出的key(那一堆下划线)，尝试尝试生成Flag<br><img src="/某-CTF-Group-的入群考核试题/6-try2.png"><br>生成的flag乱码，看ASCII码(上面的数字)发现有部分字符无法打印，怀疑key有问题<br>[2017-03-01]</p>
+<h4 id="2-try"><a href="#2-try" class="headerlink" title="2-try"></a>2-try</h4><p>将key中的下划线<code>_</code>按数量一次用数字替代，刚好可以用1~9替代完全<br><figure class="highlight python"><figcaption><span>_DecodeFile2Num.txt </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>*((<span class="number">2</span>//<span class="number">2</span>+<span class="number">3</span>+<span class="number">6</span><span class="number">-4</span>%<span class="number">4</span>)**((<span class="number">3</span>%(<span class="number">3</span><span class="number">-1</span>))+<span class="number">8</span>+(<span class="number">3</span>%<span class="number">3</span>+<span class="number">5</span>+<span class="number">7</span>%<span class="number">2</span>+<span class="number">6</span>-(<span class="number">6</span>//(<span class="number">5</span>%<span class="number">3</span>)))))+<span class="number">2</span>*(((<span class="number">8</span>/<span class="number">2</span>)+<span class="number">3</span>%<span class="number">2</span>+<span class="number">7</span>-(<span class="number">8</span>//<span class="number">4</span>))**(<span class="number">1</span>*(<span class="number">5</span>+<span class="number">5</span>)+<span class="number">7</span>+<span class="number">9</span>%<span class="number">3</span>))+<span class="number">8</span>*(((<span class="number">9</span>//<span class="number">2</span>+<span class="number">8</span>%<span class="number">2</span>)+(<span class="number">7</span><span class="number">-1</span>))**((<span class="number">3</span>+<span class="number">7</span>)+<span class="number">9</span>-(<span class="number">6</span>//<span class="number">2</span>)))+<span class="number">7</span>*((<span class="number">3</span>+<span class="number">9</span>-(<span class="number">6</span>//<span class="number">3</span><span class="number">-7</span>%<span class="number">2</span>%<span class="number">1</span>))**(<span class="number">5</span>+<span class="number">5</span>+<span class="number">5</span>))+<span class="number">2</span>*(<span class="number">2</span>+<span class="number">9</span>-(<span class="number">3</span>//<span class="number">3</span><span class="number">-9</span>%<span class="number">5</span>%<span class="number">2</span>))**(<span class="number">9</span><span class="number">-4</span>+<span class="number">7</span>)+(<span class="number">3</span>+<span class="number">7</span>)**(<span class="number">8</span>%<span class="number">3</span>%<span class="number">2</span>+<span class="number">5</span>+<span class="number">6</span>)+(<span class="number">5</span><span class="number">-2</span>)*((<span class="number">4</span>//<span class="number">4</span><span class="number">-5</span>%<span class="number">4</span>%<span class="number">1</span>)+<span class="number">9</span>)**(<span class="number">5</span>-(<span class="number">7</span>//<span class="number">7</span>+<span class="number">9</span>%<span class="number">3</span>)+<span class="number">6</span>)+(<span class="number">5</span>+(<span class="number">9</span>%<span class="number">7</span>)*<span class="number">2</span>+<span class="number">1</span>)**<span class="number">9</span>+<span class="number">7</span>*(((<span class="number">9</span>%<span class="number">7</span>)*<span class="number">2</span>+<span class="number">7</span>-(<span class="number">8</span>//<span class="number">8</span>))**<span class="number">7</span>)+(<span class="number">8</span>/<span class="number">2</span>)*(((<span class="number">4</span><span class="number">-1</span>+<span class="number">7</span>)*(<span class="number">6</span>+<span class="number">4</span>))**<span class="number">3</span>)+<span class="number">3</span>*((<span class="number">2</span>+<span class="number">9</span><span class="number">-1</span>)**<span class="number">5</span>)+<span class="number">3</span>*(((<span class="number">3</span>+<span class="number">7</span><span class="number">-6</span>/<span class="number">3</span>+<span class="number">2</span><span class="number">-9</span>%<span class="number">5</span>%<span class="number">2</span>)*(<span class="number">3</span><span class="number">-1</span>+<span class="number">8</span>/<span class="number">2</span>+<span class="number">9</span>%<span class="number">5</span>))**<span class="number">2</span>)+(<span class="number">1</span>//<span class="number">1</span>)*(((<span class="number">8</span>%<span class="number">3</span>%<span class="number">2</span>+<span class="number">5</span>+<span class="number">5</span>)%<span class="number">6</span>)+<span class="number">7</span><span class="number">-1</span>)**<span class="number">3</span>+<span class="number">5</span>*((<span class="number">6</span>/(<span class="number">5</span>%<span class="number">3</span>))+<span class="number">7</span>)*((<span class="number">9</span>%<span class="number">7</span>)*<span class="number">2</span>+<span class="number">5</span>+<span class="number">1</span>)+<span class="number">3</span>//<span class="number">3</span>+<span class="number">9</span>+<span class="number">9</span>/<span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>Python 命令行下执行得<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5287002131074331513L</span><br></pre></td></tr></table></figure></p>
+<p>再次运行解密脚本(要手动输入key，可去掉注释，见下图)<br><img src="/某-CTF-Group-的入群考核试题/7-zhushi.png"><br>纯数字key<br><img src="/某-CTF-Group-的入群考核试题/8-try3.png"><br>带L的key<br><img src="/某-CTF-Group-的入群考核试题/9-try4.png"></p>
+<p>结果依旧乱码，无果<br>[2017-03-09]</p>
+<h4 id="final-try"><a href="#final-try" class="headerlink" title="final-try"></a>final-try</h4><p>还是Google好用 <code>CTF Python utf9</code>直接搜到了精灵[sunnyelf]大佬的writeup<br><a href="https://www.hackfun.org/CTF/you_need_python_write_up.html" target="_blank" rel="noopener">人生苦短，你需要用Python来做CTF</a></p>
+<p>看了一眼key的部分</p>
+<blockquote>
+<p>得到一堆符号串，但是经常仔细观察，除了“”符号外，其他符号都是Python中的算数运算符，“(”，“)”括号表示优先级，然后开脑洞“”为数字“1”，“__”为数字“2”，依次类推“<strong><strong>_</strong></strong>”为数字“9”，在熟悉了utf9模块的使用后尝试编写转换代码，代码执行后得到数字：5287002131074331513，尝试转换为16进制然后转换为ASCII字符</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;import binascii</span><br><span class="line">&gt;&gt;&gt;print binascii.a2b_hex(hex(5287002131074331513)[2:-1])</span><br><span class="line">I_4m-k3y</span><br></pre></td></tr></table></figure>
+<p>这样才解出了真正的key：<code>I_4m-k3y</code></p>
+<p>输入脚本解出Flag：<br><code>flag{Lif3_i5_5h0r7_U_n33d_Py7h0n}</code></p>
+<p>断断续续解了一个月….<br>[2017-03-31]</p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/CTF/">CTF</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/easyCTF2017/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">easyCTF2017</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/0ops-0CTF-2017/">
+        <span class="next-text nav-default">0ops 0CTF 2017</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

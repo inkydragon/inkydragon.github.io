@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="pyplot 原点相交的坐标轴与箭头">
+
+
+
+
+  <meta name="keywords" content="matplotlib,pyplot,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/">
+
+
+<meta name="description" content="我就想画个简单的 SVG 图，懒得开 Ai 了(虽然下面这个图还是用 Ai 画的)，希望用 pyplot 直接画。  pyplot 自带的坐标轴在左下角相交，并且没有箭头。 用自带的 ax.spines[&amp;#39;bottom&amp;#39;].set_position((&amp;#39;data&amp;#39;,0)) 可以做到原点相交，但貌似加不了箭头。ref: Moving spines - Matplotl">
+<meta name="keywords" content="matplotlib,pyplot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pyplot 原点相交的坐标轴与箭头">
+<meta property="og:url" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="我就想画个简单的 SVG 图，懒得开 Ai 了(虽然下面这个图还是用 Ai 画的)，希望用 pyplot 直接画。  pyplot 自带的坐标轴在左下角相交，并且没有箭头。 用自带的 ax.spines[&amp;#39;bottom&amp;#39;].set_position((&amp;#39;data&amp;#39;,0)) 可以做到原点相交，但貌似加不了箭头。ref: Moving spines - Matplotl">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/ReLU.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/base_point-1.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/base_point_arrow.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/arrow_axis-1.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/arrow_axis-2.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/eq-ReLU.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/ReLU-final.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/eq-sigmod.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/sigmod.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/eq-tanh.svg">
+<meta property="og:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/tanh.svg">
+<meta property="og:updated_time" content="2018-12-21T15:11:47.801Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pyplot 原点相交的坐标轴与箭头">
+<meta name="twitter:description" content="我就想画个简单的 SVG 图，懒得开 Ai 了(虽然下面这个图还是用 Ai 画的)，希望用 pyplot 直接画。  pyplot 自带的坐标轴在左下角相交，并且没有箭头。 用自带的 ax.spines[&amp;#39;bottom&amp;#39;].set_position((&amp;#39;data&amp;#39;,0)) 可以做到原点相交，但貌似加不了箭头。ref: Moving spines - Matplotl">
+<meta name="twitter:image" content="https://blog.wo-class.cn/pyplot-原点相交的坐标轴与箭头/ReLU.svg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> pyplot 原点相交的坐标轴与箭头 · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          pyplot 原点相交的坐标轴与箭头
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018年12月21日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#改现有轴的位置"><span class="toc-text">改现有轴的位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原点新加轴且加箭头"><span class="toc-text">原点新加轴且加箭头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#直接画箭头"><span class="toc-text">直接画箭头</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三种激活函数的图像"><span class="toc-text">三种激活函数的图像</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ReLU"><span class="toc-text">ReLU</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sigmod"><span class="toc-text">Sigmod</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tanh"><span class="toc-text">tanh</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <p>我就想画个简单的 SVG 图，懒得开 Ai 了(<del>虽然下面这个图还是用 Ai 画的</del>)，希望用 pyplot 直接画。</p>
+<img src="/pyplot-原点相交的坐标轴与箭头/ReLU.svg" title="ReLU 的图像">
+<p><code>pyplot</code> 自带的坐标轴在左下角相交，并且没有箭头。</p>
+<p>用自带的 <code>ax.spines[&#39;bottom&#39;].set_position((&#39;data&#39;,0))</code> 可以做到原点相交，但貌似加不了箭头。<br>ref: <a href="https://www.labri.fr/perso/nrougier/teaching/matplotlib/#moving-spines" target="_blank" rel="noopener">Moving spines - Matplotlib tutorial</a></p>
+<p>用 <code>mpl_toolkits.axisartist.axislines</code> 包里的 <code>SubplotZero</code> 可以画出原点相交的坐标轴，<br>可以加箭头。但没办法加上大箭头(默认的 <code>size=1</code> 太小，更大的画/显示不出来)。<br>ref: <a href="https://matplotlib.org/gallery/axisartist/demo_axisline_style.html" target="_blank" rel="noopener">Axis line styles</a></p>
+<p>最后看到 sf 上强行直接画箭头的就简单粗暴很符合要求。<br>ref: <a href="https://stackoverflow.com/a/23855021/10250520" target="_blank" rel="noopener">python - How to make ‘fuller’ axis arrows with matplotlib - Stack Overflow</a></p>
+<a id="more"></a>
+<p>以下为各种尝试，按尝试的时间为序：</p>
+<h2 id="改现有轴的位置"><a href="#改现有轴的位置" class="headerlink" title="改现有轴的位置"></a>改现有轴的位置</h2><p>ref: <a href="https://www.labri.fr/perso/nrougier/teaching/matplotlib/#moving-spines" target="_blank" rel="noopener">Matplotlib tutorial</a></p>
+<p>稍微改了下，去除了冗余的语句。</p>
+<figure class="highlight python"><figcaption><span>move axis to base point</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">-8</span>, <span class="number">8</span>, <span class="number">17</span>)</span><br><span class="line">f1 = <span class="keyword">lambda</span> x: max(<span class="number">0</span>,x) <span class="comment"># ReLU</span></span><br><span class="line">y1 = list(map(f1, x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 原点正交的坐标系</span></span><br><span class="line">plt.figure()</span><br><span class="line">plt.plot(x, y1)</span><br><span class="line"></span><br><span class="line">ax = plt.gca()</span><br><span class="line">ax.spines[<span class="string">'right'</span>].set_visible(<span class="keyword">False</span>)</span><br><span class="line">ax.spines[<span class="string">'top'</span>].set_visible(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#ax.xaxis.set_ticks_position('bottom')</span></span><br><span class="line"><span class="comment">#ax.yaxis.set_ticks_position('left')</span></span><br><span class="line">ax.spines[<span class="string">'bottom'</span>].set_position((<span class="string">'data'</span>,<span class="number">0</span>))</span><br><span class="line">ax.spines[<span class="string">'left'</span>].set_position((<span class="string">'data'</span>,<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">'base_point-1.svg'</span>, dpi = <span class="number">300</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><strong>【效果】</strong><br><img src="/pyplot-原点相交的坐标轴与箭头/base_point-1.svg" title="移动坐标轴的效果图"></p>
+<p>试完这个没有找到怎么给它加箭头，所以又换了一种方法。</p>
+<h2 id="原点新加轴且加箭头"><a href="#原点新加轴且加箭头" class="headerlink" title="原点新加轴且加箭头"></a>原点新加轴且加箭头</h2><p>ref: <a href="https://matplotlib.org/gallery/axisartist/demo_axisline_style.html" target="_blank" rel="noopener">Axis line styles — Matplotlib 3.0.2 documentation</a></p>
+<figure class="highlight python"><figcaption><span>Add new ZeroAxis with arrows</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> mpl_toolkits.axisartist <span class="keyword">as</span> axisartist</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">-8</span>, <span class="number">8</span>, <span class="number">17</span>)</span><br><span class="line">f1 = <span class="keyword">lambda</span> x: max(<span class="number">0</span>,x) <span class="comment"># ReLU</span></span><br><span class="line">y1 = list(map(f1, x))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 原点正交 + 带箭头</span></span><br><span class="line">fig = plt.figure(<span class="number">1</span>)</span><br><span class="line">ax = axisartist.SubplotZero(fig, <span class="number">111</span>)</span><br><span class="line">fig.add_subplot(ax)</span><br><span class="line"></span><br><span class="line">ax.axis[:].set_visible(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> direction <span class="keyword">in</span> [<span class="string">"xzero"</span>, <span class="string">"yzero"</span>]:</span><br><span class="line">    ax.axis[direction].set_axisline_style(<span class="string">"-&gt;"</span>)</span><br><span class="line">    ax.axis[direction].set_visible(<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line">ax.axis[<span class="string">"yzero"</span>].set_axis_direction(<span class="string">"left"</span>)</span><br><span class="line"></span><br><span class="line">plt.plot(x, y1)</span><br><span class="line">plt.savefig(<span class="string">'base_point_arrow.svg'</span>, dpi = <span class="number">300</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><strong>【效果】</strong><br><img src="/pyplot-原点相交的坐标轴与箭头/base_point_arrow.svg" title="新建在原点的轴并加上箭头的效果图"></p>
+<p>这种箭头是加上了，但大小调不了，<code>size</code>调得过大就显示不出来，跑到图外面去了。</p>
+<h2 id="直接画箭头"><a href="#直接画箭头" class="headerlink" title="直接画箭头"></a>直接画箭头</h2><p>ref:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/17646247/how-to-make-fuller-axis-arrows-with-matplotlib/23855021#23855021" target="_blank" rel="noopener">python - How to make ‘fuller’ axis arrows with matplotlib - Stack Overflow</a></li>
+</ul>
+<p>原答案是直接画的箭头，你要是给 y 轴加上数字刻度就会出现在左侧：</p>
+<img src="/pyplot-原点相交的坐标轴与箭头/arrow_axis-1.svg" title="给 y 轴加上刻度的效果图">
+<p>用前面学到的一句，调整一下 y 轴的位置：<br><code>ax.spines[&#39;left&#39;].set_position((&#39;data&#39;,0))</code></p>
+<p>完整的绘图代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> pylab <span class="keyword">as</span> pl</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> exp</span><br><span class="line"></span><br><span class="line">x = np.linspace(<span class="number">-8</span>, <span class="number">8</span>, <span class="number">17</span>)</span><br><span class="line"></span><br><span class="line">f1 = <span class="keyword">lambda</span> x: max(<span class="number">0</span>,x) <span class="comment"># ReLU</span></span><br><span class="line">y1 = list(map(f1, x))    </span><br><span class="line">y2 = <span class="number">1</span>/(<span class="number">1</span>+exp(-x))      <span class="comment"># Sigmod</span></span><br><span class="line">y3 = (<span class="number">1</span>-exp(<span class="number">-2</span>*x))/(<span class="number">1</span>+exp(<span class="number">-2</span>*x))    <span class="comment"># tanh</span></span><br><span class="line"></span><br><span class="line">fig = pl.figure()</span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">ax.plot(</span><br><span class="line">        x, y1,</span><br><span class="line">        color=<span class="string">"red"</span>, </span><br><span class="line">        linewidth=<span class="number">2.0</span>, </span><br><span class="line">        linestyle=<span class="string">"-"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">xmin, xmax = ax.get_xlim()</span><br><span class="line">ymin, ymax = ax.get_ylim()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除四周原有的边框</span></span><br><span class="line"><span class="keyword">for</span> side <span class="keyword">in</span> [<span class="string">'bottom'</span>,<span class="string">'right'</span>,<span class="string">'top'</span>,<span class="string">'left'</span>]:</span><br><span class="line">    ax.spines[side].set_visible(<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调整现有 y 轴位置</span></span><br><span class="line">ax.spines[<span class="string">'left'</span>].set_position((<span class="string">'data'</span>,<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># removing the axis ticks</span></span><br><span class="line">pl.xticks([<span class="number">-5</span>,<span class="number">0</span>,<span class="number">5</span>]) <span class="comment"># labels</span></span><br><span class="line">pl.yticks([<span class="number">5</span>])</span><br><span class="line">ax.xaxis.set_ticks_position(<span class="string">'none'</span>)</span><br><span class="line"><span class="comment">#ax.yaxis.set_ticks_position('left')</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># wider figure for demonstration</span></span><br><span class="line">fig.set_size_inches(<span class="number">4</span>,<span class="number">2.2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># get width and height of axes object to compute</span></span><br><span class="line"><span class="comment"># matching arrowhead length and width</span></span><br><span class="line">dps = fig.dpi_scale_trans.inverted()</span><br><span class="line">bbox = ax.get_window_extent().transformed(dps)</span><br><span class="line">width, height = bbox.width, bbox.height</span><br><span class="line"></span><br><span class="line"><span class="comment"># manual arrowhead width and length</span></span><br><span class="line">hw = <span class="number">1.</span>/<span class="number">20.</span>*(ymax-ymin)</span><br><span class="line">hl = <span class="number">1.</span>/<span class="number">20.</span>*(xmax-xmin)</span><br><span class="line">lw = <span class="number">1.</span> <span class="comment"># axis line width</span></span><br><span class="line">ohg = <span class="number">0.3</span> <span class="comment"># arrow overhang</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># compute matching arrowhead length and width</span></span><br><span class="line">yhw = hw/(ymax-ymin)*(xmax-xmin)* height/width</span><br><span class="line">yhl = hl/(xmax-xmin)*(ymax-ymin)* width/height</span><br><span class="line"></span><br><span class="line"><span class="comment"># draw x and y axis</span></span><br><span class="line">ax.arrow(xmin, <span class="number">0</span>, xmax-xmin, <span class="number">0.</span>, fc=<span class="string">'k'</span>, ec=<span class="string">'k'</span>, lw = lw,</span><br><span class="line">         head_width=hw, head_length=hl, overhang = ohg,</span><br><span class="line">         length_includes_head= <span class="keyword">True</span>, clip_on = <span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">ax.arrow(<span class="number">0</span>, ymin, <span class="number">0.</span>, ymax-ymin, fc=<span class="string">'k'</span>, ec=<span class="string">'k'</span>, lw = lw,</span><br><span class="line">         head_width=yhw, head_length=yhl, overhang = ohg,</span><br><span class="line">         length_includes_head= <span class="keyword">True</span>, clip_on = <span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># clip_on = False if only positive x or y values.</span></span><br><span class="line"></span><br><span class="line">pl.savefig(<span class="string">'arrow_axis-2.svg'</span>, dpi = <span class="number">300</span>)</span><br><span class="line">pl.show()</span><br></pre></td></tr></table></figure>
+<p><strong>【最终效果】</strong><br><img src="/pyplot-原点相交的坐标轴与箭头/arrow_axis-2.svg" title="最终效果图"></p>
+<h2 id="三种激活函数的图像"><a href="#三种激活函数的图像" class="headerlink" title="三种激活函数的图像"></a>三种激活函数的图像</h2><h3 id="ReLU"><a href="#ReLU" class="headerlink" title="ReLU"></a>ReLU</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">begin</span><span class="string">&#123;aligned&#125;</span></span></span></span><br><span class="line"><span class="formula">f<span class="tag">\<span class="name">left</span></span>( x <span class="tag">\<span class="name">right</span></span>) </span></span><br><span class="line"><span class="formula">&amp;=<span class="tag">\<span class="name">max</span></span> <span class="tag">\<span class="name">left</span></span>( x,0 <span class="tag">\<span class="name">right</span></span>) <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">&amp;=</span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">begin</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">text</span><span class="string">&#123;0,&#125;</span></span>&amp;  x<span class="tag">\<span class="name">le</span></span> 0 <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">x,&amp;         x<span class="tag">\<span class="name">ge</span></span> 0 <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">end</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">end</span><span class="string">&#123;aligned&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
+<img src="/pyplot-原点相交的坐标轴与箭头/eq-ReLU.svg" title="ReLU 数学定义">
+<img src="/pyplot-原点相交的坐标轴与箭头/ReLU-final.svg" title="ReLU 图像">
+<h3 id="Sigmod"><a href="#Sigmod" class="headerlink" title="Sigmod"></a>Sigmod</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">f<span class="tag">\<span class="name">left</span></span>( x <span class="tag">\<span class="name">right</span></span>) =<span class="tag">\<span class="name">frac</span><span class="string">&#123;1&#125;</span><span class="string">&#123;1+e^x&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
+<img src="/pyplot-原点相交的坐标轴与箭头/eq-sigmod.svg" title="sigmod 数学定义">
+<img src="/pyplot-原点相交的坐标轴与箭头/sigmod.svg" title="sigmod 图像">
+<h3 id="tanh"><a href="#tanh" class="headerlink" title="tanh"></a>tanh</h3><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">f<span class="tag">\<span class="name">left</span></span>( x <span class="tag">\<span class="name">right</span></span>) =<span class="tag">\<span class="name">frac</span><span class="string">&#123;1-e^&#123;-2x&#125;</span></span>&#125;&#123;1+e^&#123;-2x&#125;&#125;</span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
+<img src="/pyplot-原点相交的坐标轴与箭头/eq-tanh.svg" title="tanh">
+<img src="/pyplot-原点相交的坐标轴与箭头/tanh.svg" title="tanh_图像">
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/matplotlib/">matplotlib</a>
+            
+              <a href="/tags/pyplot/">pyplot</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/排版技术入门/">
+        <span class="next-text nav-default">排版技术入门</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>

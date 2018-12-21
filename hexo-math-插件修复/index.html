@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="想增加一下LaTeX的支持，但是hexo-math插件被弃坑了，只好自己动手、丰衣足食了。">
+
+
+
+
+  <meta name="keywords" content="hexo,">
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="0u0' lab | Hexo">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.4.x">
+
+
+
+<link rel="canonical" href="https://blog.wo-class.cn/hexo-math-插件修复/">
+
+
+<meta name="description" content="想增加一下LaTeX的支持，但是hexo-math插件被弃坑了，只好自己动手、丰衣足食了。">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-math 插件修复">
+<meta property="og:url" content="https://blog.wo-class.cn/hexo-math-插件修复/index.html">
+<meta property="og:site_name" content="0u0&#39; lab | Hexo">
+<meta property="og:description" content="想增加一下LaTeX的支持，但是hexo-math插件被弃坑了，只好自己动手、丰衣足食了。">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://blog.wo-class.cn/hexo-math-插件修复/ex1.png">
+<meta property="og:updated_time" content="2018-12-21T11:52:17.541Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo-math 插件修复">
+<meta name="twitter:description" content="想增加一下LaTeX的支持，但是hexo-math插件被弃坑了，只好自己动手、丰衣足食了。">
+<meta name="twitter:image" content="https://blog.wo-class.cn/hexo-math-插件修复/ex1.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.4.x">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+
+<script>
+  var CONFIG = {
+    search: true,
+    searchPath: "/search.xml",
+    fancybox: true,
+    toc: true,
+  }
+</script>
+
+
+
+
+  
+
+
+
+    <title> hexo-math 插件修复 · 0u0' lab | Hexo </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">0u0' lab | Hexo</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">0u0' lab | Hexo</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+      
+        <li class="menu-search">
+          <form>
+            <i class="iconfont icon-search" id="open-search"></i>
+            <input type="text" class="search-input" id="search-input">
+            <i class="iconfont icon-close" id="close-search"></i>
+          </form>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          hexo-math 插件修复
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017年4月30日
+        </span>
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <blockquote>
+<p>学习也是没有办法的事情</p>
+</blockquote>
+<a id="more"></a>
+<p>粗略的的看一下用了 gulp + es6<br>大概还得研究下 <a href="http://coffee-script.org/" target="_blank" rel="noopener">coffeescript</a></p>
+<p>ref:</p>
+<p><strong>Hexo 插件相关</strong></p>
+<ul>
+<li><a href="http://www.ieclipse.cn/en/2016/07/18/Web/Hexo-dev-plugin/" target="_blank" rel="noopener">Hexo高级教程之插件开发</a></li>
+</ul>
+<p><strong>JS 语法&amp;环境相关</strong></p>
+<p>【ECMAScript 6】</p>
+<ul>
+<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">ECMAScript 6 入门</a></li>
+<li><a href="http://www.ituring.com.cn/article/201561" target="_blank" rel="noopener">ECMAScript6 教程（一）</a></li>
+<li><a href="http://es6-features.org" target="_blank" rel="noopener">ECMAScript 6 — New Features: Overview &amp; Comparison</a></li>
+</ul>
+<p>【gulp】</p>
+<ul>
+<li><a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md" target="_blank" rel="noopener">gulp API docs</a></li>
+<li><a href="https://github.com/nimojs/gulp-book" target="_blank" rel="noopener">gulp 入门指南</a></li>
+<li><a href="http://www.jianshu.com/p/fbf9871dc47a" target="_blank" rel="noopener">Gulp入门教程</a></li>
+<li><a href="https://www.zybuluo.com/EncyKe/note/658462" target="_blank" rel="noopener">手记：gulp 入门</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/gulp-book/" target="_blank" rel="noopener">Gulp 入门指南</a></li>
+</ul>
+<p>【Coffeescript】</p>
+<ul>
+<li><a href="http://coffee-script.org/" target="_blank" rel="noopener">coffeescript</a></li>
+<li><p><a href="http://wiki.jikexueyuan.com/project/coffeescript/" target="_blank" rel="noopener">CoffeeScript 实用手册</a></p>
+</li>
+<li><p><a href="http://wiki.jikexueyuan.com/project/chrome-devtools/" target="_blank" rel="noopener">Chrome 开发工具指南</a></p>
+</li>
+</ul>
+<hr>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">math:</span><br><span class="line">  engine: &apos;mathjax&apos; # or &apos;katex&apos;</span><br><span class="line">  mathjax:</span><br><span class="line">    src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/config/TeX-AMS-MML_HTMLorMML.js</span><br><span class="line">    config:</span><br><span class="line">      # MathJax config</span><br><span class="line">        </span><br><span class="line">  katex:</span><br><span class="line">    css: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css</span><br><span class="line">    js: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js # not used</span><br><span class="line">    config:</span><br><span class="line">      # KaTeX config</span><br></pre></td></tr></table></figure>
+<p>真是服气，把配置都删了就好使了。不过处理时还是有报错</p>
+<img src="/hexo-math-插件修复/ex1.png">
+<figure class="highlight plain"><figcaption><span>err</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">11:44:41.160 INFO  [hexo-math] Using engine &apos;mathjax&apos;</span><br><span class="line">11:44:41.160 DEBUG Plugin loaded: hexo-math</span><br><span class="line">11:44:41.175 DEBUG Plugin loaded: hexo-renderer-ejs</span><br><span class="line">11:44:41.175 DEBUG Plugin loaded: hexo-renderer-marked</span><br><span class="line">11:44:41.175 DEBUG Plugin loaded: hexo-renderer-stylus</span><br><span class="line">11:44:41.269 DEBUG Plugin loaded: hexo-server</span><br><span class="line">11:44:41.285 DEBUG Plugin loaded: hexo-renderer-scss</span><br><span class="line">11:44:41.285 DEBUG [hexo-inject] firing inject_ready</span><br><span class="line">11:44:41.300 DEBUG Loading database.</span><br><span class="line">11:44:41.316 DEBUG [hexo-inject] SKIP: undefined</span><br><span class="line">11:44:41.316 DEBUG Incomplete document</span><br><span class="line">Error: Incomplete document</span><br><span class="line">    at Inject._transform (I:\GitHub\inkydragon.github.io\hexo\node_modules\hexo-inject\lib\mixin\transform.js:29:34)</span><br><span class="line">    at Hexo.tryCatcher (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Hexo.&lt;anonymous&gt; (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\method.js:15:34)</span><br><span class="line">    at I:\GitHub\inkydragon.github.io\hexo\node_modules\hexo\lib\extend\filter.js:68:35</span><br><span class="line">    at tryCatcher (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Object.gotValue (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\reduce.js:155:18)</span><br><span class="line">    at Object.gotAccum (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\reduce.js:144:25)</span><br><span class="line">    at Object.tryCatcher (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at Promise._settlePromiseFromHandler (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\promise.js:512:31)</span><br><span class="line">    at Promise._settlePromise (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\promise.js:569:18)</span><br><span class="line">    at Promise._settlePromiseCtx (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\promise.js:606:10)</span><br><span class="line">    at Async._drainQueue (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\async.js:138:12)</span><br><span class="line">    at Async._drainQueues (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\async.js:143:10)</span><br><span class="line">    at Immediate.Async.drainQueues (I:\GitHub\inkydragon.github.io\hexo\node_modules\bluebird\js\release\async.js:17:14)</span><br><span class="line">    at runCallback (timers.js:672:20)</span><br><span class="line">    at tryOnImmediate (timers.js:645:5)</span><br><span class="line">    at processImmediate [as _immediateCallback] (timers.js:617:5)</span><br></pre></td></tr></table></figure>
+<div style="display: none;"><br>
+
+
+{% blockquote [author[, source]] [link] [source_link_title] %}
+content
+{% endblockquote %}
+
+
+{% codeblock [title] [lang:language] [url] [link text] %}
+code snippet
+{% endcodeblock %}
+
+undefined
+
+{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+
+{% asset_img slug [title] %}
+
+
+<br></div>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/hexo/">hexo</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/Vim-Tutor-explore/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Vim Tutor explore</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/Memo-List-Week11/">
+        <span class="next-text nav-default">Memo List @Week11</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/inkydragon" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">woclass</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  
+  
+
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.4.x"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.4.x"></script>
+
+    
+  <script type="text/html" id="search-result">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a href="$url$" class="post-link">
+            $title$
+          </a>
+        </h1>
+      </header>
+      <div class="post-content">
+        $content$
+        <div class="read-more">
+          <a href="$url$" class="read-more-link">
+            阅读更多
+          </a>
+        </div>
+      </div>
+    </article>
+  </script>
+  <script type="text/html" id="no-search-result">
+    <div class="no-result">
+      <h2>No result found!</h2>
+    </div>
+  </script>
+  <script type="text/javascript" src="/js/src/search.js?v=2.4.x"></script>
+
+  </body>
+</html>
