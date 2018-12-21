@@ -112,4 +112,4 @@ search:
 deploy:
   type: git
   repo:
-    github: git@github.com:inkydragon/inkydragon.github.io.git, master
+    github: git@github.com:inkydragon/inkydragon.github.io.git,master
