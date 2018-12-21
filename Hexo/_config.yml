@@ -6,8 +6,9 @@
 title: 0u0' lab | Hexo
 subtitle:
 description: wo' lab | 咸鱼的小站
+keywords:
 author: woclass
-language: en
+language: zh-cn
 timezone: Asia/Shanghai
 
 # URL
@@ -34,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: True
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -42,7 +43,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-
+  
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -51,7 +52,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-
+  
 # Category & Tag
 default_category: wo~
 category_map:
@@ -75,24 +76,40 @@ pagination_dir: page
 theme: even
 
 # hexo-generator-archive
+## home: https://github.com/hexojs/hexo-generator-archive
 archive_generator:
-  per_page: 20
+  enabled: true
+  per_page: 15
   yearly: true
   monthly: true
   daily: false
-
+  order_by: -date
 
 # hexo-generator-feed
+## home: https://github.com/hexojs/hexo-generator-feed
 feed:
   type: atom
   path: atom.xml
   limit: 20
   hub:
   content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
+# hexo-generator-search
+## home: https://github.com/wzpan/hexo-generator-search
+search:
+  path: search.xml
+  field: all
+  content: true
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# using: hexo-deployer-git
+## home: https://github.com/hexojs/hexo-deployer-git
 deploy:
   type: git
   repo:
-    github: https://github.com/inkydragon/inkydragon.github.io,master
+    github: git@github.com:inkydragon/inkydragon.github.io.git, master
