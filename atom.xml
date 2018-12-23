@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.wo-class.cn/"/>
-  <updated>2018-12-21T15:11:47.801Z</updated>
+  <updated>2018-12-22T16:17:50.612Z</updated>
   <id>https://blog.wo-class.cn/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Win 10 下编译带 GPU 支持的 Tensorflow</title>
+    <link href="https://blog.wo-class.cn/Win-10-%E4%B8%8B%E7%BC%96%E8%AF%91%E5%B8%A6-GPU-%E6%94%AF%E6%8C%81%E7%9A%84-Tensorflow/"/>
+    <id>https://blog.wo-class.cn/Win-10-下编译带-GPU-支持的-Tensorflow/</id>
+    <published>2018-12-22T04:59:30.000Z</published>
+    <updated>2018-12-22T16:17:50.612Z</updated>
+    
+    <summary type="html">
+    
+      尝试在 Win 10 上编译安装带 GPU 支持的 TensorFlow
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>pyplot 原点相交的坐标轴与箭头</title>
@@ -374,24 +390,6 @@ content
     
       <category term="MIT HAKMAN" scheme="https://blog.wo-class.cn/categories/Books/MIT-HAKMAN/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Vim Tutor explore</title>
-    <link href="https://blog.wo-class.cn/Vim-Tutor-explore/"/>
-    <id>https://blog.wo-class.cn/Vim-Tutor-explore/</id>
-    <published>2017-04-30T11:52:23.000Z</published>
-    <updated>2018-12-21T11:52:17.534Z</updated>
-    
-    <summary type="html">
-    
-      我真是闲
-    
-    </summary>
-    
-    
-      <category term="vim" scheme="https://blog.wo-class.cn/tags/vim/"/>
     
   </entry>
   
