@@ -40,7 +40,7 @@
 <meta property="og:description" content="尝试在 Win 10 上编译安装带 GPU 支持的 TensorFlow">
 <meta property="og:locale" content="zh-cn">
 <meta property="og:image" content="https://blog.wo-class.cn/Win-10-下编译带-GPU-支持的-Tensorflow/Win-10-下编译带-GPU-支持的-Tensorflow/vc_redist.x64-error.png">
-<meta property="og:updated_time" content="2018-12-22T16:17:50.612Z">
+<meta property="og:updated_time" content="2018-12-23T15:46:19.287Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win 10 下编译带 GPU 支持的 Tensorflow">
 <meta name="twitter:description" content="尝试在 Win 10 上编译安装带 GPU 支持的 TensorFlow">
@@ -67,6 +67,9 @@
 </script>
 
 
+
+
+  
 
 
 
@@ -219,6 +222,17 @@
     <div class="post-content">
       
         <a id="more"></a>
+<p>Note:<br>搞了两天没什么进展，不过把所有的外部依赖全部下载下来了。<br>待续</p>
+<p>ref：</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/29029860" target="_blank" rel="noopener">在Windows 10 下用源码编译基于GPU的tensorflow.dll - 知乎</a></li>
+<li><a href="https://blog.csdn.net/XCCCCZ/article/details/82952927" target="_blank" rel="noopener">我的AI之路(23)–在Windows下编译Bazel和使用Bazel编译tensorflow - XCCCCZ的博客 - CSDN博客</a></li>
+<li><a href="https://www.cnblogs.com/shouhuxianjian/p/9416934.html" target="_blank" rel="noopener">Tensorflow[源码安装时bazel行为解析] - 仙守 - 博客园</a></li>
+<li><a href="https://github.com/tensorflow/tensorflow/issues/6210#issuecomment-288155573" target="_blank" rel="noopener">[Installing TensorFlow offline] $ ./configure fails because no Internet connection is available for my server. · Issue #6210 · tensorflow/tensorflow</a></li>
+<li><a href="https://blog.csdn.net/huang_yx005/article/details/78873134" target="_blank" rel="noopener">tensorflow离线源码安装 - huang_yx005的博客 - CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/may0324/article/details/53413024" target="_blank" rel="noopener">Tensorflow 离线安装跳坑总结 - may0324的博客 - CSDN博客</a></li>
+</ul>
+<hr>
 <p><strong>【官方文档-begin】</strong></p>
 <ul>
 <li><a href="https://www.tensorflow.org/install/source_windows" target="_blank" rel="noopener">Build from source on Windows  |  TensorFlow@tensorflow.org</a></li>
@@ -524,6 +538,10 @@ bazel build --config=opt --config=cuda //tensorflow/tools/pip_package:build_pip_
 </ol>
 <p>估计还是网不好，重试 x2</p>
 <p>继续重试 x3</p>
+<p>准备新套路，先 <code>fetch</code> 然后再 build</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bazel --output_user_root=C:/tf-tools/bazel_cache fetch //tensorflow/tools/pip_package:build_pip_package</span><br></pre></td></tr></table></figure>
+<p>如果出现一下的报错，就把对应的包单独下载下来，然后改名放到对应的文件夹下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PS C:\tf-tools\tensorflow-1.12.0&gt; bazel --output_user_root=C:/tf-tools/bazel_cache fetch //tensorflow/tools/pip_package:build_pip_package</span><br><span class="line">Extracting Bazel installation...</span><br><span class="line">Starting local Bazel server and connecting to it...</span><br><span class="line">............</span><br><span class="line">ERROR: C:/tf-tools/tensorflow-1.12.0/tensorflow/tools/pip_package/BUILD:132:1: no such package &apos;@ngraph//&apos;: java.io.IOException: Error downloading [https://mirror.bazel.build/github.com/NervanaSystems/ngraph/archive/v0.8.1.tar.gz, https://github.com/NervanaSystems/ngraph/archive/v0.8.1.tar.gz] to C:/tf-tools/bazel_cache/5rstnx6i/external/ngraph/v0.8.1.tar.gz: All mirrors are down: [GET returned 404 Not Found] and referenced by &apos;//tensorflow/tools/pip_package:licenses&apos;</span><br><span class="line">ERROR: C:/tf-tools/tensorflow-1.12.0/tensorflow/tools/pip_package/BUILD:132:1: no such package &apos;@ngraph_tf//&apos;: java.io.IOException: thread interrupted and referenced by &apos;//tensorflow/tools/pip_package:licenses&apos;</span><br><span class="line">ERROR: C:/tf-tools/tensorflow-1.12.0/tensorflow/tools/pip_package/BUILD:132:1: no such package &apos;@icu//&apos;: java.io.IOException: thread interrupted and referenced by &apos;//tensorflow/tools/pip_package:licenses&apos;</span><br><span class="line">ERROR: C:/tf-tools/tensorflow-1.12.0/tensorflow/core/kernels/BUILD:6589:1: no such package &apos;@icu//&apos;: java.io.IOException: thread interrupted and referenced by &apos;//tensorflow/core/kernels:unicode_script_op&apos;</span><br><span class="line">ERROR: C:/tf-tools/tensorflow-1.12.0/tensorflow/python/BUILD:3865:1: no such package &apos;@ngraph_tf//&apos;: java.io.IOException: thread interrupted and referenced by &apos;//tensorflow/python:pywrap_tensorflow_internal_py_wrap&apos;</span><br></pre></td></tr></table></figure>
 <!-- #### Bazel build options -->
 <h4 id="Bazel-构建选项"><a href="#Bazel-构建选项" class="headerlink" title="Bazel 构建选项"></a>Bazel 构建选项</h4><!-- 
 Building TensorFlow from source can use a lot of RAM. If your system is
@@ -649,6 +667,12 @@ undefined
         
   <nav class="post-nav">
     
+      <a class="prev" href="/UNet-语义分割/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">UNet 语义分割</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
     
       <a class="next" href="/pyplot-原点相交的坐标轴与箭头/">
         <span class="next-text nav-default">pyplot 原点相交的坐标轴与箭头</span>
@@ -717,7 +741,7 @@ undefined
      
       2015 - 
     
-    2018
+    2019
 
     <span class="heart">
       <i class="iconfont icon-heart"></i>

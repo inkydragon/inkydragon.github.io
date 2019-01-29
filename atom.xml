@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.wo-class.cn/"/>
-  <updated>2018-12-22T16:17:50.612Z</updated>
+  <updated>2019-01-29T13:02:45.267Z</updated>
   <id>https://blog.wo-class.cn/</id>
   
   <author>
@@ -17,11 +17,70 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Building Julia Offline</title>
+    <link href="https://blog.wo-class.cn/Building-Julia-Offline/"/>
+    <id>https://blog.wo-class.cn/Building-Julia-Offline/</id>
+    <published>2019-01-29T06:34:34.000Z</published>
+    <updated>2019-01-29T13:02:45.267Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://discourse.juliacn.com/t/topic/1365&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Ubuntu 离线编译 Julia - 综合讨论区 / Julia入门 - Julia中文社区&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Build LLVM</title>
+    <link href="https://blog.wo-class.cn/Build-LLVM/"/>
+    <id>https://blog.wo-class.cn/Build-LLVM/</id>
+    <published>2019-01-29T04:01:07.000Z</published>
+    <updated>2019-01-29T06:20:45.554Z</updated>
+    
+    <summary type="html">
+    
+      编译 Release 版 LLVM 的命令参数记录。
+    
+    </summary>
+    
+    
+      <category term="LLVM" scheme="https://blog.wo-class.cn/tags/LLVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UNet 语义分割</title>
+    <link href="https://blog.wo-class.cn/UNet-%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/"/>
+    <id>https://blog.wo-class.cn/UNet-语义分割/</id>
+    <published>2019-01-17T09:09:05.000Z</published>
+    <updated>2019-01-29T04:39:02.965Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;links&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/search?q=unet&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Win 10 下编译带 GPU 支持的 Tensorflow</title>
     <link href="https://blog.wo-class.cn/Win-10-%E4%B8%8B%E7%BC%96%E8%AF%91%E5%B8%A6-GPU-%E6%94%AF%E6%8C%81%E7%9A%84-Tensorflow/"/>
     <id>https://blog.wo-class.cn/Win-10-下编译带-GPU-支持的-Tensorflow/</id>
     <published>2018-12-22T04:59:30.000Z</published>
-    <updated>2018-12-22T16:17:50.612Z</updated>
+    <updated>2018-12-23T15:46:19.287Z</updated>
     
     <summary type="html">
     
@@ -334,62 +393,6 @@ content
     
     
       <category term="Memo List" scheme="https://blog.wo-class.cn/tags/Memo-List/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Memo List @Week13</title>
-    <link href="https://blog.wo-class.cn/Memo-List-Week13/"/>
-    <id>https://blog.wo-class.cn/Memo-List-Week13/</id>
-    <published>2017-05-18T11:08:45.000Z</published>
-    <updated>2018-12-21T11:52:17.503Z</updated>
-    
-    <summary type="html">
-    
-      少量尚不能单独成篇的笔记
-    
-    </summary>
-    
-    
-      <category term="Memo List" scheme="https://blog.wo-class.cn/tags/Memo-List/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Matlab memo</title>
-    <link href="https://blog.wo-class.cn/Matlab-memo/"/>
-    <id>https://blog.wo-class.cn/Matlab-memo/</id>
-    <published>2017-05-06T13:01:20.000Z</published>
-    <updated>2018-12-21T11:52:17.468Z</updated>
-    
-    <summary type="html">
-    
-      Some Matlab note
-    
-    </summary>
-    
-    
-      <category term="memo" scheme="https://blog.wo-class.cn/tags/memo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MIT HAKMAN</title>
-    <link href="https://blog.wo-class.cn/MIT-HAKMAN/"/>
-    <id>https://blog.wo-class.cn/MIT-HAKMAN/</id>
-    <published>2017-05-01T04:19:37.000Z</published>
-    <updated>2018-12-21T11:52:17.466Z</updated>
-    
-    <summary type="html">
-    
-      神书，我把其中的公式用LaTeX整理了一下. 目前来看，这本书内容也不少，放在blog里不太合适，准备开一本gitbook
-    
-    </summary>
-    
-      <category term="Books" scheme="https://blog.wo-class.cn/categories/Books/"/>
-    
-      <category term="MIT HAKMAN" scheme="https://blog.wo-class.cn/categories/Books/MIT-HAKMAN/"/>
-    
     
   </entry>
   
