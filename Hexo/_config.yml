@@ -111,5 +111,5 @@ search:
 ## home: https://github.com/hexojs/hexo-deployer-git
 deploy:
   type: git
-  repo:
-    github: git@github.com:inkydragon/inkydragon.github.io.git,master
+  repo: git@github.com:inkydragon/inkydragon.github.io.git
+  branch: master
