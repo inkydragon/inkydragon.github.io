@@ -1,4 +1,4 @@
-# Update old code to Julia 1.0
+# Upgrade old code to Julia 1.0
 
 - [ ] Remove all deprecation warnings.
 - [ ] Constantly run package benchmarks to detect regressions.
