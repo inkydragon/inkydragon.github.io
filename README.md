@@ -1,5 +1,7 @@
 # Julia Memo
 
+julia 相关的笔记与备忘。
+
 Random note and memo about Julia.
 
 
