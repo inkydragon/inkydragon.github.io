@@ -23,6 +23,6 @@ currying: [RFC: curry underscore arguments to create anonymous functions by stev
 // SPDX-License-Identifier: Unlicense OR CC-BY-4.0
 ```
 
-Choose [CC0 license](LICENSE), make it easy to copy and run (paste).
+Choose [Unlicense](LICENSE), make it easy to copy and run (paste).
 
 For long quotes, you may want to use [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
