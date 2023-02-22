@@ -34,3 +34,14 @@ true
 
 - 调整宏展开顺序
 https://jkrumbiegel.com/pages/2022-08-09-composing-macros/
+
+
+### 下载 youtube 的视频列表
+
+```cmd
+..\yt-dlp_win\yt-dlp.exe  `
+--playlist-items 1:150  `
+--no-playlist  `
+-f bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best `
+https://www.youtube.com/playlist?list=PLWiiO7FHwvr9DRqaeyJEU8E0OYc1-1K6n
+```
