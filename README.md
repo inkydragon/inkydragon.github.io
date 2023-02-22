@@ -20,7 +20,7 @@ currying: [RFC: curry underscore arguments to create anonymous functions by stev
 ## LICENSE
 
 ```
-// SPDX-License-Identifier: MIT OR CC-BY-4.0
+// SPDX-License-Identifier: Unlicense OR CC-BY-4.0
 ```
 
 Choose [CC0 license](LICENSE), make it easy to copy and run (paste).
