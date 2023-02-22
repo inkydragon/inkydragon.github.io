@@ -3,12 +3,6 @@
 need  `libstdc++-6.dll` (julia used)
 
 
-..\yt-dlp_win\yt-dlp.exe  `
---playlist-items 1:150  `
---no-playlist  `
--f bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best `
-https://www.youtube.com/playlist?list=PLWiiO7FHwvr9DRqaeyJEU8E0OYc1-1K6n
-
 ## 生成文档 tex
 
 *documenter.sty*
