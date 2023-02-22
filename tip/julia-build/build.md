@@ -66,14 +66,14 @@ make -C julia-ucrt -j`nproc`
 
 ## cygwin ---------------------------------------------------------------------------------------------
 
-### + deps
+### cyg
 ```sh
-make O=julia-deps configure
-echo 'XC_HOST = x86_64-w64-mingw32' > julia-deps/Make.user
+make O=julia-cyg configure
+echo 'XC_HOST = x86_64-w64-mingw32' > julia-cyg/Make.user
 echo 'ifeq ($(BUILDROOT),$(JULIAHOME))
         $(error "in-tree build disabled")
       endif' >> Make.user
-make -C julia-deps -j 6
+make -C julia-cyg -j 6
 ```
 
 
