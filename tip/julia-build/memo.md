@@ -1,3 +1,22 @@
+## GC
+
+
+## 获取模块的导出项
+```
+# Modules
+#   [ sym for sym in names(Base) if eval(:(Base.$(sym) isa Module)) ] |> sort
+#   names(Base) |> sort |> x->eval.(x) |> l->filter(sym->sym isa Module, l)
+# names(Base) |> l->filter(sym->eval(:(Base.$(sym) isa Module)), l) |> sort .|> x->println("    $x,");
+
+# Types
+#   [ sym for sym in names(Base) if eval(:(Base.$(sym) isa Type)) ] |> sort
+# [ sym for sym in names(Base) if eval(:(Base.$(sym) isa Type)) ] |> sort .|> x->println("    $x,");
+
+# Exceptions
+# names(Base) |> sort |> x->eval.(x) |> l->filter(sym->sym isa Type && sym <: Exception, l)
+
+```
+
 ## libstdc/build-stats
 - `make build-stats` 需要使用 Julia 自带的的 c++ 库才能正常运行
 need  `libstdc++-6.dll` (julia used)
