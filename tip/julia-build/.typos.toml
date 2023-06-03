@@ -1,0 +1,6 @@
+# typos --config .wos/.typos.toml doc
+
+[files]
+extend-exclude = ["julia-*/", "usr/"]
+ignore-hidden = true
+ignore-files = true
