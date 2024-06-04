@@ -6,182 +6,182 @@
 
 ### 1k+
 
-- InverseFunctions.jl
+- [InverseFunctions.jl](https://github.com/JuliaMath/InverseFunctions.jl)
     [![deps](https://juliahub.com/docs/General/InverseFunctions/stable/deps.svg)](https://juliahub.com/ui/Packages/General/InverseFunctions?t=2)
     [![version](https://juliahub.com/docs/General/InverseFunctions/stable/version.svg)](https://juliahub.com/ui/Packages/General/InverseFunctions)
-- IrrationalConstants.jl
+- [IrrationalConstants.jl](https://github.com/JuliaMath/IrrationalConstants.jl)
     [![deps](https://juliahub.com/docs/General/IrrationalConstants/stable/deps.svg)](https://juliahub.com/ui/Packages/General/IrrationalConstants?t=2)
     [![version](https://juliahub.com/docs/General/IrrationalConstants/stable/version.svg)](https://juliahub.com/ui/Packages/General/IrrationalConstants)
-- ChangesOfVariables.jl
+- [ChangesOfVariables.jl](https://github.com/JuliaMath/ChangesOfVariables.jl)
     [![deps](https://juliahub.com/docs/General/ChangesOfVariables/stable/deps.svg)](https://juliahub.com/ui/Packages/General/ChangesOfVariables?t=2)
     [![version](https://juliahub.com/docs/General/ChangesOfVariables/stable/version.svg)](https://juliahub.com/ui/Packages/General/ChangesOfVariables)
-- SpecialFunctions.jl
+- [SpecialFunctions.jl](https://github.com/JuliaMath/SpecialFunctions.jl)
     [![deps](https://juliahub.com/docs/General/SpecialFunctions/stable/deps.svg)](https://juliahub.com/ui/Packages/General/SpecialFunctions?t=2)
     [![version](https://juliahub.com/docs/General/SpecialFunctions/stable/version.svg)](https://juliahub.com/ui/Packages/General/SpecialFunctions)
-- NaNMath.jl
+- [NaNMath.jl](https://github.com/JuliaMath/NaNMath.jl)
     [![deps](https://juliahub.com/docs/General/NaNMath/stable/deps.svg)](https://juliahub.com/ui/Packages/General/NaNMath?t=2)
     [![version](https://juliahub.com/docs/General/NaNMath/stable/version.svg)](https://juliahub.com/ui/Packages/General/NaNMath)
-- FixedPointNumbers.jl
+- [FixedPointNumbers.jl](https://github.com/JuliaMath/FixedPointNumbers.jl)
     [![deps](https://juliahub.com/docs/General/FixedPointNumbers/stable/deps.svg)](https://juliahub.com/ui/Packages/General/FixedPointNumbers?t=2)
     [![version](https://juliahub.com/docs/General/FixedPointNumbers/stable/version.svg)](https://juliahub.com/ui/Packages/General/FixedPointNumbers)
-- HypergeometricFunctions.jl
+- [HypergeometricFunctions.jl](https://github.com/JuliaMath/HypergeometricFunctions.jl)
     [![deps](https://juliahub.com/docs/General/HypergeometricFunctions/stable/deps.svg)](https://juliahub.com/ui/Packages/General/HypergeometricFunctions?t=2)
     [![version](https://juliahub.com/docs/General/HypergeometricFunctions/stable/version.svg)](https://juliahub.com/ui/Packages/General/HypergeometricFunctions)
-- DensityInterface.jl
+- [DensityInterface.jl](https://github.com/JuliaMath/DensityInterface.jl)
     [![deps](https://juliahub.com/docs/General/DensityInterface/stable/deps.svg)](https://juliahub.com/ui/Packages/General/DensityInterface?t=2)
     [![version](https://juliahub.com/docs/General/DensityInterface/stable/version.svg)](https://juliahub.com/ui/Packages/General/DensityInterface)
-- AbstractFFTs.jl
+- [AbstractFFTs.jl](https://github.com/JuliaMath/AbstractFFTs.jl)
     [![deps](https://juliahub.com/docs/General/AbstractFFTs/stable/deps.svg)](https://juliahub.com/ui/Packages/General/AbstractFFTs?t=2)
     [![version](https://juliahub.com/docs/General/AbstractFFTs/stable/version.svg)](https://juliahub.com/ui/Packages/General/AbstractFFTs)
-- FFTW.jl
+- [FFTW.jl](https://github.com/JuliaMath/FFTW.jl)
     [![deps](https://juliahub.com/docs/General/FFTW/stable/deps.svg)](https://juliahub.com/ui/Packages/General/FFTW?t=2)
     [![version](https://juliahub.com/docs/General/FFTW/stable/version.svg)](https://juliahub.com/ui/Packages/General/FFTW)
 
 
 ### 100~1k
 
-- Calculus.jl
+- [Calculus.jl](https://github.com/JuliaMath/Calculus.jl)
     [![deps](https://juliahub.com/docs/General/Calculus/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Calculus?t=2)
     [![version](https://juliahub.com/docs/General/Calculus/stable/version.svg)](https://juliahub.com/ui/Packages/General/Calculus)
-- TensorCore.jl
+- [TensorCore.jl](https://github.com/JuliaMath/TensorCore.jl)
     [![deps](https://juliahub.com/docs/General/TensorCore/stable/deps.svg)](https://juliahub.com/ui/Packages/General/TensorCore?t=2)
     [![version](https://juliahub.com/docs/General/TensorCore/stable/version.svg)](https://juliahub.com/ui/Packages/General/TensorCore)
-- QuadGK.jl
+- [QuadGK.jl](https://github.com/JuliaMath/QuadGK.jl)
     [![deps](https://juliahub.com/docs/General/QuadGK/stable/deps.svg)](https://juliahub.com/ui/Packages/General/QuadGK?t=2)
     [![version](https://juliahub.com/docs/General/QuadGK/stable/version.svg)](https://juliahub.com/ui/Packages/General/QuadGK)
-- Combinatorics.jl
+- [Combinatorics.jl](https://github.com/JuliaMath/Combinatorics.jl)
     [![deps](https://juliahub.com/docs/General/Combinatorics/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Combinatorics?t=2)
     [![version](https://juliahub.com/docs/General/Combinatorics/stable/version.svg)](https://juliahub.com/ui/Packages/General/Combinatorics)
-- IntervalSets.jl
+- [IntervalSets.jl](https://github.com/JuliaMath/IntervalSets.jl)
     [![deps](https://juliahub.com/docs/General/IntervalSets/stable/deps.svg)](https://juliahub.com/ui/Packages/General/IntervalSets?t=2)
     [![version](https://juliahub.com/docs/General/IntervalSets/stable/version.svg)](https://juliahub.com/ui/Packages/General/IntervalSets)
-- Primes.jl
+- [Primes.jl](https://github.com/JuliaMath/Primes.jl)
     [![deps](https://juliahub.com/docs/General/Primes/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Primes?t=2)
     [![version](https://juliahub.com/docs/General/Primes/stable/version.svg)](https://juliahub.com/ui/Packages/General/Primes)
-- IntegerMathUtils.jl
+- [IntegerMathUtils.jl](https://github.com/JuliaMath/IntegerMathUtils.jl)
     [![deps](https://juliahub.com/docs/General/IntegerMathUtils/stable/deps.svg)](https://juliahub.com/ui/Packages/General/IntegerMathUtils?t=2)
     [![version](https://juliahub.com/docs/General/IntegerMathUtils/stable/version.svg)](https://juliahub.com/ui/Packages/General/IntegerMathUtils)
-- RealDot.jl
+- [RealDot.jl](https://github.com/JuliaMath/RealDot.jl)
     [![deps](https://juliahub.com/docs/General/RealDot/stable/deps.svg)](https://juliahub.com/ui/Packages/General/RealDot?t=2)
     [![version](https://juliahub.com/docs/General/RealDot/stable/version.svg)](https://juliahub.com/ui/Packages/General/RealDot)
-- Sobol.jl
+- [Sobol.jl](https://github.com/JuliaMath/Sobol.jl)
     [![deps](https://juliahub.com/docs/General/Sobol/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Sobol?t=2)
     [![version](https://juliahub.com/docs/General/Sobol/stable/version.svg)](https://juliahub.com/ui/Packages/General/Sobol)
-- Interpolations.jl
+- [Interpolations.jl](https://github.com/JuliaMath/Interpolations.jl)
     [![deps](https://juliahub.com/docs/General/Interpolations/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Interpolations?t=2)
     [![version](https://juliahub.com/docs/General/Interpolations/stable/version.svg)](https://juliahub.com/ui/Packages/General/Interpolations)
-- Polynomials.jl
+- [Polynomials.jl](https://github.com/JuliaMath/Polynomials.jl)
     [![deps](https://juliahub.com/docs/General/Polynomials/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Polynomials?t=2)
     [![version](https://juliahub.com/docs/General/Polynomials/stable/version.svg)](https://juliahub.com/ui/Packages/General/Polynomials)
-- BFloat16s.jl
+- [BFloat16s.jl](https://github.com/JuliaMath/BFloat16s.jl)
     [![deps](https://juliahub.com/docs/General/BFloat16s/stable/deps.svg)](https://juliahub.com/ui/Packages/General/BFloat16s?t=2)
     [![version](https://juliahub.com/docs/General/BFloat16s/stable/version.svg)](https://juliahub.com/ui/Packages/General/BFloat16s)
-- Roots.jl
+- [Roots.jl](https://github.com/JuliaMath/Roots.jl)
     [![deps](https://juliahub.com/docs/General/Roots/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Roots?t=2)
     [![version](https://juliahub.com/docs/General/Roots/stable/version.svg)](https://juliahub.com/ui/Packages/General/Roots)
-- LambertW.jl
+- [LambertW.jl](https://github.com/JuliaMath/LambertW.jl)
     [![deps](https://juliahub.com/docs/General/LambertW/stable/deps.svg)](https://juliahub.com/ui/Packages/General/LambertW?t=2)
     [![version](https://juliahub.com/docs/General/LambertW/stable/version.svg)](https://juliahub.com/ui/Packages/General/LambertW)
 
 
 ### 10~100
-- Quadmath.jl
+- [Quadmath.jl](https://github.com/JuliaMath/Quadmath.jl)
     [![deps](https://juliahub.com/docs/General/Quadmath/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Quadmath?t=2)
     [![version](https://juliahub.com/docs/General/Quadmath/stable/version.svg)](https://juliahub.com/ui/Packages/General/Quadmath)
-- Richardson.jl
+- [Richardson.jl](https://github.com/JuliaMath/Richardson.jl)
     [![deps](https://juliahub.com/docs/General/Richardson/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Richardson?t=2)
     [![version](https://juliahub.com/docs/General/Richardson/stable/version.svg)](https://juliahub.com/ui/Packages/General/Richardson)
-- HCubature.jl
+- [HCubature.jl](https://github.com/JuliaMath/HCubature.jl)
     [![deps](https://juliahub.com/docs/General/HCubature/stable/deps.svg)](https://juliahub.com/ui/Packages/General/HCubature?t=2)
     [![version](https://juliahub.com/docs/General/HCubature/stable/version.svg)](https://juliahub.com/ui/Packages/General/HCubature)
-- DoubleFloats.jl
+- [DoubleFloats.jl](https://github.com/JuliaMath/DoubleFloats.jl)
     [![deps](https://juliahub.com/docs/General/DoubleFloats/stable/deps.svg)](https://juliahub.com/ui/Packages/General/DoubleFloats?t=2)
     [![version](https://juliahub.com/docs/General/DoubleFloats/stable/version.svg)](https://juliahub.com/ui/Packages/General/DoubleFloats)
-- Infinities.jl
+- [Infinities.jl](https://github.com/JuliaMath/Infinities.jl)
     [![deps](https://juliahub.com/docs/General/Infinities/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Infinities?t=2)
     [![version](https://juliahub.com/docs/General/Infinities/stable/version.svg)](https://juliahub.com/ui/Packages/General/Infinities)
-- Bessels.jl
+- [Bessels.jl](https://github.com/JuliaMath/Bessels.jl)
     [![deps](https://juliahub.com/docs/General/Bessels/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Bessels?t=2)
     [![version](https://juliahub.com/docs/General/Bessels/stable/version.svg)](https://juliahub.com/ui/Packages/General/Bessels)
-- GSL.jl
+- [GSL.jl](https://github.com/JuliaMath/GSL.jl)
     [![deps](https://juliahub.com/docs/General/GSL/stable/deps.svg)](https://juliahub.com/ui/Packages/General/GSL?t=2)
     [![version](https://juliahub.com/docs/General/GSL/stable/version.svg)](https://juliahub.com/ui/Packages/General/GSL)
-- AccurateArithmetic.jl
+- [AccurateArithmetic.jl](https://github.com/JuliaMath/AccurateArithmetic.jl)
     [![deps](https://juliahub.com/docs/General/AccurateArithmetic/stable/deps.svg)](https://juliahub.com/ui/Packages/General/AccurateArithmetic?t=2)
     [![version](https://juliahub.com/docs/General/AccurateArithmetic/stable/version.svg)](https://juliahub.com/ui/Packages/General/AccurateArithmetic)
-- NFFT.jl
+- [NFFT.jl](https://github.com/JuliaMath/NFFT.jl)
     [![deps](https://juliahub.com/docs/General/NFFT/stable/deps.svg)](https://juliahub.com/ui/Packages/General/NFFT?t=2)
     [![version](https://juliahub.com/docs/General/NFFT/stable/version.svg)](https://juliahub.com/ui/Packages/General/NFFT)
-- DecFP.jl
+- [DecFP.jl](https://github.com/JuliaMath/DecFP.jl)
     [![deps](https://juliahub.com/docs/General/DecFP/stable/deps.svg)](https://juliahub.com/ui/Packages/General/DecFP?t=2)
     [![version](https://juliahub.com/docs/General/DecFP/stable/version.svg)](https://juliahub.com/ui/Packages/General/DecFP)
-- Cubature.jl
+- [Cubature.jl](https://github.com/JuliaMath/Cubature.jl)
     [![deps](https://juliahub.com/docs/General/Cubature/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Cubature?t=2)
     [![version](https://juliahub.com/docs/General/Cubature/stable/version.svg)](https://juliahub.com/ui/Packages/General/Cubature)
-- Decimals.jl
+- [Decimals.jl](https://github.com/JuliaMath/Decimals.jl)
     [![deps](https://juliahub.com/docs/General/Decimals/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Decimals?t=2)
     [![version](https://juliahub.com/docs/General/Decimals/stable/version.svg)](https://juliahub.com/ui/Packages/General/Decimals)
 
 
 ### <10
 
-- FastPow.jl
+- [FastPow.jl](https://github.com/JuliaMath/FastPow.jl)
     [![deps](https://juliahub.com/docs/General/FastPow/stable/deps.svg)](https://juliahub.com/ui/Packages/General/FastPow?t=2)
     [![version](https://juliahub.com/docs/General/FastPow/stable/version.svg)](https://juliahub.com/ui/Packages/General/FastPow)
-- FixedPointDecimals.jl
+- [FixedPointDecimals.jl](https://github.com/JuliaMath/FixedPointDecimals.jl)
     [![deps](https://juliahub.com/docs/General/FixedPointDecimals/stable/deps.svg)](https://juliahub.com/ui/Packages/General/FixedPointDecimals?t=2)
     [![version](https://juliahub.com/docs/General/FixedPointDecimals/stable/version.svg)](https://juliahub.com/ui/Packages/General/FixedPointDecimals)
-- MeasureBase.jl
+- [MeasureBase.jl](https://github.com/JuliaMath/MeasureBase.jl)
     [![deps](https://juliahub.com/docs/General/MeasureBase/stable/deps.svg)](https://juliahub.com/ui/Packages/General/MeasureBase?t=2)
     [![version](https://juliahub.com/docs/General/MeasureBase/stable/version.svg)](https://juliahub.com/ui/Packages/General/MeasureBase)
-- KahanSummation.jl
+- [KahanSummation.jl](https://github.com/JuliaMath/KahanSummation.jl)
     [![deps](https://juliahub.com/docs/General/KahanSummation/stable/deps.svg)](https://juliahub.com/ui/Packages/General/KahanSummation?t=2)
     [![version](https://juliahub.com/docs/General/KahanSummation/stable/version.svg)](https://juliahub.com/ui/Packages/General/KahanSummation)
-- Xsum.jl
+- [Xsum.jl](https://github.com/JuliaMath/Xsum.jl)
     [![deps](https://juliahub.com/docs/General/Xsum/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Xsum?t=2)
     [![version](https://juliahub.com/docs/General/Xsum/stable/version.svg)](https://juliahub.com/ui/Packages/General/Xsum)
-- OverflowContexts.jl
+- [OverflowContexts.jl](https://github.com/JuliaMath/OverflowContexts.jl)
     [![deps](https://juliahub.com/docs/General/OverflowContexts/stable/deps.svg)](https://juliahub.com/ui/Packages/General/OverflowContexts?t=2)
     [![version](https://juliahub.com/docs/General/OverflowContexts/stable/version.svg)](https://juliahub.com/ui/Packages/General/OverflowContexts)
-- RealFFTs.jl
+- [RealFFTs.jl](https://github.com/JuliaMath/RealFFTs.jl)
     [![deps](https://juliahub.com/docs/General/RealFFTs/stable/deps.svg)](https://juliahub.com/ui/Packages/General/RealFFTs?t=2)
     [![version](https://juliahub.com/docs/General/RealFFTs/stable/version.svg)](https://juliahub.com/ui/Packages/General/RealFFTs)
-- MeasureTheory.jl
+- [MeasureTheory.jl](https://github.com/JuliaMath/MeasureTheory.jl)
     [![deps](https://juliahub.com/docs/General/MeasureTheory/stable/deps.svg)](https://juliahub.com/ui/Packages/General/MeasureTheory?t=2)
     [![version](https://juliahub.com/docs/General/MeasureTheory/stable/version.svg)](https://juliahub.com/ui/Packages/General/MeasureTheory)
-- FunctionZeros.jl
+- [FunctionZeros.jl](https://github.com/JuliaMath/FunctionZeros.jl)
     [![deps](https://juliahub.com/docs/General/FunctionZeros/stable/deps.svg)](https://juliahub.com/ui/Packages/General/FunctionZeros?t=2)
     [![version](https://juliahub.com/docs/General/FunctionZeros/stable/version.svg)](https://juliahub.com/ui/Packages/General/FunctionZeros)
-- FastChebInterp.jl
+- [FastChebInterp.jl](https://github.com/JuliaMath/FastChebInterp.jl)
     [![deps](https://juliahub.com/docs/General/FastChebInterp/stable/deps.svg)](https://juliahub.com/ui/Packages/General/FastChebInterp?t=2)
     [![version](https://juliahub.com/docs/General/FastChebInterp/stable/version.svg)](https://juliahub.com/ui/Packages/General/FastChebInterp)
-- Hadamard.jl
+- [Hadamard.jl](https://github.com/JuliaMath/Hadamard.jl)
     [![deps](https://juliahub.com/docs/General/Hadamard/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Hadamard?t=2)
     [![version](https://juliahub.com/docs/General/Hadamard/stable/version.svg)](https://juliahub.com/ui/Packages/General/Hadamard)
-- Tau.jl
+- [Tau.jl](https://github.com/JuliaMath/Tau.jl)
     [![deps](https://juliahub.com/docs/General/Tau/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Tau?t=2)
     [![version](https://juliahub.com/docs/General/Tau/stable/version.svg)](https://juliahub.com/ui/Packages/General/Tau)
-- InverseLaplace.jl
+- [InverseLaplace.jl](https://github.com/JuliaMath/InverseLaplace.jl)
     [![deps](https://juliahub.com/docs/General/InverseLaplace/stable/deps.svg)](https://juliahub.com/ui/Packages/General/InverseLaplace?t=2)
     [![version](https://juliahub.com/docs/General/InverseLaplace/stable/version.svg)](https://juliahub.com/ui/Packages/General/InverseLaplace)
-- ILog2.jl
+- [ILog2.jl](https://github.com/JuliaMath/ILog2.jl)
     [![deps](https://juliahub.com/docs/General/ILog2/stable/deps.svg)](https://juliahub.com/ui/Packages/General/ILog2?t=2)
     [![version](https://juliahub.com/docs/General/ILog2/stable/version.svg)](https://juliahub.com/ui/Packages/General/ILog2)
-- AppleAccelerate.jl
+- [AppleAccelerate.jl](https://github.com/JuliaMath/AppleAccelerate.jl)
     [![deps](https://juliahub.com/docs/General/AppleAccelerate/stable/deps.svg)](https://juliahub.com/ui/Packages/General/AppleAccelerate?t=2)
     [![version](https://juliahub.com/docs/General/AppleAccelerate/stable/version.svg)](https://juliahub.com/ui/Packages/General/AppleAccelerate)
-- MittagLeffler.jl
+- [MittagLeffler.jl](https://github.com/JuliaMath/MittagLeffler.jl)
     [![deps](https://juliahub.com/docs/General/MittagLeffler/stable/deps.svg)](https://juliahub.com/ui/Packages/General/MittagLeffler?t=2)
     [![version](https://juliahub.com/docs/General/MittagLeffler/stable/version.svg)](https://juliahub.com/ui/Packages/General/MittagLeffler)
-- CheckedArithmetic.jl
+- [CheckedArithmetic.jl](https://github.com/JuliaMath/CheckedArithmetic.jl)
     [![deps](https://juliahub.com/docs/General/CheckedArithmetic/stable/deps.svg)](https://juliahub.com/ui/Packages/General/CheckedArithmetic?t=2)
     [![version](https://juliahub.com/docs/General/CheckedArithmetic/stable/version.svg)](https://juliahub.com/ui/Packages/General/CheckedArithmetic)
-- ChangePrecision.jl
+- [ChangePrecision.jl](https://github.com/JuliaMath/ChangePrecision.jl)
     [![deps](https://juliahub.com/docs/General/ChangePrecision/stable/deps.svg)](https://juliahub.com/ui/Packages/General/ChangePrecision?t=2)
     [![version](https://juliahub.com/docs/General/ChangePrecision/stable/version.svg)](https://juliahub.com/ui/Packages/General/ChangePrecision)
-- Float8s.jl
+- [Float8s.jl](https://github.com/JuliaMath/Float8s.jl)
     [![deps](https://juliahub.com/docs/General/Float8s/stable/deps.svg)](https://juliahub.com/ui/Packages/General/Float8s?t=2)
     [![version](https://juliahub.com/docs/General/Float8s/stable/version.svg)](https://juliahub.com/ui/Packages/General/Float8s)
-- IntelVectorMath.jl
+- [IntelVectorMath.jl](https://github.com/JuliaMath/IntelVectorMath.jl)
     [![deps](https://juliahub.com/docs/General/IntelVectorMath/stable/deps.svg)](https://juliahub.com/ui/Packages/General/IntelVectorMath?t=2)
     [![version](https://juliahub.com/docs/General/IntelVectorMath/stable/version.svg)](https://juliahub.com/ui/Packages/General/IntelVectorMath)
