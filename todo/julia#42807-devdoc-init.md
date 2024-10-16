@@ -1,5 +1,7 @@
 ## [1.6] [devdoc/init] Update doc: "Initialization of the Julia runtime"
 
+需要 rebase
+
 > [[1.6] [devdoc/init] Update doc: "Initialization of the Julia runtime" by inkydragon · Pull Request #42807 · JuliaLang/julia](https://github.com/JuliaLang/julia/pull/42807)
 
 *tl; dr*
