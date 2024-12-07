@@ -20,7 +20,7 @@ plugins = [
 
     # CI
     Dependabot(),
-    GitHubActions(; extra_versions=["1.10", "pre"],),
+    GitHubActions(; extra_versions=["lts", "pre"],),
     Documenter{GitHubActions}(),
 ]
 
@@ -35,4 +35,4 @@ tpl = Template(;
     interactive=false,
 )
 
-tpl("NewPkg.jl")
+tpl("PurePkgname.jl")
