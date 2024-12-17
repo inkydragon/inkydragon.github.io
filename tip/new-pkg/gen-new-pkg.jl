@@ -21,6 +21,7 @@ plugins = [
     # CI
     Dependabot(),
     GitHubActions(; extra_versions=["lts", "pre"],),
+    Codecov(),
     Documenter{GitHubActions}(),
 ]
 
