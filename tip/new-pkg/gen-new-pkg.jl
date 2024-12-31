@@ -20,7 +20,7 @@ plugins = [
 
     # CI
     Dependabot(),
-    GitHubActions(; extra_versions=["lts", "pre"],),
+    GitHubActions(; extra_versions=["lts", "nightly"],),
     Codecov(),
     Documenter{GitHubActions}(),
 ]
@@ -37,3 +37,4 @@ tpl = Template(;
 )
 
 tpl("PurePkgname.jl")
+# julia --project=@script .\gen-new-pkg.jl
