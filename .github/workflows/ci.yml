@@ -17,14 +17,15 @@ jobs:
         with:
           node-version: 18
           cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Build website
-        run: npm run build
+      - name: Install and build
+        working-directory: ./site
+        run: |
+          npm ci
+          npm run build
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: site/build
 
   deploy:
     name: Deploy to GitHub Pages
