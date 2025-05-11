@@ -1,8 +1,7 @@
 ---
 slug: new-docusaurus-blog
 title: New Docusaurus Blog!
-authors:
-  - name: Cyhan
+authors: cyhan
 tags: [docusaurus]
 ---
 
