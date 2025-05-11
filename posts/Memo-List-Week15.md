@@ -9,7 +9,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 [2017-06-02 22:20:48]
 
 # Haskell 可选参数(optional arguments)

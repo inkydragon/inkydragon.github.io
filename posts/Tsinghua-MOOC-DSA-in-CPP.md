@@ -8,7 +8,7 @@ description:
 
 Tsinghua MOOC DSA in C++ 示例代码
 
-<!--more-->
+<!-- truncate -->
 
 # VS 更改版本
 

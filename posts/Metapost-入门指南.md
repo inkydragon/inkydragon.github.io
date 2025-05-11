@@ -11,7 +11,7 @@ tags:
 
 联动 [Metapost 入门资料(并不是教程)](http://wenda.latexstudio.net/article/1022)
 
-<!--more-->
+<!-- truncate -->
 
 # 0x0 前言
 

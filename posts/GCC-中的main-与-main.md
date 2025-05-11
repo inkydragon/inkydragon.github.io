@@ -7,7 +7,7 @@ tags:
 ---
 看RE4B, C3 中间有提到用gcc编译简单函数，试了下hello world，发现生成的汇编代码很奇怪，看上去想出现了死循环。
 
-<!--more-->
+<!-- truncate -->
 
 {% codeblock c源码 lang:c 3.1.c %}
 #include <stdio.h>

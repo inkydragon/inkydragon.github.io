@@ -9,7 +9,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 >**ATTENTION:**
      The commands in the lessons will modify the text.  Make a copy of this

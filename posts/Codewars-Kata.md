@@ -11,7 +11,7 @@ tags:
 
 开坑记录一下有趣的题, 顺便采用新结构 [堆栈类似物]
 
-<!--more-->
+<!-- truncate -->
 [我的解题集](https://www.codewars.com/users/0u0/completed_solutions)
 
 ### 1ku

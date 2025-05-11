@@ -9,7 +9,7 @@ tags:
 Landscape-plus 没怎么更新，多说也要挂了。
 我就想另起炉灶，开个坑叫 Landscape++
 
-<!--more-->
+<!-- truncate -->
 备选主题;
 
 - [hexo-theme-yilia](http://litten.me/)

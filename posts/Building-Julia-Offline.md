@@ -8,7 +8,7 @@ description:
 
 [Ubuntu 离线编译 Julia - 综合讨论区 / Julia入门 - Julia中文社区](https://discourse.juliacn.com/t/topic/1365)
 
-<!--more-->
+<!-- truncate -->
 
 ref
 - [Building Julia Offline - Usage - JuliaLang](https://discourse.julialang.org/t/building-julia-offline/9252/4)

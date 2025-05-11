@@ -7,7 +7,7 @@ description: 尝试在 Win 10 上编译安装带 GPU 支持的 TensorFlow
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 Note: 
 搞了两天没什么进展，不过把所有的外部依赖全部下载下来了。

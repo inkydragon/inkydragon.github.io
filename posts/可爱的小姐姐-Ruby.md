@@ -12,7 +12,7 @@ Seven Languages in Seven Weeks: Ruby, Day 1-3 FULL
 
 ![Ruby](ruby.jpg Just For Fun ! ——)
 
-<!--more-->
+<!-- truncate -->
 > 有糖相伴好下药。 ——Mary Poppins
 
 # Install

@@ -16,7 +16,7 @@ tags:
 
 > http://t.cn/RJgPBh4 -> https://pan.baidu.com/s/1nv4UsyP
 
-<!--more-->
+<!-- truncate -->
 
 ## CTF
 ![压缩包内容](1-7zip.png)

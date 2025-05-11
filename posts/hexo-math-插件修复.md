@@ -9,7 +9,7 @@ description:
 ---
 >学习也是没有办法的事情
 
-<!--more-->
+<!-- truncate -->
 粗略的的看一下用了 gulp + es6
 大概还得研究下 [coffeescript](http://coffee-script.org/)
 

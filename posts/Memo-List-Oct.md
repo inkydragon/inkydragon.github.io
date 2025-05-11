@@ -9,7 +9,7 @@ description:
 ---
 Oct. Memo 
 
-<!--more-->
+<!-- truncate -->
 
 
 [2017-10-25 16:56:05]

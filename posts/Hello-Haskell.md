@@ -13,7 +13,7 @@ tags:
 >
 >—— [阅千人而惜知己](https://www.zhihu.com/question/27355585/answer/36405568)
 
-<!--more-->
+<!-- truncate -->
 -----
 
 

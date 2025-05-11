@@ -26,7 +26,7 @@ date: 2017-02-22 18:09:01
 
 > The main equations studied in the course are driven first and second order constant coefficient linear ordinary differential equations and 2x2 systems.
 
-<!--more-->
+<!-- truncate -->
 ## Units
 [UNIT I: FIRST ORDER DIFFERENTIAL EQUATIONS]
 

@@ -9,7 +9,7 @@ description:
 ---
 Dec. Memo
 
-<!--more-->
+<!-- truncate -->
 
 [2017-12-26 13:35:26]
 

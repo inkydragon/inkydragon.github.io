@@ -7,7 +7,7 @@ tags:
 ---
 又看见 dalao star 了新的项目[alwsl](https://github.com/alwsl/alwsl)，看了一眼，是在WSL(Windows Subsystem for Linux) 中装ArchLinux的脚本，然后我就开始折腾WSL了。
 
-<!--more-->
+<!-- truncate -->
 
 ref:
 

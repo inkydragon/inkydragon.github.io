@@ -9,7 +9,7 @@ description:
 ---
 Nov. Memo
 
-<!--more-->
+<!-- truncate -->
 
 [2017-11-25 11:03:12]
 - [Main is usually a function. So then when is it not?](https://jroweboy.github.io/c/asm/2015/01/26/when-is-main-not-a-function.html)

@@ -9,7 +9,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 # 初始化git
 `git init` To initialize a Git repository here

@@ -12,7 +12,7 @@ description:
 ---
 幕布版 [Programming Ruby —— The Pragmatic Programmer's Guide​](http://mubu.io/doc/SswLzGgZ0)
 
-<!--more-->
+<!-- truncate -->
 
 # ----- 2. Ruby.new ------
 ## Object-Oriented

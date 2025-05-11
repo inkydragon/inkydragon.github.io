@@ -8,7 +8,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 先基于腾讯云尝试一下。
 
 # Install

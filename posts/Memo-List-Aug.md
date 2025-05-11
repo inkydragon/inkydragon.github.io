@@ -8,7 +8,7 @@ description:
   备忘&开坑记录
 ---
 
-<!--more-->
+<!-- truncate -->
 
 
 

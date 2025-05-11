@@ -12,7 +12,7 @@ tags:
 
 开工！
 
-<!--more-->
+<!-- truncate -->
 
 # Piet-lang
 Google 之，找到编译器 [Piet Interpreters and Assemblers](http://www.dangermouse.net/esoteric/piet/tools.html)

@@ -8,7 +8,7 @@ description:
   texlive 2016 宏包更新后炸了。
 ---
 
-<!--more-->
+<!-- truncate -->
 
 手贱，在图形界面更新了所有的可更新宏包。
 

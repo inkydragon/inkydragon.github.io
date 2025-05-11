@@ -8,7 +8,7 @@ description:
 
 scala
 
-<!--more-->
+<!-- truncate -->
 
 # Day 0
 
