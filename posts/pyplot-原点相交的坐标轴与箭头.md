@@ -11,7 +11,7 @@ mathjax: true
 
 我就想画个简单的 SVG 图，懒得开 Ai 了(~~虽然下面这个图还是用 Ai 画的~~)，希望用 pyplot 直接画。
 
-{% asset_img ReLU.svg ReLU 的图像 %}
+![的图像](ReLU.svg ReLU)
 
 `pyplot` 自带的坐标轴在左下角相交，并且没有箭头。
 
@@ -62,7 +62,7 @@ plt.show()
 ```
 
 **【效果】**
-{% asset_img base_point-1.svg 移动坐标轴的效果图 %}
+![移动坐标轴的效果图](base_point-1.svg)
 
 试完这个没有找到怎么给它加箭头，所以又换了一种方法。
 
@@ -100,7 +100,7 @@ plt.show()
 ```
 
 **【效果】**
-{% asset_img base_point_arrow.svg 新建在原点的轴并加上箭头的效果图 %}
+![新建在原点的轴并加上箭头的效果图](base_point_arrow.svg)
 
 这种箭头是加上了，但大小调不了，`size`调得过大就显示不出来，跑到图外面去了。
 
@@ -112,7 +112,7 @@ ref:
 
 原答案是直接画的箭头，你要是给 y 轴加上数字刻度就会出现在左侧：
 
-{% asset_img arrow_axis-1.svg 给 y 轴加上刻度的效果图 %}
+![轴加上刻度的效果图](arrow_axis-1.svg 给 y)
 
 用前面学到的一句，调整一下 y 轴的位置：
 `ax.spines['left'].set_position(('data',0))`
@@ -192,7 +192,7 @@ pl.show()
 ```
 
 **【最终效果】**
-{% asset_img arrow_axis-2.svg 最终效果图 %}
+![最终效果图](arrow_axis-2.svg)
 
 
 ## 三种激活函数的图像
@@ -212,8 +212,8 @@ x,&         x\ge 0 \\
 $$
 ```
 
-{% asset_img eq-ReLU.svg ReLU 数学定义 %}
-{% asset_img ReLU-final.svg ReLU 图像 %}
+![数学定义](eq-ReLU.svg ReLU)
+![图像](ReLU-final.svg ReLU)
 
 
 ### Sigmod
@@ -223,8 +223,8 @@ f\left( x \right) =\frac{1}{1+e^x}
 $$
 ```
 
-{% asset_img eq-sigmod.svg sigmod 数学定义 %}
-{% asset_img sigmod.svg sigmod 图像 %}
+![数学定义](eq-sigmod.svg sigmod)
+![图像](sigmod.svg sigmod)
 
 
 ### tanh
@@ -234,5 +234,5 @@ f\left( x \right) =\frac{1-e^{-2x}}{1+e^{-2x}}
 $$
 ```
 
-{% asset_img eq-tanh.svg tanh  %}
-{% asset_img tanh.svg tanh_图像 %}
+![tanh ](eq-tanh.svg)
+![tanh_图像](tanh.svg)

@@ -5,8 +5,8 @@ tags:
 - Cipher & Code
 ---
 在密码吧看到[两张图](http://tieba.baidu.com/p/4963843005)，目测是[Esoteric programming language](https://en.wikipedia.org/wiki/Esoteric_programming_language)(天马dalao也提示了，就想着试一试
-{% asset_img Piet.jpg 第一张 %}
-{% asset_img Malbolge.jpg 第二张 %}
+![第一张](Piet.jpg)
+![第二张](Malbolge.jpg)
 
 以前也在知乎上看见过[相关的介绍](https://www.zhihu.com/question/23115824/answer/45138393)，找了一下，第一张是Piet-lang，第二张是 Malbolge-lang
 

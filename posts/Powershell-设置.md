@@ -118,7 +118,7 @@ code snippet
 
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
 
-{% asset_img slug [title] %}
+![[title]](slug)
 
 
 {% endraw %}

@@ -331,7 +331,7 @@ NOTE: When the search reaches the end of the file it will continue at the
 
 `:!ls` 在cmd中执行`ls`并打开新窗口
 
-{% asset_img ls.png 执行效果 %}
+![执行效果](ls.png)
 
 ## MORE ON WRITING FILES
 >** To save the changes made to the text, type  :w FILENAME. **

@@ -9,7 +9,7 @@ tags:
 
 <!--more-->
 按照书中的方法，用书中的例子初步试了一下，发现系统还是用MSVC作为默认的调试器。   
-{% asset_img vs.png MSVC调试器 %}
+![MSVC调试器](vs.png)
 
 在经过一番尝试后，终于找到了解决方案。
 
@@ -21,9 +21,9 @@ tags:
 ___x86部分___   
 删除`HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug`中的`Auto`和`Debugger`两项。  
 ___x64部分___   
-{% asset_img regedit_x86.png AeDebug %}     
+![AeDebug](regedit_x86.png)     
 删除`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug`中的`Auto`和`Debugger`两项。   
-{% asset_img regedit_x64.png AeDebug %}
+![AeDebug](regedit_x64.png)
 
 2. **注册WinDbg为默认的JIT调试器**   
 在管理员模式下的CMD中输入  
@@ -35,19 +35,19 @@ cd C:\Program Files (x86)\Windows Kits\10\Debuggers\x64
 windbg -I
 ```
 出现弹窗说明注册成功，这样x86和x64和JIT一时期就都注册为WinDbg了。    
-{% asset_img windbg_1.png WinDbg注册成功 %}
+![WinDbg注册成功](windbg_1.png)
 
 3. **JIT参数微调**  
 1.中注册表项`Auto`可取值`0` or `1`。    
 取`0`，代表不自动启动调试器，会显示一个对话框，询问你是否启动调试器。    
 取`1`，则自动打开默认的调试器。   
-{% asset_img shut.png 程序崩溃 %}
-{% asset_img choose.png 选择是否调试 %}
+![程序崩溃](shut.png)
+![选择是否调试](choose.png)
 
 4. **调试符号设置**   
 为了方便调试，在WinDbg中按`Ctrl+S`打开将符号路径设置   
 输入`cache*c:\mysymbol;srv*https://msdl.microsoft.com/download/symbols`这样WinDbg就可以自动从微软的符号服务器下载符号文件并缓存在`c:\mysymbol`文件夹下。     
-{% asset_img windbg_symbol.png WinDbg 符号设置 %}
-{% asset_img c_symbol.png C盘的符号缓存 %}    
+![符号设置](windbg_symbol.png WinDbg)
+![C盘的符号缓存](c_symbol.png)    
 设置好后，WinDbg会自动加载下载/加载符号文件       
-{% asset_img symbols.png WinDbg成功加载符号文件 %}  
+![WinDbg成功加载符号文件](symbols.png)  

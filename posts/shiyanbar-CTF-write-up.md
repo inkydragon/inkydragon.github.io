@@ -34,7 +34,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 解压出的文件用binwalk看一下，发现是jpeg，改名打开(win上打开)，得到flag
 
-{% asset_img 2002-Spamcarver-flag.jpg Flag %}
+![Flag](2002-Spamcarver-flag.jpg)
 
 [2017-11-09 14:24:26]
 > flag{7adf6f07e0810003c585a7be97868a90}
@@ -73,7 +73,7 @@ drwxr-xr-x  3.0 unx        0 bx stor 13-Apr-15 03:13 Mag7-BW/
 ```
 
 看一下文件头
-{% asset_img 2001-NAVSAT-hex1.png File header %}
+![header](2001-NAVSAT-hex1.png File)
 
 确认是文件头有问题，把文件头改成 `50 4B 03 04`
 > zip文件格式参考： [Zip 格式 — CTF Wiki 文档](https://ctf-wiki.github.io/ctf-wiki/misc/archive/zip.html)
@@ -185,10 +185,10 @@ int main(int argc, char const *argv[]) {
 }
 ```
 
-{% asset_img 1998-CFG2C-f-modulo.png  Func modulo %}
-{% asset_img 1998-CFG2C-f-loop.png Func loop %}
-{% asset_img 1998-CFG2C-f-control.png Func control %}
-{% asset_img 1998-CFG2C-f-for_loop.png Func for_loop %}
+![modulo](1998-CFG2C-f-modulo.png  Func)
+![loop](1998-CFG2C-f-loop.png Func)
+![control](1998-CFG2C-f-control.png Func)
+![for_loop](1998-CFG2C-f-for_loop.png Func)
 
 [2017-11-09 14:58:13]
 > BCDA

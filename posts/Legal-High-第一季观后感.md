@@ -6,9 +6,9 @@ tags:
 ---
 
 化学狗莫名中枪
-{% asset_img ligohi1.png 又黑化学狗 %}
+![又黑化学狗](ligohi1.png)
 
 <!--more-->
 
 欲扬先抑
-{% asset_img ligohi2.png 美好的理想 %}
+![美好的理想](ligohi2.png)

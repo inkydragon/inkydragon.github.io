@@ -84,7 +84,7 @@ surf(Z), hold on
 [~,h] = contourf(Z);
 h.ContourZLevel = -10;
 ```
-{% asset_img Matlab-memo-contourZlevel.png 效果 %}
+![效果](Matlab-memo-contourZlevel.png)
 [2017-05-07]
 
 ---
@@ -124,7 +124,7 @@ end
 
 imwrite(A,map,filename,'gif','WriteMode','append','DelayTime',2); % 最后一帧 延时
 ```
-{% asset_img Matlab-memo-GIF_testAnimated.gif gif %}
+![gif](Matlab-memo-GIF_testAnimated.gif)
 
 ---
 

@@ -67,7 +67,7 @@ Arch 里面换了systemd-netwoekd 配置网络，一直不成功。想看一下l
 
 发现有几个依赖项没有启动，手工拉一下
 
-{% asset_img systemd-journald-dependence.png  systemd-journald-dependence %}
+![systemd-journald-dependence](systemd-journald-dependence.png )
 
 开了下其中一个的状态，并尝试重启了下.
 无效
