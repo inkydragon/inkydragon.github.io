@@ -1,13 +1,15 @@
 ---
+slug: lecture-1-introduction-to-computation
 title: Lecture 1 - Introduction to Computation
-date: 2017-01-29 14:10:28
-categories: 
+date: 2017-01-29T14:10:28
+authors: cyhan
+tags: 
 - Study
 - MOOC
 - edX
 - MIT-6.00.1sp
 ---
-# *Lecture 1 Introduction*
+
 Lecture 1将介绍：计算方法和计算思维的一些基本原则：     
 1.  计算机到底干了什么？
 - 计算机最基本的操作(元指令)是什么？
@@ -16,6 +18,7 @@ Lecture 1将介绍：计算方法和计算思维的一些基本原则：
 - 我们应该怎样用一门编程语言来描述上述的方法、原则？
 
 <!-- truncate -->
+
 ## Section1 Introduction to Computer Science and Programming
 - Goal
     - Become skillful at making a computer do what you want it to do

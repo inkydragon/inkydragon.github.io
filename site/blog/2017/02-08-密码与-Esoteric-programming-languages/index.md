@@ -1,10 +1,15 @@
 ---
+slug: cipher-and-esoteric-programming-languages
 title: 密码与 Esoteric programming languages
-date: 2017-02-08 23:08:56
+date: 2017-02-08T23:08:56
+authors: cyhan
 tags:
-- Cipher & Code
+- Cipher
 ---
-在密码吧看到[两张图](http://tieba.baidu.com/p/4963843005)，目测是[Esoteric programming language](https://en.wikipedia.org/wiki/Esoteric_programming_language)(天马dalao也提示了，就想着试一试
+
+在密码吧看到[两张图](http://tieba.baidu.com/p/4963843005)，目测是[Esoteric programming language](https://en.wikipedia.org/wiki/Esoteric_programming_language)
+(天马dalao也提示了，就想着试一试
+
 ![第一张](Piet.jpg)
 ![第二张](Malbolge.jpg)
 
@@ -14,10 +19,10 @@ tags:
 
 <!-- truncate -->
 
-# Piet-lang
+## Piet-lang
 Google 之，找到编译器 [Piet Interpreters and Assemblers](http://www.dangermouse.net/esoteric/piet/tools.html)
 
-## Piet-lang 编译环境构建
+### Piet-lang 编译环境构建
 ### # 0 try: [web Piet IDE](http://zobier.net/piet/)
 格子太少，需要手工输入，虽然有[源码](http://www.rapapaing.com/blog/?page_id=6)，但目测改起来麻烦，遂放弃
 
@@ -31,7 +36,8 @@ Google 之，找到编译器 [Piet Interpreters and Assemblers](http://www.dange
 下载源码 ，cd到源代码根目录`python setup.py install`
 
 报错
-```
+
+```cmd
 ...
 running build_ext
 building '_imaging' extension
@@ -39,10 +45,12 @@ error: Unable to find vcvarsall.bat
 
 I:\Desktop\Imaging-1.1.7>
 ```
+
 google 得知是少Python的C++编译器
-{% blockquote Ross Rogers http://stackoverflow.com/a/10558328 hexo error: Unable to find vcvarsall.bat %}
-Update: Comments point out that the instructions here may be dangerous. Consider using the Visual C++ 2008 Express edition or the purpose-built [Microsoft Visual C++ Compiler for Python](http://www.microsoft.com/en-us/download/details.aspx?id=44266) [(details)](http://stackoverflow.com/a/26127562/2778484) and NOT using the original answer below. Original error message means the required version of Visual C++ is not installed.
-{% endblockquote %}
+
+> Update: Comments point out that the instructions here may be dangerous. Consider using the Visual C++ 2008 Express edition or the purpose-built [Microsoft Visual C++ Compiler for Python](http://www.microsoft.com/en-us/download/details.aspx?id=44266) [(details)](http://stackoverflow.com/a/26127562/2778484) and NOT using the original answer below. Original error message means the required version of Visual C++ is not installed.
+>
+> [hexo error: Unable to find vcvarsall.bat @Ross Rogers](https://stackoverflow.com/a/10558328)
 
 安装以上提到的.msi包，发现已经装过了
 
@@ -52,7 +60,7 @@ DEAD
 需要`cmake`，下载cmake(网速感人，安装完，编译
 
 报错：
-```
+```cmd
 CMake Error at C:/Program Files/CMake/share/cmake-3.8/Modules/FindQt4.cmake:1318 (message):
   Found unsuitable Qt version "" from NOTFOUND, this code requires Qt 4.x
 Call Stack (most recent call first):
@@ -72,7 +80,7 @@ DEAD
 只支持 .gif .png .ppm
 自带的例子可以正常运行，
 
-{% codeblock npiet-help %}
+```cmd
 I:\Downloads\npiet-1.3a-win32>npiet.exe -h
 npiet v1.3  (with GD support, with GIF support, with PNG support)
 
@@ -94,8 +102,7 @@ options:
         -d         - debug (default: off)
         -dpbug     - model the perl piet interpreter (default: off)
         -v11       - model the npiet v1.1 interpreter (default: off)
-{% endcodeblock %}
-
+```
 
 不带参数运行题目，听见风扇声，CPU占用率升高，怀疑死循环，加上参数`-t`确认是死循环
 
@@ -131,6 +138,7 @@ trace: entering white block at 464,2 (like the perl interpreter would)...
 
 .....
 ```
+
 带参数`-ub`无果
 ```
 I:\Downloads\npiet-1.3a-win32>npiet.exe -ub -t Piet.png
@@ -156,26 +164,30 @@ DEAD
 
 --------
 
-# Malbolge-lang
+## Malbolge-lang
 找到疑似[官网](http://www.lscheffer.com/malbolge.shtml)
 
-## 编译环境
+### 编译环境
 [编译器源码](http://www.lscheffer.com/malbolge_interp.html)
 ***记得把第一句话删掉！！***
 
 Hello World测试代码
-{% codeblock Malbolge-lang Hello World.mal %}
+
+*Hello World.mal*
+```
 ('&%:9]!~}|z2Vxwv-,POqponl$Hjig%eB@@>}=<M:9wv6WsU2T|nm-,jcL(I&%$#"
  `CB]V?Tx<uVtT`Rpo3NlF.Jh++FdbCBA@?]!~|4XzyTT43Qsqq(Lnmkj"Fhg${z@>
-{% endcodeblock %}
+```
 一般都能正常运行
 
 然后手工识别源码：
-{% codeblock Malbolge-lang Job.mal %}
+
+*Job.mal*
+```
 ('&$:^"!}54Xzyw5.Rtrrp('Kml)j!Eg
 f{"cx>_u::[q7554E~10A.-+M*uK'_^]
 \"ZY}j/zxw;;:Ur7q44
-{% endcodeblock %}
+```
 
 结果：
 ```

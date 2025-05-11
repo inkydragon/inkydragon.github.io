@@ -3,3 +3,8 @@ docusaurus:
   label: Docusaurus
   permalink: /docusaurus
   description: docusaurus.io related things
+
+todo:
+  label: Todo
+  permalink: /todo
+  description: Placeholder for future posts

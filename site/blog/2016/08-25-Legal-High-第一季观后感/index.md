@@ -1,8 +1,10 @@
 ---
+slug: legal-high-se1
 title: Legal High 第一季观后感
-date: 2016-08-25 01:08:22
-tags: 
-- 日剧
+date: 2016-08-25T01:08:22
+authors: cyhan
+tags:
+  - 日剧
 ---
 
 化学狗莫名中枪
