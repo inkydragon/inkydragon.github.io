@@ -6,7 +6,7 @@ tags:
 ---
 又想填坑了，所以找了个开源的辅助翻译软件，记录下配置过程
 
-<!--more-->
+<!-- truncate -->
 # *0x00* 词典、术语集管理
 
 [语帆术语宝](http://termbox.lingosail.com/console/extract)

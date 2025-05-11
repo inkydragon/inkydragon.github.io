@@ -25,7 +25,7 @@ ref: [Axis line styles](https://matplotlib.org/gallery/axisartist/demo_axisline_
 最后看到 sf 上强行直接画箭头的就简单粗暴很符合要求。
 ref: [python - How to make 'fuller' axis arrows with matplotlib - Stack Overflow](https://stackoverflow.com/a/23855021/10250520)
 
-<!--more-->
+<!-- truncate -->
 
 以下为各种尝试，按尝试的时间为序：
 

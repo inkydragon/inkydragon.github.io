@@ -12,7 +12,7 @@ description:
 ![](fuel.png)
 OpenStack Fuel 是Mirantis为OpenStack定制的自动部署软件(套装)，使用fuel配置OpenStack只需要配置master/主节点，并在主节点安装完成后在fuel dashboard/控制面板配置好整个OpenStack系统，即可通过fuel自动给个node/子节点部署系统(默认为Ubuntu)并安装、配置openstack。
 
-<!--more-->
+<!-- truncate -->
 
 # Ref Links
 

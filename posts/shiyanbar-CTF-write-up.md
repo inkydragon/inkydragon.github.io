@@ -7,7 +7,7 @@ categories:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 ## 2002-[Spamcarver-实验吧](http://www.shiyanbar.com/ctf/2002)
 
 Stegsolve 看了一下，没发现什么。

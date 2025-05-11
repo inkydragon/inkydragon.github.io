@@ -10,7 +10,7 @@ tags:
 
 >easyctf{irc_d0esn7_apist0rm_:)}
 
-<!--more-->
+<!-- truncate -->
 ### Flip My Letters
 看提示是按字母表逆序替换
 ![](Flip_My_Letters.png)

@@ -28,7 +28,7 @@ def func_resolve (self, dll, function):
 
 坑中坑就开始了。
 
-<!--more-->
+<!-- truncate -->
 # 坑中坑
 讲道理：    
 python是超出int自动转换为long   

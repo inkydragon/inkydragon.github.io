@@ -6,7 +6,7 @@ tags:
 ---
 clone某汉化组的repo，本来有墙，结果repo竟然有31M，源码是一堆tex文件，图片也没几张最大的一个文件是PDF，然后我就感觉很奇怪，怎么这个repo这么大。
 
-<!--more-->
+<!-- truncate -->
 ref：    
 1. [为什么你的 Git 仓库变得如此臃肿](http://www.jianshu.com/p/7231b509c279)
 2. [.git 文件太大时怎样处理](https://segmentfault.com/q/1010000000171057)

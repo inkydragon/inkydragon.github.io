@@ -7,7 +7,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 **links**
 - [UNet@github - Search · unet](https://github.com/search?q=unet)

@@ -9,7 +9,7 @@ description:
   目前看 Inote2 做点笔记
 ---
 
-<!--more-->
+<!-- truncate -->
 
 # 简介
 ## 数字排版

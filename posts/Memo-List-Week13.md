@@ -9,7 +9,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 [2017-05-18 19:15:40]
 

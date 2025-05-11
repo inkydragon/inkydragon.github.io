@@ -12,7 +12,7 @@ tags:
 ---
 开坑了，这里用作目录。
 
-<!--more-->
+<!-- truncate -->
 # Week1
 
 # Week2

@@ -7,7 +7,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 
 

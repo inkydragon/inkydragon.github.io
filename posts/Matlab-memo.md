@@ -9,7 +9,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 **向量值函数~多元函数转换**
 
