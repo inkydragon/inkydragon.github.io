@@ -7,6 +7,7 @@ tags:
 - Study
 - MOOC
 - edX
+- MIT-6.00.1sp
 - Python
 - todo
 ---
