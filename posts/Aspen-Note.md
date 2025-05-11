@@ -6,7 +6,7 @@ tags:
 ---
 Aspen 版本号比较乱
 
-<!--more-->
+<!-- truncate -->
 
 
 ## Aspen 版本关系

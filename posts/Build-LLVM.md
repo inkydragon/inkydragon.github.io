@@ -8,7 +8,7 @@ description: 编译 Release 版 LLVM 的命令参数记录。
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 background
 - [关于编译时的目录结构 · Issue #2 · Becavalier/Cinderella](https://github.com/Becavalier/Cinderella/issues/2)

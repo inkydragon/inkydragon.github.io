@@ -8,7 +8,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 ref:
 
 - [powershell配置(win10)](http://kaimingwan.com/post/gong-ju/powershellpei-zhi-win10)

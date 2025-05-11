@@ -6,7 +6,7 @@ tags:
 ---
 整理下已开的坑[TodoList](http://mubu.io/doc/1o5MOHEvi0)，开坑的目的，以及各坑之间的关系。
 
-<!--more-->
+<!-- truncate -->
 
 
 

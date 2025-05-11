@@ -8,7 +8,7 @@ tags:
 化学狗莫名中枪
 ![又黑化学狗](ligohi1.png)
 
-<!--more-->
+<!-- truncate -->
 
 欲扬先抑
 ![美好的理想](ligohi2.png)

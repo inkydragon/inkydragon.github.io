@@ -9,7 +9,7 @@ description:
 >—— Ferris Bueller
 
 
-<!--more-->
+<!-- truncate -->
 
 # Install
 google搜索 `io-lang` ，找到官网 [io / binaries via jake peck](http://iolanguage.org/binaries.html)

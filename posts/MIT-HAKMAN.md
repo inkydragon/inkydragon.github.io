@@ -11,7 +11,7 @@ description:
 ---
 MIT 人工智能实验室的 memo
 
-<!--more-->
+<!-- truncate -->
 ``` plain Title
                             MASSACHUSETTS INSTITUTE OF TECHNOLOGY
 

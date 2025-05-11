@@ -9,7 +9,7 @@ description:
 ---
 
 
-<!--more-->
+<!-- truncate -->
 
 - [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 
