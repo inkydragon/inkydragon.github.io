@@ -13,7 +13,7 @@ tags:
 <!--more-->
 ### Flip My Letters
 看提示是按字母表逆序替换
-{% asset_img Flip_My_Letters.png %}
+![](Flip_My_Letters.png)
 
 >easyctf{i_dont_even_need_an_ascii_table}
 
@@ -24,7 +24,7 @@ tags:
 
 ### Hexable
 notepad++直接打开
-{% asset_img Hexable.png %}
+![](Hexable.png)
 
 >easyctf{T00rtUMhk0eTOp}
 
@@ -48,13 +48,13 @@ print out
 >672676048626705557
 
 ### Cookie Blog
-{% asset_img Cookie_Blog.png %}
+![](Cookie_Blog.png)
 
 >easyctf{yum_c00kies!!!}
 
 ### Mane Event
 看见 `new camera`果断去看 EXIF 果然有flag
-{% asset_img Mane_Event.png %}
+![](Mane_Event.png)
 
 >easyctf{pride_in_african_engin33ring}
 
@@ -131,7 +131,7 @@ $ cmp -cl file1.txt file2.txt
 
 ### Bizarro
 图片题上神器 Stegsolve
-{% asset_img Bizarro-1.png %} 
+![](Bizarro-1.png) 
 
 ```
 CI XCVII CXV CXXI XCIX CXVI CII CXXIII CXVI CIV CV CXV XCV CV CXV XCV CX CXI CXVI XCV CXVI CIV CI XCV CII CVIII XCVII CIII CXXV XXXII CV XXXII CVII CX CXI CXIX XXXII CXVI CIV CV CXV XXXII CII CVIII XCVII CIII XXXII CV CXV XXXII CXIX CI CV CXIV C XXXII CV XXXII CVI CXVII CXV CXVI XXXII XCIX XCVII CX XXXIX CXVI XXXII CXII CXVII CXVI XXXII CIX CXXI XXXII CII CV CX CIII CI CXIV XXXII CXI CX XXXII CXIX CIV CXXI

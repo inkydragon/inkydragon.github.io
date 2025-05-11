@@ -122,7 +122,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 看见 key.png 直接解压
 
-{% asset_img 2000-docz.png %}
+![](2000-docz.png)
 
 [2017-11-09 14:29:49]
 > flag{docx_why_not_docz}
@@ -132,7 +132,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ## 1999- [stegas 300-实验吧](http://www.shiyanbar.com/ctf/1999)
 
 AU看一下波形
-{% asset_img 1999-stegas-wav.png %}
+![](1999-stegas-wav.png)
 
 ---
 

@@ -21,7 +21,7 @@ Tsinghua MOOC DSA in C++ 示例代码
 找不到基本的库，需要改一下配置：
 
 - 批量修改：项目>配置属性>常规>Windows SDK 版本 到合适的版本。我的是`10.0.17134.0`
-{% asset_img setting1.png %}
+![](setting1.png)
 
 
 <div style="display: none;">

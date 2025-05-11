@@ -223,7 +223,7 @@ description:
 把第四句改成 `mask = prediction[0,...,1] > 0.1` 最后的阈值改成 0.1 才有像样的输出。
 暂未找到原因
 
-{% asset_img toy-1.png %}
+![](toy-1.png)
 
 
 2. [Radio Frequency Interference mitigation](https://github.com/jakeret/tf_unet/blob/master/demo/demo_radio_data.ipynb)

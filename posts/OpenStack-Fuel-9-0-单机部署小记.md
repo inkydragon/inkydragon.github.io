@@ -9,7 +9,7 @@ tags:
 description:
   Mirantis 家的 OpenStack Fuel 套装单机部署踩坑记录
 ---
-{% asset_img fuel.png %}
+![](fuel.png)
 OpenStack Fuel 是Mirantis为OpenStack定制的自动部署软件(套装)，使用fuel配置OpenStack只需要配置master/主节点，并在主节点安装完成后在fuel dashboard/控制面板配置好整个OpenStack系统，即可通过fuel自动给个node/子节点部署系统(默认为Ubuntu)并安装、配置openstack。
 
 <!--more-->
@@ -208,7 +208,7 @@ omitted
 - [ ] master 的安装
   一定要等待安装完成，否则会出现不可预料的错误.
   **完成的标志**: `tty1`出现
-  {% asset_img master-finish.png %}
+  ![](master-finish.png)
 
 - [ ] node 的配置
   硬盘\>120G
@@ -283,7 +283,7 @@ omitted
   在生成镜像(`fuel-bootstrap build`)后，镜像还放在`tmp`里，需要手工导入
   `fuel-bootstrap import /tmp/<bootstrap-id>`然后再次list就可以看见了。
   然后激活镜像`fuel-bootstrap activate <bootstrap-id>`
-  {% asset_img active-bootstrap.png %}
+  ![](active-bootstrap.png)
 
 - 连接不上 Fuel Web UI (10.20.0.2:8448)
   检查主节点及子节点网卡是否有`down`掉的(`ifconfig -a` 显示，而`ifconfig`不显示的)，
@@ -291,7 +291,7 @@ omitted
 
   若主机与虚拟机可以互`ping`
   可尝试设置SSH隧道访问
-  {% asset_img ssh-tunnel.png %}
+  ![](ssh-tunnel.png)
 
 - `Timeout waiting for host '10.109.6.1' status to become 'up' after 60 seconds!`
   公有网关设置有误/网关不回应ICMP包(ping包)
@@ -304,7 +304,7 @@ omitted
   NTP服务配置有误，务必设置为master的IP (默认为 `10.20.0.2`)
 
 - `Command: 'openstack [ .... ]' has been running for more then 20 seconds!`
-  {% asset_img keystone-timeout.png %}
+  ![](keystone-timeout.png)
   一般是虚拟机性能不行。
   查看各虚拟机，资源占用情况(`top` or `htop`)
   若CPU/内存占用过大，务必关机后增加配置。
@@ -313,7 +313,7 @@ omitted
 - `unable to establish connection to keystone endpoint`
   horizon_dashboard 登录不了
 
-  {% asset_img horizon_dashboard.png %}
+  ![](horizon_dashboard.png)
 
   简单方法，重启各虚拟机
 
