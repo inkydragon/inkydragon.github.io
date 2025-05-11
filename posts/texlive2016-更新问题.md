@@ -50,14 +50,14 @@ some ref:
 然后我就在 **备份** 之后删了`TEXMFVAR`目录
 
 重新运行 `fmtutil-sys -all` 成功。
-{% asset_img su.png %}
+![](su.png)
 
 但编译文件是提示找不到字体缓存，尝试 `fc-cache`
 报错，提示 找不到缓存
-{% asset_img err4.png %}
+![](err4.png)
 
 遂恢复字体缓存及其配置文件
-{% asset_img fc.png %}
+![](fc.png)
 
 然后在重建缓存 `fc-cache` 成功
 

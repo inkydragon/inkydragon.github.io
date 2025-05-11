@@ -101,7 +101,7 @@ Some text i'd like to have in the body of this post
 2016‎年‎7‎月‎6‎日 ‎星期三，‏‎19:35:00
 ```
 在浏览器中产看源代码
-{% asset_img xiaojie1.png %}
+![](xiaojie1.png)
 
 可以看见有坑爹的`&rlm;`，维基称之为 Right-to-left mark，说明锅是微软的。
 

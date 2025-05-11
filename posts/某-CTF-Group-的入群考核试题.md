@@ -54,10 +54,10 @@ key 看起来能运算的样子，先放一放。
 
 ### marshal
 再看flag.py
-{% asset_img 3-flag.png %}
+![](3-flag.png)
 
 执行一下
-{% asset_img 4-try1.png %}
+![](4-try1.png)
 
 尝试依次`base64 zlib`解码无果
 
@@ -226,7 +226,7 @@ key 有了(or 部分解出)，flag 验证程序源码也有了，开始逆推Fla
 
 #### 1-try
 用上面的`.py`脚本+之前解出的key(那一堆下划线)，尝试尝试生成Flag
-{% asset_img 6-try2.png %}
+![](6-try2.png)
 生成的flag乱码，看ASCII码(上面的数字)发现有部分字符无法打印，怀疑key有问题
 [2017-03-01]
 
@@ -241,11 +241,11 @@ Python 命令行下执行得
 {% endcodeblock %}
 
 再次运行解密脚本(要手动输入key，可去掉注释，见下图)
-{% asset_img 7-zhushi.png %}
+![](7-zhushi.png)
 纯数字key
-{% asset_img 8-try3.png %}
+![](8-try3.png)
 带L的key
-{% asset_img 9-try4.png %}
+![](9-try4.png)
 
 结果依旧乱码，无果
 [2017-03-09]

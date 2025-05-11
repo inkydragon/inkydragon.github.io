@@ -72,7 +72,7 @@ Arch 里面换了systemd-netwoekd 配置网络，一直不成功。想看一下l
 开了下其中一个的状态，并尝试重启了下.
 无效
 
-{% asset_img systemd-journald-audit-cond.png %}
+![](systemd-journald-audit-cond.png)
 
 `systemctl --all --failed`
 
@@ -80,7 +80,7 @@ ref；
 
 - [[SOLVED] journald not logging / System Administration / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=187602)
   然而并没有出现这个问题
-  {% asset_img systemd-journald.service&socket.png %}
+  ![](systemd-journald.service&socket.png)
 - [Arch Linux ARM • View topic - Issuses with 1Aug2016 "latest" for utilite](https://archlinuxarm.org/forum/viewtopic.php?f=45&t=10703)
   这个要重装内核...
 

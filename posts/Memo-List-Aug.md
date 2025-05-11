@@ -280,7 +280,7 @@ stack install ghc-mod
 stack install hasktags
 ```
 
-{% asset_img haskell-atom-stack.png %}
+![](haskell-atom-stack.png)
 
 **FIN**
 

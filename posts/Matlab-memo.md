@@ -47,7 +47,7 @@ subplot(1,2,1),mesh(mesh_Plot_X, mesh_Plot_Y, Vector_Z);title('VectorFunc');
 Varargin_Z = VararginFunc(mesh_Plot_X, mesh_Plot_Y);
 subplot(1,2,2),mesh(mesh_Plot_X, mesh_Plot_Y, Varargin_Z);title('VararginFunc');
 ```
-{% asset_img Matlab-memo-VectorFunc.png %}
+![](Matlab-memo-VectorFunc.png)
 
 
 ---
@@ -66,7 +66,7 @@ contour3(z, ...
          'LineWidth',3, ...
          'Color','red')
 ```
-{% asset_img Matlab-memo-contour-specific_height.png %}
+![](Matlab-memo-contour-specific_height.png)
 
 ---
 

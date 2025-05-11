@@ -61,7 +61,7 @@ math:
 
 真是服气，把配置都删了就好使了。不过处理时还是有报错
 
-{% asset_img ex1.png %}
+![](ex1.png)
 
 ``` plain err
 11:44:41.160 INFO  [hexo-math] Using engine 'mathjax'
