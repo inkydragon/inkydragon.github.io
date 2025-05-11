@@ -1,0 +1,30 @@
+# 写作想法与话题
+
+## 话题
+
+- #a11y: [SIG-A11y](https://github.com/sig-a11y), `/dev/a11y/`
+- #game-a11y: [Game A11y](https://github.com/game-a11y)
+
+
+## 现有成果介绍
+
+- game-a11y: 死亡细胞无障碍计划-需求说明
+- a11y: 开放的无障碍问题与需求 (盲扫二维码...) `git:gc/a11y`
+- a11y: 黑神话模组 BlackMyth-A11y 进度介绍
+- a11y: BaoYi-fake-nvdaControllerClient 介绍
+
+
+## 使用教程类
+
+- a11y: biliup-app 测试及使用教程
+- a11y: 常见无障碍接口库介绍 (tolk/UniversalSpeech)
+- game-a11y: PvZ-A11y 介绍
+- game-a11y: RE-UE4SS 编译、WukongB1/UnrealEngine4Wukong 编译
+
+
+## 新的想法
+
+- a11y: 旧版无障碍 DLL 介绍 (ScreenReaderAPI.dll)
+- a11y: 继续翻译 NVDA 博客、教程
+- game-a11y: 无障碍游戏介绍
+- game-a11y: 一些无障碍游戏 mod 安装教程
