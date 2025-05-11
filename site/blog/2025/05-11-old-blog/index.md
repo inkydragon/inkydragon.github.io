@@ -12,6 +12,9 @@ date: 2025-05-11T21:30
 
 <!-- truncate -->
 
+Hexo 博客于 2016-08-19 建立
+![hello-hexo](hello-hexo.png)
+
 ## Archives
 
 ![](arch1.png)
