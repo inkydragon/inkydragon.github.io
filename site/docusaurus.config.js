@@ -47,6 +47,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
@@ -61,6 +62,7 @@ const config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: './src/css/custom.css',
