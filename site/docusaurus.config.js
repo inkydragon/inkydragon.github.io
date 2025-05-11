@@ -63,6 +63,9 @@ const config = {
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
           showLastUpdateTime: true,
+          // https://docusaurus.io/docs/blog#blog-sidebar
+          blogSidebarTitle: '最近的博客',
+          blogSidebarCount: 30,  // ‘ALL’
         },
         theme: {
           customCss: './src/css/custom.css',
