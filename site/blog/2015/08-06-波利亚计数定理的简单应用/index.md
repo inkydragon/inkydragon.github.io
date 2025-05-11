@@ -1,39 +1,40 @@
 ---
+slug: polya-counting-theorem-application
 title: 波利亚计数定理的简单应用
-date: 2015-08-06 22:38:39
-categories: 
+date: 2015-08-06T22:38:39
+authors: cyhan
+tags:
   - 代数学
   - 群论
-tags:
   - 组合数学 
   - 波利亚计数定理
 ---
 
-# 问题的提出
+## 问题的提出
 
 原题目：用二十种氨基酸取代立方烷，产物有多少种（不考虑手性异构）？
 
 【注】：原题目改编自
 [1997年国初题](http://wenku.baidu.com/view/1db8792c6bd97f192279e9ec.html)。
 
-{% asset_img gc.jpg 1997年国初题 %}
+![1997年国初题](gc.jpg)
 
-<!--more-->
+<!-- truncate -->
 
-# 思路及文献
+## 思路及文献
 
 经大神指点应用[波利亚计数定理](http://baike.baidu.com/item/%E6%B3%A2%E5%88%A9%E4%BA%9A%E5%AE%9A%E7%90%86)解题。
 
 找到文献：[走向数学丛书01-波利亚计数定理-萧文强.pdf](https://pan.baidu.com/s/1i4w2qlZ)
 
 
-# 步骤及过程
+## 步骤及过程
 
 按书中步骤写出了S4的[置换群](http://baike.baidu.com/view/1879054.htm)
 
 
 图3-1
-{% asset_img 3.1.jpg S4的置换群 %}
+![S4的置换群](3.1.jpg)
 
  以此作参照算出出立方体的圈分解
 
@@ -42,19 +43,19 @@ tags:
         XYZ直角坐标系原点在立方体中心，即a,b,c,d的交点。
 
 图3-2
-{% asset_img 3.2.jpg 圈分解 %}
+![圈分解](3.2.jpg)
 
 图3-3
-{% asset_img 3.3.jpg 圈分解 %}
+![圈分解](3.3.jpg)
 
 图3-4
-{% asset_img 3.4.jpg 圈分解 %}
+![圈分解](3.4.jpg)
 
 
-## 圈分解小结
+### 圈分解小结
 
 图3-5
-{% asset_img 3.5.jpg 圈分解小结 %}
+![圈分解小结](3.5.jpg)
 
 -----
 
@@ -63,12 +64,12 @@ tags:
 根据同余定理可知只需将1~12带入计算，若都为整数则原式可被24整除。
 
 计算结果
-{% asset_img res.jpg MOD24 %}
+![MOD24](res.jpg)
 
 
-# 结论
+## 结论
 
 将21（20种氨基酸+氢元素）带入公式计算可得
-{% asset_img res2.jpg 最终结果 %}
+![最终结果](res2.jpg)
 
 结果中含立方烷本身，故最终结果为15,7609,0340种。
