@@ -96,8 +96,8 @@ const config = {
           //   label: 'Tutorial',
           // },
           {
-            label: '备忘录导航',
-            to: '/docs/intro',
+            label: '备忘录',
+            to: '/docs/memo',
             position: 'left',
           },
           {
@@ -123,7 +123,7 @@ const config = {
             items: [
               {
                 label: '备忘录',
-                to: '/docs/intro',
+                to: '/docs/memo',
               },
             ],
           },
