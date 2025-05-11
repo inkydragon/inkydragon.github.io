@@ -234,7 +234,7 @@ omitted
   > VBox version 5.1.24 & 5.1.26
 
   使用官方自动安装、配置脚本时可能会遇到如下错误：
-  {% asset_img VBox-HostOnly.png VBox-HostOnly %}
+  ![VBox-HostOnly](VBox-HostOnly.png)
   ```
   Deleting old interfaces if exists...
   ...eting host-only interface: VirtualBox Host-Only Ethernet Adapter
@@ -253,7 +253,7 @@ omitted
 
   依旧报错
 
-  {% asset_img NIC-not_found.png NIC-not_found %}
+  ![NIC-not_found](NIC-not_found.png)
 
   ```
   Creating host-only interface...
@@ -276,7 +276,7 @@ omitted
   虚拟机冲突,只留一个要用的虚拟机，关闭其他的。
    (一般为 hyper-v 和其他虚拟机冲突，因为他会默认将整个系统虚拟化)
    - [virtualbox.org • View topic - system_service_exception](https://forums.virtualbox.org/viewtopic.php?f=38&t=77134)
-   {% asset_img hyper-v conflict.png %}
+   ![conflict.png](hyper-v)
 
 - `fuel-bootstrap list` 结果为空
   【适用于手工生成镜像。若使用了已有的镜像，可能是镜像损坏】

@@ -13,7 +13,7 @@ description:
 手贱，在图形界面更新了所有的可更新宏包。
 
 然后编译文档就炸了。
-{% asset_img tex1.jpg 编译伪helloworld爆炸 %}
+![编译伪helloworld爆炸](tex1.jpg)
 
 报错
 ``` latex
@@ -27,8 +27,8 @@ google之，找到
 内面要求在 `texlive\2016\texmf-dist\scripts\texlive`下执行 `fmtutil-sys -all` 试过了并不好使
 
 报错
-{% asset_img err1.jpg fmtutil-sys爆炸 %}
-{% asset_img err2.png fmtutil-sys爆炸 %}
+![fmtutil-sys爆炸](err1.jpg)
+![fmtutil-sys爆炸](err2.png)
 
 然后各种关键词搜来搜去，就是找不到有效的解决方法。
 

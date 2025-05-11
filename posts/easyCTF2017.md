@@ -195,8 +195,8 @@ deroman('CI XCVII CXV CXXI XCIX CXVI CII CXXIII CXVI CIV CV CXV XCV CV CXV XCV C
 ### Let Me Be Frank
 先尝试单表，发现有重复替换，怀疑维吉尼亚，半手工破解成功
 
-{% asset_img Let_Me_Be_Frank-db 尝试单表 %} 
-{% asset_img Let_Me_Be_Frank-wm 维吉尼亚 %}
+![尝试单表](Let_Me_Be_Frank-db) 
+![维吉尼亚](Let_Me_Be_Frank-wm)
 
 >easyctf{better_thank_the_french_for_this_one}
 

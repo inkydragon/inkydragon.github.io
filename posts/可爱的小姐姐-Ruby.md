@@ -10,7 +10,7 @@ tags:
 ---
 Seven Languages in Seven Weeks: Ruby, Day 1-3 FULL
 
-{% asset_img ruby.jpg Just For Fun ! —— Ruby %}
+![Ruby](ruby.jpg Just For Fun ! ——)
 
 <!--more-->
 > 有糖相伴好下药。 ——Mary Poppins
@@ -664,7 +664,7 @@ end
 grep("ruby-license.txt", /[ ]{1}with[ ]{1}/)
 ```
 
-{% asset_img color.png 彩色输出效果 %}
+![彩色输出效果](color.png)
 
 彩色转义序列参考 [ruby输出多背景、颜色、效果的字符串](http://starzhou.com/blogs/ruby_colorize_console)
 
@@ -859,7 +859,7 @@ code snippet
 
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
 
-{% asset_img slug [title] %}
+![[title]](slug)
 
 
 {% endraw %}

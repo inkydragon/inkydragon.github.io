@@ -12,14 +12,14 @@ tags:
 >CTF Group:473831530
 
 加群需要先解出Flag
-{% asset_img 0-flag.png 加群Flag %}
+![加群Flag](0-flag.png)
 
 > http://t.cn/RJgPBh4 -> https://pan.baidu.com/s/1nv4UsyP
 
 <!--more-->
 
 ## CTF
-{% asset_img 1-7zip.png 压缩包内容 %}
+![压缩包内容](1-7zip.png)
 
 ### RFC4042
 google 一下发现是 [UTF-9 and UTF-18](https://www.ietf.org/rfc/rfc4042.txt)
@@ -45,7 +45,7 @@ with codecs.open("_DecodeFile.txt", "w") as temp:
     temp.write(main())
     temp.close()
 ```
-{% asset_img 2-key.png UTF-9解码得key %}
+![UTF-9解码得key](2-key.png)
 
 key 看起来能运算的样子，先放一放。
 
@@ -80,7 +80,7 @@ co = marshal.loads(zlib.decompress(base64.b64decode('eJxtVP9r21YQvyd/ieWm66Cd03Q
 f=open('./_DecryptedCode.py','w')
 uncompyle2.uncompyle('2.7.3',co,f)
 ```
-{% asset_img 5-py.png 解码得到的Python代码 %}
+![解码得到的Python代码](5-py.png)
 
 #### flag.py 分析
 
