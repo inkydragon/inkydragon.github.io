@@ -2,7 +2,7 @@
 slug: old-hexo-blog
 title: Old Hexo Blog
 authors: cyhan
-tags: [Hexo]
+tags: [hexo]
 date: 2025-05-11T21:30
 ---
 

@@ -5,7 +5,6 @@ date: 2017-01-19T18:04:19
 authors: cyhan
 tags:
 - Python
-- PyDbg
 ---
 
 我又默默地开了[新坑 GHP-PyDbg](https://github.com/inkydragon/GHP-PyDbg).

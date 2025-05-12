@@ -5,6 +5,9 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+// https://docusaurus.io/docs/markdown-features/math-equations#configuration
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -48,6 +51,9 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
           showLastUpdateTime: true,
+          // KaTeX
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -66,12 +72,26 @@ const config = {
           // https://docusaurus.io/docs/blog#blog-sidebar
           blogSidebarTitle: '最近的博客',
           blogSidebarCount: 30,  // ‘ALL’
+          // KaTeX
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
     ],
+  ],
+
+  stylesheets: [
+    // KaTeX
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themeConfig:

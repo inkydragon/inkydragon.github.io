@@ -4,7 +4,7 @@ title: Hexo 发布时间显示问题
 date: 2017-02-07T15:56:18
 authors: cyhan
 tags:
-- Hexo
+- hexo
 ---
 
 ## 问题概述

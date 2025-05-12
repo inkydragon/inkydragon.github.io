@@ -3,8 +3,6 @@ slug: private-github-repo-public-github-pages
 title: Private Github repo & Public Github Pages
 date: 2017-02-08T17:49:24
 authors: cyhan
-tags:
-- Github
 ---
 
 弄了个 Student Developer Pack 可以使用 Private repo ，我就想，如果把 Github Pages 设为 Private 会怎么样。
