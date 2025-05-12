@@ -1,26 +1,18 @@
 ---
-title: Memo List @Aug
+slug: 2017-aug-memo-list
+title: Memo List Aug
 date: 2017-08-08 17:00:44
-categories:
+authors: cyhan
 tags:
-  - Memo List
-description:
-  备忘&开坑记录
+- Memo List
 ---
+备忘&开坑记录
 
 <!-- truncate -->
-
-
-
-
-
 
 [2017-08-28 12:17:54]
 
 - [美国文化大革命样板戏之四 《沙里亚浜》 - 知乎专栏](https://zhuanlan.zhihu.com/p/28683644)
-
-
-
 - [中国真的能在未来抗衡美国么？ - 知乎](https://www.zhihu.com/question/20241087/answer/130160119)
 
 
@@ -29,7 +21,7 @@ description:
 【存疑？】
 >脉冲星就是高速自转的中子星，具有极其稳定的周期性，其稳定度比目前最稳定的氢原子钟还要高1万倍以上，被誉为自然界中最稳定的天文时钟，使之成为人类在宇宙中航行的灯塔。
 
-# QQ协议分析
+## QQ协议分析
 [Achieved]
 
 - [ScienJus/qqbot: 基于SmartQQ（WebQQ）的QQ机器人 / a qq robot based on smartqq(webqq) api](https://github.com/ScienJus/qqbot)
@@ -48,7 +40,7 @@ description:
 
 [2017-08-23 18:11:43]
 
-# 如何正确的看待国际形势
+## 如何正确的看待国际形势
 
 - [【局座时评24】8.1 八一特别节目|中国军队：过去的你很不容易，今后等你到世界最强_星海_科技_bilibili_哔哩哔哩](https://www.bilibili.com/video/av5601953/)
 
@@ -69,11 +61,11 @@ monad
 - [化学工程专业毕业后直接工作赚钱，还是攻读研究生后再工作赚钱？ - 知乎](https://www.zhihu.com/question/22976221)
 
 
-# 杂文 历史
+## 杂文 历史
 - [有哪些影响力被严重低估的历史事件？ - 知乎](https://www.zhihu.com/question/35266109/answer/194982719)
 
 
-# Heroes in my heart
+## Heroes in my heart
 
 - 【HTML】[Heros in My Heart](http://www.brunel.ac.uk/~csstzzw/story.html)
 - [Heroes in My Heart - 知乎专栏](https://zhuanlan.zhihu.com/scienceandscientists)
@@ -83,15 +75,15 @@ monad
 
 [2017-08-17 13:53:06]
 
-# radare2
+## radare2
 
 - [radare/radare2: unix-like reverse engineering framework and commandline tools](https://github.com/radare/radare2)
 
 
-## Qus
+### Qus
 - [Memory Manipulation · Radare2 Explorations](https://monosource.gitbooks.io/radare2-explorations/content/tut2/tut2_-_mem_manip.html)
 
-## tutorial
+### tutorial
 - [Introduction · Radare2 Book](https://radare.gitbooks.io/radare2book/content/introduction/intro.html)
 - [Reverse Engineering With Radare2, Part 1 | Sam Symons](https://samsymons.com/blog/reverse-engineering-with-radare2-part-1/)
 - [Radare 2 in 0x1E minutes – Techorganic – Musings from the brainpan](https://blog.techorganic.com/2016/03/08/radare-2-in-0x1e-minutes/)
@@ -100,7 +92,7 @@ monad
 - [An Introduction to radare2 – sushant94](http://sushant94.me/2015/05/31/Introduction_to_radare2/)
 
 
-# Functional square root
+## Functional square root
 
 - [(1 条消息)已知f(f(x))，在怎样的条件下，可求f(x)？ - 知乎](https://www.zhihu.com/question/63745657)
 
@@ -114,7 +106,7 @@ monad
 
 
 
-# FCC
+## FCC
 
 **Override Styles in Subsequent CSS**
 
@@ -150,15 +142,16 @@ class="class1 class2"
 让我们来覆盖你的 pink-text 和 blue-text 两个 class，通过为 h1 元素添加 id 并设置 id 的样式，使你的 h1 元素变成 orange（橙色）。
 
 给你的 h1 元素添加名为 orange-text 的 id 属性。记住，id 样式看起来是这样的：
-
+```html
 <h1 id="orange-text">
+```
 
 在你的 h1 元素中保留 blue-text 和 pink-text 两个 class。
 
 在你的 style 元素中为你的 orange-text id 创建一个 CSS 声明，就像下面例子中的样子：
 
-``` CSS
-#brown-text {
+```css
+##brown-text {
   color: brown;
 }
 ```
@@ -171,7 +164,7 @@ class="class1 class2"
 
 
 
-# 生化-代谢途径
+## 生化-代谢途径
 
 - [biochemical-pathways.com/#/map/1](http://biochemical-pathways.com/#/map/1)
 - [Human_Metabolism_-_Pathways.jpg (2054×1792)](https://upload.wikimedia.org/wikipedia/commons/a/a8/Human_Metabolism_-_Pathways.jpg)
@@ -197,7 +190,7 @@ class="class1 class2"
 
 [2017-08-08 16:58:52]
 
-## Atom Haskell lint err
+### Atom Haskell lint err
 
 在ghci中可以import的模块,写在文件里就报err
 
@@ -221,7 +214,7 @@ ref：
 - [simonmichael/haskell-atom-setup: How to set up and use the Atom IDE for Haskell development](https://github.com/simonmichael/haskell-atom-setup#more-on-atoms-haskell-support)
 
 
-## Check 1
+### Check 1
 - [Home · DanielG/ghc-mod Wiki](https://github.com/DanielG/ghc-mod/wiki#most-common-stack-related-issue)
 
 ```
@@ -269,7 +262,7 @@ GHC System libraries: C:\Users\inkyd\AppData\Local\Programs\stack\x86_64-windows
 
 [2017-08-07 16:38:12]
 
-# Atom haskell 开发环境配置
+## Atom haskell 开发环境配置
 
 - [打造令人愉悦的 Haskell 开发环境 - 简书](http://www.jianshu.com/p/605042ea7c16)
 
@@ -302,17 +295,17 @@ build-depends:       base >= 4.7 && < 5
 - [泰晓科技 - 五分钟内搭建 Linux 0.11 的实验环境](http://www.tinylab.org/take-5-minutes-to-build-linux-0-11-experiment-envrionment/)
 
 
-## KVM
+### KVM
 
 - [kvm - 韋任的維基百科](http://people.cs.nctu.edu.tw/~chenwj/dokuwiki/doku.php?id=kvm)
 - [KVM虚拟化原理与实践（连载） – 笑遍世界](http://smilejay.com/kvm_theory_practice/)
 
-## Kotlin
+### Kotlin
 
 - [Kotlin 作为 Android 开发语言相比传统 Java 有什么优势？ - 知乎](https://www.zhihu.com/question/37288009/answer/172132665)
 
 
-## BIOS 终端向量表
+### BIOS 终端向量表
 
 - [BIOS 和DOS 中断大全](http://staff.ustc.edu.cn/~hufy/ComputerSystem/%B8%BD%C2%BC/BIOS_DOS%D6%D0%B6%CF%B9%A6%C4%DC%B5%F7%D3%C3%B4%F3%C8%AB.pdf)
 - [Embedded BIOS User's Manual](ftp://ftp.embeddedarm.com/old/saved-downloads-manuals/EBIOS-UM.PDF)
@@ -331,7 +324,7 @@ build-depends:       base >= 4.7 && < 5
 
 [2017-08-02 20:58:02]
 
-# Arch x64 的安装
+## Arch x64 的安装
 某up打包的Arch有点问题，遂重装一遍
 
 ref：
@@ -362,7 +355,7 @@ ibus-setup
 GCC 套装 `gcc binutils gdb make patch`
 
 
-### 网络配置
+#### 网络配置
 
 配置前先`ifconfig`看看网卡是否启用，若启用
 则用`ip link set <ethx/enp0sx> down`关闭
@@ -380,7 +373,7 @@ vim /etc/netctl
 `netctl enable <eth-static-enp0sx>`重启再次确认配置生效
 
 
-## Vim 配置
+### Vim 配置
 
 - [yangyangwithgnu/use_vim_as_ide: use vim as IDE](https://github.com/yangyangwithgnu/use_vim_as_ide)
 
@@ -390,7 +383,7 @@ vim 皮肤
 - [Newest - Vim Colors](http://vimcolors.com/)
 
 
-### ssh vim 皮肤 err
+#### ssh vim 皮肤 err
 
 ides#capture_highlight 时发生错误:
 第 2 行:
