@@ -1,14 +1,14 @@
 ---
+slug: lammps-installation-and-configuration
 title: LAMMPS 的安装与配置
 date: 2017-04-27 16:33:53
-categories:
 tags:
-description:
-  分子模拟开坑，我只是路过。
+- LAMMPS
 ---
-
+分子模拟开坑，我只是路过
 
 <!-- truncate -->
+
 先基于腾讯云尝试一下。
 
 # Install
@@ -119,30 +119,3 @@ ref:
     ```
 
 FIN    
-    
-    
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text] 
-code snippet 
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-![[title]](slug)
-
-
-{% endraw %}
-</div>
