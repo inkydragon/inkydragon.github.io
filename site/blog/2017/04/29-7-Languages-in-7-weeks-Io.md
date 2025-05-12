@@ -1,8 +1,10 @@
 ---
 slug: seven-languages-in-seven-weeks-io
-title: 7 Languages in 7 weeks - Io
+title: 七周七语言：Io
 date: 2017-04-29 19:03:01
 authors: cyhan
+tags:
+- 七周七语言
 ---
 > 问题不是“我们要干点儿什么”而是“我们有什么不能干”
 > —— Ferris Bueller
