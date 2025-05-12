@@ -1,32 +1,35 @@
 ---
-title: easyCTF2017
+slug: easyctf-2017
+title: EasyCTF 2017
 date: 2017-03-14 13:47:47
+authors: cyhan
 tags:
 - CTF
 ---
 
 ### IRC
-\#easyctf2017: EasyCTF 2017 - Flag is easyctf{irc_d0esn7_apist0rm_:)}
+`#easyctf2017: EasyCTF 2017 - Flag is easyctf{irc_d0esn7_apist0rm_:)}`
 
->easyctf{irc_d0esn7_apist0rm_:)}
+> `easyctf{irc_d0esn7_apist0rm_:)}`
 
 <!-- truncate -->
+
 ### Flip My Letters
 看提示是按字母表逆序替换
 ![](Flip_My_Letters.png)
 
->easyctf{i_dont_even_need_an_ascii_table}
+> `easyctf{i_dont_even_need_an_ascii_table}`
 
 ###　Clear and Concise Commentary on Caesar Cipher
 都说了是Caesar Cipher
 
->easyctf{yougotit}
+> `easyctf{yougotit}`
 
 ### Hexable
 notepad++直接打开
 ![](Hexable.png)
 
->easyctf{T00rtUMhk0eTOp}
+> `easyctf{T00rtUMhk0eTOp}`
 
 ### Phunky Python I
 
@@ -45,18 +48,18 @@ for letter in reversed(digs):
 print out
 ```
 
->672676048626705557
+> 672676048626705557
 
 ### Cookie Blog
 ![](Cookie_Blog.png)
 
->easyctf{yum_c00kies!!!}
+> `easyctf{yum_c00kies!!!}`
 
 ### Mane Event
 看见 `new camera`果断去看 EXIF 果然有flag
 ![](Mane_Event.png)
 
->easyctf{pride_in_african_engin33ring}
+> `easyctf{pride_in_african_engin33ring}`
 
 
 ###　Petty Difference
@@ -124,7 +127,7 @@ $ cmp -cl file1.txt file2.txt
 
 用正则搞了半天，才把flag提出来
 
->easyctf{th1s_m4y_b3_th3_d1ff3r3nc3_y0u_w3r3_l00k1ng_4}
+> `easyctf{th1s_m4y_b3_th3_d1ff3r3nc3_y0u_w3r3_l00k1ng_4}`
 
 
 ### RSA 1
@@ -195,10 +198,10 @@ deroman('CI XCVII CXV CXXI XCIX CXVI CII CXXIII CXVI CIV CV CXV XCV CV CXV XCV C
 ### Let Me Be Frank
 先尝试单表，发现有重复替换，怀疑维吉尼亚，半手工破解成功
 
-![尝试单表](Let_Me_Be_Frank-db) 
-![维吉尼亚](Let_Me_Be_Frank-wm)
+![尝试单表](Let_Me_Be_Frank-db.png) 
+![维吉尼亚](Let_Me_Be_Frank-wm.png)
 
->easyctf{better_thank_the_french_for_this_one}
+> `easyctf{better_thank_the_french_for_this_one}`
 
 ### Hash On Hash
 目测MD5
@@ -208,9 +211,9 @@ deroman('CI XCVII CXV CXXI XCIX CXVI CII CXXIII CXVI CIV CV CXV XCV CV CXV XCV C
 Im far too lazy to put anything meaningful here. Instead, here's some information about what you just solved.The MD5 algorithm is a widely used hash function producing a 128-bit hash value. Although MD5 was initially designed to be used as a cryptographic hash function, it has been found to suffer from extensive vulnerabilities. It can still be used as a checksum to verify data integrity, but only against unintentional corruption.Like most hash functions, MD5 is neither encryption nor encoding. It can be cracked by brute-force attack and suffers from extensive vulnerabilities as detailed in the security section below.MD5 was designed by Ronald Rivest in 1991 to replace an earlier hash function MD4.[3] The source code in RFC 1321 contains a "by attribution" RSA license. The abbreviation "MD" stands for "Message Digest."The security of the MD5 has been severely compromised, with its weaknesses having been exploited in the field, most infamously by the Flame malware in 2012. The CMU Software Engineering Institute considers MD5 essentially "cryptographically broken and unsuitable for further use".[4]easyctf{1_h0p3_y0u_d1dn7_d0_7h47_by_h4nd}
 ```
 
->easyctf{1_h0p3_y0u_d1dn7_d0_7h47_by_h4nd}
+> `easyctf{1_h0p3_y0u_d1dn7_d0_7h47_by_h4nd}`
 
 ### Decode Me
 base64 (手工)循环解码+去空格换行
 
->easyctf{what_1s_l0v3_bby_don7_hurt_m3}
+> `easyctf{what_1s_l0v3_bby_don7_hurt_m3}`
