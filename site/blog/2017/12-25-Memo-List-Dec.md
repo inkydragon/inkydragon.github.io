@@ -1,11 +1,10 @@
 ---
-title: Memo List @Dec
+slug: 2017-dec-memo-list
+title: Memo List Dec
 date: 2017-12-25 18:50:50
-categories:
+authors: cyhan
 tags:
-  - Memo List
-description:
-  备忘&开坑记录
+- Memo List
 ---
 Dec. Memo
 
@@ -13,7 +12,7 @@ Dec. Memo
 
 [2017-12-26 13:35:26]
 
-# SICP
+## SICP
 
 ### 1.1.1 Expression
 
@@ -71,16 +70,14 @@ Note:
 
 [2017-12-23 11:43:56]
 
-# 重装系统计划
-
-## Target
+## 重装系统计划
 
 - Win 10
   - `C:` SSD > 100G
 
-## Software
+## --Software--
 
-### 环境 - env
+## 环境 - env
 
 1. NodeJS —— for Hexo
 2.
