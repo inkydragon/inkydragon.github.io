@@ -1,12 +1,12 @@
 ---
-title: texlive2016 更新问题
+slug: texlive2016-update-issue
+title: TexLive 2016 更新问题
 date: 2017-04-23 15:23:20
-categories:
 tags:
-  - texlive
-description:
-  texlive 2016 宏包更新后炸了。
+- TexLive
 ---
+
+TexLive 2016 宏包更新后炸了
 
 <!-- truncate -->
 
@@ -22,7 +22,7 @@ description:
 ?
 ```
 google之，找到 
-[! Missing \endcsname inserted. <to be read again> \def l.252 … \UnicodeEncodingName {}{"007E}](https://tex.stackexchange.com/questions/357690/missing-endcsname-inserted-to-be-read-again-def-l-252-unicodeencodin)
+[! Missing `\endcsname` inserted. `<to be read again> \def l.252 … \UnicodeEncodingName {}{"007E}`](https://tex.stackexchange.com/questions/357690/missing-endcsname-inserted-to-be-read-again-def-l-252-unicodeencodin)
 
 内面要求在 `texlive\2016\texmf-dist\scripts\texlive`下执行 `fmtutil-sys -all` 试过了并不好使
 
