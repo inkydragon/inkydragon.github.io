@@ -7,3 +7,5 @@ tags: [hexo]
 ---
 
 Hexo 搭起来了，又可以折腾好一阵子了。
+
+<!-- truncate -->
