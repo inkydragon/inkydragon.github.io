@@ -1,11 +1,12 @@
 ---
+slug: compile-with-gpu-support-for-tensorflow-under-win10
 title: Win 10 下编译带 GPU 支持的 Tensorflow
 date: 2018-12-22 12:59:30
-categories:
+authors: cyhan
 tags:
-description: 尝试在 Win 10 上编译安装带 GPU 支持的 TensorFlow
+- TensorFlow
 ---
-
+尝试在 Win 10 上编译安装带 GPU 支持的 TensorFlow
 
 <!-- truncate -->
 
@@ -35,7 +36,7 @@ ref：
 -----
 
 <!-- # Build from source on Windows -->
-# 在 Windows 上从源码编译安装
+## 在 Windows 上从源码编译安装
 
 <!-- 
 Build a TensorFlow *pip* package from source and install it on Windows.
@@ -49,14 +50,14 @@ for Windows systems.
 
 
 <!-- ## Setup for Windows -->
-## Windows 上的准备工作
+### Windows 上的准备工作
 
 <!-- Install the following build tools to configure your Windows development
 environment. -->
 > 安装以下构建工具，配置好你的 Windows 开发环境。
 
 <!-- ### Install Python and the TensorFlow package dependencies -->
-### 安装 Python 和 TensorFlow 的相关依赖
+#### 安装 Python 和 TensorFlow 的相关依赖
 
 Python **安装包**国内镜像：
 - [3.6.8 - taobao Python Mirror](https://npm.taobao.org/mirrors/python/3.6.8/)
@@ -115,7 +116,7 @@ REQUIRED_PACKAGES = [
     'termcolor >= 1.1.0',
 ]
 
-# windows 需要装这个
+## windows 需要装这个
 if sys.byteorder == 'little':
   # grpcio does not build correctly on big-endian machines due to lack of
   # BoringSSL support.
@@ -124,7 +125,7 @@ if sys.byteorder == 'little':
 
 ....
 
-# python3 requires wheel 0.26
+## python3 requires wheel 0.26
 if sys.version_info.major == 3:
   REQUIRED_PACKAGES.append('wheel >= 0.26')
 else:
@@ -132,7 +133,7 @@ else:
   # mock comes with unittest.mock for python3, need to install for python2
   REQUIRED_PACKAGES.append('mock >= 2.0.0')
 
-# tf-nightly should depend on tb-nightly
+## tf-nightly should depend on tb-nightly
 if 'tf_nightly' in project_name:
   for i, pkg in enumerate(REQUIRED_PACKAGES):
     if 'tensorboard' in pkg:
@@ -142,9 +143,9 @@ if 'tf_nightly' in project_name:
     elif 'tensorflow_estimator' in pkg:
       REQUIRED_PACKAGES[i] = 'tf-estimator-nightly'
 
-# 新一点的 tf 都是 py 3.5 以上的啦
+## 新一点的 tf 都是 py 3.5 以上的啦
 '''
-# weakref.finalize and enum were introduced in Python 3.4
+## weakref.finalize and enum were introduced in Python 3.4
 if sys.version_info < (3, 4):
   REQUIRED_PACKAGES.append('backports.weakref >= 1.0rc1')
   REQUIRED_PACKAGES.append('enum34 >= 1.1.6')
@@ -197,7 +198,7 @@ pip3 install absl-py, astor, gast, keras_applications, keras_preprocessing, nump
 - [Pypi | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
 
 
-### 安装 Bazel
+#### 安装 Bazel
 
 <!-- 
 [Install Bazel](https://docs.bazel.build/versions/master/install-windows.html),
@@ -218,7 +219,7 @@ Add the location of the Bazel executable to your `%PATH%` environment variable.
   These are common DLLs that Bazel needs. You may already have them installed.
 
 安装 `vc_redist.x64` 时可能报错
-![](./Win-10-下编译带-GPU-支持的-Tensorflow/vc_redist.x64-error.png)
+![](./vc_redist.x64-error.png)
 
 看日志
 ```
@@ -227,7 +228,7 @@ Error 0x80070666: Cannot install a product when a newer version is installed.
 应该是已经安装了更新的版本，那就继续，不用管他。
 
 
-### 安装 MSYS2
+#### 安装 MSYS2
 
 **上面装 Bazel 的时候作为依赖之一，已经装过了**
 
@@ -251,7 +252,7 @@ run:
 上面这句大概要下载 30M 的东西，该不该镜像源都行，改了基本秒下完。
 
 
-### 安装 Visual C++ Build Tools 2015
+#### 安装 Visual C++ Build Tools 2015
 
 <!-- 
 Install the *Visual C++ build tools 2015*. This comes with *Visual Studio 2015*
@@ -276,7 +277,7 @@ Note: TensorFlow is tested against the *Visual Studio 2015 Update 3*.
 > 注意！TensorFlow 在 *Visual Studio 2015 Update 3* 中进行了测试。
 
 
-### 安装 GPU 支持 (可选的)
+#### 安装 GPU 支持 (可选的)
 
 <!-- See the Windows [GPU support](./gpu.md) guide to install the drivers and additional
 software required to run TensorFlow on a GPU. -->
@@ -303,7 +304,7 @@ SET PATH=C:\tools\cuda\bin;%PATH%
 
 
 <!-- ### Download the TensorFlow source code -->
-### 下载 TensorFlow 的源码
+#### 下载 TensorFlow 的源码
 
 <!-- 
 Use [Git](https://git-scm.com/){:.external} to clone the
@@ -343,7 +344,7 @@ a release branch that is known to work.
 > 关键点！如果你在最新的主分支上构建出错了，你可以尝试一下通过测试的 release 分支。
 
 <!-- ## Configure the build -->
-## 构建配置
+### 构建配置
 
 Configure your system build by running the following at the root of your
 TensorFlow source tree:
@@ -421,7 +422,7 @@ tf 官网讲的不清楚。
 
 
 
-### Configuration options
+#### Configuration options
 
 <!-- 
 For [GPU support](./gpu.md), specify the versions of CUDA and cuDNN. If your
@@ -442,13 +443,13 @@ run on older CPUs.
 
 
 <!-- ## Build the pip package -->
-## 构建 pip 包
+### 构建 pip 包
 
 <!-- ### Bazel build -->
-### Bazel 构建
+#### Bazel 构建
 
 <!-- #### CPU-only -->
-#### 仅支持 CPU
+##### 仅支持 CPU
 
 <!-- 
 Use `bazel` to make the TensorFlow package builder with CPU-only support:
@@ -462,7 +463,7 @@ bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
 > <pre> bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package </pre>
 
 <!-- #### GPU support -->
-#### 带 GPU 支持
+##### 带 GPU 支持
 
 <!-- 
 To make the TensorFlow package builder with GPU support:
@@ -577,7 +578,7 @@ ERROR: C:/tf-tools/tensorflow-1.12.0/tensorflow/python/BUILD:3865:1: no such pac
 
 
 <!-- #### Bazel build options -->
-#### Bazel 构建选项
+##### Bazel 构建选项
 
 <!-- 
 Building TensorFlow from source can use a lot of RAM. If your system is
@@ -592,7 +593,7 @@ to suppress nvcc warning messages.
 > 如果构建带 GPU 支持的库，请加上 `--copt=-nvcc_options=disable-warnings` 以消除 nvcc 的警告。
 
 <!-- ### Build the package -->
-### 构建包
+#### 构建包
 
 <!-- 
 The `bazel build` command creates an executable named `build_pip_package`—this
@@ -619,7 +620,7 @@ these two configurations in the same source tree.
 
 
 <!-- ### Install the package -->
-### 安装包
+#### 安装包
 
 <!-- 
 The filename of the generated `.whl` file depends on the TensorFlow version and
@@ -640,13 +641,13 @@ Success: TensorFlow is now installed.
 
 
 <!-- ## Build using the MSYS shell -->
-## 使用 MSYS shell 构建包
+### 使用 MSYS shell 构建包
 
 TensorFlow can also be built using the MSYS shell. Make the changes listed
 below, then follow the previous instructions for the Windows native command line
 (`cmd.exe`).
 
-### Disable MSYS path conversion {:.hide-from-toc}
+#### Disable MSYS path conversion
 
 MSYS automatically converts arguments that look like Unix paths to Windows paths,
 and this doesn't work with `bazel`. (The label `//foo/bar:bin` is considered a
@@ -657,14 +658,14 @@ Unix absolute path since it starts with a slash.)
 <code class="devsite-terminal">export MSYS2_ARG_CONV_EXCL="*"</code>
 </pre>
 
-### Set your PATH {:.hide-from-toc}
+#### Set your PATH
 
 Add the Bazel and Python installation directories to your `$PATH` environmental
 variable. If Bazel is installed to `C:\tools\bazel.exe`, and Python to
 `C:\Python36\python.exe`, set your `PATH` with:
 
 <pre class="prettyprint lang-bsh">
-# Use Unix-style with ':' as separator
+## Use Unix-style with ':' as separator
 <code class="devsite-terminal">export PATH="/c/tools:$PATH"</code>
 <code class="devsite-terminal">export PATH="/c/Python36:$PATH"</code>
 </pre>
@@ -679,9 +680,9 @@ For GPU support, add the CUDA and cuDNN bin directories to your `$PATH`:
 
 
 <!-- ## Tested build configurations -->
-## 经过测试的构建配置
+### 经过测试的构建配置
 
-### CPU
+#### CPU
 
 <table>
 <tr><th>Version</th><th>Python version</th><th>Compiler</th><th>Build tools</th></tr>
@@ -699,7 +700,7 @@ For GPU support, add the CUDA and cuDNN bin directories to your `$PATH`:
 <tr><td>tensorflow-1.0.0</td><td>3.5</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td></tr>
 </table>
 
-### GPU
+#### GPU
 
 <table>
 <tr><th>Version</th><th>Python version</th><th>Compiler</th><th>Build tools</th><th>cuDNN</th><th>CUDA</th></tr>
@@ -717,36 +718,6 @@ For GPU support, add the CUDA and cuDNN bin directories to your `$PATH`:
 <tr><td>tensorflow_gpu-1.0.0</td><td>3.5</td><td>MSVC 2015 update 3</td><td>Cmake v3.6.3</td><td>5.1</td><td>8</td></tr>
 </table>
 
-
-
-
 -----
 
 **【官方文档-end】**
-
-
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text] 
-code snippet 
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-![[title]](slug)
-
-
-{% endraw %}
-</div>
