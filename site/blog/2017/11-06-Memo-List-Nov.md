@@ -1,11 +1,10 @@
 ---
-title: Memo List @Nov
+slug: 2017-nov-memo-list
+title: Memo List Nov
 date: 2017-11-06 18:19:33
-categories:
+authors: cyhan
 tags:
-  - Memo List
-description:
-  备忘&开坑记录
+- Memo List
 ---
 Nov. Memo
 
@@ -13,8 +12,6 @@ Nov. Memo
 
 [2017-11-25 11:03:12]
 - [Main is usually a function. So then when is it not?](https://jroweboy.github.io/c/asm/2015/01/26/when-is-main-not-a-function.html)
-
-
 - [【新提醒】全国大学生化工设计竞赛软件情况汇总〖全国大学生化工设计竞赛〗马后炮化工-让天下没有难学的化工技术 - Powered by Mahoupao Technology](http://bbs.mahoupao.net/thread-173016-1-1.html)
 
 工艺流程稳态模拟	Aspen Plus、PRO II、HYSYS
@@ -106,11 +103,8 @@ Nov. Memo
 - [相比于耳熟能详的微积分发展史，为什么我们较少听说过线性代数的发展史？线性代数是如何发展的？ - 知乎](https://www.zhihu.com/question/53494184)
 
 
-
-
-
-# Level - 1
-## easy_sign_in
+## Level - 1
+### easy_sign_in
 
 报HTTPS的错误
 看一眼证书
@@ -119,18 +113,18 @@ OU = flag in:
 O = 123.206.81.217
 ```
 访问得到flag
-> hctf{s00000_e4sy_sign_in}
+> `hctf{s00000_e4sy_sign_in}`
 
 ---
 
-# Level - 2
-## babycrack
+## Level - 2
+### babycrack
 
 just babycrack
-1.flag.substr(-5,3)=="333"  => `"hctf{!@#$%^&*(){}:>?333+}"`
-2.flag.substr(-8,1)=="3"    => `"hctf{!@#$%^&*(){}3>?333+}"`
-3.Every word makes sence.
-4.sha256(flag)=="d3f154b641251e319855a73b010309a168a12927f3873c97d2e5163ea5cbb443"
+1. flag.substr(-5,3)=="333"  => `"hctf{!@#$%^&*(){}:>?333+}"`
+2. flag.substr(-8,1)=="3"    => `"hctf{!@#$%^&*(){}3>?333+}"`
+3. Every word makes sence.
+4. sha256(flag)=="d3f154b641251e319855a73b010309a168a12927f3873c97d2e5163ea5cbb443"
 
 URL http://babycrack.2017.hctf.io
 
