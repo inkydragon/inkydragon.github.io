@@ -1,16 +1,16 @@
 ---
-title: 'Memo List @Week16'
+slug: 2017-memo-list-jun
+title: Memo List Jun
 date: 2017-06-05 16:23:52
-categories:
+authors: cyhan
 tags:
-  - Memo List
-description:
-  备忘&开坑记录
+- Memo List
 ---
-
+备忘&开坑记录
 
 <!-- truncate -->
 
+## Week16
 [2017-06-05 16:23:29]
 
 某群的问题：
