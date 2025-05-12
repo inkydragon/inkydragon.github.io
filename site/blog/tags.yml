@@ -4,6 +4,11 @@ docusaurus:
   permalink: /docusaurus
   description: docusaurus.io related things
 
+hexo:
+  label: Hexo
+  permalink: /hexo
+  description: hexo.io related things
+
 todo:
   label: Todo
   permalink: /todo
