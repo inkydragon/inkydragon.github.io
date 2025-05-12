@@ -3,7 +3,7 @@ slug: 2017-oct-memo-list
 title: Memo List Oct
 date: 2017-10-01 19:40:01
 tags:
-- Memo List
+- memo
 ---
 Oct. Memo 
 

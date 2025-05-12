@@ -29,6 +29,10 @@ hexo:
   permalink: /hexo
   description: hexo.io related things
 
+memo:
+  label: Memo
+  permalink: /memo
+
 MOOC:
   label: MOOC
   permalink: /mooc

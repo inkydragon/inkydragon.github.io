@@ -4,7 +4,7 @@ title: Memo List July
 date: 2017-06-29 22:50:56
 authors: cyhan
 tags:
-  - Memo List
+  - memo
 ---
 
 反正经常开坑不填，为了保持版面整洁，先在Memo里开坑，待填的差不多了再单独拿出去。

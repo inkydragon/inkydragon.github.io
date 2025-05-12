@@ -4,7 +4,7 @@ title: Memo List Nov
 date: 2017-11-06 18:19:33
 authors: cyhan
 tags:
-- Memo List
+- memo
 ---
 Nov. Memo
 
