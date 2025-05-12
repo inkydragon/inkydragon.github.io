@@ -1,12 +1,12 @@
 ---
-title: Build LLVM
+slug: build-llvm-rel-ver
+title: Build LLVM Release Version
 date: 2019-01-29 12:01:07
-categories:
+authors: cyhan
 tags: 
-    - LLVM
-description: 编译 Release 版 LLVM 的命令参数记录。
+- LLVM
 ---
-
+编译 Release 版 LLVM 的命令参数记录
 
 <!-- truncate -->
 
