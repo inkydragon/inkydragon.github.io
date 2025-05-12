@@ -1,16 +1,17 @@
 ---
+slug: slsw-scala
 title: Seven Languages In Seven Weeks - Scala
 date: 2017-12-25 19:06:50
-categories:
+authors: cyhan
 tags:
-description:
+- 七周七语言
 ---
 
-scala
+Scala
 
 <!-- truncate -->
 
-# Day 0
+## Day 0
 
 *`Scala` 与 `java` 的不同之处*
 
@@ -19,9 +20,9 @@ scala
 - 不(可)变量
 - 高级程序构造
 
-# Day 1
+## Day 1
 
-## 类型
+### 类型
 ``` java
 scala> println("Hello, surreal world")
 Hello, surreal world
@@ -75,7 +76,7 @@ scala> 4 * "abc"
          ^
 ```
 
-### 表达式与条件
+#### 表达式与条件
 
 ``` java
 scala> 5 < 6
@@ -160,9 +161,9 @@ scala> if (1) {println("true")}
            ^
 ```
 
-### 循环
+#### 循环
 
-### Range 与 元组
+#### Range 与 元组
 
 **Range**
 ``` java
@@ -246,7 +247,7 @@ scala> val (x, y, z) = (1, 2)
            ^
 ```
 
-### 类
+#### 类
 
 定义类
 `class Person(firstName: String, lastName: String)`
@@ -259,7 +260,7 @@ scala> val gump = new Person("Forrest", "Gump")
 gump: Person = Person@5e9257b3
 ```
 
-### 扩展类
+#### 扩展类
 
 
 ## Day 2
