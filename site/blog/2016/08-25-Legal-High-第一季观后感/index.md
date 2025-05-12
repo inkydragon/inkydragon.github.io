@@ -8,7 +8,7 @@ tags:
 ---
 
 化学狗莫名中枪
-![又黑化学狗](ligohi1.png)
+![又黑化学狗-ligohi1.png](https://cdn.sa.net/2025/05/12/kRF5I8u6fcdVQjD.png)
 
 <!-- truncate -->
 
