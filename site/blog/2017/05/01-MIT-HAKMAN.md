@@ -1,17 +1,19 @@
 ---
+slug: mit-hakman-memo
 title: MIT HAKMAN
 date: 2017-05-01 12:19:37
-categories:
-  - Books
-  - MIT HAKMAN
+authors: cyhan
 tags:
-description:
-  神书，我把其中的公式用LaTeX整理了一下.  
-  目前来看，这本书内容也不少，放在blog里不太合适，准备开一本gitbook
+- Books
+- MIT HAKMAN
 ---
+神书，我把其中的公式用LaTeX整理了一下.  
+目前来看，这本书内容也不少，放在blog里不太合适，准备开一本gitbook
+
 MIT 人工智能实验室的 memo
 
 <!-- truncate -->
+
 ``` plain Title
                             MASSACHUSETTS INSTITUTE OF TECHNOLOGY
 
@@ -19,7 +21,8 @@ MIT 人工智能实验室的 memo
 
 AIM 239                                                                       February 1972
 ```
-# HAKMEM
+
+## HAKMEM
 
 by ：
 
@@ -31,7 +34,7 @@ This report describes research done at the Artificial Intelligence Laboratory of
 
 ------
 
-## **Page 1**
+### **Page 1**
 
 Compiled with the hope that a record of the random things people do around here can save some duplication of effort -- except for fun.
 
@@ -113,7 +116,7 @@ Robert Clements
 
 ----
 
-## **Page 2**
+### **Page 2**
 
 CAVEATS:
 
@@ -123,9 +126,9 @@ The label "PROBLEM" does not always mean exercise; if no solution is given, it m
 
 Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pipeline.com/~hbaker1/pdp-10/pdp-10.html) assembly language.
 
-# CONTENTS, HAKMEM 140
+## CONTENTS, HAKMEM 140
 
-## P3 - [Geometry, Algebra, Calculus](http://home.pipeline.com/~hbaker1/hakmem/geometry.html)
+### P3 - [Geometry, Algebra, Calculus](http://home.pipeline.com/~hbaker1/hakmem/geometry.html)
   - [Item 1](http://home.pipeline.com/~hbaker1/hakmem/geometry.html#item1) Fractional factorials
   - [Item 2](http://home.pipeline.com/~hbaker1/hakmem/geometry.html#item2) N-gon diagonals
   - [Item 3](http://home.pipeline.com/~hbaker1/hakmem/geometry.html#item3) Convergence of Newton's square roots
@@ -139,13 +142,13 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 11](http://home.pipeline.com/~hbaker1/hakmem/geometry.html#item11) Conformal mappings of N-space
 
 
-## P6 - [Recurrence Relations](http://home.pipeline.com/~hbaker1/hakmem/recurrence.html)
+### P6 - [Recurrence Relations](http://home.pipeline.com/~hbaker1/hakmem/recurrence.html)
   - [Item 12](http://home.pipeline.com/~hbaker1/hakmem/recurrence.html#item12) Fast Fibonacci Transform
   - [Item 13](http://home.pipeline.com/~hbaker1/hakmem/recurrence.html#item13) Linear Recurrence Relations
   - [Item 14](http://home.pipeline.com/~hbaker1/hakmem/recurrence.html#item14) Rapid Recurrences
   - [Item 15](http://home.pipeline.com/~hbaker1/hakmem/recurrence.html#item15) Chebychev polynomials
   - [Item 16](http://home.pipeline.com/~hbaker1/hakmem/recurrence.html#item16) Tangents and arctangents
-## P10 - [Boolean Algebra](http://home.pipeline.com/~hbaker1/hakmem/boolean.html)
+### P10 - [Boolean Algebra](http://home.pipeline.com/~hbaker1/hakmem/boolean.html)
   - [Item 17](http://home.pipeline.com/~hbaker1/hakmem/boolean.html#item17) Minimize AND's
   - [Item 18](http://home.pipeline.com/~hbaker1/hakmem/boolean.html#item18) Count monotonic Boolean functions
   - [Item 19](http://home.pipeline.com/~hbaker1/hakmem/boolean.html#item19) 2-NOT's
@@ -154,11 +157,11 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 22](http://home.pipeline.com/~hbaker1/hakmem/boolean.html#item22) Binary masks
   - [Item 23](http://home.pipeline.com/~hbaker1/hakmem/boolean.html#item23) Plus and XOR
   - [Item 24](http://home.pipeline.com/~hbaker1/hakmem/boolean.html#item24) Venn Diagrams
-## P12 - [Random Numbers](http://home.pipeline.com/~hbaker1/hakmem/random.html)
+### P12 - [Random Numbers](http://home.pipeline.com/~hbaker1/hakmem/random.html)
   - [Item 25](http://home.pipeline.com/~hbaker1/hakmem/random.html#item25) Random number generators
   - [Item 26](http://home.pipeline.com/~hbaker1/hakmem/random.html#item26) Gaussian distribution
   - [Item 27](http://home.pipeline.com/~hbaker1/hakmem/random.html#item27) Random unit vectors in N-space
-## P13 - [Number Theory, Primes, Probability](http://home.pipeline.com/~hbaker1/hakmem/number.html)
+### P13 - [Number Theory, Primes, Probability](http://home.pipeline.com/~hbaker1/hakmem/number.html)
   - [Item 28](http://home.pipeline.com/~hbaker1/hakmem/number.html#item28) Mersenne 125 is composite
   - [Item 29](http://home.pipeline.com/~hbaker1/hakmem/number.html#item29) Probability of largest prime factor
   - [Item 30](http://home.pipeline.com/~hbaker1/hakmem/number.html#item30) Twin Primes
@@ -195,11 +198,11 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 61](http://home.pipeline.com/~hbaker1/hakmem/number.html#item61) Amicable pairs
   - [Item 62](http://home.pipeline.com/~hbaker1/hakmem/number.html#item62) Amicable pairs
   - [Item 63](http://home.pipeline.com/~hbaker1/hakmem/number.html#item63) Joys of 239
-## P25 - [Automata Theory](http://home.pipeline.com/~hbaker1/hakmem/automata.html)
+### P25 - [Automata Theory](http://home.pipeline.com/~hbaker1/hakmem/automata.html)
   - [Item 64](http://home.pipeline.com/~hbaker1/hakmem/automata.html#item64) 2-counter machines
   - [Item 65](http://home.pipeline.com/~hbaker1/hakmem/automata.html#item65) Complexity of pi(X)
   - [Item 66](http://home.pipeline.com/~hbaker1/hakmem/automata.html#item66) Space-filling curves
-## P26 - [Games](http://home.pipeline.com/~hbaker1/hakmem/games.html)
+### P26 - [Games](http://home.pipeline.com/~hbaker1/hakmem/games.html)
   - [Item 67](http://home.pipeline.com/~hbaker1/hakmem/games.html#item67) "Poker coins"
   - [Item 68](http://home.pipeline.com/~hbaker1/hakmem/games.html#item68) *Blackout*
   - [Item 69](http://home.pipeline.com/~hbaker1/hakmem/games.html#item69) *Dots*
@@ -210,8 +213,8 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 74](http://home.pipeline.com/~hbaker1/hakmem/games.html#item74) *Tactix*
   - [Item 75](http://home.pipeline.com/~hbaker1/hakmem/games.html#item75) *Peg solitaire*
   - [Item 76](http://home.pipeline.com/~hbaker1/hakmem/games.html#item76) *Hi-Q*
-## P30 - [Proposed Computer Programs](http://home.pipeline.com/~hbaker1/hakmem/proposed.html)
-## - [Problem 77](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item77) Counting polyominos
+### P30 - [Proposed Computer Programs](http://home.pipeline.com/~hbaker1/hakmem/proposed.html)
+### - [Problem 77](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item77) Counting polyominos
   - [Problem 78](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item78) Solve *minichess*
   - [Problem 79](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item79) Solve the *tiger puzzle*
   - [Problem 80](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item80) Find smallest *squared square*
@@ -231,7 +234,7 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Problem 94](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item94) Solve *Hex*
   - [Problem 95](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item95) Solve *chess*
   - [Problem 96](http://home.pipeline.com/~hbaker1/hakmem/proposed.html#item96) Solve *Go*
-## P36 - [Continued Fractions](http://home.pipeline.com/~hbaker1/hakmem/cf.html)
+### P36 - [Continued Fractions](http://home.pipeline.com/~hbaker1/hakmem/cf.html)
   - [Item 97](http://home.pipeline.com/~hbaker1/hakmem/cf.html#item97) Sqrt(2), Sqrt(3)
   - [Item 98](http://home.pipeline.com/~hbaker1/hakmem/cf.html#item98) Minimum of factorial function
   - [Item 99](http://home.pipeline.com/~hbaker1/hakmem/cf.html#item99) Partial quotients in arithmetic progression
@@ -239,25 +242,25 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 101A](http://home.pipeline.com/~hbaker1/hakmem/cf.html#item101a) Continued fraction representation
   - [Item 101B](http://home.pipeline.com/~hbaker1/hakmem/cf.html#item101b) Continued fraction arithmetic
   - [Item 101C](http://home.pipeline.com/~hbaker1/hakmem/cf.html#item101c) Rationals in intervals
-## P45 - [Group Theory](http://home.pipeline.com/~hbaker1/hakmem/group.html)
+### P45 - [Group Theory](http://home.pipeline.com/~hbaker1/hakmem/group.html)
   - [Item 102](http://home.pipeline.com/~hbaker1/hakmem/group.html#item102) Group-like definitions
   - [Item 103](http://home.pipeline.com/~hbaker1/hakmem/group.html#item103) Hamiltonian paths
   - [Item 104](http://home.pipeline.com/~hbaker1/hakmem/group.html#item104) Permuting bits on PDP-6/10
-## P45 - [Set Theory](http://home.pipeline.com/~hbaker1/hakmem/group.html#item105)
+### P45 - [Set Theory](http://home.pipeline.com/~hbaker1/hakmem/group.html#item105)
   - [Item 105](http://home.pipeline.com/~hbaker1/hakmem/group.html#item105) Closure and complement
-## P46 - [Quaternions](http://home.pipeline.com/~hbaker1/hakmem/quaternions.html)
+### P46 - [Quaternions](http://home.pipeline.com/~hbaker1/hakmem/quaternions.html)
   - [Item 107](http://home.pipeline.com/~hbaker1/hakmem/quaternions.html#item107) Quaternions
-## P48 - [Polyominos, etc.](http://home.pipeline.com/~hbaker1/hakmem/polyominos.html)
+### P48 - [Polyominos, etc.](http://home.pipeline.com/~hbaker1/hakmem/polyominos.html)
   - [Item 108](http://home.pipeline.com/~hbaker1/hakmem/polyominos.html#item108) Counting polyominos
   - [Item 109](http://home.pipeline.com/~hbaker1/hakmem/polyominos.html#item109) Tessellating the plane
   - [Item 110](http://home.pipeline.com/~hbaker1/hakmem/polyominos.html#item110) Covering rectangles
   - [Item 111](http://home.pipeline.com/~hbaker1/hakmem/polyominos.html#item111) Domino covering
   - [Item 112](http://home.pipeline.com/~hbaker1/hakmem/polyominos.html#item112) Polyiamonds
-## P51 - [Topology](http://home.pipeline.com/~hbaker1/hakmem/topology.html)
+### P51 - [Topology](http://home.pipeline.com/~hbaker1/hakmem/topology.html)
   - [Item 113](http://home.pipeline.com/~hbaker1/hakmem/topology.html#item113)
   - [Item 114](http://home.pipeline.com/~hbaker1/hakmem/topology.html#item114)
   - [Item 115](http://home.pipeline.com/~hbaker1/hakmem/topology.html#item115)
-## P54 - [Series](http://home.pipeline.com/~hbaker1/hakmem/series.html)
+### P54 - [Series](http://home.pipeline.com/~hbaker1/hakmem/series.html)
   - [Item 116](http://home.pipeline.com/~hbaker1/hakmem/series.html#item116)
   - [Item 117](http://home.pipeline.com/~hbaker1/hakmem/series.html#item117) Gamma
   - [Item 118](http://home.pipeline.com/~hbaker1/hakmem/series.html#item118) N^N
@@ -268,7 +271,7 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 123](http://home.pipeline.com/~hbaker1/hakmem/series.html#item123) Fourier clocks
   - [Item 124](http://home.pipeline.com/~hbaker1/hakmem/series.html#item124)
   - [Item 125](http://home.pipeline.com/~hbaker1/hakmem/series.html#item125) Radius of convergence
-## P61 - Flows and Iterated Functions
+### P61 - Flows and Iterated Functions
   - [Item 126](http://home.pipeline.com/~hbaker1/hakmem/flows.html#item126) Flow for Newton's square root
   - [Item 127](http://home.pipeline.com/~hbaker1/hakmem/flows.html#item127) Polynomial functions which commute
   - [Item 128](http://home.pipeline.com/~hbaker1/hakmem/flows.html#item128) Binary/negative binary radix flow
@@ -279,7 +282,7 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 133](http://home.pipeline.com/~hbaker1/hakmem/flows.html#item133) 3 N + 1 problem
   - [Item 134](http://home.pipeline.com/~hbaker1/hakmem/flows.html#item134) Numbers to English words flow
   - [Item 135](http://home.pipeline.com/~hbaker1/hakmem/flows.html#item135) The "C" Curve
-## P67 - [Pi](http://home.pipeline.com/~hbaker1/hakmem/pi.html)
+### P67 - [Pi](http://home.pipeline.com/~hbaker1/hakmem/pi.html)
   - [Item 136](http://home.pipeline.com/~hbaker1/hakmem/pi.html#item136) Gaussian integers
   - [Item 137](http://home.pipeline.com/~hbaker1/hakmem/pi.html#item137) Arctangent formulas for pi
   - [Item 138](http://home.pipeline.com/~hbaker1/hakmem/pi.html#item138) Arctangent formulas for pi
@@ -289,7 +292,7 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 142](http://home.pipeline.com/~hbaker1/hakmem/pi.html#item142) Pi from fast trig functions
   - [Item 143](http://home.pipeline.com/~hbaker1/hakmem/pi.html#item143) AGM for elliptic integrals, log, and pi
   - [Item 144](http://home.pipeline.com/~hbaker1/hakmem/pi.html#item144) AGM for pi
-## P72 - [Programming Hacks](http://home.pipeline.com/~hbaker1/hakmem/hacks.html)
+### P72 - [Programming Hacks](http://home.pipeline.com/~hbaker1/hakmem/hacks.html)
   - [Item 145](http://home.pipeline.com/~hbaker1/hakmem/hacks.html#item145) Display/sound
   - [Item 146](http://home.pipeline.com/~hbaker1/hakmem/hacks.html#item146) Munching squares
   - [Item 147](http://home.pipeline.com/~hbaker1/hakmem/hacks.html#item147) Munching squares
@@ -321,13 +324,13 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 173](http://home.pipeline.com/~hbaker1/hakmem/hacks.html#item173) Fix float
   - [Item 174](http://home.pipeline.com/~hbaker1/hakmem/hacks.html#item174) Fix point of float function
   - [Item 175](http://home.pipeline.com/~hbaker1/hakmem/hacks.html#item175) Next higher
-## P82 - [Programming Algorithms, Heuristics](http://home.pipeline.com/~hbaker1/hakmem/algorithms.html)
+### P82 - [Programming Algorithms, Heuristics](http://home.pipeline.com/~hbaker1/hakmem/algorithms.html)
   - [Item 176](http://home.pipeline.com/~hbaker1/hakmem/algorithms.html#item176) BANANA Phenomenon
   - [Item 177](http://home.pipeline.com/~hbaker1/hakmem/algorithms.html#item177) Drawing Curves Incrementally
   - [Item 178](http://home.pipeline.com/~hbaker1/hakmem/algorithms.html#item178) Evaluating Functions
   - [Item 179](http://home.pipeline.com/~hbaker1/hakmem/algorithms.html#item179) Searching Character Strings
   - [Item 180](http://home.pipeline.com/~hbaker1/hakmem/algorithms.html#item180) Finding Corners in Images
-## P87 - [Hardware](http://home.pipeline.com/~hbaker1/hakmem/hardware.html)
+### P87 - [Hardware](http://home.pipeline.com/~hbaker1/hakmem/hardware.html)
   - [Item 181](http://home.pipeline.com/~hbaker1/hakmem/hardware.html#item181) Floating Point
   - [Item 182](http://home.pipeline.com/~hbaker1/hakmem/hardware.html#item182) Voltage regulators
   - [Item 183](http://home.pipeline.com/~hbaker1/hakmem/hardware.html#item183) Current mirrors
@@ -340,7 +343,7 @@ Unless otherwise stated, all computer programs are in [PDP-6/10](http://home.pip
   - [Item 190](http://home.pipeline.com/~hbaker1/hakmem/hardware.html#item190) Photocathode Current Oscillator
   - [Item 191](http://home.pipeline.com/~hbaker1/hakmem/hardware.html#item191) Deflection Amplifier
 
-# Figures
+## Figures
 
 - P19, 20 | [1a](http://home.pipeline.com/~hbaker1/hakmem/Figure1a.html), [1b](http://home.pipeline.com/~hbaker1/hakmem/Figure1b.html) | Binary integers radix *i*-1, *i*+1.
 - P21       | [2](http://home.pipeline.com/~hbaker1/hakmem/Figure2.html)         | Radix *i*-1 fraction parts (Knuth).
