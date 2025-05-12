@@ -1,18 +1,22 @@
 ---
+slug: aspen-note
 title: Aspen Note
 date: 2017-04-11 21:34:22
-categories:
+authors: cyhan
 tags:
+- Aspen
 ---
+
 Aspen 版本号比较乱
 
 <!-- truncate -->
 
-
 ## Aspen 版本关系
 可以用记事本打开你的bkp文件，第一行就是实际发行版本好，
 
-{% codeblock plain http://bbs.mahoupao.net/forum.php?mod=viewthread&tid=49877&page=1#pid840770 Aspen版本区别 %}
+
+[Aspen版本区别](http://bbs.mahoupao.net/forum.php?mod=viewthread&tid=49877&page=1#pid840770)
+```text
 Aspen 10.0
 Aspen 11.1 
 Aspen 12
@@ -31,7 +35,7 @@ Aspen V8.3
 Aspen V8.4
 Aspen V8.6
 Aspen V8.8
-{% endcodeblock %}
+```
 
 ## Aspen 包含关系
 
@@ -52,7 +56,7 @@ Aspen plus 是Aspen one工程套件的一个组件，就像word和office的关�
 - aspenONE Supply Chain Management
 
 
-# Aspen 相关书籍
+## Aspen 相关书籍
 
 - 《用户指南》(user guide)
 - 《单元操作模型》(Unit Operation Models)
