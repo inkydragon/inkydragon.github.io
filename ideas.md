@@ -8,6 +8,7 @@
 
 ## 现有成果介绍
 
+- 清理 WSL 磁盘大小 `git:gc/ps1/cleam-wsl-disk.ps1`
 - game-a11y: 死亡细胞无障碍计划-需求说明
 - a11y: 黑神话模组 BlackMyth-A11y 进度介绍
 - a11y: BaoYi-fake-nvdaControllerClient 介绍
@@ -31,3 +32,7 @@
 - game-a11y: 无障碍游戏介绍
 - game-a11y: 一些无障碍游戏 mod 安装教程
 - 2020~2022: 开源贡献小结
+
+### 历史故事
+
+- Gualang 与雨课堂：一切还要从一个清华自动化大一的作业说起
