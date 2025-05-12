@@ -1,6 +1,6 @@
 ---
 slug: building-julia-offline
-title: Building Julia Offline
+title: 离线源代码构建 Julia
 date: 2019-01-29 14:34:34
 authors: cyhan
 tags:
@@ -13,6 +13,3 @@ tags:
 
 ref
 - [Building Julia Offline - Usage - JuliaLang](https://discourse.julialang.org/t/building-julia-offline/9252/4)
-
-
-
