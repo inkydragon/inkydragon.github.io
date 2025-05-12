@@ -1,28 +1,26 @@
 ---
+slug: seven-languages-in-seven-weeks-io
 title: 7 Languages in 7 weeks - Io
 date: 2017-04-29 19:03:01
-categories:
-tags:
-description:
+authors: cyhan
 ---
->问题不是“我们要干点儿什么”而是“我们有什么不能干”。
->—— Ferris Bueller
-
+> 问题不是“我们要干点儿什么”而是“我们有什么不能干”
+> —— Ferris Bueller
 
 <!-- truncate -->
 
-# Install
+## Install
 google搜索 `io-lang` ，找到官网 [io / binaries via jake peck](http://iolanguage.org/binaries.html)
 下载合适的安装包，按照其中的readme安装。
 
 
-## summary
+### summary
 
 - 没有任何语法糖，核心元素也没有
     - 好处：不必记住很多语法
     - 坏处：难以阅读代码
 
-## TODO
+### TODO
 **Find**
 
 - 一些Io的示例问题。
@@ -81,34 +79,8 @@ google搜索 `io-lang` ，找到官网 [io / binaries via jake peck](http://iola
 - 给定槽的名称，执行该槽中的代码。
 - 花上点时间熟悉槽和原型。理解原型的运行方式。
 
-# --------- Day 1 ---------
+## --------- Day 1 ---------
 
-# --------- Day 2 ---------
+## --------- Day 2 ---------
 
-# --------- Day 3 ---------
-
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text] 
-code snippet 
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-![[title]](slug)
-
-
-{% endraw %}
-</div>
+## --------- Day 3 ---------
