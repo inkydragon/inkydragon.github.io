@@ -784,7 +784,7 @@ haskell 中的函数调用不需要括号
 
 此节至本章末尾的函数定义：
 
-ref: [02-starting out.lhs](//)
+ref: `02-starting out.lhs`
 
 - haskell 中的函数定义没有顺序
 - haskell 中`if`语句的`else`不可省略

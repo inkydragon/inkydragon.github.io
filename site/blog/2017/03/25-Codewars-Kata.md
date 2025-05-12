@@ -8,7 +8,7 @@ tags:
 - Ruby
 ---
 
-看到 [Codewars](www.codewars.com/r/S2zJGQ) oj类似物，不过可以看到详细的报错，并在AC一次后看到别人的答案
+看到 [Codewars](https://www.codewars.com) oj类似物，不过可以看到详细的报错，并在AC一次后看到别人的答案
 
 开坑记录一下有趣的题, 顺便采用新结构 [堆栈类似物]
 
