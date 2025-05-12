@@ -1,36 +1,36 @@
 ---
+slug: powershell-setting
 title: Powershell 设置
 date: 2017-04-29 12:04:20
-categories:
+authors: cyhan
 tags:
-description:
-  Win10 右键+Shift 默认的命令行改成了 Powershell，略作设置方便使用。
+- Powershell
 ---
-
+Win10 右键+Shift 默认的命令行改成了 Powershell，略作设置方便使用
 
 <!-- truncate -->
-ref:
 
+ref:
 - [powershell配置(win10)](http://kaimingwan.com/post/gong-ju/powershellpei-zhi-win10)
 
-# 设置常用函数
+## 设置常用函数
 通过 `$PROFILE` 可以查看配置文件路径
 ``` ps
 Import-Module PSColor;
 
-# hexo' server
+## hexo' server
 function hexo-web {
     cd I:\GitHub\inkydragon.github.io\hexo;
     hexo s --debug;
 }
 
-# atom + hexo
+## atom + hexo
 function hexo-write {
     atom I:\GitHub\inkydragon.github.io\hexo;
 }
 ```
 
-## File-Hash
+### File-Hash
 自带的 `Get-FileHash` 不是很好用，每次只能计算一种hash，有了各种hash碰撞.
 只用一种不安全，于是自己改了一个，支持多文件，多种hash计算的ps脚本。
 
@@ -38,10 +38,10 @@ function hexo-write {
 若权限受限参看 [about_Execution_Policies](https://technet.microsoft.com/zh-cn/library/347708dc-1515-4d74-978b-8334603472e6)
 
 ``` ps 计算文件Hash
-#requires -version 4.0
+##requires -version 4.0
  
-#Hash.ps1
-#计算文件Hash
+##Hash.ps1
+##计算文件Hash
  
 [cmdletbinding()]
 Param(
@@ -97,29 +97,3 @@ SHA256          57F9FE61DCC291DF186D8BB063D57D9B839AF38E0F14E4DAA4B999F66D09112C
 SHA256          F4F465B8FFDC66371E425EB56B615C8B7394911D158F98E164AC5710667217EE       I:\Desktop\TeX\TEST\zh-font....
 SHA256          EC14B68DEF8A03326E0C25A8480277E5CD1B71D682F4B413636D59BC0D23E57C       I:\Desktop\TeX\TEST\zh-font.tex
 ```
-
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text] 
-code snippet 
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-![[title]](slug)
-
-
-{% endraw %}
-</div>
