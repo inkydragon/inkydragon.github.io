@@ -1,20 +1,20 @@
 ---
+slug: openstack-fuel-9-0-installation-notes
 title: OpenStack Fuel 9.0 单机部署小记
 date: 2017-07-27 14:26:36
-categories:
-  - OpenStack
-  - OpenStack Fuel
+authors: cyhan
 tags:
-  - OpenStack
-description:
-  Mirantis 家的 OpenStack Fuel 套装单机部署踩坑记录
+- OpenStack
+- OpenStack Fuel
 ---
+Mirantis 家的 OpenStack Fuel 套装单机部署踩坑记录
+
 ![](fuel.png)
 OpenStack Fuel 是Mirantis为OpenStack定制的自动部署软件(套装)，使用fuel配置OpenStack只需要配置master/主节点，并在主节点安装完成后在fuel dashboard/控制面板配置好整个OpenStack系统，即可通过fuel自动给个node/子节点部署系统(默认为Ubuntu)并安装、配置openstack。
 
 <!-- truncate -->
 
-# Ref Links
+## Ref Links
 
 **推荐阅读**
 0. [Fuel | 深入理解OpenStack自动化部署](https://pom.nops.cloud/deployment_tool/fuel.html)
@@ -41,11 +41,11 @@ OpenStack Fuel 是Mirantis为OpenStack定制的自动部署软件(套装)，使�
 - [ESXi服务器上利用Fuel部署Openstack错误解决 - lwyeluo的专栏 - CSDN博客](http://blog.csdn.net/lwyeluo/article/details/53102508?locationNum=12&fps=1)
 
 
-# Fuel 配置概述
+## Fuel 配置概述
 
 [翻译自ref-3]
 
-## 虚拟机硬件配置
+### 虚拟机硬件配置
 
 >**NOTE**: 这里只谈一般的配置，具体针对虚拟机的配置见后
 
@@ -81,7 +81,7 @@ OpenStack Fuel 是Mirantis为OpenStack定制的自动部署软件(套装)，使�
   - 1000M 网卡 x3
   - \>120G 硬盘 (or 64G x3)
 
-## [Network requirements](https://docs.openstack.org/fuel-docs/latest/userdocs/fuel-install-guide/sysreq/sysreq_network_requirements.html)
+### [Network requirements](https://docs.openstack.org/fuel-docs/latest/userdocs/fuel-install-guide/sysreq/sysreq_network_requirements.html)
 
 >**NOTE** 以下配置均在Dashboard中进行
 
@@ -127,13 +127,13 @@ omitted
 - `浮动IP`地址不应与`公有网络`地址重合
 - 如果不使用默认DNS服务器，则应指定guest OS DNS servers
 
-## 主节点网络配置
+### 主节点网络配置
 
 - 主节点应该能正常联网，一边下载、制作PXE启动镜像。
 - 也可以在不联网的条件下，通过本地镜像制作PXE启动镜像。
 
 
-# 安装步骤
+## 安装步骤
 
 安装可大致分为几类：
 
@@ -152,7 +152,7 @@ omitted
 >详细的过程建议参考ref部分-推荐阅读的教程
 
 
-## Part 0 安装镜像的下载
+### Part 0 安装镜像的下载
 
 - 【Fuel 9.0 ~ 9.2 有VBox自动安装脚本】[Download OpenStack Solutions](https://www.mirantis.com/software/openstack/download/)
 - 【Fuel 11.0 & 12.0】[Fuel Community project - Deployment and Management Automation for OpenStack](https://www.fuel-infra.org/#fuelget)
@@ -162,29 +162,29 @@ omitted
 这个错误是一个已知的VBox Bug，在最新版中仍未修复，目前无直接解决办法，可以考虑绕过网络配置，详见【常见错误】的相关错误
 
 
-## 【Part I】master/主节点的配置
-### 1.1 网络的规划与配置
+### 【Part I】master/主节点的配置
+#### 1.1 网络的规划与配置
 
-### 1.2 master 虚拟机的设置
+#### 1.2 master 虚拟机的设置
 
-### 1.3 master 的安装
+#### 1.3 master 的安装
 
-### 1.4 bootstrap 镜像的制作
+#### 1.4 bootstrap 镜像的制作
 
-## 【Part II】node/子节点的建立
-### 2.1 node 虚拟机的配置
+### 【Part II】node/子节点的建立
+#### 2.1 node 虚拟机的配置
 
-### 2.2 fuel dashboard 的配置
+#### 2.2 fuel dashboard 的配置
 
-### 2.3 配置分发/deploy
+#### 2.3 配置分发/deploy
 
-## 【Part III】horizon 平台的使用
-### 3.1 openstack 健康检查
+### 【Part III】horizon 平台的使用
+#### 3.1 openstack 健康检查
 
-### 3.2 云主机实例的建立
+#### 3.2 云主机实例的建立
 
 
-# 注意事项
+## 注意事项
 
 >**NOTE**: 针对易出错的地方单独列出checklist，以便于检查
 
@@ -228,7 +228,7 @@ omitted
   注意ip段无冲突(默认的是无冲突的，更改时注意，务必同时参考网络配置的要求)
 
 
-# 常见错误
+## 常见错误
 
 - `error: Failed to create the host-only adapter`
   > VBox version 5.1.24 & 5.1.26
@@ -243,10 +243,11 @@ omitted
   VBoxManage.exe: error: Context: "FindHostNetworkInterfaceByName(Bstr(pszName).raw(), hif.asOutParam())" at line 139 of file VBoxManageHostonly.cpp
   " was not removed. Aborting...x Host-Only Ethernet Adapter
   ```
+
   可能的解决方案：
-  {% blockquote @Javed Mulani  https://stackoverflow.com/questions/31765581/the-host-network-interface-with-the-given-name-could-not-be-found —— vagrant - The host network interface with the given name could not be found - Stack Overflow %}
-  Simple solution: **Delete the already created (default) Host only Ethernet Adapter** from VirtualBox Preferences and run sh launch.sh (if you received error while installing Mirantis Openstack package).
-  {% endblockquote %}
+  > Simple solution: **Delete the already created (default) Host only Ethernet Adapter** from VirtualBox Preferences and run sh launch.sh (if you received error while installing Mirantis Openstack package).
+  >
+  > [vagrant - The host network interface with the given name could not be found - Stack Overflow](https://stackoverflow.com/questions/31765581/the-host-network-interface-with-the-given-name-could-not-be-found)
 
   删除已有的网卡,
   再次运行脚本
@@ -276,7 +277,7 @@ omitted
   虚拟机冲突,只留一个要用的虚拟机，关闭其他的。
    (一般为 hyper-v 和其他虚拟机冲突，因为他会默认将整个系统虚拟化)
    - [virtualbox.org • View topic - system_service_exception](https://forums.virtualbox.org/viewtopic.php?f=38&t=77134)
-   ![conflict.png](hyper-v)
+   ![conflict.png](hyper-v-conflict.png)
 
 - `fuel-bootstrap list` 结果为空
   【适用于手工生成镜像。若使用了已有的镜像，可能是镜像损坏】
@@ -304,7 +305,7 @@ omitted
   NTP服务配置有误，务必设置为master的IP (默认为 `10.20.0.2`)
 
 - `Command: 'openstack [ .... ]' has been running for more then 20 seconds!`
-  ![](keystone-timeout.png)
+  ![keystone-timeout.png](https://cdn.sa.net/2025/05/12/9XDxfRmJYngikM2.png)
   一般是虚拟机性能不行。
   查看各虚拟机，资源占用情况(`top` or `htop`)
   若CPU/内存占用过大，务必关机后增加配置。
@@ -313,7 +314,7 @@ omitted
 - `unable to establish connection to keystone endpoint`
   horizon_dashboard 登录不了
 
-  ![](horizon_dashboard.png)
+  ![horizon_dashboard.png](https://cdn.sa.net/2025/05/12/rLQOWhZtoG783kS.png)
 
   简单方法，重启各虚拟机
 
