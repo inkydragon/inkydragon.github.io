@@ -151,7 +151,7 @@ updated: 1017-02-07 16:43:31
 # LaTeX Supposed-test
 
 The **characteristic polynomial** $\chi(\lambda)$ of the $3 \times 3$ matrix
-```tex
+
 $$
 \left( \begin{array}{ccc}
 a & b & c \\
@@ -180,4 +180,4 @@ $$
 $$
 y=Ce^{at}
 $$
-```
+
