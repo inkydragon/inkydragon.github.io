@@ -65,6 +65,16 @@ MIT-OCW:
   label: MIT-OCW
   permalink: /mit-ocw
 
+nvda:
+  label: NVDA
+  permalink: /nvda
+  description: NVDA 屏幕阅读器
+
+nvda-internals:
+  label: NVDA Internals
+  permalink: /nvda-internals
+  description: NVDA 内幕故事系列文章
+
 Ruby:
   label: Ruby
   permalink: /ruby
@@ -90,6 +100,11 @@ todo:
 Translation:
   label: 翻译
   permalink: /translation
+
+译文:
+  label: 译文
+  permalink: /translations
+  description: 非原创、翻译自其他语言
 
 Typesetting:
   label: Typesetting

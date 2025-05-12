@@ -7,3 +7,13 @@ cyhan:
   socials:
     github: inkydragon
     x: inkydragon
+
+Joseph:
+  name: Joseph Lee
+  title: The author of NVDA-Internals
+  url: https://nvda.groups.io/g/nvda/profile/@joslee
+  image_url: https://github.com/josephsl.png
+  page: true
+  socials:
+    x: joslee
+    github: josephsl
