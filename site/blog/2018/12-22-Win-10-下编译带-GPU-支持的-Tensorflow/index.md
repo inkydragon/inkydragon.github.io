@@ -44,7 +44,7 @@ for Windows systems.
 -->
 > 在 windows 上，从源码构建出一个 TensorFlow 的 *pip* 包，并安装。
 > 
-> 注意！我们已经为 windows 系统提供了经过良好测试的、预构建的 [TensorFlow 包](./pip.md)
+> 注意！我们已经为 windows 系统提供了经过良好测试的、预构建的 [TensorFlow 包]
 
 
 <!-- ## Setup for Windows -->
@@ -279,7 +279,7 @@ Note: TensorFlow is tested against the *Visual Studio 2015 Update 3*.
 
 <!-- See the Windows [GPU support](./gpu.md) guide to install the drivers and additional
 software required to run TensorFlow on a GPU. -->
-> 参见 Windows 上的 [GPU 支持](./gpu.md)说明，安装在 GPU 上运行 TensorFlow 所需的驱动及其他附加软件。
+> 参见 Windows 上的 [GPU 支持] 说明，安装在 GPU 上运行 TensorFlow 所需的驱动及其他附加软件。
 
 到这里下载老版的 CUDA Toolkit
 - [CUDA Toolkit Archive | NVIDIA Developer](https://developer.nvidia.com/cuda-toolkit-archive)
@@ -432,7 +432,7 @@ configuration step must be run again before building.
 Note: Starting with TensorFlow 1.6, binaries use AVX instructions which may not
 run on older CPUs. 
 -->
-> 对于 [支持 GPU](./gpu.md)，请在配置时指明 CUDA 和 cuDNN 的版本。
+> 对于 [支持 GPU]，请在配置时指明 CUDA 和 cuDNN 的版本。
 > 如果你的系统中安装了多个版本的 CUDA 或 cuDNN，请显式的设置版本，而不是使用默认值。
 > `./configure.py` 会创建一个到你系统中 CUDA 库的符号链接。——所以如果你更新了 CUDA 的路径，
 > 在构建之前，这个配置步骤就必须重新来过。
