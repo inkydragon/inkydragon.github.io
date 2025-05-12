@@ -1,15 +1,17 @@
 ---
-title: hexo-math 插件修复
+slug: hexo-math-plugin-fix
+title: Hexo Math 插件修复
 date: 2017-04-30 11:49:38
-categories:
+authors: cyhan
 tags:
-  - hexo
-description:
-  想增加一下LaTeX的支持，但是hexo-math插件被弃坑了，只好自己动手、丰衣足食了。
+- hexo
 ---
->学习也是没有办法的事情
+想增加一下LaTeX的支持，但是hexo-math插件被弃坑了，只好自己动手、丰衣足食了
+
+> 学习也是没有办法的事情
 
 <!-- truncate -->
+
 粗略的的看一下用了 gulp + es6
 大概还得研究下 [coffeescript](http://coffee-script.org/)
 
@@ -94,32 +96,3 @@ Error: Incomplete document
     at tryOnImmediate (timers.js:645:5)
     at processImmediate [as _immediateCallback] (timers.js:617:5)
 ```
-
-
-
-
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text] 
-code snippet 
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-![[title]](slug)
-
-
-{% endraw %}
-</div>
