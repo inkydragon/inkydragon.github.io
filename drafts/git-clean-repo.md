@@ -190,3 +190,14 @@ To https://github.com/inkydragon/inkydragon.github.io.git
  + 0cdc027...cc74f39 main -> main (forced update)
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 ```
+
+## smms 图床
+
+```md
+![5-konami.png](https://cdn.sa.net/2025/05/12/WPOujx8EQKqwboG.png)
+![horizon_dashboard.png](https://cdn.sa.net/2025/05/12/rLQOWhZtoG783kS.png)
+![haskell.png](https://cdn.sa.net/2025/05/12/gBY8325QFVvtqZ4.png)
+![Matlab-memo-GIF_testAnimated.gif](https://cdn.sa.net/2025/05/12/8fHjLvmdYMx6G5O.gif)
+![ligohi1.png](https://cdn.sa.net/2025/05/12/kRF5I8u6fcdVQjD.png)
+![4-konami.gif](https://cdn.sa.net/2025/05/12/io5Cj87YTEBgcsI.gif)
+```
