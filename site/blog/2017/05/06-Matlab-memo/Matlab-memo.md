@@ -1,13 +1,12 @@
 ---
-title: Matlab memo
+slug: matlab-memo
+title: Matlab Memo
 date: 2017-05-06 21:01:20
-categories:
+authors: cyhan
 tags:
   - memo
-description:
-  Some Matlab note
 ---
-
+Some Matlab note
 
 <!-- truncate -->
 
@@ -124,7 +123,7 @@ end
 
 imwrite(A,map,filename,'gif','WriteMode','append','DelayTime',2); % 最后一帧 延时
 ```
-![gif](Matlab-memo-GIF_testAnimated.gif)
+![Matlab-memo-GIF_testAnimated.gif](https://cdn.sa.net/2025/05/12/8fHjLvmdYMx6G5O.gif)
 
 ---
 
