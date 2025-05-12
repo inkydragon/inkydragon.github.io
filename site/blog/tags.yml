@@ -1,3 +1,7 @@
+CTF:
+  label: CTF
+  permalink: /ctf
+  description: Capture The Flag
 
 docusaurus:
   label: Docusaurus
