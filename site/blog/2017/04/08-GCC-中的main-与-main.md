@@ -1,15 +1,17 @@
 ---
-title: GCC 中的main 与 __main
+slug: main-in-gcc
+title: GCC 中的 main 与 __main
 date: 2017-04-08 21:48:55
-categories:
+authors: cyhan
 tags:
- - gcc
+- gcc
 ---
+
 看RE4B, C3 中间有提到用gcc编译简单函数，试了下hello world，发现生成的汇编代码很奇怪，看上去想出现了死循环。
 
 <!-- truncate -->
 
-{% codeblock c源码 lang:c 3.1.c %}
+```c  3.1.c
 #include <stdio.h>
 
 int main() 
@@ -17,9 +19,9 @@ int main()
     printf("hello, world\n");
     return 0;
 }
-{% endcodeblock %}
+```
 
-``` nasm 得到的汇编代码 3.1.s
+```nasm 得到的汇编代码 3.1.s
 .file	"3.1.c"
 .def	__main;	.scl	2;	.type	32;	.endef
 .section .rdata,"dr"
@@ -51,34 +53,6 @@ ref:
 - [GNU Compiler Collection (GCC) Internals](http://www.delorie.com/gnu/docs/gcc/gccint_149.html)
 - [20 collect2](https://gcc.gnu.org/onlinedocs/gccint/Collect2.html#Collect2)
 - [gcc on windows generating garbage? windows vs linux](http://stackoverflow.com/questions/19552816/gcc-on-windows-generating-garbage-windows-vs-linux/19553974#19553974)
-[2017-04-08]
+    [2017-04-08]
 - [GCC Assembly Optimizations - Why are these equivalent?](http://stackoverflow.com/questions/31166773/gcc-assembly-optimizations-why-are-these-equivalent)
 - [GCC's assembly output of an empty program on x86, win32](http://stackoverflow.com/questions/1317081/gccs-assembly-output-of-an-empty-program-on-x86-win32/1317202#1317202)
-
-
-
-<div style="display: none;">
-{% raw %}
-
-
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-``` [language] [title] [url] [link text] 
-code snippet 
-```
-
-
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
-
-![[title]](slug)
-
-
-{% endraw %}
-</div>
