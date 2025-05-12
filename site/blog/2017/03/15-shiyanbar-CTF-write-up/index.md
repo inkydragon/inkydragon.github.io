@@ -1,13 +1,16 @@
 ---
-title: shiyanbar CTF write up
+slug: shiyanbar-ctf-write-up
+title: 实验吧 CTF write up
 date: 2017-03-15 13:15:04
+authors: cyhan
 tags:
   - CTF
-categories:
 ---
 
+www.shiyanbar.com/ctf
 
 <!-- truncate -->
+
 ## 2002-[Spamcarver-实验吧](http://www.shiyanbar.com/ctf/2002)
 
 Stegsolve 看了一下，没发现什么。
@@ -37,7 +40,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ![Flag](2002-Spamcarver-flag.jpg)
 
 [2017-11-09 14:24:26]
-> flag{7adf6f07e0810003c585a7be97868a90}
+> `flag{7adf6f07e0810003c585a7be97868a90}`
 
 Other writeup:
 - [write-ups-2013/pico-ctf-2013/spamcarver at master · ctfs/write-ups-2013](https://github.com/ctfs/write-ups-2013/tree/master/pico-ctf-2013/spamcarver)
@@ -94,7 +97,7 @@ Key: Next stop Tau Eridani
 ```
 
 [2017-11-09 10:20:32]
-> flag{Next stop Tau Eridani}
+> `flag{Next stop Tau Eridani}`
 
 Other writeup:
 - [write-ups-2013/pico-ctf-2013/navsat at master · ctfs/write-ups-2013](https://github.com/ctfs/write-ups-2013/tree/master/pico-ctf-2013/navsat)
@@ -125,7 +128,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ![](2000-docz.png)
 
 [2017-11-09 14:29:49]
-> flag{docx_why_not_docz}
+> `flag{docx_why_not_docz}`
 
 ---
 
@@ -252,7 +255,7 @@ class Authenticator
 ## 1822 凯撒和某某加密
 
 [2017-03-15 13:15:04]
->flag{_Just_4_fun_0.0_}
+> `flag{_Just_4_fun_0.0_}`
 
 ---
 
@@ -272,7 +275,7 @@ if (isset ($_GET['password'])) {
 mt_srand((microtime() ^ rand(1, 10000)) % rand(1, 10000) + rand(1, 10000));
 ?>
 ```
-> CTF{Cl3ar_th3_S3ss1on}
+> `CTF{Cl3ar_th3_S3ss1on}`
 
 ## 1787- [FALSE-实验吧](http://www.shiyanbar.com/ctf/1787)
 
@@ -296,8 +299,10 @@ else{
 Payload = false.php?name[]=0&password[]=
 
 [2017-11-09 16:43:35]
-> CTF{t3st_th3_Sha1}
+> `CTF{t3st_th3_Sha1}`
+
 ---
+
 ## 34- [一段奇怪的代码-实验吧](http://www.shiyanbar.com/ctf/34)
 
 VBscript.Encode
