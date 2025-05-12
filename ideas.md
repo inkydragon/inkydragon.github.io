@@ -9,7 +9,6 @@
 ## 现有成果介绍
 
 - game-a11y: 死亡细胞无障碍计划-需求说明
-- a11y: 开放的无障碍问题与需求 (盲扫二维码...) `git:gc/a11y`
 - a11y: 黑神话模组 BlackMyth-A11y 进度介绍
 - a11y: BaoYi-fake-nvdaControllerClient 介绍
 
