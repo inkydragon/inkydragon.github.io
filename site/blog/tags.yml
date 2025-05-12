@@ -1,9 +1,4 @@
 
-# BianCheng
-编程:
-  label: 编程
-  permalink: /programming
-
 # QiZhou
 七周七语言:
   label: 七周七语言
@@ -15,6 +10,11 @@ CTF:
   permalink: /ctf
   description: Capture The Flag
 
+# combinatorics
+组合数学:
+  label: 组合数学
+  permalink: /combinatorics
+
 docusaurus:
   label: Docusaurus
   permalink: /docusaurus
@@ -24,24 +24,73 @@ edX:
   label: edX
   permalink: /edx
 
+Haskell:
+  label: Haskell
+  permalink: /haskell
+
 hexo:
   label: Hexo
   permalink: /hexo
   description: hexo.io related things
 
+Julia:
+  label: Julia
+  permalink: /julia
+
+LaTeX:
+  label: LaTeX
+  permalink: /latex
+
+LLVM:
+  label: LLVM
+  permalink: /llvm
+
 memo:
   label: Memo
   permalink: /memo
+
+Math:
+  label: Math
+  permalink: /math
+
+maybe-bug:
+  label: "Bug?"
+  permalink: /maybe-bug
 
 MOOC:
   label: MOOC
   permalink: /mooc
 
+MIT-OCW:
+  label: MIT-OCW
+  permalink: /mit-ocw
+
+Ruby:
+  label: Ruby
+  permalink: /ruby
+
+# programming
+编程:
+  label: 编程
+  permalink: /programming
+
 Python:
   label: Python
   permalink: /python
+
+TexLive:
+  label: TexLive
+  permalink: /texlive
 
 todo:
   label: Todo
   permalink: /todo
   description: Placeholder for future posts
+
+Translation:
+  label: 翻译
+  permalink: /translation
+
+Typesetting:
+  label: Typesetting
+  permalink: /typesetting

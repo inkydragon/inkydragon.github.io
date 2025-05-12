@@ -5,7 +5,6 @@ date: 2017-03-29 21:56:30
 authors: cyhan
 tags:
 - LaTeX
-- Metapost
 ---
 **目前** 只有 Metapost 入门的一些资料合集(非教程)
 

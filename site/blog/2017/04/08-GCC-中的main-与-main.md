@@ -3,8 +3,6 @@ slug: main-in-gcc
 title: GCC 中的 main 与 __main
 date: 2017-04-08 21:48:55
 authors: cyhan
-tags:
-- gcc
 ---
 
 看RE4B, C3 中间有提到用gcc编译简单函数，试了下hello world，发现生成的汇编代码很奇怪，看上去想出现了死循环。

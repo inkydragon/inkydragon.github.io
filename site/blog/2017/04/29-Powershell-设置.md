@@ -3,8 +3,6 @@ slug: powershell-setting
 title: Powershell 设置
 date: 2017-04-29 12:04:20
 authors: cyhan
-tags:
-- Powershell
 ---
 Win10 右键+Shift 默认的命令行改成了 Powershell，略作设置方便使用
 

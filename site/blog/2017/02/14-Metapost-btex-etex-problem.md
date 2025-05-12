@@ -4,8 +4,7 @@ title: Metapost btex etex problem
 date: 2017-02-14 21:07:03
 authors: cyhan
 tags:
-- bug or typo?
-- Metapost
+- maybe-bug
 ---
 
 metapost: Unable to make mpx file

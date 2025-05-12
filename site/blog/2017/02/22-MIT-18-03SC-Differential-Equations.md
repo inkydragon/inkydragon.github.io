@@ -4,9 +4,7 @@ title: 'MIT-18.03sc Differential Equations'
 date: 2017-02-22 18:09:01
 authors: cyhan
 tags:
-- Study
 - MOOC
-- MIT-18.03sc
 - MIT-OCW
 - Math
 ---

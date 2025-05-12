@@ -3,8 +3,6 @@ slug: win10-x64-windbg-jit-debug-setting
 title: Win10 x64 WinDbg JIT调试设置
 date: 2016-12-10T15:09:38
 authors: cyhan
-tags: 
-- WinDbg
 ---
 
 《格蠹汇编》中第四章有关于如何把 WinDbg 设为 Windows 的 JIT 调试器方法。

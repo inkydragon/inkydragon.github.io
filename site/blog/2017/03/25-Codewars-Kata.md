@@ -4,8 +4,6 @@ title: Codewars' Kata
 date: 2017-03-25 20:18:23
 authors: cyhan
 tags:
-- Codewars
-- Programming
 - Python
 - Ruby
 ---

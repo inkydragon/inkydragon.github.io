@@ -3,9 +3,6 @@ slug: pyplot-origin-axis-arrow
 title: pyplot 原点相交的坐标轴与箭头
 date: 2018-12-21 11:07:29
 authors: cyhan
-tags: 
-- matplotlib
-- pyplot
 ---
 如何在 pyplot 中画出原点相交的&带箭头的坐标轴
 

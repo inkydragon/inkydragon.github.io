@@ -3,8 +3,6 @@ slug: compile-with-gpu-support-for-tensorflow-under-win10
 title: Win 10 下编译带 GPU 支持的 Tensorflow
 date: 2018-12-22 12:59:30
 authors: cyhan
-tags:
-- TensorFlow
 ---
 尝试在 Win 10 上编译安装带 GPU 支持的 TensorFlow
 

@@ -4,10 +4,10 @@ title: Lecture 2 - Core Elements of Programs
 date: 2017-01-29T17:04:35
 authors: cyhan
 tags: 
-- Study
 - MOOC
 - edX
-- MIT-6.00.1sp
+- Python
+- todo
 ---
 
 todo

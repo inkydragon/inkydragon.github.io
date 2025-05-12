@@ -3,8 +3,6 @@ slug: heelo-haskell
 title: Hello Haskell!
 date: 2017-04-02 21:25:20
 authors: cyhan
-tags:
-- Haskell
 ---
 
 本来我只是去知乎上找一个大佬 [@雾雨魔理沙](https://www.zhihu.com/people/marisa.moe) 的Github

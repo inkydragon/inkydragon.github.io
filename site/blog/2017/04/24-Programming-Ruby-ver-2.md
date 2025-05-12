@@ -4,10 +4,7 @@ title: Programming Ruby ver.2
 date: 2017-04-24 18:15:37
 authors: cyhan
 tags:
-- Books
 - 编程
-- Programming Ruby
-- Ruby
 ---
 七周七语言里推荐的书，随便看看，记点笔记
 

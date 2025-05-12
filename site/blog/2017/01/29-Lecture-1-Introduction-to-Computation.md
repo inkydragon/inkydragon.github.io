@@ -4,10 +4,9 @@ title: Lecture 1 - Introduction to Computation
 date: 2017-01-29T14:10:28
 authors: cyhan
 tags: 
-- Study
 - MOOC
 - edX
-- MIT-6.00.1sp
+- Python
 ---
 
 Lecture 1将介绍：计算方法和计算思维的一些基本原则：     

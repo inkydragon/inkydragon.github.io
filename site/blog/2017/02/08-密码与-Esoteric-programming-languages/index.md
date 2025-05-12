@@ -3,8 +3,6 @@ slug: cipher-and-esoteric-programming-languages
 title: 密码与 Esoteric programming languages
 date: 2017-02-08T23:08:56
 authors: cyhan
-tags:
-- Cipher
 ---
 
 在密码吧看到[两张图](http://tieba.baidu.com/p/4963843005)，目测是[Esoteric programming language](https://en.wikipedia.org/wiki/Esoteric_programming_language)

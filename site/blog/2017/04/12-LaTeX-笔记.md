@@ -4,8 +4,7 @@ title: LaTeX 笔记
 date: 2017-04-12 19:13:27
 authors: cyhan
 tags:
-  - Note
-  - LaTeX
+- LaTeX
 ---
 
 目前看 Inote2 做点笔记

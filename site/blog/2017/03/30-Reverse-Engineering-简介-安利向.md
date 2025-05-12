@@ -3,8 +3,6 @@ slug: reverse-engineering-intro
 title: Reverse Engineering 简介 (安利向)
 date: 2017-03-30 22:55:04
 authors: cyhan
-tags:
-- Reverse Engineering
 ---
 
 ## 0x1 什么是逆向工程

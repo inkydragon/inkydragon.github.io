@@ -3,8 +3,6 @@ slug: aspen-note
 title: Aspen Note
 date: 2017-04-11 21:34:22
 authors: cyhan
-tags:
-- Aspen
 ---
 
 Aspen 版本号比较乱

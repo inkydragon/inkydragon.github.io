@@ -3,10 +3,7 @@ slug: lovely-girl-ruby
 title: 可爱的小姐姐~ Ruby!
 date: 2017-04-22 16:30:54
 tags:
-- Books
-- 编程
 - 七周七语言
-- Ruby
 ---
 Seven Languages in Seven Weeks: Ruby, Day 1-3 FULL
 

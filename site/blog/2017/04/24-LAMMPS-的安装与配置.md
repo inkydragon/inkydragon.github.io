@@ -2,8 +2,6 @@
 slug: lammps-installation-and-configuration
 title: LAMMPS 的安装与配置
 date: 2017-04-27 16:33:53
-tags:
-- LAMMPS
 ---
 分子模拟开坑，我只是路过
 

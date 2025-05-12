@@ -4,9 +4,7 @@ title: 'MIT-18.03sc Unit I: Overview'
 date: 2017-02-22 18:09:46
 authors: cyhan
 tags:
-- Study
 - MOOC
-- MIT-18.03sc
 - MIT-OCW
 - Math
 ---

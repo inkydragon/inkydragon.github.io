@@ -3,8 +3,6 @@ slug: git-repo-cleanup
 title: Git 仓库瘦身之 .git 文件夹清理
 date: 2017-04-01 19:27:35
 authors: cyhan
-tags:
-- Git
 ---
 clone某汉化组的repo，本来有墙，结果repo竟然有31M，源码是一堆tex文件，图片也没几张最大的一个文件是PDF，然后我就感觉很奇怪，怎么这个repo这么大。
 

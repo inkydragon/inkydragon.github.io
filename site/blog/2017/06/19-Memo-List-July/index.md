@@ -631,7 +631,7 @@ body {
 
 ## 01 [introduction](http://learnyouahaskell.com/introduction)
 
-- Hakell 是一门 *纯粹函数式编程语言 (purely functional programming language)*
+- Haskell 是一门 *纯粹函数式编程语言 (purely functional programming language)*
   无 *副作用 (side effect)*
 - Haskell 是 *惰性 (lazy)* 的
 - Haskell 是 *静态类型 (statically typed)* 的

@@ -3,8 +3,6 @@ slug: wsl-windows-subsystem-for-linux-notes
 title: WSL (Windows Subsystem for Linux) 小记
 date: 2017-04-12 21:44:45
 authors: cyhan
-tags:
-- WSL
 ---
 
 又看见 dalao star 了新的项目[alwsl](https://github.com/alwsl/alwsl)，看了一眼，是在WSL(Windows Subsystem for Linux) 中装ArchLinux的脚本，然后我就开始折腾WSL了。

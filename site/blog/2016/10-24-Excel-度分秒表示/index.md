@@ -3,8 +3,6 @@ slug: excel-deg-min-sec-representation
 title: Excel 度分秒表示
 date: 2016-10-24T13:43:31
 authors: cyhan
-tags:
-- Excel
 ---
 
 做光学实验需要处理数据，原始数据是以度分秒为单位的。

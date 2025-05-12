@@ -3,9 +3,6 @@ slug: openstack-fuel-9-0-installation-notes
 title: OpenStack Fuel 9.0 单机部署小记
 date: 2017-07-27 14:26:36
 authors: cyhan
-tags:
-- OpenStack
-- OpenStack Fuel
 ---
 Mirantis 家的 OpenStack Fuel 套装单机部署踩坑记录
 

@@ -4,9 +4,7 @@ title: 'MIT-18.03sc Unit I: Basic DE''s and Separable Equations'
 date: 2017-02-22 17:56:07
 authors: cyhan
 tags:
-- Study
 - MOOC
-- MIT-18.03sc
 - MIT-OCW
 - Math
 ---

@@ -3,9 +3,6 @@ slug: mit-hakman-memo
 title: MIT HAKMAN
 date: 2017-05-01 12:19:37
 authors: cyhan
-tags:
-- Books
-- MIT HAKMAN
 ---
 神书，我把其中的公式用LaTeX整理了一下.  
 目前来看，这本书内容也不少，放在blog里不太合适，准备开一本gitbook
