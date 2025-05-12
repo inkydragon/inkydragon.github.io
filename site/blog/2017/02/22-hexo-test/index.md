@@ -2,7 +2,7 @@
 slug: hexo-test-page
 title: Hexo 测试页
 date: 2017-02-22 17:00:31
-author: cyhan
+authors: cyhan
 tags:
   - debug
   - hexo
