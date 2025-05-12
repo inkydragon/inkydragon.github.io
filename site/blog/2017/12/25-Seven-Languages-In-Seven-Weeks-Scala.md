@@ -1,6 +1,6 @@
 ---
 slug: slsw-scala
-title: Seven Languages In Seven Weeks - Scala
+title: 七周七语言：Scala
 date: 2017-12-25 19:06:50
 authors: cyhan
 tags:

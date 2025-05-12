@@ -1,7 +1,8 @@
 ---
 slug: lovely-girl-ruby
-title: 可爱的小姐姐~ Ruby!
+title: 七周七语言：Ruby! 可爱的小姐姐~ 
 date: 2017-04-22 16:30:54
+authors: cyhan
 tags:
 - 七周七语言
 ---
