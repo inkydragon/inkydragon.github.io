@@ -1,18 +1,21 @@
 ---
-title: Reverse Engineering 简介(安利向)
+slug: reverse-engineering-intro
+title: Reverse Engineering 简介 (安利向)
 date: 2017-03-30 22:55:04
+authors: cyhan
 tags:
 - Reverse Engineering
 ---
 
-# 0x1 什么是逆向工程
+## 0x1 什么是逆向工程
 根据[维基百科](https://en.wikipedia.org/)上的定义
 >[逆向工程(Reverse engineering)](https://zh.wikipedia.org/wiki/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B)
 >是一种技术过程，即对一项目标产品进行逆向分析及研究，从而演绎并得出该产品的处理流程、组织结构、功能性能规格等设计要素。
 >逆向工程源于商业及军事领域中的硬件分析。其主要目的是，在不能轻易获得必要的生产信息下，直接从成品的分析，推导出产品的设计原理。
 
 <!-- truncate -->
-## 逆向工程的分类
+
+### 逆向工程的分类
 一般按逆向工程的对象分类：
 
 - 机械设备 (machines)
@@ -30,7 +33,7 @@ tags:
 
 *下文均使用RCE代指软件逆向工程，而不是RE，避免混淆*
 
-## 逆向工程的动力
+### 逆向工程的动力
 *这里只针对RCE*
 
 - 学术／学习目的
