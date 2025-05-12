@@ -1,9 +1,10 @@
 ---
+slug: building-julia-offline
 title: Building Julia Offline
 date: 2019-01-29 14:34:34
-categories:
+authors: cyhan
 tags:
-description:
+- Julia
 ---
 
 [Ubuntu 离线编译 Julia - 综合讨论区 / Julia入门 - Julia中文社区](https://discourse.juliacn.com/t/topic/1365)
