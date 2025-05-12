@@ -5,7 +5,7 @@ date: 2017-04-22 16:30:54
 tags:
 - Books
 - 编程
-- 编程七周谈
+- 七周七语言
 - Ruby
 ---
 Seven Languages in Seven Weeks: Ruby, Day 1-3 FULL
