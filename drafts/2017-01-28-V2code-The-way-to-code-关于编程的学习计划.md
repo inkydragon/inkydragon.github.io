@@ -1,11 +1,14 @@
 ---
 title: V2code-The way to code-关于编程的学习计划
 date: 2017-01-28 21:42:12
+authors: cyhan
 tags:
 - Plan
 - V2code
 ---
-# The way to code
+
+## The way to code
+
 先解释一下标题，这个用法是从知乎上看见的。原标题是 [V2coder](https://github.com/hhstore/v2coder) 但我还没有转到编程方向的想法，所以就改成了 V2code .
 
 当时我在搜索怎么样系统的学习编程，然看到了[V2coder](https://github.com/hhstore/v2coder)这个用法，它还有个项目但是早已被坑主弃坑，之后又发现了这篇[编程入门指南 v1.5](https://zhuanlan.zhihu.com/p/19959253)。看了前面的`心态调整`部分，然后又回顾了下自己之前自学编程的方式，觉得确实应该改一改了。
