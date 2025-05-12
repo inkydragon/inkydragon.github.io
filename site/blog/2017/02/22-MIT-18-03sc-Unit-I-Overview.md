@@ -1,20 +1,19 @@
 ---
-title: 'Unit I: Overview'
-categories:
-  - Study
-  - MOOC
-  - MIT-OCW
-  - MIT-18.03sc
-tags:
-  - MIT-OCW
-  - Math
+slug: mit-18-03sc-unit-i-overview
+title: 'MIT-18.03sc Unit I: Overview'
 date: 2017-02-22 18:09:46
+authors: cyhan
+tags:
+- Study
+- MOOC
+- MIT-18.03sc
+- MIT-OCW
+- Math
 ---
 
-# Session Overview
 这一节主要是回顾指数函数
 
-
+<!-- truncate -->
 
 # Session Activities
 

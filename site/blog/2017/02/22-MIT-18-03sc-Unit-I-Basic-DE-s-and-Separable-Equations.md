@@ -1,18 +1,16 @@
 ---
-title: 'Unit I: Basic DE''s and Separable Equations'
+slug: mit-18-03sc-unit-i-basic-de-s-and-separable-equations
+title: 'MIT-18.03sc Unit I: Basic DE''s and Separable Equations'
 date: 2017-02-22 17:56:07
-categories:
+authors: cyhan
+tags:
 - Study
 - MOOC
-- MIT-OCW
 - MIT-18.03sc
-tags:
-  - MIT-OCW
-  - Math
-mathjax: true
+- MIT-OCW
+- Math
 ---
 
-# Session Overview
 本章重点：
 
 $$
@@ -26,6 +24,7 @@ y=Ce^{at}
 $$
 
 <!-- truncate -->
+
 # Session Activities
 -  [[PDF-1p]The Most Important DE](https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/unit-i-first-order-differential-equations/basic-de-and-separable-equations/MIT18_03SCF11_s1_0intro.pdf)
     证明了$y'=ay$的通解为$y=Ce^{at}$

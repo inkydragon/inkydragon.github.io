@@ -1,14 +1,14 @@
 ---
+slug: mit-18-03sc-differential-equations
 title: 'MIT-18.03sc Differential Equations'
-categories:
-  - Study
-  - MOOC
-  - MIT-OCW
-  - MIT-18.03sc
-tags:
-  - MIT-OCW
-  - Math
 date: 2017-02-22 18:09:01
+authors: cyhan
+tags:
+- Study
+- MOOC
+- MIT-18.03sc
+- MIT-OCW
+- Math
 ---
 
 [Differential Equations - ocw](https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/index.htm)
@@ -27,6 +27,7 @@ date: 2017-02-22 18:09:01
 > The main equations studied in the course are driven first and second order constant coefficient linear ordinary differential equations and 2x2 systems.
 
 <!-- truncate -->
+
 ## Units
 [UNIT I: FIRST ORDER DIFFERENTIAL EQUATIONS]
 
