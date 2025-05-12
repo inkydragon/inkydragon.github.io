@@ -1,13 +1,16 @@
 ---
+slug: 0ops-0ctf-2017
 title: 0ops 0CTF 2017
 date: 2017-03-09 16:06:16
+authors: cyhan
 tags:
 - CTF
 ---
 
-## 探索 http://www.0ops.net/cli.html
+探索 http://www.0ops.net/cli.html
 
 <!-- truncate -->
+
 可用命令
 ``` sh
 help
@@ -96,9 +99,9 @@ ori
 3rd
 ![发光了](3-KONAMI.png)
 4th
-![文字开始抖动](4-konami.gif)
+![文字开始抖动--4-konami.gif](https://cdn.sa.net/2025/05/12/io5Cj87YTEBgcsI.gif)
 result
-![得到base64-code](5-konami.png)
+![得到base64-code--5-konami.png](https://cdn.sa.net/2025/05/12/WPOujx8EQKqwboG.png)
 
 接下来的解密同上
 
