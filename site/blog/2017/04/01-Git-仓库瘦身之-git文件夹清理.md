@@ -1,12 +1,15 @@
 ---
-title: Git 仓库瘦身之.git文件夹清理
+slug: git-repo-cleanup
+title: Git 仓库瘦身之 .git 文件夹清理
 date: 2017-04-01 19:27:35
+authors: cyhan
 tags:
-  - Git
+- Git
 ---
 clone某汉化组的repo，本来有墙，结果repo竟然有31M，源码是一堆tex文件，图片也没几张最大的一个文件是PDF，然后我就感觉很奇怪，怎么这个repo这么大。
 
 <!-- truncate -->
+
 ref：    
 1. [为什么你的 Git 仓库变得如此臃肿](http://www.jianshu.com/p/7231b509c279)
 2. [.git 文件太大时怎样处理](https://segmentfault.com/q/1010000000171057)
@@ -14,7 +17,7 @@ ref：
 4. [记一次删除Git记录中的大文件的过程](http://www.hollischuang.com/archives/1708)
 
 
-# 原因分析
+## 原因分析
 先找了篇教程(第一篇)，知道了是因为`.git/objects`目录下缓存了过多的大文件。结合repo的原文件，可知是因为编译出的PDF文件每次都包含到repo中了，导致`.git`文件夹很大。
 
 ```
@@ -26,15 +29,15 @@ $ du -d 1 -h
 35M     .
 ```
 
-# repo瘦身
-## 临时解决方法
+## repo 瘦身
+### 临时解决方法
 >ref:2
 
 1. 在`.gitignore`里面加上要排除的PDF
 2. clone repo时 使用`--depth`指定clone深度   
     `git clone git@github.com:torvalds/linux.git --depth 1`     
 
-## 彻底解决方案
+### 彻底解决方案
 
 **WARNING!**
 _如果你不是完全清楚你在做什么，那么_
@@ -49,10 +52,10 @@ _如果你不是完全清楚你在做什么，那么_
 
 **进行危险操作前先备份**
 
-### step 0 git clone
+#### step 0 git clone
 `git clone git@github.com:ChzRuan/CallenThermo.git`
 
-### step 1 备份
+#### step 1 备份
 首先备份
 `git clone /i/GitHub/Callen-Thermo-CHS /i/backup`
 
@@ -61,7 +64,7 @@ _如果你不是完全清楚你在做什么，那么_
 切换目录
 `cd /i/backup/`
 
-### step 2 查看空间占用
+#### step 2 查看空间占用
 ```
 $ du -d 1 -h
 27M     ./.git
@@ -89,7 +92,7 @@ $ du -d 1 -h
 -------
 _上面没**备份**的，现在还有救_
 
-### step 3 查找大文件
+#### step 3 查找大文件
 本例中已经确定大文件是 `CallenThermo.pdf` 可以直接进行下一步。
 当然还要提一下通用的方法。
 
@@ -110,9 +113,9 @@ dd351b9649360a24d890ba8df7cad2b16e2b914d CallenThermo.pdf
 
 确认是`CallenThermo.pdf`的锅
 
-### step 4 删除大文件
+#### step 4 删除大文件
 
-#### 删除单个大文件
+##### 删除单个大文件
 使用以下命令，删除提交历史中所有的大文件记录：
 
 ```
@@ -139,7 +142,7 @@ WARNING: Ref 'refs/remotes/origin/master' is unchanged
 我本来为了‘安全’，建立了一个新的分支dev-thin。但从输出的最后几行可以出git修改了所有与repo相关的分支，这也是这个操作最危险的一点。
 
 
-#### 删除多个大文件
+##### 删除多个大文件
 取得单行的大文件名
 
 ```
@@ -151,7 +154,7 @@ git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/\*.i
 git filter-branch -f --prune-empty --index-filter "git rm -rf --cached --ignore-unmatch `cat large-file.txt`" --tag-name-filter cat -- --all
 ```
 
-### step 5 清理repo
+#### step 5 清理repo
 一开始照着 ref：3 来操作时没有这一步，发现repo的大小几乎没变。
 找了新的教程后，才成功给repo瘦身。
 
@@ -165,7 +168,7 @@ git reflog expire --expire=now --all
 git gc --prune=now
 ```
 
-### step 6 推送到远端
+#### step 6 推送到远端
 以强制覆盖的方式推送你的repo
 
 ```
@@ -175,7 +178,7 @@ git push origin --force --all
 这里的`--all`会将所有分支都推送到origin上。当然你也可以只推送master分支： `git push origin master --force`。
 
 
-# 效果
+## 效果
 
 ```
 $ du -d 1 -h
