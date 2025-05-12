@@ -27,6 +27,7 @@
 
 ## 新的想法
 
+- jl: julia MWE 样例缩减教程 `creduce_julia, cvise+julia`
 - a11y: 旧版无障碍 DLL 介绍 (ScreenReaderAPI.dll)
 - a11y: 继续翻译 NVDA 博客、教程
 - game-a11y: 无障碍游戏介绍
