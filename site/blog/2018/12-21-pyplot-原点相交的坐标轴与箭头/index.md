@@ -1,13 +1,14 @@
 ---
+slug: pyplot-origin-axis-arrow
 title: pyplot 原点相交的坐标轴与箭头
 date: 2018-12-21 11:07:29
-categories:
+authors: cyhan
 tags: 
-  - matplotlib
-  - pyplot
-description: # 如何在 pyplot 中画出原点相交的&带箭头的坐标轴
-mathjax: true
+- matplotlib
+- pyplot
 ---
+如何在 pyplot 中画出原点相交的&带箭头的坐标轴
+
 
 我就想画个简单的 SVG 图，懒得开 Ai 了(~~虽然下面这个图还是用 Ai 画的~~)，希望用 pyplot 直接画。
 
