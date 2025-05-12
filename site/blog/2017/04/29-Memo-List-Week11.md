@@ -1,15 +1,16 @@
 ---
-title: 'Memo List @Week11'
+slug: 2017-mar-memo-list
+title: Memo List Mar
 date: 2017-04-29 22:34:42
-categories:
+authors: cyhan
 tags:
-  - Memo List
-description:
-  一些有趣的文章
+- Memo List
 ---
-
+一些有趣的文章
 
 <!-- truncate -->
+
+## Week11
 
 - [正则表达式30分钟入门教程](https://deerchao.net/tutorials/regex/regex.htm)
 
