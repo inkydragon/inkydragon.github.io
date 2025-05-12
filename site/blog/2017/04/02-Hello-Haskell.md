@@ -1,8 +1,10 @@
 ---
-title: Hello Haskell !
+slug: heelo-haskell
+title: Hello Haskell!
 date: 2017-04-02 21:25:20
+authors: cyhan
 tags:
-  - Haskell
+- Haskell
 ---
 
 本来我只是去知乎上找一个大佬 [@雾雨魔理沙](https://www.zhihu.com/people/marisa.moe) 的Github
@@ -14,7 +16,6 @@ tags:
 >—— [阅千人而惜知己](https://www.zhihu.com/question/27355585/answer/36405568)
 
 <!-- truncate -->
------
 
 
 >禅宗haskell
