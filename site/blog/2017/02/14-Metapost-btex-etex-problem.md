@@ -1,10 +1,16 @@
 ---
+slug: metapost-btex-etex-problem
 title: Metapost btex etex problem
 date: 2017-02-14 21:07:03
+authors: cyhan
 tags:
 - bug or typo?
 - Metapost
 ---
+
+metapost: Unable to make mpx file
+
+<!-- truncate -->
 
 ### ref
 - [要被metapost的Unable to make mpx file 整崩溃了。 - ctex.org](http://bbs.ctex.org/forum.php?mod=viewthread&tid=152699)
