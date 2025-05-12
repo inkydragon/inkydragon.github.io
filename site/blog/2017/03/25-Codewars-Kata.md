@@ -1,17 +1,21 @@
 ---
+slug: 2017-codewars-Kata
 title: Codewars' Kata
 date: 2017-03-25 20:18:23
-categories:
-  - Programming
+authors: cyhan
 tags:
-  - Python
-  - Ruby
+- Codewars
+- Programming
+- Python
+- Ruby
 ---
+
 看到 [Codewars](www.codewars.com/r/S2zJGQ) oj类似物，不过可以看到详细的报错，并在AC一次后看到别人的答案
 
 开坑记录一下有趣的题, 顺便采用新结构 [堆栈类似物]
 
 <!-- truncate -->
+
 [我的解题集](https://www.codewars.com/users/0u0/completed_solutions)
 
 ### 1ku
@@ -245,7 +249,7 @@ Returns a copy of str with leading and trailing whitespace removed.
 [Take a Number And Sum Its Digits Raised To The Consecutive Powers And ....¡Eureka!!](https://www.codewars.com/kata/5626b561280a42ecc50000d1)
 
 GET：
-- 知道了`enumerate` <- 不记得枚举，最后写了个循环
+- 知道了 `enumerate` `<-` 不记得枚举，最后写了个循环
 
 My Solution - Reduce ver
 ``` python
@@ -273,7 +277,7 @@ def sum_dig_pow(a, b):
 
 ### 7ku
 
-a.map{|arr| arr.map{|a| avg = a.reduce(:+)./3; [avg, avg, avg] }}
+`a.map{|arr| arr.map{|a| avg = a.reduce(:+)./3; [avg, avg, avg] }}`
 
 [Ones and Zeros](https://www.codewars.com/kata/578553c3a1b8d5c40300037c)
 
