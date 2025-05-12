@@ -1,5 +1,12 @@
 # Git 清理仓库大文件
 
+参考
+- [How can I find/identify large commits in Git history? - Stack Overflow](https://stackoverflow.com/questions/10622179/how-can-i-find-identify-large-commits-in-git-history)
+- [BFG Repo-Cleaner by rtyley](https://rtyley.github.io/bfg-repo-cleaner/)
+    注意使用 JRE 11
+
+## 执行
+
 ```sh
 # clone repo
 git clone https://github.com/inkydragon/inkydragon.github.io.git
