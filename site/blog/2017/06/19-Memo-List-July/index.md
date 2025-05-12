@@ -1,11 +1,10 @@
 ---
-title: Memo List @July
+slug: 2017-jul-memo-list
+title: Memo List July
 date: 2017-06-29 22:50:56
-categories:
+authors: cyhan
 tags:
   - Memo List
-description:
-  备忘&开坑记录
 ---
 
 反正经常开坑不填，为了保持版面整洁，先在Memo里开坑，待填的差不多了再单独拿出去。
@@ -15,7 +14,7 @@ description:
 
 [2017-07-30 17:46:32]
 
-# Linux内核分析与实现
+## Linux内核分析与实现
 
 - [天极网---服务器专栏](http://www.yesky.com/20010813/192098.shtml)
 - [linux 0.11 bootsect.s中的BIOS部分解读 - 行者无疆的专栏 - CSDN博客](http://blog.csdn.net/suppercoder/article/details/18703903)
@@ -29,9 +28,9 @@ description:
   操作系统原理与实现
 
 
-## ULK 2014
+### ULK 2014
 
-### hw1
+#### hw1
 
 1. 阅读至少2本操作系统相关书籍，
   - 给出这些书中关于操作系统的定义，要列出出处。
@@ -98,17 +97,16 @@ ref；
   以上两个bug 互相关联
 
 附 dmesg-log
-{% asset_link dmesg-err.txt dmesg error log %}
-
+[dmesg-err.txt](./dmesg-err.txt)
 
 
 
 ---
 
 
-# cis 914
+## cis 914
 
-## 01-intro Haskell 入门
+### 01-intro Haskell 入门
 
 推荐阅读：
 【en】
@@ -122,7 +120,7 @@ ref；
 - [Real World Haskell 中文版 — Real World Haskell 中文版](http://cnhaskell.com/), 第1章和第2章
 
 
-### 什么是 Haskell
+#### 什么是 Haskell
 
 Haskell 的特点：
 
@@ -131,7 +129,7 @@ Haskell 的特点：
 - 惰性求值 (Lazy)
 - 静态类型 (Statically typed)
 
-### Themes
+#### Themes
 
 三个关注的方面
 
@@ -144,7 +142,7 @@ Haskell 的特点：
 
 [2017-07-15 22:02:13]
 
-# Some Note for FreeCodeCamp
+## Some Note for FreeCodeCamp
 
 当你遇到困惑不知道该怎么办，永远记住:Read-Search-Ask。
 
@@ -152,7 +150,7 @@ Haskell 的特点：
 - Search Google
 - Ask for help
 
-# HTML 5 & CSS
+## HTML 5 & CSS
 
 **Say Hello to HTML Element**
 
@@ -189,7 +187,7 @@ p是英文paragraph段落的缩写，经常被用来创建一个段落.
 
 样式的属性多达几千个，但别担心，按照80-20原则，常用的也就几十个，你完全可以掌握它。
 
-当你键入<h2 style="color: red">CatPhotoApp</h2>，你就给h2元素添加了inline style(内联样式)。
+当你键入 `<h2 style="color: red">CatPhotoApp</h2>`，你就给h2元素添加了inline style(内联样式)。
 
 内联样式是为元素添加样式的最简单有效的方式，但是更易于维护的方式是使用层叠样式表CSS（Cascading Style Sheets）。
 
@@ -362,12 +360,12 @@ a元素，也叫anchor（锚点）元素，既可以用来链接到外部地址�
 <img src="www.your-image-source.com/your-image.jpg" alt="your alt text">
 ```
 
-## List
+### List
 **Create a Bulleted Unordered List**
 
 HTML有一个特殊元素，用于创建unordered lists（无序列表）, 或带项目符号的列表。
 
-无序列表以<ul>元素开始，并包含一个或多个<li>元素。
+无序列表以 `<ul>` 元素开始，并包含一个或多个 `<li>` 元素。
 
 例如：
 ``` html
@@ -394,7 +392,7 @@ HTML有一个特殊元素，用于创建ordered lists（有序列表）, 或数�
 ```
 将创建一个包含"Garfield"和"Sylvester"的数字编号列表。
 
-## Form, Button and Checkboxes
+### Form, Button and Checkboxes
 **Create a Text Field**
 
 现在让我们来创建一个`form`(表单)。
@@ -490,7 +488,7 @@ Text input(文本输入框)是用来获得用户输入的绝佳方式。
 <label><input type="checkbox" name="personality" checked> Loving</label>
 ```
 
-## Div
+### Div
 **Nest Many Elements within a Single Div Element**
 
 `div`元素，也被称作division(层)元素，是一个盛装其他元素的通用容器。
@@ -527,13 +525,13 @@ Text input(文本输入框)是用来获得用户输入的绝佳方式。
 
 声明一个叫`cat-photo-element`的ID选择器 ，并设置背景色为绿色。：
 ``` css
-#cat-photo-element {
+##cat-photo-element {
   background-color: green;
 }
 ```
 注意：在你的 `style` 元素内部，定义类选择器必须添加 . 为前缀，定义ID选择器必须添加 `#` 为前缀。
 
-## padding, margin and border
+### padding, margin and border
 **Adjusting the Padding of an Element**
 
 你可能早已经注意到了这点，所有的 HTML 元素本质上是小的矩形块，代表着某一小块区域。有三个影响HTML元素布局的重要属性：`padding(内边距)`、`margin(外边距)`、`border(边框)`。
@@ -576,7 +574,7 @@ margin: 10px 20px 10px 20px;
 这四个值以顺时针方式排列：顶部、右侧、底部、左侧，简称：`上右下左`。
 
 
-# css
+## css
 
 **Style the HTML Body Element**
 
@@ -631,7 +629,7 @@ body {
 - [简体中文 zh-cn](https://learnyoua.haskell.sg/content/zh-cn/)
 - [繁體中文 zh-tw](https://learnyoua.haskell.sg/content/zh-tw/)
 
-# 01 [introduction](http://learnyouahaskell.com/introduction)
+## 01 [introduction](http://learnyouahaskell.com/introduction)
 
 - Hakell 是一门 *纯粹函数式编程语言 (purely functional programming language)*
   无 *副作用 (side effect)*
@@ -639,13 +637,13 @@ body {
 - Haskell 是 *静态类型 (statically typed)* 的
   支持 *自动类型推导 (tyoe inference)*
 
-## WinGHCi
+### WinGHCi
 
 在GHCi中在载入(`:load`/`:l`)文件后，若更改了源文件要记得重新加载源文件(`:reload`/`:r`)
 
-# 02 [starting out](http://learnyouahaskell.com/starting-out)
+## 02 [starting out](http://learnyouahaskell.com/starting-out)
 
-## Ready, set, go!
+### Ready, set, go!
 
 GHCi的提示符默认是`Preload`可以通过`:set prompt "ghci>"`修改成你想要的形式
 
@@ -782,7 +780,7 @@ ghci> succ (9 * 10)
 
 haskell 中的函数调用不需要括号
 
-## Baby's first functions
+### Baby's first functions
 
 此节至本章末尾的函数定义：
 
@@ -794,7 +792,7 @@ ref: [02-starting out.lhs](//)
 - 首字母大写的函数是不允许的
 - 常量(函数)不可修改
 
-## An intro to lists
+### An intro to lists
 
 ** lists, strings and list comprehensions**
 
@@ -978,12 +976,12 @@ ghci> init [5,4,3,2,1]
 [5,4,3,2]
 ```
 
-## Texas ranges
+### Texas ranges
 
 
-## I'm a list comprehension
+### I'm a list comprehension
 
-## Tuples
+### Tuples
 
 ----
 
@@ -991,13 +989,13 @@ ghci> init [5,4,3,2,1]
 测试 haskell 高亮以及 `pandoc` `lhs`转`md`效果
 
 ```
-# 写成这样会显示`lhs`中的`>`。 ↓↓↓↓↓
+## 写成这样会显示`lhs`中的`>`。 ↓↓↓↓↓
 pandoc -f markdown+lhs -t html+lhs -o 1.html '.\10.2-Identity Monad.lhs'
 
 pandoc -f markdown+lhs -t markdown -o 1.md '.\10.2-Identity Monad.lhs'
 pandoc -f markdown -t html -o 2.html 1.md
 ```
-## 10.2 Identity Monad
+### 10.2 Identity Monad
 
 为避免与 `Prelude`及`GHC.Base`里面预定义的函数冲突，加上以下几行
 
@@ -1009,7 +1007,7 @@ pandoc -f markdown -t html -o 2.html 1.md
 import Prelude hiding ((>>=), Monad, Identity)
 ```
 
-### 10.2.1 最基本的Monad定义
+#### 10.2.1 最基本的Monad定义
 
 ``` haskell
 -- typeclass Monad
@@ -1029,7 +1027,7 @@ class Monad m where
 -   `return`函数将一个值`a`映射为`Monad a`
 -   `(>>=)`运算符将连续的、从左至右的运算串联起来
 
-### 10.2.2 Monad.Identity
+#### 10.2.2 Monad.Identity
 
 下面定义一个最简单的Monad——Identity Monad(单位元Monad)
 
@@ -1043,7 +1041,7 @@ instance Monad Identity where
   (Identity m) >>= k = k m
 ```
 
-### 10.2.3 (|&gt;)
+#### 10.2.3 (|&gt;)
 
 在讨论高阶函数时，为了把参数写在函数名的前面，定义了一个中缀运算符`(|>)`
 
@@ -1072,7 +1070,7 @@ pandoc转化有点小问题，代码段头会多出一段，需要手工替换
 
 - [老码识途 (豆瓣)](https://book.douban.com/subject/19930393/)
 
-## 1.1.1 机器码
+### 1.1.1 机器码
 
 ``` c
 int gi;
