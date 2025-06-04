@@ -266,7 +266,7 @@ NVDA 会将您视为正在移动到“文档”的不同部分。
 ## 译注
 
 译自 Joseph Lee - [The Inside Story of NVDA: the anatomy of an NVDA object][1]
-
+(2022-12-28)
 
 [1]: https://nvda.groups.io/g/nvda/topic/95747818#101756
 [2]: https://nvda.groups.io/g/nvda/topic/95741248#msg101742
