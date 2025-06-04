@@ -5,7 +5,8 @@ authors: [Joseph, cyhan]
 tags: [nvda-internals, 译文]
 ---
 
-这是关于 NVDA 对象的三部分系列的最后一部分。
+本文为[《内幕故事》][1]系列英文译文的第七篇，也是关于 NVDA 对象的三部曲的最后一部分。
+后文中的“我”指 Joseph Lee。
 
 对于最近加入我们的朋友：欢迎来到“NVDA 内幕”系列，
 一位经验丰富的 NVDA 开发人员将带您揭秘 NVDA 屏幕阅读器的内部工作原理。
@@ -147,7 +148,8 @@ Joseph
 
 ## 译注
 
-译自 Joseph Lee - [The Inside Story of NVDA: API and overlay classes][1]
+译自 Joseph Lee - [The Inside Story of NVDA: API and overlay classes][2]
 
 
-[1]: https://nvda.groups.io/g/nvda/topic/96236605#102447
+[1]: https://nvdacn.com/index.php/tag/NVDA-%E5%86%85%E5%B9%95%E6%95%85%E4%BA%8B/
+[2]: https://nvda.groups.io/g/nvda/topic/96236605#102447

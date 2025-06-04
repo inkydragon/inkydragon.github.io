@@ -5,6 +5,8 @@ authors: [Joseph, cyhan]
 tags: [nvda-internals, 译文]
 ---
 
+本文为[《内幕故事》][1]系列英文译文的第八篇。后文中的“我”指 Joseph Lee
+
 另一篇内幕故事的帖子更新，这次回答了一个关于拼写错误蜂鸣声的问题，原问题已被锁定。
 
 “内幕故事”系列文章详细介绍了 NVDA 的内部工作原理。
@@ -16,7 +18,7 @@ tags: [nvda-internals, 译文]
 （或者像 Reddit 上的人们所说的那样，是 AMA）。
 有时这些文章可能会有点复杂，所以我会尽力简化它。
 
-几天前， 一位会员询问 [NVDA 是否可以检测 Microsoft PowerPoint 中的拼写错误][2] ，答案是否定的。
+几天前， 一位会员询问 [NVDA 是否可以检测 Microsoft PowerPoint 中的拼写错误][3] ，答案是否定的。
 但为什么 NVDA 在编写或查看幻灯片时无法检测拼写错误呢？
 事实证明，这取决于应用程序是否愿意将此类信息提供给 NVDA，从而允许 NVDA 检测格式标记和其他文本信息。
 NVDA 中包含一个名为“可编辑文本”的模块。
@@ -91,9 +93,10 @@ Joseph
 
 ## 译注
 
-译自 Joseph Lee - [The Inside Story of NVDA: bleep, spelling error (2021-02-26)][1]
+译自 Joseph Lee - [The Inside Story of NVDA: bleep, spelling error (2021-02-26)][2]
 截至2025年6月，本文是《内幕故事》的最后一篇文章。
 
 
-[1]: https://nvda.groups.io/g/nvda/topic/97259430#103929
-[2]: https://nvda.groups.io/g/nvda/topic/97219888#msg103867
+[1]: https://nvdacn.com/index.php/tag/NVDA-%E5%86%85%E5%B9%95%E6%95%85%E4%BA%8B/
+[2]: https://nvda.groups.io/g/nvda/topic/97259430#103929
+[3]: https://nvda.groups.io/g/nvda/topic/97219888#msg103867
