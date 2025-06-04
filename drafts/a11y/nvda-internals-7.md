@@ -149,7 +149,7 @@ Joseph
 ## 译注
 
 译自 Joseph Lee - [The Inside Story of NVDA: API and overlay classes][2]
-
+(2023-01-13)
 
 [1]: https://nvdacn.com/index.php/tag/NVDA-%E5%86%85%E5%B9%95%E6%95%85%E4%BA%8B/
 [2]: https://nvda.groups.io/g/nvda/topic/96236605#102447

@@ -94,7 +94,9 @@ Joseph
 ## 译注
 
 译自 Joseph Lee - [The Inside Story of NVDA: bleep, spelling error (2021-02-26)][2]
-截至2025年6月，本文是《内幕故事》的最后一篇文章。
+(2023-02-27)
+
+- 截至2025年6月，本文是《内幕故事》的最后一篇文章。
 
 
 [1]: https://nvdacn.com/index.php/tag/NVDA-%E5%86%85%E5%B9%95%E6%95%85%E4%BA%8B/
