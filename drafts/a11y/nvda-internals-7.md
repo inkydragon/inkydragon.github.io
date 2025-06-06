@@ -13,7 +13,7 @@ tags: [nvda-internals, 译文]
 
 <!-- truncate -->
 
-到目前为止，我们已经讨论了[对象名称与角色]和 [NVDA 对象的解剖]。
+到目前为止，我们已经讨论了[对象名称与角色][2]和 [NVDA 对象的解剖][3]。
 本文将讨论 API 和覆盖类，并对 NVDA 对象进行一些评论。
 我可能会稍微扩展一下，并讨论一两个行为类，并且在未来的文章中可以详细介绍进度条输出和建议宣告
 （关于各种 NVDA 行为类，如表格导航、对话框、进度条等的讨论将需要一篇完整的文章）。
@@ -23,7 +23,7 @@ tags: [nvda-internals, 译文]
 
 NVDA 对象是单个 GUI 控件的抽象（理想化）表示。
 NVDA 对象本身不会为您提供有用的信息，也不会提供帮助您与给定控件有效交互的方法。
-因此，它依赖于更具体的实现，例如辅助功能 API 对象，来提供诸如对象导航、焦点和前台宣告等功能背后的实际机制。
+因此，它依赖于更具体的实现，例如无障碍 API 对象，来提供诸如对象导航、焦点和前台宣告等功能背后的实际机制。
 在讨论 NVDA 对象的构造时，我展示了一个“抽象类”的示例 —— NVDA 如何通过各种方式获取对象位置
 （展示了三种方式：基础 NVDA 对象、IAccessible 和 UIA），最后我展示了 NVDA 对象的类继承树。
 如果您想了解更多关于我刚才讨论的内容，请点击上面的“NVDA 对象解剖”链接
@@ -54,10 +54,10 @@ API、行为和覆盖类可以被视为 NVDA 基础对象之上的层。
 这是必要的，因为如果没有窗口句柄，NVDA 将会：
 
 - 无法区分 GUI 控件
-- 无法创建或与辅助功能 API 及其生成的 API 类进行交互（例如 IAccessible）
+- 无法创建或与无障碍 API 及其生成的 API 类进行交互（例如 IAccessible）
 
 除了基础窗口对象之外，NVDA 还附带了一系列窗口对象，用于处理诸如 Excel 之类的操作。
-这些对象不一定使用辅助功能 API 来完成各种任务——需要辅助功能 API 的对象被分组到相应的 API 目录中。
+这些对象不一定使用无障碍 API 来完成各种任务——需要无障碍 API 的对象被分组到相应的 API 目录中。
 窗口对象主要依靠诸如窗口句柄和类名之类的属性来告知 NVDA 它正在处理的控件类型。
 
 紧邻 NVDA 基础对象之上的另一个类（或一组类）是行为。
@@ -75,29 +75,31 @@ API、行为和覆盖类可以被视为 NVDA 基础对象之上的层。
 这些类代表各种 API 及其支持的控件，包括 MSAA/IAccessible (`NvDAObjects.IAccessible.IAccessible`)、
 Java Access Bridge (`NVDAObjects.JAB.JAB`) 和 UI Automation (`NVDAObjects.UIA.UIA`)。
 如上所述，这些类需要窗口句柄才能正常运行，因此它们继承自基窗口类。
-这些 API 类的作用是通过提供名称、角色、描述以及其他属性和方法的具体实现，来补充基 NVDA 对象，并参考实际的辅助功能 API 特性。
+这些 API 类的作用是通过提供名称、角色、描述以及其他属性和方法的具体实现，来补充基 NVDA 对象，并参考实际的无障碍 API 特性。
 （请记住，由于基 NVDA 对象是抽象类，因此许多属性和方法会显示“未实现”）
 定义后，API 类将为 NVDA 提供一种处理由该 API 支持的控件的方法，并提供供覆盖类（如下所述）使用的常用服务。
+
 例如，NVDA 获取控件标签（名称）的方式在 IAccessible 和 UIA 之间有所不同，
 并且任何 UIA 类都可以在需要时使用 UIA 方式查找控件标签，而无需定义自己的方式
 （因为基本 UIA NVDA 对象完成了繁重的工作；您可以覆盖如何在覆盖类中“定义”标签）。
 API 类在大多数情况下并不打算被直接使用 —— 在大多数情况下，人们会根据控件被视为的 NVDA 对象的类型从这些类中继承
-（例如，如果处理 IAccessible 对象，则会创建一个从基本 IAccessible 类继承的类）；
-使用这些 API 类的唯一时间是：如果您需要编辑 NVDA 源代码，以向这些类添加可由继承或覆盖类使用的功能。
+（例如，如果处理 IAccessible 对象，则会创建一个从 IAccessible 基类继承的类）；
+直接使用这些 API 类的唯一情形是：如果您需要编辑 NVDA 源代码，以向这些类添加可由继承或覆盖类使用的功能。
 
 ### 覆盖类
 
-下一层（也是最后一层）是覆盖类，它们既内置于 NVDA，也由许多 NVDA 插件定义，
-其中许多插件源自具体的辅助功能 API 类。
+下一层（也是最后一层）是覆盖类，既有内置于 NVDA 的，也有由 NVDA 插件定义的，
+其中许多插件源自具体的无障碍 API 类。
 顾名思义，覆盖类是一种“自定义覆盖”，旨在帮助 NVDA 应对特定情况。
-例如，名为 `SysListView32` （派生自 IAccessible）的覆盖类在任务管理器等位置提供表格导航命令，
-名为 `SuggestionsList` （来自 UIA）的类会在 Windows 10/11 设置等应用中公布建议计数。
+
+例如，名为 `SysListView32` 的覆盖类（派生自 IAccessible），在任务管理器等位置提供表格导航命令，
+名为 `SuggestionsList` 的类（来自 UIA）会在 Windows 10,11 设置等应用中宣告建议计数。
 NVDA 之所以非常灵活，是因为插件可以定义自己的覆盖类：
 一个很好的例子就是在安装 Mozilla 应用增强插件后，NVDA 如何与各种 Mozilla 应用和控件协同工作。
 
 从技术角度来说，覆盖类是一个自定义或扩展的 API 类，提供自定义的方法来执行某些操作。
 NVDA 所关注的只是它能够完成其工作，例如播报标签、响应事件以及执行各种操作，
-而无需了解底层发生了什么，而这正是 NVDA 对象的用户体验方面。
+而无需了解底层发生了什么，而这是 NVDA 对象的用户体验方面。
 在代码层面，覆盖类可以扩展或替换基类提供的服务，
 无论基类是 API 类、行为类，还是至少一个插件中的 NVDA 基类对象。
 换句话说，覆盖类可以塑造 NVDA 呈现给用户的体验，如果插件定义了自己的覆盖类，则更是如此。
@@ -109,48 +111,54 @@ NVDA 所关注的只是它能够完成其工作，例如播报标签、响应事
 ## 示例：StationPlaylist 插件
 
 为了展示覆盖类在塑造 NVDA 行为和用户体验方面的强大功能，
-我们来看一下 StationPlaylist 插件，以及 NVDA 如何在曲目列表中提供表格导航命令。
+我们来看一下 StationPlaylist 插件，以及 NVDA 如何在歌曲列表中提供表格导航命令。
+
 作为此插件的一部分，定义了一个 StationPlaylist Studio (`splstudio`) 的应用模块，
-该应用模块内部包含一个覆盖类，它提供了曲目项的抽象视图。
-该曲目项类 (`appModules.splstudio.SPLTrackItem`) 派生自一长串 IAccessible 类：
+该应用模块内部包含一个覆盖类，它提供了歌曲项的抽象视图。
+该歌曲项类 (`appModules.splstudio.SPLTrackItem`) 派生自一长串 IAccessible 类：
 
 - SysListView32 列表项（`NVDAObjects.IAccessible.syslistview32.ListItem`），
   为某些列表提供表格导航命令，由以下功能提供支持：
 - 伪表格行和导航（`NVDAObjects.behaviors.RowWithFakeNavigation`），
-  为不是真正表格的行定义表格导航命令（就 NVDA 第一眼能获取的的部分），但这还不是全部：
+  为不是真表格中的行，定义表格导航命令（这里指 NVDA 第一次能获取的的部分，后续还可以动态加载更多）。
+  但这还不是全部：
 - 基本 IAccessible/MSAA 服务（`NVDAObjects.IAccessible.IAccessible`）
 - 窗口（`NVDAObjects.window.Window`）
 - 基本 NVDA 对象（`NVDAObjects.NVDAObject`）
 
-最终，SPL 轨道列表中的表格导航命令来自 `sysListView32.ListItem`。
-但是，SPL 应用模块中的轨道项类会覆盖某些用于获取列内容的方法，从而改变 NVDA 获取单元格内容的方式。
-所有这些都由来自插件的单个覆盖类处理
-（现在您看到了覆盖类的强大之处；给插件作者的忠告：您的代码会在一定程度上影响用户对 NVDA 的看法）。
+最终，SPL 歌曲列表中的表格导航命令来自 `sysListView32.ListItem` 类。
+但是，SPL 应用模块中的歌曲项类会覆盖某些用于获取列内容的方法，从而改变 NVDA 获取单元格内容的方式。
+所有这些都由来自插件的单个覆盖类处理。
+
+现在您看到了覆盖类的强大之处；给插件作者的忠告：您的代码会在一定程度上影响用户对 NVDA 的看法。
 或者，简单地说，覆盖类的作用是改变 NVDA 的行为以适应当前情况，而这一切都归功于抽象、继承和多态性。
 
 > 译者注：
+> - 作者在这里列出了一堆继承的类，实际上该歌曲类直接继承了 `sysListView32.ListItem` 类。
+>   其他列出的类，都是由 `ListItem` 间接继承的。
+>
 > - StationPlaylist 插件目前仍在维护。当前的维护者是 Joseph Lee，即本文作者。
 > - [`SPLTrackItem` 类的定义代码](https://github.com/ChrisDuffley/stationPlaylist/blob/25.06/addon/appModules/splstudio/__init__.py#L124)
 
 
 ## 特殊情况
 
-最后，NVDA 如何了解“特殊情况”？
-这是在构建一个 NVDA 对象来表示您正在使用的控件时完成的。
+最后，NVDA 如何处理“特殊情况”？这主要发生在 NVDA 对象的构造时。
 
 首先，NVDA 将确定需要使用哪个 API 类。
-然后，NVDA 将确定它是否是它所知道的对象（通过调用 `findOverlayClasses` 来查找所选 API 的内置覆盖类），
-接着询问代表该控件所属应用程序的应用程序模块，然后遍历已加载的全局插件，看看它们是否知道该对象
+然后，NVDA 将确定这是否是已知的对象
+（通过调用 `findOverlayClasses` 来查找所选 API 的内置覆盖类），
+接着询问代表该控件所属应用程序的应用程序模块，然后遍历已加载的全局插件，看看插件是否知道该对象
 （对于应用程序模块和全局插件，将调用 `chooseNVDAObjectOverlayClasses`）。
 NVDA 还可以询问应用程序模块是否需要进一步自定义对象，例如使用不同的角色（`event_NVDAObject_init`）。
 如果生成的对象是一个覆盖类（而不是 API 类），则可以将其视为“特殊情况”，
-否则将直接使用辅助功能 API 提供的服务，因为生成的 NVDA 对象是一个纯 API 类（没有自定义）。
+否则将直接使用无障碍 API 提供的服务，因为生成的 NVDA 对象是一个纯 API 类（没有自定义化）。
 
 
 ## 总结
 
 NVDA 对象系列文章共分为三部分，涵盖了 NVDA 对象的概念、工作原理、内部结构以及如何自定义。
-本系列文章的关键点在于，NVDA 竭尽全力在各种辅助功能 API 中提供通用的用户体验，并且始终考虑各种特殊情况。
+本系列文章的关键点在于，NVDA 竭尽全力在各种无障碍 API 中提供通用的用户体验，并且始终考虑各种特殊情况。
 从某种程度上来说，了解 NVDA 对象、其结构以及覆盖类的用途，是创建高效插件所需的最低知识要求，特别是在设计应用模块时。
 
 希望这有所帮助。
@@ -169,10 +177,13 @@ Joseph
 
 ## 译注
 
-译自 Joseph Lee - [The Inside Story of NVDA: API and overlay classes][2]
+译自 Joseph Lee - [The Inside Story of NVDA: API and overlay classes][4]
 (2023-01-13)
 
 - 代码与开发文档均使用指向特定 git 提交的版本，这样可以保证不会因版本更新而失效。
 
-[1]: https://nvdacn.com/index.php/tag/NVDA-%E5%86%85%E5%B9%95%E6%95%85%E4%BA%8B/
-[2]: https://nvda.groups.io/g/nvda/topic/96236605#102447
+
+  [1]: https://nvdacn.com/index.php/tag/NVDA-%E5%86%85%E5%B9%95%E6%95%85%E4%BA%8B/
+  [2]: https://nvdacn.com/index.php/archives/1310/
+  [3]: https://nvdacn.com/index.php/archives/1313/
+  [4]: https://nvda.groups.io/g/nvda/topic/96236605#102447
