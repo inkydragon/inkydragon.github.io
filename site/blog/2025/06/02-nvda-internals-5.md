@@ -117,7 +117,7 @@ NVDA 会执行一系列测试，来确定与给定控件交互时要使用哪个
 1. 桌面图标会触发（引发）系统焦点事件。
 2. NVDA 识别焦点事件，并确定它正在处理的控件类型。
 3. 经过一些测试，NVDA 发现它正在与 MSAA 控件配合使用。
-   因此它构建了一个 `IAccesible` NVDA 对象（`NVDAObjects.IAccessible.IAccessible`）。
+   因此它构建了一个 `IAccessible` NVDA 对象（`NVDAObjects.IAccessible.IAccessible`）。
    对于 MSAA 对象来说，一个关键属性是 `IAccessibleObject`，因此 NVDA 也会获取到它的指针。
 4. 即使它是一个 MSAA 对象，NVDA 也仅知道它是一个自定义的 MSAA 对象，还不知道他能做些什么。
    所以它调用 `NVDAObjects.IAccessible.IAccessible.findOverlayClasses` 方法来确定该做什么，
@@ -126,7 +126,7 @@ NVDA 会执行一系列测试，来确定与给定控件交互时要使用哪个
 5. 现在已经创建了一个合适的 MSAA NVDA 对象。
    NVDA 现在要求 `IAccessibleObject` 返回诸如名称和角色之类的属性。
    在 MSAA 中，`IAccessibleObject` 的 `accName` 属性保存控件名称属性，`accRole` 记录对象角色。
-   现在，我们可以分别从 IAccesible NVDA 对象类中定义的：`_get_name` 和 `_get_role` 属性获取方法中查询这些属性。
+   现在，我们可以分别从 IAccessible NVDA 对象类中定义的：`_get_name` 和 `_get_role` 属性获取方法中查询这些属性。
 6. 对于控制角色，需要执行额外的步骤，以便 NVDA 以友好的方式呈现角色。
    NVDA 的 MSAA API 处理程序（`IAccessibleHandler`）具有 MSAA 角色到 NVDA 角色的映射表，
    会查询该映射以返回“NVDA 角色”。
@@ -141,7 +141,7 @@ NVDA 会执行一系列测试，来确定与给定控件交互时要使用哪个
 与 MSAA 控件角色一样，UIA API 处理程序 (`UIAHandler`) 包含 UIA 控件类型到 NVDA 角色的映射表。
 
 无论使用哪种无障碍 API，有两个事情始终保持不变：
-控件属性（如名称和角色）由应用程序开发人员确定，并且同一份源代码可以处理各种无障碍 API。
+首先，控件属性（如名称和角色）由应用程序开发人员确定；其次，同一份源代码可以处理各种无障碍 API。
 例如，无论最终调用哪个无障碍 API 指针和属性，从 NVDA Python 控制台调用 `focus.name` 都将返回控件标签。
 （如 `IAccessibleObject` 的 `accName` 属性，和 `UIAElement` 的 `name` 属性），
 标签文本就是应用程序开发人员定义的控件信息，开发人员的工作是将此信息提供给无障碍 API，以便屏幕阅读器和用户可以确定控件是什么。
