@@ -1,3 +1,0 @@
-- Is it appropriate to/how do I overload the interpolation operator $ for my type?
-- There's no overload for this generally, but if you mean string interpolation, you can overload string(::MyType)
-- Oh, maybe repr?
