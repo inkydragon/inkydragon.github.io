@@ -1,0 +1,41 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			/* ---- for julia ---------------- */
+			// Makefile Make.inc
+			"Makefile": "makefile",
+			"Make.inc": "makefile",
+			"Make.user": "makefile",
+			"Make.user.*": "makefile",
+			"*.mk": "makefile",
+			"*.make": "makefile",
+			"*.version": "makefile",
+			// sh
+			"*.sh": "shellscript",
+			// Julia
+			"*.jl": "julia",
+			// lsp  flisp.boot
+			"*.boot": "scheme",
+			"*.scm": "scheme",
+			"*.lsp": "scheme",
+			// C
+			"trampolines_*.S": "c",
+			"_setjmp.*.S": "c",
+			"jl_exported_*.inc": "c",
+			"common_symbols*.inc": "c",
+			"htable.inc": "c",
+			
+			"setjmp.h": "c",
+			"pthread.h": "c",
+			"valgrind.h": "c",
+			"julia_internal.h": "c",
+			"platform.h": "c"
+			/* ---- for julia END ------------ */
+		}
+	}
+}

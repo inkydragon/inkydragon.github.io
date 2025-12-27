@@ -1,0 +1,56 @@
+diff --git a/doc/make.jl b/doc/make.jl
+index 5028b89093..26113e490d 100644
+--- a/doc/make.jl
++++ b/doc/make.jl
+@@ -24,19 +24,40 @@ cd(joinpath(@__DIR__, "src")) do
+     Base.rm("stdlib"; recursive=true, force=true)
+     mkdir("stdlib")
+     for dir in readdir(STDLIB_DIR)
+-        sourcefile = joinpath(STDLIB_DIR, dir, "docs", "src")
++        sourcedir = joinpath(STDLIB_DIR, dir, "docs", "src")
++        if !isdir(sourcedir)
++            println("ignore dir: $(sourcedir)")
++            continue
++        end
++        
+         if dir in EXT_STDLIB_DOCS
+-            sourcefile = joinpath(sourcefile, "basedocs.md")
+-        else
+-            sourcefile = joinpath(sourcefile, "index.md")
++            full_path = joinpath(sourcedir, "basedocs.md")
++            if isfile(full_path)
++                targetfile = joinpath("stdlib", dir * ".md")
++                push!(STDLIB_DOCS, (stdlib = Symbol(dir), targetfile = targetfile))
++                if Sys.iswindows()
++                    cp_q(full_path, targetfile)
++                else
++                    symlink_q(full_path, targetfile)
++                end
++            end
++            continue
+         end
+-        if isfile(sourcefile)
+-            targetfile = joinpath("stdlib", dir * ".md")
+-            push!(STDLIB_DOCS, (stdlib = Symbol(dir), targetfile = targetfile))
+-            if Sys.iswindows()
+-                cp_q(sourcefile, targetfile)
+-            else
+-                symlink_q(sourcefile, targetfile)
++        
++        for full_path in readdir(sourcedir, join=true)
++            if !endswith(full_path, r"\.md")
++                println("ignore file: $(full_path)")
++                continue
++            end
++            
++            if isfile(full_path)
++                targetfile = joinpath("stdlib", dir * ".md")
++                push!(STDLIB_DOCS, (stdlib = Symbol(dir), targetfile = targetfile))
++                if Sys.iswindows()
++                    cp_q(full_path, targetfile)
++                else
++                    symlink_q(full_path, targetfile)
++                end
+             end
+         end
+     end
