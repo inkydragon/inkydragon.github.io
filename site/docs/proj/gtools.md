@@ -8,6 +8,7 @@
 
 ## 开源
 
+- 7z
 - [WinMerge - You will see the difference…](https://winmerge.org/):
     WinMerge is an Open Source differencing and merging tool for Windows.
     WinMerge can compare both folders and files,
@@ -19,6 +20,9 @@
 - [Everything](https://www.voidtools.com/): Locate files and folders by name instantly.  
     Win 快速搜索文件
 - hugflash: Flash 拆包
+- Mail PassView v1.92:
+    Mail PassView is a small password-recovery tool that reveals the
+    passwords and other account details for the following email clients
 
 ## 商业软件
 
