@@ -1,3 +1,3 @@
 # Godot
 
-- [Godot 节点参考](/godot/node-reference.html)
+- [Godot 节点参考](https://inkydragon.github.io/godot/node-reference.html)
