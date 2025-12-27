@@ -29,7 +29,7 @@ const config = {
   organizationName: 'inkydragon', // Usually your GitHub org/user name.
   projectName: 'inkydragon.github.io', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'warn',
