@@ -7,6 +7,6 @@ updates:
     schedule:
       interval: "monthly"
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "site"
     schedule:
       interval: "monthly"
