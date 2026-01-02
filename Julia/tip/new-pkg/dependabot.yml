@@ -6,3 +6,10 @@ updates:
     schedule:
       # weekly, monthly
       interval: "monthly"
+  - package-ecosystem: "julia"
+    directories:
+      - "/"
+      - "/docs"
+      - "/test"
+    schedule:
+      interval: "monthly"
