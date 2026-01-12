@@ -126,7 +126,8 @@
 - harwell: 404
 - hence
 - `hompack`: The latest version of this package is HOMPACK90, in netlib at TOMS 777.
-- hpf
+- hpf: High Performance Fortran (HPF)
+  - http://hpff.rice.edu/
 - hypercube
 - ieeecss
 
