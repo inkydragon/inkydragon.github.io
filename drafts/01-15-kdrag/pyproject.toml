@@ -1,0 +1,16 @@
+[project]
+name = "01-15-kdrag"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "knuckledragger",
+]
+
+[tool.uv.sources]
+knuckledragger = { git = "https://github.com/philzook58/knuckledragger.git" }
+
+[dependency-groups]
+dev = [
+    "uv>=0.9.25",
+]
