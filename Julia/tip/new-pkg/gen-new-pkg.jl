@@ -4,23 +4,19 @@ using PkgTemplates
 
 # Template Plugins
 plugins = [
-    Git(;
-        # ignore=String[],
-        branch="main",
-        jl=true,  # add a .jl suffix to the remote URL.
-        # gpgsign=false,
-    ),
-    License(; name="MIT", destination="LICENSE"),
-    Tests(;
-        project=true,
-        # aqua=false,
-        # aqua_kwargs=NamedTuple(),
-        # jet=false,
+    # Tests(;  # [default]
+    #     project=false,
+    #     aqua=false,
+    #     aqua_kwargs=NamedTuple(),
+    #     jet=false,
+    # ),
+    Formatter(;
+        style="sciml"
     ),
 
     # CI
-    Dependabot(),
-    GitHubActions(; extra_versions=["lts", "nightly"],),
+    # Dependabot(),  # [default]
+    GitHubActions(; extra_versions=["lts", "1", "nightly"],),
     Codecov(),
     Documenter{GitHubActions}(),
 ]
@@ -31,10 +27,11 @@ tpl = Template(;
     authors=["Chengyu HAN <cyhan.dev@outlook.com> and contributors"],
     # Package Options
     dir=".",
+    julia=v"1.6",
     # Template Plugins
     plugins=plugins,
     interactive=false,
 )
 
-tpl("PurePkgname.jl")
+tpl("Libm.jl")
 # julia --project=@script .\gen-new-pkg.jl
