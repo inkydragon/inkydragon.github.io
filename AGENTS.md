@@ -6,7 +6,7 @@
 
 这是一个**双用途仓库**：
 既是部署到 GitHub Pages 的 Docusaurus 博客站点（`site/` 为框架，`blog/` 和 `memo/` 为内容），
-也是个人思考工作区（`workspace/`、`drafts/`、`Julia/`、`.agents/`）。
+也是个人思考工作区（`workspace/`、`drafts/`、`.agents/`）。
 工作区内容（想法、草稿、skill 定义）是主要提交活动；博客站点是对外展示的产物。
 
 ## 博客站点（`site/`）
@@ -29,8 +29,8 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 - `archive/` —— 不再活跃维护的存档内容。
 - `cnblog-sync/` —— 同步内容到博客园的脚本。
 - `drafts/` —— 草稿技术笔记。部分会打磨后发布到 `blog/`。不会自动发布。
-- `Julia/` —— Julia 语言笔记，按主题组织。
 - `workspace/` —— 活跃工作区：研究方向脑暴、项目选择方法论、项目孵化。个人决策框架，非博客内容。
+- `ai-gen/` —— AI 生成内容（会被发布）。格式要求见 `.agents/ai-gen-conventions.md`。
 
 ## 内容工作流
 
@@ -61,7 +61,7 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 | `ci` | CI/CD 工作流 |
 | `ws` | 工作区（想法、方法论、项目孵化）——`workspace/` 的缩写 |
 | `draft` | 草稿技术笔记 |
-| `julia` | Julia 语言相关笔记 |
+| `research` | AI 生成的调研报告（`ai-gen/research/`） |
 | `skill` | `.agents/skills/` 下的 Agent Skill |
 | `meta` | 仓库基础设施（AGENTS.md、.gitignore 等） |
 
