@@ -55,7 +55,8 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 |-------|------|
 | `site` | 博客站点（Docusaurus 配置、主题、框架） |
 | `blog` | 博客文章（`blog/` 下的内容） |
-| `memo` | 备忘录（`memo/` 下的内容） |
+| `memo` | 备忘录（`memo/` 下不便归入子分类的通用内容，含 `memo/index.md`） |
+| `memo(…)` | 备忘录下的特定子目录，括号内为目录缩写或简称。详见下方「备忘录子 scope」 |
 | `deps` | 依赖更新（`site/package.json` 等） |
 | `ci` | CI/CD 工作流 |
 | `ws` | 工作区（想法、方法论、项目孵化）——`workspace/` 的缩写 |
@@ -65,6 +66,31 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 | `meta` | 仓库基础设施（AGENTS.md、.gitignore 等） |
 
 一个 commit 涉及多个 scope 时，用逗号分隔（如 `site, ci: ...`），或用更上层的 scope 概括。revert、merge 等特殊提交不强制遵循此格式。
+
+### 备忘录子 scope
+
+当修改限定在 `memo/` 下的特定子目录时，优先使用更具体的子 scope，格式为 `memo(<缩写>)`。缩写规则：
+
+- 取目录路径的最后一段（即主题名）作为缩写基础
+- 单个 `-` 连接的复合词可缩减首字母：`game-a11y` → `ga`，`sig-a11y` → `sa`
+- 普通单词可为前几个字母或全写：`archive` → `arc`，`proj` → `proj` 或省略
+- 缩写应保持可辨识，避免歧义
+
+常用示例：
+
+| 子 scope | 对应路径 | 说明 |
+|----------|----------|------|
+| `memo(arc)` | `memo/archive/` | 存档内容（含 `archive/` 下直接放置的 `.md` 页面） |
+| `memo(proj)` | `memo/proj/` | 项目备忘录（`proj/` 下不归属特定主题的 `.md` 页面） |
+| `memo(aeg)` | `memo/archive/aeg-dev/` | Aegisub 开发 |
+| `memo(jl)` | `memo/proj/julia/` | Julia 相关 |
+| `memo(ga)` | `memo/proj/game-a11y/` | 游戏无障碍 |
+| `memo(sa)` | `memo/proj/sig-a11y/` | 无障碍 SIG |
+| `memo(cactus)` | `memo/proj/cactus/` | 仙人掌计划 |
+
+当备忘录子页面只有一个（如 `memo/archive/3d.md`）或目录下多个文件同时修改时，直接使用其所属目录的 scope（如上表）。文件名不要作为 scope。
+
+当修改确实分散在 `memo/` 下的多个不相关子目录时，回到通用 `memo` scope。
 
 ### 为什么不用 Conventional Commits
 
