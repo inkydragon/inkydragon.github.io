@@ -51,7 +51,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: '../docs',
+          path: '../memo',
+          routeBasePath: 'memo',
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
           showLastUpdateTime: true,
@@ -136,7 +137,7 @@ const config = {
           // },
           {
             label: '备忘录',
-            to: '/docs/memo',
+            to: '/memo',
             position: 'left',
           },
           {
@@ -167,7 +168,7 @@ const config = {
             items: [
               {
                 label: '备忘录',
-                to: '/docs/memo',
+                to: '/memo',
               },
             ],
           },
