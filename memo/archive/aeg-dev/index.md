@@ -1,7 +1,8 @@
 # AegiSub
 
 - [TypesettingTools/Aegisub: Cross-platform advanced subtitle editor](https://github.com/TypesettingTools/Aegisub)
-- [Aegisub Dev](https://github.com/aeg-dev)
+- [Aegisub Dev](https://github.com/Aeg-dev)
+    2024-12-14: Aegisub 开发、ass 脚本模板
 
 ## 字幕制作流程
 
