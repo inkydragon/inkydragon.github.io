@@ -1,3 +1,8 @@
+---
+tags:
+- moonbit
+---
+
 # MoonBit
 
 - [moonbitlang.cn](https://www.moonbitlang.cn/) / 
