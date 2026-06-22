@@ -72,20 +72,20 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 当修改限定在 `memo/` 下的特定子目录时，优先使用更具体的子 scope，格式为 `memo(<缩写>)`。缩写规则：
 
 - 取目录路径的最后一段（即主题名）作为缩写基础
-- 单个 `-` 连接的复合词可缩减首字母：`game-a11y` → `ga`，`sig-a11y` → `sa`
-- 普通单词可为前几个字母或全写：`archive` → `arc`，`proj` → `proj` 或省略
+- 单个 `-` 连接的复合词可缩减首字母：`game-a11y` → `game`，`sig-a11y` → `a11y`
+- 普通单词可为前几个字母或全写：`archive` → `arch`，`proj` → `proj` 或省略
 - 缩写应保持可辨识，避免歧义
 
 常用示例：
 
 | 子 scope | 对应路径 | 说明 |
 |----------|----------|------|
-| `memo(arc)` | `memo/archive/` | 存档内容（含 `archive/` 下直接放置的 `.md` 页面） |
+| `memo(arch)` | `memo/archive/` | 存档内容（含 `archive/` 下直接放置的 `.md` 页面） |
 | `memo(proj)` | `memo/proj/` | 项目备忘录（`proj/` 下不归属特定主题的 `.md` 页面） |
 | `memo(aeg)` | `memo/archive/aeg-dev/` | Aegisub 开发 |
 | `memo(jl)` | `memo/proj/julia/` | Julia 相关 |
-| `memo(ga)` | `memo/proj/game-a11y/` | 游戏无障碍 |
-| `memo(sa)` | `memo/proj/sig-a11y/` | 无障碍 SIG |
+| `memo(game)` | `memo/proj/game-a11y/` | 游戏无障碍 |
+| `memo(a11y)` | `memo/proj/sig-a11y/` | 无障碍 SIG |
 | `memo(cactus)` | `memo/proj/cactus/` | 仙人掌计划 |
 
 当备忘录子页面只有一个（如 `memo/archive/3d.md`）或目录下多个文件同时修改时，直接使用其所属目录的 scope（如上表）。文件名不要作为 scope。
