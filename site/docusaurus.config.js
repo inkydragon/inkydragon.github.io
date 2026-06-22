@@ -51,16 +51,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: '../docs',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
+          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/',
           showLastUpdateTime: true,
           // KaTeX
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
         blog: {
+          path: '../blog',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -68,7 +70,7 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
+          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
