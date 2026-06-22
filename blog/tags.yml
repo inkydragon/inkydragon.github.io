@@ -109,3 +109,8 @@ Translation:
 Typesetting:
   label: Typesetting
   permalink: /typesetting
+
+moonlang:
+  label: MoonLang
+  permalink: /moonlang
+  description: MoonLang 编程语言
