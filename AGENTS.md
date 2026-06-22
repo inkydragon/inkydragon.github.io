@@ -14,8 +14,8 @@
 Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 详细说明见 `site/README.md`。
 
-- **开发**：`cd site && npm start`
-- **构建**：`cd site && npm run build`；本地预览：`npm run serve`
+- **开发**：`cd site && pnpm start`
+- **构建**：`cd site && pnpm build`；本地预览：`pnpm run serve`
 - **CI**：推送到 `main` 且变更涉及 `site/**`、`blog/**` 或 `docs/**` 时，触发 `.github/workflows/ci.yml` → 构建 → 部署到 GitHub Pages。
 - **Markdown**：支持 KaTeX 数学公式（`remark-math` + `rehype-katex`）。
 - **语言**：`zh-Hans`。

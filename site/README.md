@@ -5,9 +5,10 @@
 ## 开发
 
 ```bash
-npm start          # 启动开发服务器（热更新）
-npm run build      # 生产构建 → build/
-npm run serve      # 本地预览构建产物
+pnpm install       # 安装依赖
+pnpm start         # 启动开发服务器（热更新）
+pnpm build         # 生产构建 → build/
+pnpm run serve     # 本地预览构建产物
 ```
 
 ## 结构
@@ -40,4 +41,4 @@ site/
 
 ## CI / 部署
 
-推送 `main` 且变更涉及 `site/**` → [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) → `npm ci && npm run build` → 部署到 GitHub Pages。
+推送 `main` 且变更涉及 `site/**` → [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) → `pnpm install --frozen-lockfile && pnpm build` → 部署到 GitHub Pages。
