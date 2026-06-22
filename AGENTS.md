@@ -6,7 +6,7 @@
 
 这是一个**双用途仓库**：
 既是部署到 GitHub Pages 的 Docusaurus 博客站点（`site/` 为框架，`blog/` 和 `memo/` 为内容），
-也是个人思考工作区（`workspace/`、`drafts/`、`Julia/`、`cyhan-skill/`）。
+也是个人思考工作区（`workspace/`、`drafts/`、`Julia/`、`.agents/`）。
 工作区内容（想法、草稿、skill 定义）是主要提交活动；博客站点是对外展示的产物。
 
 ## 博客站点（`site/`）
@@ -23,11 +23,11 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 
 ## 工作区目录
 
-- `.claude/skills/` —— 指向 `cyhan-skill/` 的符号链接，使 Claude Code 能发现这些 skill。
+- `.claude/skills/` —— 指向 `.agents/skills/` 的符号链接，使 Claude Code 能发现这些 skill。
 - `.cyhan/` —— 个人环境配置（如 NVDA 屏幕阅读器集成）。
+- `.agents/` —— Claude Code 的 Agent Skill。详见 `.agents/skills/README.md`。
 - `archive/` —— 不再活跃维护的存档内容。
 - `cnblog-sync/` —— 同步内容到博客园的脚本。
-- `cyhan-skill/` —— Claude Code 的 Agent Skill。详见 `cyhan-skill/README.md`。
 - `drafts/` —— 草稿技术笔记。部分会打磨后发布到 `blog/`。不会自动发布。
 - `Julia/` —— Julia 语言笔记，按主题组织。
 - `workspace/` —— 活跃工作区：研究方向脑暴、项目选择方法论、项目孵化。个人决策框架，非博客内容。
@@ -62,7 +62,7 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 | `ws` | 工作区（想法、方法论、项目孵化）——`workspace/` 的缩写 |
 | `draft` | 草稿技术笔记 |
 | `julia` | Julia 语言相关笔记 |
-| `skill` | `cyhan-skill/` 下的 Agent Skill |
+| `skill` | `.agents/skills/` 下的 Agent Skill |
 | `meta` | 仓库基础设施（AGENTS.md、.gitignore 等） |
 
 一个 commit 涉及多个 scope 时，用逗号分隔（如 `site, ci: ...`），或用更上层的 scope 概括。revert、merge 等特殊提交不强制遵循此格式。
@@ -75,4 +75,4 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 
 ## Agent Skill
 
-`cyhan-skill/` 中的 skill 遵循 agentskills.io 格式。详见 `cyhan-skill/README.md`。
+`.agents/skills/` 中的 skill 遵循 agentskills.io 格式。详见 `.agents/skills/README.md`。
