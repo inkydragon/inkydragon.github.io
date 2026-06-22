@@ -43,6 +43,38 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 3. 涉及 `site/**` 的提交触发 CI → 构建 → 部署到 `cyhan.dev`。
 4. 博客文章支持 KaTeX 数学公式和语法高亮（Prism，GitHub 主题）。
 
+## 提交规范
+
+采用 Scope-Prefixed Commits：[scopedcommits.com](https://scopedcommits.com)。
+
+```
+<scope>: <描述>
+
+<scope> 是变更涉及的子系统或区域，而非变更类型（如 fix/feat）。
+描述本身即可传达变更性质——"修正登录超时未重试"不需要前缀 fix:。
+```
+
+### 本仓库的 scope
+
+| Scope | 含义 |
+|-------|------|
+| `site` | 博客站点（Docusaurus 配置、主题、发布文章） |
+| `deps` | 依赖更新（`site/package.json` 等） |
+| `ci` | CI/CD 工作流 |
+| `idea` | 研究想法、方法论、可行性分析 |
+| `draft` | 草稿技术笔记 |
+| `julia` | Julia 语言相关笔记 |
+| `skill` | `cyhan-skill/` 下的 Agent Skill |
+| `meta` | 仓库基础设施（AGENTS.md、.gitignore 等） |
+
+一个 commit 涉及多个 scope 时，用逗号分隔（如 `site, ci: ...`），或用更上层的 scope 概括。revert、merge 等特殊提交不强制遵循此格式。
+
+### 为什么不用 Conventional Commits
+
+- **scope 优先于 type**：看历史的人首先关心"改了什么区域"，而非"是 fix 还是 feat"。
+- **type 冗余**：好的描述已经传达了变更性质。
+- **不用于生成 changelog**：提交日志面向开发者，changelog 面向用户——两者受众不同，不应混用（[参考](https://sumnerevans.com/posts/software-engineering/stop-using-conventional-commits/)）。
+
 ## Agent Skill
 
 `cyhan-skill/` 中的 skill 遵循 agentskills.io 格式。详见 `cyhan-skill/README.md`。
