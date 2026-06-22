@@ -1,6 +1,7 @@
 ---
 slug: 2017-aug-memo-list
 title: Memo List Aug
+draft: true
 date: 2017-08-08 17:00:44
 authors: cyhan
 tags:

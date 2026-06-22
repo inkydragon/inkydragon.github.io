@@ -1,6 +1,7 @@
 ---
 slug: wordpress-vuln-env-setup-test-rest-api-content-injection-vuln
 title: WordPress 漏洞环境搭建与测试 — REST API 内容注入漏洞
+draft: true
 date: 2017-02-10T23:31:16
 authors: cyhan
 ---

@@ -1,6 +1,7 @@
 ---
 slug: mit-hakman-memo
 title: MIT HAKMAN
+draft: true
 date: 2017-05-01 12:19:37
 authors: cyhan
 ---

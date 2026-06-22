@@ -1,6 +1,7 @@
 ---
 slug: 2017-nov-memo-list
 title: Memo List Nov
+draft: true
 date: 2017-11-06 18:19:33
 authors: cyhan
 tags:

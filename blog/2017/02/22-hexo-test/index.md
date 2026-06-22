@@ -1,6 +1,7 @@
 ---
 slug: hexo-test-page
 title: Hexo 测试页
+draft: true
 date: 2017-02-22 17:00:31
 authors: cyhan
 tags:
@@ -179,4 +180,3 @@ $$
 $$
 y=Ce^{at}
 $$
-

@@ -1,6 +1,7 @@
 ---
 slug: 2017-jul-memo-list
 title: Memo List July
+draft: true
 date: 2017-06-29 22:50:56
 authors: cyhan
 tags:

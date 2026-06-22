@@ -1,6 +1,7 @@
 ---
 slug: vim-tutor-explore
 title: Vim Tutor explore
+draft: true
 date: 2017-04-30 19:52:23
 authors: cyhan
 ---

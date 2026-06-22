@@ -1,6 +1,7 @@
 ---
 slug: 2017-mar-memo-list
 title: Memo List Mar
+draft: true
 date: 2017-04-29 22:34:42
 authors: cyhan
 tags:
