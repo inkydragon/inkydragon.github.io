@@ -67,6 +67,12 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 
 一个 commit 涉及多个 scope 时，用逗号分隔（如 `site, ci: ...`），或用更上层的 scope 概括。revert、merge 等特殊提交不强制遵循此格式。
 
+### 推送与修改历史
+
+- **禁止自主推送**：没有明确指令（如"推送"、"push"），不得执行 `git push`。
+- **禁止 `--force`**：不得使用 `git push --force`、`--force-with-lease`。
+- **amend 规则**：未推送的提交可以自由 `git commit --amend`；已推送的提交如需 amend，需用户明确允许。
+
 ### 备忘录子 scope
 
 当修改限定在 `memo/` 下的特定子目录时，优先使用更具体的子 scope，格式为 `memo(<缩写>)`。缩写规则：
