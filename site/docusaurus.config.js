@@ -53,9 +53,7 @@ const config = {
         docs: {
           path: '../docs',
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/',
+          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
           showLastUpdateTime: true,
           // KaTeX
           remarkPlugins: [remarkMath],
@@ -68,9 +66,7 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/',
+          editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
