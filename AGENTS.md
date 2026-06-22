@@ -59,7 +59,7 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 | `docs` | 技术文档（`docs/` 下的内容） |
 | `deps` | 依赖更新（`site/package.json` 等） |
 | `ci` | CI/CD 工作流 |
-| `workspace` | 工作区（想法、方法论、项目孵化） |
+| `ws` | 工作区（想法、方法论、项目孵化）——`workspace/` 的缩写 |
 | `draft` | 草稿技术笔记 |
 | `julia` | Julia 语言相关笔记 |
 | `skill` | `cyhan-skill/` 下的 Agent Skill |
