@@ -6,4 +6,14 @@ ai:
 research:
   label: Research
   permalink: /research
-  description: 调研报告
+  description: 基于 Web 搜索总结的特定方向调研报告
+
+reading:
+  label: Reading
+  permalink: /reading
+  description: AI 辅助的博客、论文、视频阅读笔记与文献摘要
+
+generated:
+  label: Generated
+  permalink: /generated
+  description: AI 直接生成的文档与代码片段，仅供参考
