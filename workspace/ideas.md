@@ -16,7 +16,6 @@
 
 ## 使用教程类
 
-- a11y: biliup-app 测试及使用教程
 - a11y: 常见无障碍接口库介绍 (tolk/UniversalSpeech)
 - game-a11y: PvZ-A11y 介绍
 - game-a11y: RE-UE4SS 编译、WukongB1/UnrealEngine4Wukong 编译
@@ -28,7 +27,6 @@
 ## 新的想法
 
 - jl: julia MWE 样例缩减教程 `creduce_julia, cvise+julia`
-- a11y: 旧版无障碍 DLL 介绍 (ScreenReaderAPI.dll)
 - a11y: 继续翻译 NVDA 博客、教程
 - game-a11y: 无障碍游戏介绍
 - game-a11y: 一些无障碍游戏 mod 安装教程
