@@ -58,7 +58,7 @@ Web 方向的解决方案已趋于**产品化**，核心是利用浏览器开发
 
 - 10+ 测试类别（功能、无障碍 WCAG 2.1、性能 Core Web Vitals、响应式、安全、SEO、跨浏览器、代码质量等）
 - **视觉记忆（MemVid MCP）**：带截图基准线的时序测试历史
-- 质量分级：PASS (95-100) / PASS WITH NOTES (85-94) / ITERATE (65-84) / FAIL (<65)
+- 质量分级：PASS (95-100) / PASS WITH NOTES (85-94) / ITERATE (65-84) / FAIL (\<65)
 
 **[Loom UI Gallery + Screenshot MCP](https://github.com/rjwalters/loom/issues/406)**
 
