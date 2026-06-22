@@ -86,6 +86,22 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ai-gen',
+        path: '../ai-gen',
+        routeBasePath: 'ai-gen',
+        sidebarPath: false,
+        editUrl: 'https://github.com/inkydragon/inkydragon.github.io/tree/main/site/',
+        showLastUpdateTime: true,
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+      },
+    ],
+  ],
+
   stylesheets: [
     // KaTeX
     {
@@ -126,6 +142,11 @@ const config = {
           {
             label: '博客文章',
             to: '/blog',
+            position: 'left',
+          },
+          {
+            label: 'AI Works',
+            to: '/ai-gen',
             position: 'left',
           },
 
