@@ -23,5 +23,5 @@ Julia stdlibs outside the Julialang organisation
 
 ## External Links
 
-- [Julia Memo](https://github.com/inkydragon/JuliaMemo): julia 相关的笔记与备忘.  
+- [Julia Memo](https://github.com/inkydragon/inkydragon.github.io/tree/main/workspace/julia): julia 相关的笔记与备忘.  
     Random note and memo about Julia.
