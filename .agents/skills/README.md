@@ -5,7 +5,7 @@
 ## 目录约定
 
 ```
-cyhan-skill/
+.agents/skills/
 └── <skill-name>/
     ├── SKILL.md          # 必需：frontmatter 元数据 + 指令
     ├── references/       # 可选：按需加载的参考文档
@@ -15,18 +15,18 @@ cyhan-skill/
 
 ## 如何让 Claude Code 发现 skill
 
-本仓库中 skill 存放在 `cyhan-skill/`，通过符号链接接入 Claude Code 的发现路径：
+本仓库中 skill 存放在 `.agents/skills/`，通过符号链接接入 Claude Code 的发现路径：
 
 ```
-.claude/skills/<skill-name> → ../../cyhan-skill/<skill-name>
+.claude/skills/<skill-name> → ../../.agents/skills/<skill-name>
 ```
 
-Skill 目录名决定调用命令名——`cyhan-skill/foo-bar/SKILL.md` → 可通过 `/foo-bar` 调用。
+Skill 目录名决定调用命令名——`.agents/skills/foo-bar/SKILL.md` → 可通过 `/foo-bar` 调用。
 
 ## 新增 skill
 
-1. 创建 `cyhan-skill/<skill-name>/SKILL.md`，按 agentskills.io 规范填写 frontmatter（至少含 `name` 和 `description`）。
-2. 创建符号链接：`ln -s ../../cyhan-skill/<skill-name> .claude/skills/<skill-name>`。
+1. 创建 `.agents/skills/<skill-name>/SKILL.md`，按 agentskills.io 规范填写 frontmatter（至少含 `name` 和 `description`）。
+2. 创建符号链接：`ln -s ../../.agents/skills/<skill-name> .claude/skills/<skill-name>`。
 3. Claude Code 会自动发现该 skill（支持热检测，无需重启）。可通过 `/skill-name` 显式调用，或由 Claude 根据 `description` 匹配自动激活。
 
 ### 最低可用的 SKILL.md
