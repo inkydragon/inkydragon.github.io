@@ -7,14 +7,17 @@ title: AI 生成的内容
 
 ## 分类
 
-### [Research](/ai-gen/tags/research)
+### Research
 
 基于 Web 搜索总结的、特定方向的调研报告。
+[#Research](/ai-gen/tags/research)
 
-### [Reading](/ai-gen/tags/reading)
+### Reading
 
 AI 辅助的博客、论文、视频阅读笔记与文献摘要。
+[#Reading](/ai-gen/tags/reading)
 
-### [Generated](/ai-gen/tags/generated)
+### Generated
 
 AI 直接生成的文档与代码片段，仅供参考。
+[#Generated](/ai-gen/tags/generated)
