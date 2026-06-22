@@ -1,6 +1,7 @@
 ---
 slug: lecture-1-introduction-to-computation
 title: Lecture 1 - Introduction to Computation
+draft: true
 date: 2017-01-29T14:10:28
 authors: cyhan
 tags: 

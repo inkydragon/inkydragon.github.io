@@ -1,6 +1,7 @@
 ---
 slug: mit-18-03sc-differential-equations
 title: 'MIT-18.03sc Differential Equations'
+draft: true
 date: 2017-02-22 18:09:01
 authors: cyhan
 tags:
@@ -38,5 +39,3 @@ tags:
 # Session Activities
 
 # Check Yourself
-
-

@@ -1,6 +1,7 @@
 ---
 slug: edx-mit-6001sp
 title: edX 计算机科学和 Python 编程导论学习笔记
+draft: true
 date: 2017-01-29T14:04:34
 authors: cyhan
 tags:
