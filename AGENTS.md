@@ -6,8 +6,7 @@
 
 这是一个**双用途仓库**：
 既是部署到 GitHub Pages 的 Docusaurus 博客站点（`site/` 为框架，`blog/` 和 `memo/` 为内容），
-也是个人思考工作区（`workspace/`、`drafts/`、`.agents/`）。
-工作区内容（想法、草稿、skill 定义）是主要提交活动；博客站点是对外展示的产物。
+个人思考工作区（`workspace/`、`drafts/`、`.agents/`）。
 
 ## 博客站点（`site/`）
 
@@ -61,7 +60,7 @@ Docusaurus 3.x，React 19，Node ≥20。自定义域名：`cyhan.dev`。
 | `ci` | CI/CD 工作流 |
 | `ws` | 工作区（想法、方法论、项目孵化）——`workspace/` 的缩写 |
 | `draft` | 草稿技术笔记 |
-| `research` | AI 生成的调研报告（`ai-gen/research/`） |
+| `ai` | AI 生成的内容（`ai-gen/` 下所有类别） |
 | `skill` | `.agents/skills/` 下的 Agent Skill |
 | `meta` | 仓库基础设施（AGENTS.md、.gitignore 等） |
 
