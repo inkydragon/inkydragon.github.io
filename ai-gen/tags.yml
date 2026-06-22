@@ -1,0 +1,9 @@
+ai:
+  label: AI
+  permalink: /ai
+  description: AI 生成的内容
+
+research:
+  label: Research
+  permalink: /research
+  description: 调研报告

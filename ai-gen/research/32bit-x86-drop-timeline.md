@@ -1,3 +1,9 @@
+---
+unlisted: true
+authors: claude-code, deepseek-v4-pro
+tags: [ai, research]
+---
+
 # When Software Dropped 32-bit x86 (i386) Support
 
 A comprehensive timeline across operating systems, programming languages, and numerical computing software.

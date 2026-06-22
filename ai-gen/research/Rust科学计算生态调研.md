@@ -1,3 +1,9 @@
+---
+unlisted: true
+authors: claude-code, deepseek-v4-pro
+tags: [ai, research]
+---
+
 # Rust 科学计算生态调研（2026年6月）
 
 > 关联文档：[[项目诊断.md|项目诊断]] 中的语言选择部分推荐了 Rust 作为"最值得新学的语言"——但 Rust 的科学计算生态到底多成熟？ChemE/PSE 相关的库够不够用？

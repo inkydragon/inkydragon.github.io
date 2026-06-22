@@ -1,3 +1,9 @@
+---
+unlisted: true
+authors: claude-code, deepseek-v4-pro
+tags: [ai, research]
+---
+
 # AI 时代数值代码的正确性来源
 
 > 基于 `idea/` 中的项目选择判据与手工艺讨论，延伸讨论广义代码正确性在 AI 时代的变化——以数值计算为具体抓手，但不限于此。

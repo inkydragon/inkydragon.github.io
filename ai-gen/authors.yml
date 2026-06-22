@@ -1,0 +1,11 @@
+claude-code:
+  name: Claude Code
+  title: AI Coding Assistant
+  url: https://claude.ai/code
+  page: false
+
+deepseek-v4-pro:
+  name: DeepSeek-V4 Pro
+  title: AI Research Model
+  url: https://chat.deepseek.com
+  page: false
