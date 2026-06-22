@@ -4,7 +4,7 @@
 
 ## Status
 
-### 1k+
+### `1k+`
 
 - [SpecialFunctions.jl](https://github.com/JuliaMath/SpecialFunctions.jl)
     Direct (511)
@@ -60,7 +60,7 @@
     [![version](https://juliahub.com/docs/General/ChangesOfVariables/stable/version.svg)](https://juliahub.com/ui/Packages/General/ChangesOfVariables)
 
 
-### 100~1k
+### `100~1k`
 
 - [QuadGK.jl](https://github.com/JuliaMath/QuadGK.jl)
     Direct (200)
@@ -100,7 +100,7 @@
     [![version](https://juliahub.com/docs/General/IntegerMathUtils/stable/version.svg)](https://juliahub.com/ui/Packages/General/IntegerMathUtils)
 
 
-### 10~100
+### `10~100`
 
 - [HCubature.jl](https://github.com/JuliaMath/HCubature.jl)
     Direct (42)
@@ -146,7 +146,7 @@
     [![version](https://juliahub.com/docs/General/FixedPointDecimals/stable/version.svg)](https://juliahub.com/ui/Packages/General/FixedPointDecimals)
 
 
-### <10
+### `<10`
 
 - [FastPow.jl](https://github.com/JuliaMath/FastPow.jl)
     [![deps](https://juliahub.com/docs/General/FastPow/stable/deps.svg)](https://juliahub.com/ui/Packages/General/FastPow?t=2)
