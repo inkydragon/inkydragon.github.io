@@ -27,3 +27,20 @@ https://github.com/game-a11y
 - [game-a11y/Duckov-PuerTS: 鸭科夫 PuerTS 支持 MOD](https://github.com/game-a11y/Duckov-PuerTS)
   可以看作 PuerTS + Unity
 - [game-a11y/ED6-Access: A a11y mod for ED6 FC (The Legend of Heroes)](https://github.com/game-a11y/ED6-Access)
+
+
+## 游戏 mod 框架
+
+cpp
+
+- Frida + js
+
+C#
+
+- MelonLoader
+- BepInEx
+- C# 通用的工具
+
+UE
+
+- UE4SS
