@@ -1,4 +1,11 @@
-# 北太天元插件
+---
+tags:
+- github-org
+- bex
+- 北太天元
+---
+
+# bex-dev | 北太天元插件
 
 - [北太振寰社区中心](https://www.baltamatica.com/community)
 - [bex-dev](https://github.com/baltamatica-dev)
