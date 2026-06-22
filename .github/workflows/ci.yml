@@ -8,7 +8,7 @@ on:
       - '.github/workflows/ci.yml'
       - 'site/**'
       - 'blog/**'
-      - 'docs/**'
+      - 'memo/**'
 
 jobs:
   build:

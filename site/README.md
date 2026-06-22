@@ -17,7 +17,7 @@ pnpm run serve     # 本地预览构建产物
 site/
 ├── blog/                      # 博客文章，按年份组织（2015/、……、2026/）
 │   └── <year>/                #   支持 KaTeX、Prism 高亮
-├── docs/                      # 结构化文档
+├── memo/                      # 结构化备忘录
 │   ├── memo.md                #   备忘录导航入口页
 │   ├── proj/                  #   项目笔记
 │   └── archive/               #   归档笔记
