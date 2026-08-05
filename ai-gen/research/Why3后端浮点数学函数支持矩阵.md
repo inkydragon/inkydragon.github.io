@@ -238,14 +238,14 @@ Why3 VC (含 sin/cos/exp) → MetiTarski → 多项式上下界替换 → Z3/QEP
 
 ## 八、参考文献
 
-- Why3 官方站：<https://why3.org>
-- SMT-LIB FloatingPoint 理论：<http://smtlib.cs.uiowa.edu/theories-FloatingPoint.shtml>
+- Why3 官方站：https://why3.org
+- SMT-LIB FloatingPoint 理论：http://smtlib.cs.uiowa.edu/theories-FloatingPoint.shtml
 - Conchon et al., *A Three-tier Strategy for Reasoning about Floating-Point Numbers in SMT*, CAV 2017
 - de Dinechin, Lauter, Melquiond, *Assisted Verification of Elementary Functions using Gappa*, SAC 2006
-- Rasheed & Konečný, *Auto-active Verification of Floating-point Programs via Nonlinear Real Provers*, SEFM 2022; PropaFP: <https://github.com/rasheedja/PropaFP>
+- Rasheed & Konečný, *Auto-active Verification of Floating-point Programs via Nonlinear Real Provers*, SEFM 2022; PropaFP: https://github.com/rasheedja/PropaFP
 - Akbarpour & Paulson, *MetiTarski: An Automatic Theorem Prover for Real-Valued Special Functions*, JAR 2010
 - Boldo & Melquiond, *Computer Arithmetic and Formal Proofs*, ISTE Press - Elsevier, 2017
 - Boldo, Jeannerod, Melquiond, Muller, *Floating-point arithmetic*, Acta Numerica, 2023
-- Alt-Ergo 2.6 release: <https://ocamlpro.com/blog/2024_09_01_alt_ergo_2_6_0_released/>
-- Why3 `ieee_float` 标准库：<https://why3.org/stdlib/ieee_float.html>
+- Alt-Ergo 2.6 release: https://ocamlpro.com/blog/2024_09_01_alt_ergo_2_6_0_released/
+- Why3 `ieee_float` 标准库：https://why3.org/stdlib/ieee_float.html
 - Why3 超越函数理论：`lib/why3/real.ExpLog`、`real.Trigonometry`（Why3 源码分发包）

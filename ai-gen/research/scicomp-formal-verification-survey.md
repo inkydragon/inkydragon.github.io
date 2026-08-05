@@ -230,7 +230,7 @@ ACM TOMS 2023 发表。
 
 **APOLLO**（NeurIPS 2025）：
 - 编译器引导的 LLM 证明修复（Lean 4），利用编译器错误信息指导证明生成
-- miniF2F 基准上达到 84.9% SOTA（sub-8B 模型），每个定理 <100 样本
+- miniF2F 基准上达到 84.9% SOTA（sub-8B 模型），每个定理 &lt;100 样本
 
 **Cobblestone**（2024）：
 - 全自动 Coq 证明合成，超越 SOTA 非 LLM 工具

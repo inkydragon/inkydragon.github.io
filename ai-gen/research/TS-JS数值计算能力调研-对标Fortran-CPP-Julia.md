@@ -118,7 +118,7 @@ Wasmtime/Wasmer + SIMD + wide_arithmetic   ████████████�
 |---|---|---|
 | **统一数组标准** | LAPACK/BLAS → NumPy → SciPy（Python 生态清晰） | 无统一标准。TensorFlow.js / ndarray / mathjs / numpy-ts / stdlib-js 各用各的 |
 | **核心库维护者** | 领域科学家（Fortran 社区）、学术贡献者（Eigen）、SciML 团队（Julia） | 主要为个人/小团队；numpy-ts 和 jax-js 均是一人项目 |
-| **社区成熟度** | NumPy ~20 年、Eigen ~15 年、Julia SciML ~8 年 | 多数库 <3 年，math.js 最老（~12 年） |
+| **社区成熟度** | NumPy ~20 年、Eigen ~15 年、Julia SciML ~8 年 | 多数库 &lt;3 年，math.js 最老（~12 年） |
 | **文档与问答** | 数千篇 Stack Overflow、专著、课程 | 有限；stdlib-js 在 HPSFCon 2026 才开始引起 HPC 圈子注意 |
 | **REPL 探索文化** | Jupyter（Python）、Juno/VSCode（Julia） | Observable 最接近但侧重可视化/数据，非数值探索 |
 
