@@ -9,7 +9,6 @@ on:
       - 'site/**'
       - 'blog/**'
       - 'memo/**'
-      - 'ai-gen/**'
 
 jobs:
   build:
