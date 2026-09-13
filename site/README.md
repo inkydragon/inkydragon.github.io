@@ -14,19 +14,18 @@ pnpm run serve     # 本地预览构建产物
 ## 结构
 
 ```
-site/
-├── blog/                      # 博客文章，按年份组织（2015/、……、2026/）
-│   └── <year>/                #   支持 KaTeX、Prism 高亮
+仓库根目录/
+├── blog/                      # 博客文章，按年份组织
 ├── memo/                      # 结构化备忘录
-│   ├── memo.md                #   备忘录导航入口页
-│   ├── proj/                  #   项目笔记
-│   └── archive/               #   归档笔记
-├── src/css/custom.css         # 自定义样式（Infima 变量覆盖）
-├── static/                    # 静态资源（图片、favicon 等）
-├── docusaurus.config.js       # 站点配置
-├── sidebars.js                # 侧边栏定义（auto-generated）
-└── package.json               # 依赖与脚本
+└── site/
+    ├── src/css/custom.css     # 自定义样式（Infima 变量覆盖）
+    ├── static/                # 静态资源（图片、favicon 等）
+    ├── docusaurus.config.js   # 站点配置
+    ├── sidebars.js            # 自动生成侧边栏
+    └── package.json           # 依赖与脚本
 ```
+
+`docusaurus.config.js` 通过 `../blog` 和 `../memo` 读取根目录内容。
 
 - 博客侧边栏显示最近 30 篇（[`blogSidebarCount`](docusaurus.config.js)）。
 - 侧边栏从文件结构自动生成（[`sidebars.js`](sidebars.js)）。
@@ -41,4 +40,6 @@ site/
 
 ## CI / 部署
 
-推送 `main` 且变更涉及 `site/**` → [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) → `pnpm install --frozen-lockfile && pnpm build` → 部署到 GitHub Pages。
+推送 `main` 且变更涉及 `.github/workflows/ci.yml`、`site/**`、`blog/**` 或
+`memo/**` → [`.github/workflows/ci.yml`](../.github/workflows/ci.yml) →
+`pnpm install --frozen-lockfile && pnpm build` → 部署到 GitHub Pages。

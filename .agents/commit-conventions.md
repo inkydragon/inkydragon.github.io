@@ -19,10 +19,6 @@
 | `memo(…)` | 备忘录下的特定子目录，括号内为目录缩写或简称。详见下方「备忘录子 scope」 |
 | `deps` | 依赖更新（`site/package.json` 等） |
 | `ci` | CI/CD 工作流 |
-| `ws` | 工作区（想法、方法论、项目孵化）——`workspace/` 的缩写 |
-| `draft` | 草稿技术笔记 |
-| `ai` | AI 生成的内容（`ai-gen/` 下所有类别） |
-| `skill` | `.agents/skills/` 下的 Agent Skill |
 | `meta` | 仓库基础设施（AGENTS.md、.gitignore 等） |
 
 一个 commit 涉及多个 scope 时，用逗号分隔（如 `site, ci: ...`），或用更上层的 scope 概括。revert、merge 等特殊提交不强制遵循此格式。
@@ -30,7 +26,7 @@
 ## 推送与修改历史
 
 - **推送需明确指令**：仅在用户给出无歧义的推送指令（如"推送"、"推送到远端"、"push"、"git push"）时才执行 `git push`。"提交"、"提交修改"默认仅指本地 `git commit`，不包含推送。
-- **禁止 `--force`**：不得使用 `git push --force`、`--force-with-lease`。
+- **重写历史需单独授权**：普通的“推送”指令不包含强制更新远程。只有用户明确要求推送重写后的历史时，才可以在核对远程 ref 后使用 `--force-with-lease`。禁止使用无保护的 `--force`。
 - **amend 规则**：未推送的提交可以自由 `git commit --amend`；已推送的提交如需 amend，需用户明确允许。
 
 ## 备忘录子 scope
